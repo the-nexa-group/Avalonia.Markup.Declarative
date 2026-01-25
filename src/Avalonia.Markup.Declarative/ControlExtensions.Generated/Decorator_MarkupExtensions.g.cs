@@ -15,17 +15,17 @@ public static partial class Decorator_MarkupExtensions
  // Child
 
 /*ValueSetterGenerator*/
-public static T Child<T>(this T control, Avalonia.Controls.Control value) where T : Avalonia.Controls.Decorator 
-=> control._set(() => control.Child = value!);
+public static T Child<T>(this T control, Avalonia.Controls.Control? value) where T : Avalonia.Controls.Decorator 
+=> control._set(() => control.Child = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T Child<T>(this T control, Func<Avalonia.Controls.Control> func, Action<Avalonia.Controls.Control>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Decorator 
+public static T Child<T>(this T control, Func<Avalonia.Controls.Control?> func, Action<Avalonia.Controls.Control?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Decorator 
    => control._set(Avalonia.Controls.Decorator.ChildProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T Child<T>(this T control,Avalonia.Controls.Control value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Decorator 
-=> control._setEx(Avalonia.Controls.Decorator.ChildProperty, ps, () => control.Child = value!, bindingMode, converter, bindingSource);
+public static T Child<T>(this T control,Avalonia.Controls.Control? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Decorator 
+=> control._setEx(Avalonia.Controls.Decorator.ChildProperty, ps, () => control.Child = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Child<T>(this T control, IBinding binding) where T : Avalonia.Controls.Decorator 
@@ -37,15 +37,15 @@ public static T Child<T>(this T control, AvaloniaProperty avaloniaProperty, Bind
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T Child<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Control> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Decorator 
-=> control._setEx(Avalonia.Controls.Decorator.ChildProperty, ps, () => control.Child = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T Child<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Control?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Decorator 
+=> control._setEx(Avalonia.Controls.Decorator.ChildProperty, ps, () => control.Child = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Padding
 
 /*ValueSetterGenerator*/
 public static T Padding<T>(this T control, Avalonia.Thickness value) where T : Avalonia.Controls.Decorator 
-=> control._set(() => control.Padding = value!);
+=> control._set(() => control.Padding = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Padding<T>(this T control, Func<Avalonia.Thickness> func, Action<Avalonia.Thickness>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Decorator 
@@ -63,7 +63,7 @@ public static T Padding<T>(this T control, System.Double left = default!, System
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Padding<T>(this T control,Avalonia.Thickness value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Decorator 
-=> control._setEx(Avalonia.Controls.Decorator.PaddingProperty, ps, () => control.Padding = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Decorator.PaddingProperty, ps, () => control.Padding = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Padding<T>(this T control, IBinding binding) where T : Avalonia.Controls.Decorator 
@@ -76,7 +76,7 @@ public static T Padding<T>(this T control, AvaloniaProperty avaloniaProperty, Bi
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Padding<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Thickness> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Decorator 
-=> control._setEx(Avalonia.Controls.Decorator.PaddingProperty, ps, () => control.Padding = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Decorator.PaddingProperty, ps, () => control.Padding = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 
@@ -84,7 +84,7 @@ public static T Padding<TValue,T>(this T control, TValue value, FuncValueConvert
  // Child
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Child<T>(this Style<T> style, Avalonia.Controls.Control value) where T : Avalonia.Controls.Decorator 
+public static Style<T> Child<T>(this Style<T> style, Avalonia.Controls.Control? value) where T : Avalonia.Controls.Decorator 
 => style._addSetter(Avalonia.Controls.Decorator.ChildProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

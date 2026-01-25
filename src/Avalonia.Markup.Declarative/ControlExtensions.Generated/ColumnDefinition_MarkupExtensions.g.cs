@@ -16,7 +16,7 @@ public static partial class ColumnDefinition_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T MaxWidth<T>(this T control, System.Double value) where T : Avalonia.Controls.ColumnDefinition 
-=> control._set(() => control.MaxWidth = value!);
+=> control._set(() => control.MaxWidth = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T MaxWidth<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ColumnDefinition 
@@ -25,7 +25,7 @@ public static T MaxWidth<T>(this T control, Func<System.Double> func, Action<Sys
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T MaxWidth<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ColumnDefinition 
-=> control._setEx(Avalonia.Controls.ColumnDefinition.MaxWidthProperty, ps, () => control.MaxWidth = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.ColumnDefinition.MaxWidthProperty, ps, () => control.MaxWidth = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T MaxWidth<T>(this T control, IBinding binding) where T : Avalonia.Controls.ColumnDefinition 
@@ -38,14 +38,14 @@ public static T MaxWidth<T>(this T control, AvaloniaProperty avaloniaProperty, B
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T MaxWidth<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ColumnDefinition 
-=> control._setEx(Avalonia.Controls.ColumnDefinition.MaxWidthProperty, ps, () => control.MaxWidth = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.ColumnDefinition.MaxWidthProperty, ps, () => control.MaxWidth = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // MinWidth
 
 /*ValueSetterGenerator*/
 public static T MinWidth<T>(this T control, System.Double value) where T : Avalonia.Controls.ColumnDefinition 
-=> control._set(() => control.MinWidth = value!);
+=> control._set(() => control.MinWidth = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T MinWidth<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ColumnDefinition 
@@ -54,7 +54,7 @@ public static T MinWidth<T>(this T control, Func<System.Double> func, Action<Sys
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T MinWidth<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ColumnDefinition 
-=> control._setEx(Avalonia.Controls.ColumnDefinition.MinWidthProperty, ps, () => control.MinWidth = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.ColumnDefinition.MinWidthProperty, ps, () => control.MinWidth = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T MinWidth<T>(this T control, IBinding binding) where T : Avalonia.Controls.ColumnDefinition 
@@ -67,14 +67,14 @@ public static T MinWidth<T>(this T control, AvaloniaProperty avaloniaProperty, B
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T MinWidth<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ColumnDefinition 
-=> control._setEx(Avalonia.Controls.ColumnDefinition.MinWidthProperty, ps, () => control.MinWidth = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.ColumnDefinition.MinWidthProperty, ps, () => control.MinWidth = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Width
 
 /*ValueSetterGenerator*/
 public static T Width<T>(this T control, Avalonia.Controls.GridLength value) where T : Avalonia.Controls.ColumnDefinition 
-=> control._set(() => control.Width = value!);
+=> control._set(() => control.Width = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Width<T>(this T control, Func<Avalonia.Controls.GridLength> func, Action<Avalonia.Controls.GridLength>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ColumnDefinition 
@@ -90,7 +90,7 @@ public static T Width<T>(this T control, System.Double value = default!, Avaloni
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Width<T>(this T control,Avalonia.Controls.GridLength value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ColumnDefinition 
-=> control._setEx(Avalonia.Controls.ColumnDefinition.WidthProperty, ps, () => control.Width = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.ColumnDefinition.WidthProperty, ps, () => control.Width = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Width<T>(this T control, IBinding binding) where T : Avalonia.Controls.ColumnDefinition 
@@ -103,7 +103,7 @@ public static T Width<T>(this T control, AvaloniaProperty avaloniaProperty, Bind
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Width<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.GridLength> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ColumnDefinition 
-=> control._setEx(Avalonia.Controls.ColumnDefinition.WidthProperty, ps, () => control.Width = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.ColumnDefinition.WidthProperty, ps, () => control.Width = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

@@ -16,7 +16,7 @@ public static partial class MaskedTextBox_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T AsciiOnly<T>(this T control, System.Boolean value) where T : Avalonia.Controls.MaskedTextBox 
-=> control._set(() => control.AsciiOnly = value!);
+=> control._set(() => control.AsciiOnly = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T AsciiOnly<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.MaskedTextBox 
@@ -25,7 +25,7 @@ public static T AsciiOnly<T>(this T control, Func<System.Boolean> func, Action<S
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T AsciiOnly<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
-=> control._setEx(Avalonia.Controls.MaskedTextBox.AsciiOnlyProperty, ps, () => control.AsciiOnly = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.MaskedTextBox.AsciiOnlyProperty, ps, () => control.AsciiOnly = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T AsciiOnly<T>(this T control, IBinding binding) where T : Avalonia.Controls.MaskedTextBox 
@@ -38,23 +38,23 @@ public static T AsciiOnly<T>(this T control, AvaloniaProperty avaloniaProperty, 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T AsciiOnly<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
-=> control._setEx(Avalonia.Controls.MaskedTextBox.AsciiOnlyProperty, ps, () => control.AsciiOnly = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.MaskedTextBox.AsciiOnlyProperty, ps, () => control.AsciiOnly = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Culture
 
 /*ValueSetterGenerator*/
-public static T Culture<T>(this T control, System.Globalization.CultureInfo value) where T : Avalonia.Controls.MaskedTextBox 
-=> control._set(() => control.Culture = value!);
+public static T Culture<T>(this T control, System.Globalization.CultureInfo? value) where T : Avalonia.Controls.MaskedTextBox 
+=> control._set(() => control.Culture = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T Culture<T>(this T control, Func<System.Globalization.CultureInfo> func, Action<System.Globalization.CultureInfo>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.MaskedTextBox 
+public static T Culture<T>(this T control, Func<System.Globalization.CultureInfo?> func, Action<System.Globalization.CultureInfo?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.CultureProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T Culture<T>(this T control,System.Globalization.CultureInfo value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
-=> control._setEx(Avalonia.Controls.MaskedTextBox.CultureProperty, ps, () => control.Culture = value!, bindingMode, converter, bindingSource);
+public static T Culture<T>(this T control,System.Globalization.CultureInfo? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
+=> control._setEx(Avalonia.Controls.MaskedTextBox.CultureProperty, ps, () => control.Culture = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Culture<T>(this T control, IBinding binding) where T : Avalonia.Controls.MaskedTextBox 
@@ -66,15 +66,15 @@ public static T Culture<T>(this T control, AvaloniaProperty avaloniaProperty, Bi
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T Culture<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Globalization.CultureInfo> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
-=> control._setEx(Avalonia.Controls.MaskedTextBox.CultureProperty, ps, () => control.Culture = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T Culture<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Globalization.CultureInfo?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
+=> control._setEx(Avalonia.Controls.MaskedTextBox.CultureProperty, ps, () => control.Culture = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // HidePromptOnLeave
 
 /*ValueSetterGenerator*/
 public static T HidePromptOnLeave<T>(this T control, System.Boolean value) where T : Avalonia.Controls.MaskedTextBox 
-=> control._set(() => control.HidePromptOnLeave = value!);
+=> control._set(() => control.HidePromptOnLeave = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T HidePromptOnLeave<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.MaskedTextBox 
@@ -83,7 +83,7 @@ public static T HidePromptOnLeave<T>(this T control, Func<System.Boolean> func, 
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T HidePromptOnLeave<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
-=> control._setEx(Avalonia.Controls.MaskedTextBox.HidePromptOnLeaveProperty, ps, () => control.HidePromptOnLeave = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.MaskedTextBox.HidePromptOnLeaveProperty, ps, () => control.HidePromptOnLeave = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T HidePromptOnLeave<T>(this T control, IBinding binding) where T : Avalonia.Controls.MaskedTextBox 
@@ -96,23 +96,23 @@ public static T HidePromptOnLeave<T>(this T control, AvaloniaProperty avaloniaPr
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T HidePromptOnLeave<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
-=> control._setEx(Avalonia.Controls.MaskedTextBox.HidePromptOnLeaveProperty, ps, () => control.HidePromptOnLeave = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.MaskedTextBox.HidePromptOnLeaveProperty, ps, () => control.HidePromptOnLeave = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Mask
 
 /*ValueSetterGenerator*/
-public static T Mask<T>(this T control, System.String value) where T : Avalonia.Controls.MaskedTextBox 
-=> control._set(() => control.Mask = value!);
+public static T Mask<T>(this T control, System.String? value) where T : Avalonia.Controls.MaskedTextBox 
+=> control._set(() => control.Mask = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T Mask<T>(this T control, Func<System.String> func, Action<System.String>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.MaskedTextBox 
+public static T Mask<T>(this T control, Func<System.String?> func, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.MaskProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T Mask<T>(this T control,System.String value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
-=> control._setEx(Avalonia.Controls.MaskedTextBox.MaskProperty, ps, () => control.Mask = value!, bindingMode, converter, bindingSource);
+public static T Mask<T>(this T control,System.String? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
+=> control._setEx(Avalonia.Controls.MaskedTextBox.MaskProperty, ps, () => control.Mask = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Mask<T>(this T control, IBinding binding) where T : Avalonia.Controls.MaskedTextBox 
@@ -124,15 +124,15 @@ public static T Mask<T>(this T control, AvaloniaProperty avaloniaProperty, Bindi
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T Mask<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
-=> control._setEx(Avalonia.Controls.MaskedTextBox.MaskProperty, ps, () => control.Mask = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T Mask<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
+=> control._setEx(Avalonia.Controls.MaskedTextBox.MaskProperty, ps, () => control.Mask = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // PromptChar
 
 /*ValueSetterGenerator*/
 public static T PromptChar<T>(this T control, System.Char value) where T : Avalonia.Controls.MaskedTextBox 
-=> control._set(() => control.PromptChar = value!);
+=> control._set(() => control.PromptChar = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T PromptChar<T>(this T control, Func<System.Char> func, Action<System.Char>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.MaskedTextBox 
@@ -141,7 +141,7 @@ public static T PromptChar<T>(this T control, Func<System.Char> func, Action<Sys
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T PromptChar<T>(this T control,System.Char value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
-=> control._setEx(Avalonia.Controls.MaskedTextBox.PromptCharProperty, ps, () => control.PromptChar = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.MaskedTextBox.PromptCharProperty, ps, () => control.PromptChar = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T PromptChar<T>(this T control, IBinding binding) where T : Avalonia.Controls.MaskedTextBox 
@@ -154,14 +154,14 @@ public static T PromptChar<T>(this T control, AvaloniaProperty avaloniaProperty,
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T PromptChar<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Char> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
-=> control._setEx(Avalonia.Controls.MaskedTextBox.PromptCharProperty, ps, () => control.PromptChar = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.MaskedTextBox.PromptCharProperty, ps, () => control.PromptChar = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ResetOnPrompt
 
 /*ValueSetterGenerator*/
 public static T ResetOnPrompt<T>(this T control, System.Boolean value) where T : Avalonia.Controls.MaskedTextBox 
-=> control._set(() => control.ResetOnPrompt = value!);
+=> control._set(() => control.ResetOnPrompt = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T ResetOnPrompt<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.MaskedTextBox 
@@ -170,7 +170,7 @@ public static T ResetOnPrompt<T>(this T control, Func<System.Boolean> func, Acti
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ResetOnPrompt<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
-=> control._setEx(Avalonia.Controls.MaskedTextBox.ResetOnPromptProperty, ps, () => control.ResetOnPrompt = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.MaskedTextBox.ResetOnPromptProperty, ps, () => control.ResetOnPrompt = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T ResetOnPrompt<T>(this T control, IBinding binding) where T : Avalonia.Controls.MaskedTextBox 
@@ -183,14 +183,14 @@ public static T ResetOnPrompt<T>(this T control, AvaloniaProperty avaloniaProper
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T ResetOnPrompt<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
-=> control._setEx(Avalonia.Controls.MaskedTextBox.ResetOnPromptProperty, ps, () => control.ResetOnPrompt = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.MaskedTextBox.ResetOnPromptProperty, ps, () => control.ResetOnPrompt = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ResetOnSpace
 
 /*ValueSetterGenerator*/
 public static T ResetOnSpace<T>(this T control, System.Boolean value) where T : Avalonia.Controls.MaskedTextBox 
-=> control._set(() => control.ResetOnSpace = value!);
+=> control._set(() => control.ResetOnSpace = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T ResetOnSpace<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.MaskedTextBox 
@@ -199,7 +199,7 @@ public static T ResetOnSpace<T>(this T control, Func<System.Boolean> func, Actio
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ResetOnSpace<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
-=> control._setEx(Avalonia.Controls.MaskedTextBox.ResetOnSpaceProperty, ps, () => control.ResetOnSpace = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.MaskedTextBox.ResetOnSpaceProperty, ps, () => control.ResetOnSpace = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T ResetOnSpace<T>(this T control, IBinding binding) where T : Avalonia.Controls.MaskedTextBox 
@@ -212,7 +212,7 @@ public static T ResetOnSpace<T>(this T control, AvaloniaProperty avaloniaPropert
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T ResetOnSpace<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.MaskedTextBox 
-=> control._setEx(Avalonia.Controls.MaskedTextBox.ResetOnSpaceProperty, ps, () => control.ResetOnSpace = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.MaskedTextBox.ResetOnSpaceProperty, ps, () => control.ResetOnSpace = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 
@@ -231,7 +231,7 @@ public static Style<T> AsciiOnly<T>(this Style<T> style, IBinding binding) where
  // Culture
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Culture<T>(this Style<T> style, System.Globalization.CultureInfo value) where T : Avalonia.Controls.MaskedTextBox 
+public static Style<T> Culture<T>(this Style<T> style, System.Globalization.CultureInfo? value) where T : Avalonia.Controls.MaskedTextBox 
 => style._addSetter(Avalonia.Controls.MaskedTextBox.CultureProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -253,7 +253,7 @@ public static Style<T> HidePromptOnLeave<T>(this Style<T> style, IBinding bindin
  // Mask
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Mask<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.MaskedTextBox 
+public static Style<T> Mask<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.MaskedTextBox 
 => style._addSetter(Avalonia.Controls.MaskedTextBox.MaskProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

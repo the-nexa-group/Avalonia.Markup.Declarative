@@ -16,7 +16,7 @@ public static partial class TransformGroup_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.TransformGroup Children(this Avalonia.Media.TransformGroup control, Avalonia.Media.Transforms value)  
-=> control._set(() => control.Children = value!);
+=> control._set(() => control.Children = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.TransformGroup Children(this Avalonia.Media.TransformGroup control, Func<Avalonia.Media.Transforms> func, Action<Avalonia.Media.Transforms>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -25,7 +25,7 @@ public static Avalonia.Media.TransformGroup Children(this Avalonia.Media.Transfo
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.TransformGroup Children(this Avalonia.Media.TransformGroup control,Avalonia.Media.Transforms value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.TransformGroup.ChildrenProperty, ps, () => control.Children = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TransformGroup.ChildrenProperty, ps, () => control.Children = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.TransformGroup Children(this Avalonia.Media.TransformGroup control, IBinding binding)  
@@ -38,7 +38,7 @@ public static Avalonia.Media.TransformGroup Children(this Avalonia.Media.Transfo
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.TransformGroup Children<TValue>(this Avalonia.Media.TransformGroup control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Transforms> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.TransformGroup.ChildrenProperty, ps, () => control.Children = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TransformGroup.ChildrenProperty, ps, () => control.Children = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

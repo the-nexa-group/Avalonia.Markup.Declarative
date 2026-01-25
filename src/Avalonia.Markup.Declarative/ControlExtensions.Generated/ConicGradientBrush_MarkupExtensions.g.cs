@@ -16,7 +16,7 @@ public static partial class ConicGradientBrush_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.ConicGradientBrush Center(this Avalonia.Media.ConicGradientBrush control, Avalonia.RelativePoint value)  
-=> control._set(() => control.Center = value!);
+=> control._set(() => control.Center = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.ConicGradientBrush Center(this Avalonia.Media.ConicGradientBrush control, Func<Avalonia.RelativePoint> func, Action<Avalonia.RelativePoint>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -32,7 +32,7 @@ public static Avalonia.Media.ConicGradientBrush Center(this Avalonia.Media.Conic
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.ConicGradientBrush Center(this Avalonia.Media.ConicGradientBrush control,Avalonia.RelativePoint value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.ConicGradientBrush.CenterProperty, ps, () => control.Center = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.ConicGradientBrush.CenterProperty, ps, () => control.Center = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.ConicGradientBrush Center(this Avalonia.Media.ConicGradientBrush control, IBinding binding)  
@@ -45,14 +45,14 @@ public static Avalonia.Media.ConicGradientBrush Center(this Avalonia.Media.Conic
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.ConicGradientBrush Center<TValue>(this Avalonia.Media.ConicGradientBrush control, TValue value, FuncValueConverter<TValue, Avalonia.RelativePoint> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.ConicGradientBrush.CenterProperty, ps, () => control.Center = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.ConicGradientBrush.CenterProperty, ps, () => control.Center = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Angle
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.ConicGradientBrush Angle(this Avalonia.Media.ConicGradientBrush control, System.Double value)  
-=> control._set(() => control.Angle = value!);
+=> control._set(() => control.Angle = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.ConicGradientBrush Angle(this Avalonia.Media.ConicGradientBrush control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -61,7 +61,7 @@ public static Avalonia.Media.ConicGradientBrush Angle(this Avalonia.Media.ConicG
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.ConicGradientBrush Angle(this Avalonia.Media.ConicGradientBrush control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.ConicGradientBrush.AngleProperty, ps, () => control.Angle = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.ConicGradientBrush.AngleProperty, ps, () => control.Angle = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.ConicGradientBrush Angle(this Avalonia.Media.ConicGradientBrush control, IBinding binding)  
@@ -74,7 +74,7 @@ public static Avalonia.Media.ConicGradientBrush Angle(this Avalonia.Media.ConicG
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.ConicGradientBrush Angle<TValue>(this Avalonia.Media.ConicGradientBrush control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.ConicGradientBrush.AngleProperty, ps, () => control.Angle = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.ConicGradientBrush.AngleProperty, ps, () => control.Angle = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

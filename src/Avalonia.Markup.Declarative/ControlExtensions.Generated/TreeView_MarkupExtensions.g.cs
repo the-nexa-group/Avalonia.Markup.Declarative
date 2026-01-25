@@ -16,7 +16,7 @@ public static partial class TreeView_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T AutoScrollToSelectedItem<T>(this T control, System.Boolean value) where T : Avalonia.Controls.TreeView 
-=> control._set(() => control.AutoScrollToSelectedItem = value!);
+=> control._set(() => control.AutoScrollToSelectedItem = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T AutoScrollToSelectedItem<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.TreeView 
@@ -25,7 +25,7 @@ public static T AutoScrollToSelectedItem<T>(this T control, Func<System.Boolean>
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T AutoScrollToSelectedItem<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.TreeView 
-=> control._setEx(Avalonia.Controls.TreeView.AutoScrollToSelectedItemProperty, ps, () => control.AutoScrollToSelectedItem = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.TreeView.AutoScrollToSelectedItemProperty, ps, () => control.AutoScrollToSelectedItem = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T AutoScrollToSelectedItem<T>(this T control, IBinding binding) where T : Avalonia.Controls.TreeView 
@@ -38,23 +38,23 @@ public static T AutoScrollToSelectedItem<T>(this T control, AvaloniaProperty ava
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T AutoScrollToSelectedItem<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.TreeView 
-=> control._setEx(Avalonia.Controls.TreeView.AutoScrollToSelectedItemProperty, ps, () => control.AutoScrollToSelectedItem = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.TreeView.AutoScrollToSelectedItemProperty, ps, () => control.AutoScrollToSelectedItem = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SelectedItem
 
 /*ValueSetterGenerator*/
-public static T SelectedItem<T>(this T control, System.Object value) where T : Avalonia.Controls.TreeView 
-=> control._set(() => control.SelectedItem = value!);
+public static T SelectedItem<T>(this T control, System.Object? value) where T : Avalonia.Controls.TreeView 
+=> control._set(() => control.SelectedItem = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T SelectedItem<T>(this T control, Func<System.Object> func, Action<System.Object>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.TreeView 
+public static T SelectedItem<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.TreeView 
    => control._set(Avalonia.Controls.TreeView.SelectedItemProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T SelectedItem<T>(this T control,System.Object value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.TreeView 
-=> control._setEx(Avalonia.Controls.TreeView.SelectedItemProperty, ps, () => control.SelectedItem = value!, bindingMode, converter, bindingSource);
+public static T SelectedItem<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.TreeView 
+=> control._setEx(Avalonia.Controls.TreeView.SelectedItemProperty, ps, () => control.SelectedItem = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SelectedItem<T>(this T control, IBinding binding) where T : Avalonia.Controls.TreeView 
@@ -66,15 +66,15 @@ public static T SelectedItem<T>(this T control, AvaloniaProperty avaloniaPropert
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T SelectedItem<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.TreeView 
-=> control._setEx(Avalonia.Controls.TreeView.SelectedItemProperty, ps, () => control.SelectedItem = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T SelectedItem<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.TreeView 
+=> control._setEx(Avalonia.Controls.TreeView.SelectedItemProperty, ps, () => control.SelectedItem = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SelectedItems
 
 /*ValueSetterGenerator*/
 public static T SelectedItems<T>(this T control, System.Collections.IList value) where T : Avalonia.Controls.TreeView 
-=> control._set(() => control.SelectedItems = value!);
+=> control._set(() => control.SelectedItems = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T SelectedItems<T>(this T control, Func<System.Collections.IList> func, Action<System.Collections.IList>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.TreeView 
@@ -83,7 +83,7 @@ public static T SelectedItems<T>(this T control, Func<System.Collections.IList> 
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectedItems<T>(this T control,System.Collections.IList value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.TreeView 
-=> control._setEx(Avalonia.Controls.TreeView.SelectedItemsProperty, ps, () => control.SelectedItems = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.TreeView.SelectedItemsProperty, ps, () => control.SelectedItems = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SelectedItems<T>(this T control, IBinding binding) where T : Avalonia.Controls.TreeView 
@@ -96,14 +96,14 @@ public static T SelectedItems<T>(this T control, AvaloniaProperty avaloniaProper
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T SelectedItems<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Collections.IList> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.TreeView 
-=> control._setEx(Avalonia.Controls.TreeView.SelectedItemsProperty, ps, () => control.SelectedItems = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.TreeView.SelectedItemsProperty, ps, () => control.SelectedItems = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SelectionMode
 
 /*ValueSetterGenerator*/
 public static T SelectionMode<T>(this T control, Avalonia.Controls.SelectionMode value) where T : Avalonia.Controls.TreeView 
-=> control._set(() => control.SelectionMode = value!);
+=> control._set(() => control.SelectionMode = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T SelectionMode<T>(this T control, Func<Avalonia.Controls.SelectionMode> func, Action<Avalonia.Controls.SelectionMode>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.TreeView 
@@ -112,7 +112,7 @@ public static T SelectionMode<T>(this T control, Func<Avalonia.Controls.Selectio
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectionMode<T>(this T control,Avalonia.Controls.SelectionMode value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.TreeView 
-=> control._setEx(Avalonia.Controls.TreeView.SelectionModeProperty, ps, () => control.SelectionMode = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.TreeView.SelectionModeProperty, ps, () => control.SelectionMode = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SelectionMode<T>(this T control, IBinding binding) where T : Avalonia.Controls.TreeView 
@@ -125,7 +125,7 @@ public static T SelectionMode<T>(this T control, AvaloniaProperty avaloniaProper
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T SelectionMode<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.SelectionMode> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.TreeView 
-=> control._setEx(Avalonia.Controls.TreeView.SelectionModeProperty, ps, () => control.SelectionMode = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.TreeView.SelectionModeProperty, ps, () => control.SelectionMode = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

@@ -16,7 +16,7 @@ public static partial class Calendar_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T FirstDayOfWeek<T>(this T control, System.DayOfWeek value) where T : Avalonia.Controls.Calendar 
-=> control._set(() => control.FirstDayOfWeek = value!);
+=> control._set(() => control.FirstDayOfWeek = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T FirstDayOfWeek<T>(this T control, Func<System.DayOfWeek> func, Action<System.DayOfWeek>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Calendar 
@@ -25,7 +25,7 @@ public static T FirstDayOfWeek<T>(this T control, Func<System.DayOfWeek> func, A
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T FirstDayOfWeek<T>(this T control,System.DayOfWeek value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.FirstDayOfWeekProperty, ps, () => control.FirstDayOfWeek = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.FirstDayOfWeekProperty, ps, () => control.FirstDayOfWeek = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T FirstDayOfWeek<T>(this T control, IBinding binding) where T : Avalonia.Controls.Calendar 
@@ -38,14 +38,14 @@ public static T FirstDayOfWeek<T>(this T control, AvaloniaProperty avaloniaPrope
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T FirstDayOfWeek<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.DayOfWeek> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.FirstDayOfWeekProperty, ps, () => control.FirstDayOfWeek = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.FirstDayOfWeekProperty, ps, () => control.FirstDayOfWeek = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsTodayHighlighted
 
 /*ValueSetterGenerator*/
 public static T IsTodayHighlighted<T>(this T control, System.Boolean value) where T : Avalonia.Controls.Calendar 
-=> control._set(() => control.IsTodayHighlighted = value!);
+=> control._set(() => control.IsTodayHighlighted = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T IsTodayHighlighted<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Calendar 
@@ -54,7 +54,7 @@ public static T IsTodayHighlighted<T>(this T control, Func<System.Boolean> func,
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IsTodayHighlighted<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.IsTodayHighlightedProperty, ps, () => control.IsTodayHighlighted = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.IsTodayHighlightedProperty, ps, () => control.IsTodayHighlighted = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T IsTodayHighlighted<T>(this T control, IBinding binding) where T : Avalonia.Controls.Calendar 
@@ -67,23 +67,23 @@ public static T IsTodayHighlighted<T>(this T control, AvaloniaProperty avaloniaP
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T IsTodayHighlighted<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.IsTodayHighlightedProperty, ps, () => control.IsTodayHighlighted = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.IsTodayHighlightedProperty, ps, () => control.IsTodayHighlighted = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // HeaderBackground
 
 /*ValueSetterGenerator*/
-public static T HeaderBackground<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Calendar 
-=> control._set(() => control.HeaderBackground = value!);
+public static T HeaderBackground<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Calendar 
+=> control._set(() => control.HeaderBackground = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T HeaderBackground<T>(this T control, Func<Avalonia.Media.IBrush> func, Action<Avalonia.Media.IBrush>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Calendar 
+public static T HeaderBackground<T>(this T control, Func<Avalonia.Media.IBrush?> func, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Calendar 
    => control._set(Avalonia.Controls.Calendar.HeaderBackgroundProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T HeaderBackground<T>(this T control,Avalonia.Media.IBrush value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.HeaderBackgroundProperty, ps, () => control.HeaderBackground = value!, bindingMode, converter, bindingSource);
+public static T HeaderBackground<T>(this T control,Avalonia.Media.IBrush? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
+=> control._setEx(Avalonia.Controls.Calendar.HeaderBackgroundProperty, ps, () => control.HeaderBackground = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T HeaderBackground<T>(this T control, IBinding binding) where T : Avalonia.Controls.Calendar 
@@ -95,15 +95,15 @@ public static T HeaderBackground<T>(this T control, AvaloniaProperty avaloniaPro
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T HeaderBackground<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.HeaderBackgroundProperty, ps, () => control.HeaderBackground = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T HeaderBackground<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
+=> control._setEx(Avalonia.Controls.Calendar.HeaderBackgroundProperty, ps, () => control.HeaderBackground = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // DisplayMode
 
 /*ValueSetterGenerator*/
 public static T DisplayMode<T>(this T control, Avalonia.Controls.CalendarMode value) where T : Avalonia.Controls.Calendar 
-=> control._set(() => control.DisplayMode = value!);
+=> control._set(() => control.DisplayMode = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T DisplayMode<T>(this T control, Func<Avalonia.Controls.CalendarMode> func, Action<Avalonia.Controls.CalendarMode>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Calendar 
@@ -112,7 +112,7 @@ public static T DisplayMode<T>(this T control, Func<Avalonia.Controls.CalendarMo
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T DisplayMode<T>(this T control,Avalonia.Controls.CalendarMode value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.DisplayModeProperty, ps, () => control.DisplayMode = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.DisplayModeProperty, ps, () => control.DisplayMode = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T DisplayMode<T>(this T control, IBinding binding) where T : Avalonia.Controls.Calendar 
@@ -125,14 +125,14 @@ public static T DisplayMode<T>(this T control, AvaloniaProperty avaloniaProperty
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T DisplayMode<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.CalendarMode> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.DisplayModeProperty, ps, () => control.DisplayMode = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.DisplayModeProperty, ps, () => control.DisplayMode = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SelectionMode
 
 /*ValueSetterGenerator*/
 public static T SelectionMode<T>(this T control, Avalonia.Controls.CalendarSelectionMode value) where T : Avalonia.Controls.Calendar 
-=> control._set(() => control.SelectionMode = value!);
+=> control._set(() => control.SelectionMode = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T SelectionMode<T>(this T control, Func<Avalonia.Controls.CalendarSelectionMode> func, Action<Avalonia.Controls.CalendarSelectionMode>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Calendar 
@@ -141,7 +141,7 @@ public static T SelectionMode<T>(this T control, Func<Avalonia.Controls.Calendar
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectionMode<T>(this T control,Avalonia.Controls.CalendarSelectionMode value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.SelectionModeProperty, ps, () => control.SelectionMode = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.SelectionModeProperty, ps, () => control.SelectionMode = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SelectionMode<T>(this T control, IBinding binding) where T : Avalonia.Controls.Calendar 
@@ -154,14 +154,14 @@ public static T SelectionMode<T>(this T control, AvaloniaProperty avaloniaProper
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T SelectionMode<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.CalendarSelectionMode> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.SelectionModeProperty, ps, () => control.SelectionMode = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.SelectionModeProperty, ps, () => control.SelectionMode = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // AllowTapRangeSelection
 
 /*ValueSetterGenerator*/
 public static T AllowTapRangeSelection<T>(this T control, System.Boolean value) where T : Avalonia.Controls.Calendar 
-=> control._set(() => control.AllowTapRangeSelection = value!);
+=> control._set(() => control.AllowTapRangeSelection = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T AllowTapRangeSelection<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Calendar 
@@ -170,7 +170,7 @@ public static T AllowTapRangeSelection<T>(this T control, Func<System.Boolean> f
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T AllowTapRangeSelection<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.AllowTapRangeSelectionProperty, ps, () => control.AllowTapRangeSelection = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.AllowTapRangeSelectionProperty, ps, () => control.AllowTapRangeSelection = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T AllowTapRangeSelection<T>(this T control, IBinding binding) where T : Avalonia.Controls.Calendar 
@@ -183,14 +183,14 @@ public static T AllowTapRangeSelection<T>(this T control, AvaloniaProperty avalo
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T AllowTapRangeSelection<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.AllowTapRangeSelectionProperty, ps, () => control.AllowTapRangeSelection = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.AllowTapRangeSelectionProperty, ps, () => control.AllowTapRangeSelection = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SelectedDate
 
 /*ValueSetterGenerator*/
 public static T SelectedDate<T>(this T control, System.Nullable<System.DateTime> value) where T : Avalonia.Controls.Calendar 
-=> control._set(() => control.SelectedDate = value!);
+=> control._set(() => control.SelectedDate = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T SelectedDate<T>(this T control, Func<System.Nullable<System.DateTime>> func, Action<System.Nullable<System.DateTime>>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Calendar 
@@ -199,7 +199,7 @@ public static T SelectedDate<T>(this T control, Func<System.Nullable<System.Date
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectedDate<T>(this T control,System.Nullable<System.DateTime> value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.SelectedDateProperty, ps, () => control.SelectedDate = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.SelectedDateProperty, ps, () => control.SelectedDate = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SelectedDate<T>(this T control, IBinding binding) where T : Avalonia.Controls.Calendar 
@@ -212,14 +212,14 @@ public static T SelectedDate<T>(this T control, AvaloniaProperty avaloniaPropert
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T SelectedDate<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Nullable<System.DateTime>> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.SelectedDateProperty, ps, () => control.SelectedDate = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.SelectedDateProperty, ps, () => control.SelectedDate = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // DisplayDate
 
 /*ValueSetterGenerator*/
 public static T DisplayDate<T>(this T control, System.DateTime value) where T : Avalonia.Controls.Calendar 
-=> control._set(() => control.DisplayDate = value!);
+=> control._set(() => control.DisplayDate = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T DisplayDate<T>(this T control, Func<System.DateTime> func, Action<System.DateTime>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Calendar 
@@ -228,7 +228,7 @@ public static T DisplayDate<T>(this T control, Func<System.DateTime> func, Actio
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T DisplayDate<T>(this T control,System.DateTime value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.DisplayDateProperty, ps, () => control.DisplayDate = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.DisplayDateProperty, ps, () => control.DisplayDate = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T DisplayDate<T>(this T control, IBinding binding) where T : Avalonia.Controls.Calendar 
@@ -241,14 +241,14 @@ public static T DisplayDate<T>(this T control, AvaloniaProperty avaloniaProperty
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T DisplayDate<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.DateTime> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.DisplayDateProperty, ps, () => control.DisplayDate = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.DisplayDateProperty, ps, () => control.DisplayDate = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // DisplayDateStart
 
 /*ValueSetterGenerator*/
 public static T DisplayDateStart<T>(this T control, System.Nullable<System.DateTime> value) where T : Avalonia.Controls.Calendar 
-=> control._set(() => control.DisplayDateStart = value!);
+=> control._set(() => control.DisplayDateStart = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T DisplayDateStart<T>(this T control, Func<System.Nullable<System.DateTime>> func, Action<System.Nullable<System.DateTime>>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Calendar 
@@ -257,7 +257,7 @@ public static T DisplayDateStart<T>(this T control, Func<System.Nullable<System.
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T DisplayDateStart<T>(this T control,System.Nullable<System.DateTime> value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.DisplayDateStartProperty, ps, () => control.DisplayDateStart = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.DisplayDateStartProperty, ps, () => control.DisplayDateStart = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T DisplayDateStart<T>(this T control, IBinding binding) where T : Avalonia.Controls.Calendar 
@@ -270,14 +270,14 @@ public static T DisplayDateStart<T>(this T control, AvaloniaProperty avaloniaPro
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T DisplayDateStart<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Nullable<System.DateTime>> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.DisplayDateStartProperty, ps, () => control.DisplayDateStart = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.DisplayDateStartProperty, ps, () => control.DisplayDateStart = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // DisplayDateEnd
 
 /*ValueSetterGenerator*/
 public static T DisplayDateEnd<T>(this T control, System.Nullable<System.DateTime> value) where T : Avalonia.Controls.Calendar 
-=> control._set(() => control.DisplayDateEnd = value!);
+=> control._set(() => control.DisplayDateEnd = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T DisplayDateEnd<T>(this T control, Func<System.Nullable<System.DateTime>> func, Action<System.Nullable<System.DateTime>>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Calendar 
@@ -286,7 +286,7 @@ public static T DisplayDateEnd<T>(this T control, Func<System.Nullable<System.Da
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T DisplayDateEnd<T>(this T control,System.Nullable<System.DateTime> value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.DisplayDateEndProperty, ps, () => control.DisplayDateEnd = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.DisplayDateEndProperty, ps, () => control.DisplayDateEnd = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T DisplayDateEnd<T>(this T control, IBinding binding) where T : Avalonia.Controls.Calendar 
@@ -299,7 +299,7 @@ public static T DisplayDateEnd<T>(this T control, AvaloniaProperty avaloniaPrope
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T DisplayDateEnd<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Nullable<System.DateTime>> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Calendar 
-=> control._setEx(Avalonia.Controls.Calendar.DisplayDateEndProperty, ps, () => control.DisplayDateEnd = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Calendar.DisplayDateEndProperty, ps, () => control.DisplayDateEnd = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 
@@ -352,7 +352,7 @@ public static Style<T> IsTodayHighlighted<T>(this Style<T> style, IBinding bindi
  // HeaderBackground
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> HeaderBackground<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Calendar 
+public static Style<T> HeaderBackground<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Calendar 
 => style._addSetter(Avalonia.Controls.Calendar.HeaderBackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

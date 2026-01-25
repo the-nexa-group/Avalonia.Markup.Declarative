@@ -16,7 +16,7 @@ public static partial class TileBrush_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T AlignmentX<T>(this T control, Avalonia.Media.AlignmentX value) where T : Avalonia.Media.TileBrush 
-=> control._set(() => control.AlignmentX = value!);
+=> control._set(() => control.AlignmentX = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T AlignmentX<T>(this T control, Func<Avalonia.Media.AlignmentX> func, Action<Avalonia.Media.AlignmentX>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TileBrush 
@@ -25,7 +25,7 @@ public static T AlignmentX<T>(this T control, Func<Avalonia.Media.AlignmentX> fu
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T AlignmentX<T>(this T control,Avalonia.Media.AlignmentX value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TileBrush 
-=> control._setEx(Avalonia.Media.TileBrush.AlignmentXProperty, ps, () => control.AlignmentX = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TileBrush.AlignmentXProperty, ps, () => control.AlignmentX = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T AlignmentX<T>(this T control, IBinding binding) where T : Avalonia.Media.TileBrush 
@@ -38,14 +38,14 @@ public static T AlignmentX<T>(this T control, AvaloniaProperty avaloniaProperty,
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T AlignmentX<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.AlignmentX> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TileBrush 
-=> control._setEx(Avalonia.Media.TileBrush.AlignmentXProperty, ps, () => control.AlignmentX = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TileBrush.AlignmentXProperty, ps, () => control.AlignmentX = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // AlignmentY
 
 /*ValueSetterGenerator*/
 public static T AlignmentY<T>(this T control, Avalonia.Media.AlignmentY value) where T : Avalonia.Media.TileBrush 
-=> control._set(() => control.AlignmentY = value!);
+=> control._set(() => control.AlignmentY = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T AlignmentY<T>(this T control, Func<Avalonia.Media.AlignmentY> func, Action<Avalonia.Media.AlignmentY>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TileBrush 
@@ -54,7 +54,7 @@ public static T AlignmentY<T>(this T control, Func<Avalonia.Media.AlignmentY> fu
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T AlignmentY<T>(this T control,Avalonia.Media.AlignmentY value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TileBrush 
-=> control._setEx(Avalonia.Media.TileBrush.AlignmentYProperty, ps, () => control.AlignmentY = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TileBrush.AlignmentYProperty, ps, () => control.AlignmentY = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T AlignmentY<T>(this T control, IBinding binding) where T : Avalonia.Media.TileBrush 
@@ -67,14 +67,14 @@ public static T AlignmentY<T>(this T control, AvaloniaProperty avaloniaProperty,
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T AlignmentY<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.AlignmentY> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TileBrush 
-=> control._setEx(Avalonia.Media.TileBrush.AlignmentYProperty, ps, () => control.AlignmentY = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TileBrush.AlignmentYProperty, ps, () => control.AlignmentY = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // DestinationRect
 
 /*ValueSetterGenerator*/
 public static T DestinationRect<T>(this T control, Avalonia.RelativeRect value) where T : Avalonia.Media.TileBrush 
-=> control._set(() => control.DestinationRect = value!);
+=> control._set(() => control.DestinationRect = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T DestinationRect<T>(this T control, Func<Avalonia.RelativeRect> func, Action<Avalonia.RelativeRect>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TileBrush 
@@ -96,7 +96,7 @@ public static T DestinationRect<T>(this T control, Avalonia.Point topLeft = defa
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T DestinationRect<T>(this T control,Avalonia.RelativeRect value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TileBrush 
-=> control._setEx(Avalonia.Media.TileBrush.DestinationRectProperty, ps, () => control.DestinationRect = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TileBrush.DestinationRectProperty, ps, () => control.DestinationRect = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T DestinationRect<T>(this T control, IBinding binding) where T : Avalonia.Media.TileBrush 
@@ -109,14 +109,14 @@ public static T DestinationRect<T>(this T control, AvaloniaProperty avaloniaProp
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T DestinationRect<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.RelativeRect> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TileBrush 
-=> control._setEx(Avalonia.Media.TileBrush.DestinationRectProperty, ps, () => control.DestinationRect = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TileBrush.DestinationRectProperty, ps, () => control.DestinationRect = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SourceRect
 
 /*ValueSetterGenerator*/
 public static T SourceRect<T>(this T control, Avalonia.RelativeRect value) where T : Avalonia.Media.TileBrush 
-=> control._set(() => control.SourceRect = value!);
+=> control._set(() => control.SourceRect = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T SourceRect<T>(this T control, Func<Avalonia.RelativeRect> func, Action<Avalonia.RelativeRect>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TileBrush 
@@ -138,7 +138,7 @@ public static T SourceRect<T>(this T control, Avalonia.Point topLeft = default!,
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SourceRect<T>(this T control,Avalonia.RelativeRect value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TileBrush 
-=> control._setEx(Avalonia.Media.TileBrush.SourceRectProperty, ps, () => control.SourceRect = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TileBrush.SourceRectProperty, ps, () => control.SourceRect = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SourceRect<T>(this T control, IBinding binding) where T : Avalonia.Media.TileBrush 
@@ -151,14 +151,14 @@ public static T SourceRect<T>(this T control, AvaloniaProperty avaloniaProperty,
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T SourceRect<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.RelativeRect> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TileBrush 
-=> control._setEx(Avalonia.Media.TileBrush.SourceRectProperty, ps, () => control.SourceRect = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TileBrush.SourceRectProperty, ps, () => control.SourceRect = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Stretch
 
 /*ValueSetterGenerator*/
 public static T Stretch<T>(this T control, Avalonia.Media.Stretch value) where T : Avalonia.Media.TileBrush 
-=> control._set(() => control.Stretch = value!);
+=> control._set(() => control.Stretch = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Stretch<T>(this T control, Func<Avalonia.Media.Stretch> func, Action<Avalonia.Media.Stretch>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TileBrush 
@@ -167,7 +167,7 @@ public static T Stretch<T>(this T control, Func<Avalonia.Media.Stretch> func, Ac
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Stretch<T>(this T control,Avalonia.Media.Stretch value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TileBrush 
-=> control._setEx(Avalonia.Media.TileBrush.StretchProperty, ps, () => control.Stretch = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TileBrush.StretchProperty, ps, () => control.Stretch = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Stretch<T>(this T control, IBinding binding) where T : Avalonia.Media.TileBrush 
@@ -180,14 +180,14 @@ public static T Stretch<T>(this T control, AvaloniaProperty avaloniaProperty, Bi
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Stretch<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Stretch> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TileBrush 
-=> control._setEx(Avalonia.Media.TileBrush.StretchProperty, ps, () => control.Stretch = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TileBrush.StretchProperty, ps, () => control.Stretch = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // TileMode
 
 /*ValueSetterGenerator*/
 public static T TileMode<T>(this T control, Avalonia.Media.TileMode value) where T : Avalonia.Media.TileBrush 
-=> control._set(() => control.TileMode = value!);
+=> control._set(() => control.TileMode = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T TileMode<T>(this T control, Func<Avalonia.Media.TileMode> func, Action<Avalonia.Media.TileMode>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TileBrush 
@@ -196,7 +196,7 @@ public static T TileMode<T>(this T control, Func<Avalonia.Media.TileMode> func, 
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T TileMode<T>(this T control,Avalonia.Media.TileMode value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TileBrush 
-=> control._setEx(Avalonia.Media.TileBrush.TileModeProperty, ps, () => control.TileMode = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TileBrush.TileModeProperty, ps, () => control.TileMode = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T TileMode<T>(this T control, IBinding binding) where T : Avalonia.Media.TileBrush 
@@ -209,7 +209,7 @@ public static T TileMode<T>(this T control, AvaloniaProperty avaloniaProperty, B
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T TileMode<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.TileMode> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TileBrush 
-=> control._setEx(Avalonia.Media.TileBrush.TileModeProperty, ps, () => control.TileMode = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TileBrush.TileModeProperty, ps, () => control.TileMode = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

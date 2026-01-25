@@ -15,17 +15,17 @@ public static partial class DrawingBrush_MarkupExtensions
  // Drawing
 
 /*ValueSetterGenerator*/
-public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, Avalonia.Media.Drawing value)  
-=> control._set(() => control.Drawing = value!);
+public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, Avalonia.Media.Drawing? value)  
+=> control._set(() => control.Drawing = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, Func<Avalonia.Media.Drawing> func, Action<Avalonia.Media.Drawing>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
+public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, Func<Avalonia.Media.Drawing?> func, Action<Avalonia.Media.Drawing?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
    => control._set(Avalonia.Media.DrawingBrush.DrawingProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control,Avalonia.Media.Drawing value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.DrawingBrush.DrawingProperty, ps, () => control.Drawing = value!, bindingMode, converter, bindingSource);
+public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control,Avalonia.Media.Drawing? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
+=> control._setEx(Avalonia.Media.DrawingBrush.DrawingProperty, ps, () => control.Drawing = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, IBinding binding)  
@@ -37,8 +37,8 @@ public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBru
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static Avalonia.Media.DrawingBrush Drawing<TValue>(this Avalonia.Media.DrawingBrush control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Drawing> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.DrawingBrush.DrawingProperty, ps, () => control.Drawing = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static Avalonia.Media.DrawingBrush Drawing<TValue>(this Avalonia.Media.DrawingBrush control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Drawing?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
+=> control._setEx(Avalonia.Media.DrawingBrush.DrawingProperty, ps, () => control.Drawing = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

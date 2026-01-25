@@ -16,7 +16,7 @@ public static partial class Arc_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T StartAngle<T>(this T control, System.Double value) where T : Avalonia.Controls.Shapes.Arc 
-=> control._set(() => control.StartAngle = value!);
+=> control._set(() => control.StartAngle = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T StartAngle<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Shapes.Arc 
@@ -25,7 +25,7 @@ public static T StartAngle<T>(this T control, Func<System.Double> func, Action<S
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T StartAngle<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Shapes.Arc 
-=> control._setEx(Avalonia.Controls.Shapes.Arc.StartAngleProperty, ps, () => control.StartAngle = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Shapes.Arc.StartAngleProperty, ps, () => control.StartAngle = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T StartAngle<T>(this T control, IBinding binding) where T : Avalonia.Controls.Shapes.Arc 
@@ -38,14 +38,14 @@ public static T StartAngle<T>(this T control, AvaloniaProperty avaloniaProperty,
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T StartAngle<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Shapes.Arc 
-=> control._setEx(Avalonia.Controls.Shapes.Arc.StartAngleProperty, ps, () => control.StartAngle = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Shapes.Arc.StartAngleProperty, ps, () => control.StartAngle = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SweepAngle
 
 /*ValueSetterGenerator*/
 public static T SweepAngle<T>(this T control, System.Double value) where T : Avalonia.Controls.Shapes.Arc 
-=> control._set(() => control.SweepAngle = value!);
+=> control._set(() => control.SweepAngle = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T SweepAngle<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Shapes.Arc 
@@ -54,7 +54,7 @@ public static T SweepAngle<T>(this T control, Func<System.Double> func, Action<S
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SweepAngle<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Shapes.Arc 
-=> control._setEx(Avalonia.Controls.Shapes.Arc.SweepAngleProperty, ps, () => control.SweepAngle = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Shapes.Arc.SweepAngleProperty, ps, () => control.SweepAngle = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SweepAngle<T>(this T control, IBinding binding) where T : Avalonia.Controls.Shapes.Arc 
@@ -67,7 +67,7 @@ public static T SweepAngle<T>(this T control, AvaloniaProperty avaloniaProperty,
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T SweepAngle<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Shapes.Arc 
-=> control._setEx(Avalonia.Controls.Shapes.Arc.SweepAngleProperty, ps, () => control.SweepAngle = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Shapes.Arc.SweepAngleProperty, ps, () => control.SweepAngle = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

@@ -15,17 +15,17 @@ public static partial class Expander_MarkupExtensions
  // ContentTransition
 
 /*ValueSetterGenerator*/
-public static T ContentTransition<T>(this T control, Avalonia.Animation.IPageTransition value) where T : Avalonia.Controls.Expander 
-=> control._set(() => control.ContentTransition = value!);
+public static T ContentTransition<T>(this T control, Avalonia.Animation.IPageTransition? value) where T : Avalonia.Controls.Expander 
+=> control._set(() => control.ContentTransition = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T ContentTransition<T>(this T control, Func<Avalonia.Animation.IPageTransition> func, Action<Avalonia.Animation.IPageTransition>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Expander 
+public static T ContentTransition<T>(this T control, Func<Avalonia.Animation.IPageTransition?> func, Action<Avalonia.Animation.IPageTransition?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Expander 
    => control._set(Avalonia.Controls.Expander.ContentTransitionProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T ContentTransition<T>(this T control,Avalonia.Animation.IPageTransition value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Expander 
-=> control._setEx(Avalonia.Controls.Expander.ContentTransitionProperty, ps, () => control.ContentTransition = value!, bindingMode, converter, bindingSource);
+public static T ContentTransition<T>(this T control,Avalonia.Animation.IPageTransition? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Expander 
+=> control._setEx(Avalonia.Controls.Expander.ContentTransitionProperty, ps, () => control.ContentTransition = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T ContentTransition<T>(this T control, IBinding binding) where T : Avalonia.Controls.Expander 
@@ -37,15 +37,15 @@ public static T ContentTransition<T>(this T control, AvaloniaProperty avaloniaPr
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T ContentTransition<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Animation.IPageTransition> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Expander 
-=> control._setEx(Avalonia.Controls.Expander.ContentTransitionProperty, ps, () => control.ContentTransition = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T ContentTransition<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Animation.IPageTransition?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Expander 
+=> control._setEx(Avalonia.Controls.Expander.ContentTransitionProperty, ps, () => control.ContentTransition = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ExpandDirection
 
 /*ValueSetterGenerator*/
 public static T ExpandDirection<T>(this T control, Avalonia.Controls.ExpandDirection value) where T : Avalonia.Controls.Expander 
-=> control._set(() => control.ExpandDirection = value!);
+=> control._set(() => control.ExpandDirection = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T ExpandDirection<T>(this T control, Func<Avalonia.Controls.ExpandDirection> func, Action<Avalonia.Controls.ExpandDirection>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Expander 
@@ -54,7 +54,7 @@ public static T ExpandDirection<T>(this T control, Func<Avalonia.Controls.Expand
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ExpandDirection<T>(this T control,Avalonia.Controls.ExpandDirection value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Expander 
-=> control._setEx(Avalonia.Controls.Expander.ExpandDirectionProperty, ps, () => control.ExpandDirection = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Expander.ExpandDirectionProperty, ps, () => control.ExpandDirection = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T ExpandDirection<T>(this T control, IBinding binding) where T : Avalonia.Controls.Expander 
@@ -67,14 +67,14 @@ public static T ExpandDirection<T>(this T control, AvaloniaProperty avaloniaProp
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T ExpandDirection<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.ExpandDirection> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Expander 
-=> control._setEx(Avalonia.Controls.Expander.ExpandDirectionProperty, ps, () => control.ExpandDirection = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Expander.ExpandDirectionProperty, ps, () => control.ExpandDirection = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsExpanded
 
 /*ValueSetterGenerator*/
 public static T IsExpanded<T>(this T control, System.Boolean value) where T : Avalonia.Controls.Expander 
-=> control._set(() => control.IsExpanded = value!);
+=> control._set(() => control.IsExpanded = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T IsExpanded<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Expander 
@@ -83,7 +83,7 @@ public static T IsExpanded<T>(this T control, Func<System.Boolean> func, Action<
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IsExpanded<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Expander 
-=> control._setEx(Avalonia.Controls.Expander.IsExpandedProperty, ps, () => control.IsExpanded = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Expander.IsExpandedProperty, ps, () => control.IsExpanded = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T IsExpanded<T>(this T control, IBinding binding) where T : Avalonia.Controls.Expander 
@@ -96,7 +96,7 @@ public static T IsExpanded<T>(this T control, AvaloniaProperty avaloniaProperty,
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T IsExpanded<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Expander 
-=> control._setEx(Avalonia.Controls.Expander.IsExpandedProperty, ps, () => control.IsExpanded = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Expander.IsExpandedProperty, ps, () => control.IsExpanded = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 
@@ -150,7 +150,7 @@ public static T OnExpanding<T>(this T control, Action<Avalonia.Interactivity.Can
  // ContentTransition
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> ContentTransition<T>(this Style<T> style, Avalonia.Animation.IPageTransition value) where T : Avalonia.Controls.Expander 
+public static Style<T> ContentTransition<T>(this Style<T> style, Avalonia.Animation.IPageTransition? value) where T : Avalonia.Controls.Expander 
 => style._addSetter(Avalonia.Controls.Expander.ContentTransitionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

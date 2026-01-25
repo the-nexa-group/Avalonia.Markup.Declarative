@@ -16,7 +16,7 @@ public static partial class DockPanel_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T LastChildFill<T>(this T control, System.Boolean value) where T : Avalonia.Controls.DockPanel 
-=> control._set(() => control.LastChildFill = value!);
+=> control._set(() => control.LastChildFill = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T LastChildFill<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.DockPanel 
@@ -25,7 +25,7 @@ public static T LastChildFill<T>(this T control, Func<System.Boolean> func, Acti
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T LastChildFill<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DockPanel 
-=> control._setEx(Avalonia.Controls.DockPanel.LastChildFillProperty, ps, () => control.LastChildFill = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.DockPanel.LastChildFillProperty, ps, () => control.LastChildFill = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T LastChildFill<T>(this T control, IBinding binding) where T : Avalonia.Controls.DockPanel 
@@ -38,14 +38,14 @@ public static T LastChildFill<T>(this T control, AvaloniaProperty avaloniaProper
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T LastChildFill<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DockPanel 
-=> control._setEx(Avalonia.Controls.DockPanel.LastChildFillProperty, ps, () => control.LastChildFill = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.DockPanel.LastChildFillProperty, ps, () => control.LastChildFill = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // HorizontalSpacing
 
 /*ValueSetterGenerator*/
 public static T HorizontalSpacing<T>(this T control, System.Double value) where T : Avalonia.Controls.DockPanel 
-=> control._set(() => control.HorizontalSpacing = value!);
+=> control._set(() => control.HorizontalSpacing = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T HorizontalSpacing<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.DockPanel 
@@ -54,7 +54,7 @@ public static T HorizontalSpacing<T>(this T control, Func<System.Double> func, A
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T HorizontalSpacing<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DockPanel 
-=> control._setEx(Avalonia.Controls.DockPanel.HorizontalSpacingProperty, ps, () => control.HorizontalSpacing = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.DockPanel.HorizontalSpacingProperty, ps, () => control.HorizontalSpacing = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T HorizontalSpacing<T>(this T control, IBinding binding) where T : Avalonia.Controls.DockPanel 
@@ -67,14 +67,14 @@ public static T HorizontalSpacing<T>(this T control, AvaloniaProperty avaloniaPr
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T HorizontalSpacing<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DockPanel 
-=> control._setEx(Avalonia.Controls.DockPanel.HorizontalSpacingProperty, ps, () => control.HorizontalSpacing = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.DockPanel.HorizontalSpacingProperty, ps, () => control.HorizontalSpacing = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // VerticalSpacing
 
 /*ValueSetterGenerator*/
 public static T VerticalSpacing<T>(this T control, System.Double value) where T : Avalonia.Controls.DockPanel 
-=> control._set(() => control.VerticalSpacing = value!);
+=> control._set(() => control.VerticalSpacing = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T VerticalSpacing<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.DockPanel 
@@ -83,7 +83,7 @@ public static T VerticalSpacing<T>(this T control, Func<System.Double> func, Act
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T VerticalSpacing<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DockPanel 
-=> control._setEx(Avalonia.Controls.DockPanel.VerticalSpacingProperty, ps, () => control.VerticalSpacing = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.DockPanel.VerticalSpacingProperty, ps, () => control.VerticalSpacing = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T VerticalSpacing<T>(this T control, IBinding binding) where T : Avalonia.Controls.DockPanel 
@@ -96,7 +96,7 @@ public static T VerticalSpacing<T>(this T control, AvaloniaProperty avaloniaProp
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T VerticalSpacing<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DockPanel 
-=> control._setEx(Avalonia.Controls.DockPanel.VerticalSpacingProperty, ps, () => control.VerticalSpacing = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.DockPanel.VerticalSpacingProperty, ps, () => control.VerticalSpacing = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

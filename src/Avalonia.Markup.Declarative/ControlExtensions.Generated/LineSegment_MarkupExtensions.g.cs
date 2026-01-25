@@ -16,7 +16,7 @@ public static partial class LineSegment_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.LineSegment Point(this Avalonia.Media.LineSegment control, Avalonia.Point value)  
-=> control._set(() => control.Point = value!);
+=> control._set(() => control.Point = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.LineSegment Point(this Avalonia.Media.LineSegment control, Func<Avalonia.Point> func, Action<Avalonia.Point>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -25,7 +25,7 @@ public static Avalonia.Media.LineSegment Point(this Avalonia.Media.LineSegment c
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.LineSegment Point(this Avalonia.Media.LineSegment control,Avalonia.Point value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.LineSegment.PointProperty, ps, () => control.Point = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.LineSegment.PointProperty, ps, () => control.Point = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.LineSegment Point(this Avalonia.Media.LineSegment control, IBinding binding)  
@@ -38,7 +38,7 @@ public static Avalonia.Media.LineSegment Point(this Avalonia.Media.LineSegment c
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.LineSegment Point<TValue>(this Avalonia.Media.LineSegment control, TValue value, FuncValueConverter<TValue, Avalonia.Point> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.LineSegment.PointProperty, ps, () => control.Point = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.LineSegment.PointProperty, ps, () => control.Point = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

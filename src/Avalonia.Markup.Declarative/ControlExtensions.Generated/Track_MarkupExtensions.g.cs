@@ -16,7 +16,7 @@ public static partial class Track_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T Minimum<T>(this T control, System.Double value) where T : Avalonia.Controls.Primitives.Track 
-=> control._set(() => control.Minimum = value!);
+=> control._set(() => control.Minimum = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Minimum<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
@@ -25,7 +25,7 @@ public static T Minimum<T>(this T control, Func<System.Double> func, Action<Syst
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Minimum<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.MinimumProperty, ps, () => control.Minimum = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.MinimumProperty, ps, () => control.Minimum = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Minimum<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
@@ -38,14 +38,14 @@ public static T Minimum<T>(this T control, AvaloniaProperty avaloniaProperty, Bi
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Minimum<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.MinimumProperty, ps, () => control.Minimum = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.MinimumProperty, ps, () => control.Minimum = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Maximum
 
 /*ValueSetterGenerator*/
 public static T Maximum<T>(this T control, System.Double value) where T : Avalonia.Controls.Primitives.Track 
-=> control._set(() => control.Maximum = value!);
+=> control._set(() => control.Maximum = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Maximum<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
@@ -54,7 +54,7 @@ public static T Maximum<T>(this T control, Func<System.Double> func, Action<Syst
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Maximum<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.MaximumProperty, ps, () => control.Maximum = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.MaximumProperty, ps, () => control.Maximum = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Maximum<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
@@ -67,14 +67,14 @@ public static T Maximum<T>(this T control, AvaloniaProperty avaloniaProperty, Bi
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Maximum<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.MaximumProperty, ps, () => control.Maximum = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.MaximumProperty, ps, () => control.Maximum = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Value
 
 /*ValueSetterGenerator*/
 public static T Value<T>(this T control, System.Double value) where T : Avalonia.Controls.Primitives.Track 
-=> control._set(() => control.Value = value!);
+=> control._set(() => control.Value = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Value<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
@@ -83,7 +83,7 @@ public static T Value<T>(this T control, Func<System.Double> func, Action<System
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Value<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.ValueProperty, ps, () => control.Value = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.ValueProperty, ps, () => control.Value = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Value<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
@@ -96,14 +96,14 @@ public static T Value<T>(this T control, AvaloniaProperty avaloniaProperty, Bind
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Value<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.ValueProperty, ps, () => control.Value = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.ValueProperty, ps, () => control.Value = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ViewportSize
 
 /*ValueSetterGenerator*/
 public static T ViewportSize<T>(this T control, System.Double value) where T : Avalonia.Controls.Primitives.Track 
-=> control._set(() => control.ViewportSize = value!);
+=> control._set(() => control.ViewportSize = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T ViewportSize<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
@@ -112,7 +112,7 @@ public static T ViewportSize<T>(this T control, Func<System.Double> func, Action
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ViewportSize<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.ViewportSizeProperty, ps, () => control.ViewportSize = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.ViewportSizeProperty, ps, () => control.ViewportSize = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T ViewportSize<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
@@ -125,14 +125,14 @@ public static T ViewportSize<T>(this T control, AvaloniaProperty avaloniaPropert
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T ViewportSize<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.ViewportSizeProperty, ps, () => control.ViewportSize = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.ViewportSizeProperty, ps, () => control.ViewportSize = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Orientation
 
 /*ValueSetterGenerator*/
 public static T Orientation<T>(this T control, Avalonia.Layout.Orientation value) where T : Avalonia.Controls.Primitives.Track 
-=> control._set(() => control.Orientation = value!);
+=> control._set(() => control.Orientation = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Orientation<T>(this T control, Func<Avalonia.Layout.Orientation> func, Action<Avalonia.Layout.Orientation>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
@@ -141,7 +141,7 @@ public static T Orientation<T>(this T control, Func<Avalonia.Layout.Orientation>
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Orientation<T>(this T control,Avalonia.Layout.Orientation value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.OrientationProperty, ps, () => control.Orientation = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.OrientationProperty, ps, () => control.Orientation = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Orientation<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
@@ -154,23 +154,23 @@ public static T Orientation<T>(this T control, AvaloniaProperty avaloniaProperty
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Orientation<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Layout.Orientation> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.OrientationProperty, ps, () => control.Orientation = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.OrientationProperty, ps, () => control.Orientation = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Thumb
 
 /*ValueSetterGenerator*/
-public static T Thumb<T>(this T control, Avalonia.Controls.Primitives.Thumb value) where T : Avalonia.Controls.Primitives.Track 
-=> control._set(() => control.Thumb = value!);
+public static T Thumb<T>(this T control, Avalonia.Controls.Primitives.Thumb? value) where T : Avalonia.Controls.Primitives.Track 
+=> control._set(() => control.Thumb = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T Thumb<T>(this T control, Func<Avalonia.Controls.Primitives.Thumb> func, Action<Avalonia.Controls.Primitives.Thumb>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
+public static T Thumb<T>(this T control, Func<Avalonia.Controls.Primitives.Thumb?> func, Action<Avalonia.Controls.Primitives.Thumb?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.ThumbProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T Thumb<T>(this T control,Avalonia.Controls.Primitives.Thumb value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.ThumbProperty, ps, () => control.Thumb = value!, bindingMode, converter, bindingSource);
+public static T Thumb<T>(this T control,Avalonia.Controls.Primitives.Thumb? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
+=> control._setEx(Avalonia.Controls.Primitives.Track.ThumbProperty, ps, () => control.Thumb = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Thumb<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
@@ -182,24 +182,24 @@ public static T Thumb<T>(this T control, AvaloniaProperty avaloniaProperty, Bind
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T Thumb<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Primitives.Thumb> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.ThumbProperty, ps, () => control.Thumb = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T Thumb<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Primitives.Thumb?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
+=> control._setEx(Avalonia.Controls.Primitives.Track.ThumbProperty, ps, () => control.Thumb = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IncreaseButton
 
 /*ValueSetterGenerator*/
-public static T IncreaseButton<T>(this T control, Avalonia.Controls.Button value) where T : Avalonia.Controls.Primitives.Track 
-=> control._set(() => control.IncreaseButton = value!);
+public static T IncreaseButton<T>(this T control, Avalonia.Controls.Button? value) where T : Avalonia.Controls.Primitives.Track 
+=> control._set(() => control.IncreaseButton = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T IncreaseButton<T>(this T control, Func<Avalonia.Controls.Button> func, Action<Avalonia.Controls.Button>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
+public static T IncreaseButton<T>(this T control, Func<Avalonia.Controls.Button?> func, Action<Avalonia.Controls.Button?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T IncreaseButton<T>(this T control,Avalonia.Controls.Button value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty, ps, () => control.IncreaseButton = value!, bindingMode, converter, bindingSource);
+public static T IncreaseButton<T>(this T control,Avalonia.Controls.Button? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
+=> control._setEx(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty, ps, () => control.IncreaseButton = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T IncreaseButton<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
@@ -211,24 +211,24 @@ public static T IncreaseButton<T>(this T control, AvaloniaProperty avaloniaPrope
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T IncreaseButton<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Button> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty, ps, () => control.IncreaseButton = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T IncreaseButton<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Button?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
+=> control._setEx(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty, ps, () => control.IncreaseButton = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // DecreaseButton
 
 /*ValueSetterGenerator*/
-public static T DecreaseButton<T>(this T control, Avalonia.Controls.Button value) where T : Avalonia.Controls.Primitives.Track 
-=> control._set(() => control.DecreaseButton = value!);
+public static T DecreaseButton<T>(this T control, Avalonia.Controls.Button? value) where T : Avalonia.Controls.Primitives.Track 
+=> control._set(() => control.DecreaseButton = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T DecreaseButton<T>(this T control, Func<Avalonia.Controls.Button> func, Action<Avalonia.Controls.Button>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
+public static T DecreaseButton<T>(this T control, Func<Avalonia.Controls.Button?> func, Action<Avalonia.Controls.Button?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T DecreaseButton<T>(this T control,Avalonia.Controls.Button value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty, ps, () => control.DecreaseButton = value!, bindingMode, converter, bindingSource);
+public static T DecreaseButton<T>(this T control,Avalonia.Controls.Button? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
+=> control._setEx(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty, ps, () => control.DecreaseButton = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T DecreaseButton<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
@@ -240,15 +240,15 @@ public static T DecreaseButton<T>(this T control, AvaloniaProperty avaloniaPrope
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T DecreaseButton<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Button> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty, ps, () => control.DecreaseButton = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T DecreaseButton<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Button?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
+=> control._setEx(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty, ps, () => control.DecreaseButton = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsDirectionReversed
 
 /*ValueSetterGenerator*/
 public static T IsDirectionReversed<T>(this T control, System.Boolean value) where T : Avalonia.Controls.Primitives.Track 
-=> control._set(() => control.IsDirectionReversed = value!);
+=> control._set(() => control.IsDirectionReversed = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T IsDirectionReversed<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
@@ -257,7 +257,7 @@ public static T IsDirectionReversed<T>(this T control, Func<System.Boolean> func
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IsDirectionReversed<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.IsDirectionReversedProperty, ps, () => control.IsDirectionReversed = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.IsDirectionReversedProperty, ps, () => control.IsDirectionReversed = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T IsDirectionReversed<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
@@ -270,14 +270,14 @@ public static T IsDirectionReversed<T>(this T control, AvaloniaProperty avalonia
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T IsDirectionReversed<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.IsDirectionReversedProperty, ps, () => control.IsDirectionReversed = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.IsDirectionReversedProperty, ps, () => control.IsDirectionReversed = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IgnoreThumbDrag
 
 /*ValueSetterGenerator*/
 public static T IgnoreThumbDrag<T>(this T control, System.Boolean value) where T : Avalonia.Controls.Primitives.Track 
-=> control._set(() => control.IgnoreThumbDrag = value!);
+=> control._set(() => control.IgnoreThumbDrag = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T IgnoreThumbDrag<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
@@ -286,7 +286,7 @@ public static T IgnoreThumbDrag<T>(this T control, Func<System.Boolean> func, Ac
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IgnoreThumbDrag<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.IgnoreThumbDragProperty, ps, () => control.IgnoreThumbDrag = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.IgnoreThumbDragProperty, ps, () => control.IgnoreThumbDrag = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T IgnoreThumbDrag<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
@@ -299,14 +299,14 @@ public static T IgnoreThumbDrag<T>(this T control, AvaloniaProperty avaloniaProp
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T IgnoreThumbDrag<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.IgnoreThumbDragProperty, ps, () => control.IgnoreThumbDrag = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.IgnoreThumbDragProperty, ps, () => control.IgnoreThumbDrag = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // DeferThumbDrag
 
 /*ValueSetterGenerator*/
 public static T DeferThumbDrag<T>(this T control, System.Boolean value) where T : Avalonia.Controls.Primitives.Track 
-=> control._set(() => control.DeferThumbDrag = value!);
+=> control._set(() => control.DeferThumbDrag = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T DeferThumbDrag<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
@@ -315,7 +315,7 @@ public static T DeferThumbDrag<T>(this T control, Func<System.Boolean> func, Act
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T DeferThumbDrag<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.DeferThumbDragProperty, ps, () => control.DeferThumbDrag = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.DeferThumbDragProperty, ps, () => control.DeferThumbDrag = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T DeferThumbDrag<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
@@ -328,7 +328,7 @@ public static T DeferThumbDrag<T>(this T control, AvaloniaProperty avaloniaPrope
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T DeferThumbDrag<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
-=> control._setEx(Avalonia.Controls.Primitives.Track.DeferThumbDragProperty, ps, () => control.DeferThumbDrag = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.Track.DeferThumbDragProperty, ps, () => control.DeferThumbDrag = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 
@@ -391,7 +391,7 @@ public static Style<T> Orientation<T>(this Style<T> style, IBinding binding) whe
  // Thumb
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Thumb<T>(this Style<T> style, Avalonia.Controls.Primitives.Thumb value) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> Thumb<T>(this Style<T> style, Avalonia.Controls.Primitives.Thumb? value) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.ThumbProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -402,7 +402,7 @@ public static Style<T> Thumb<T>(this Style<T> style, IBinding binding) where T :
  // IncreaseButton
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> IncreaseButton<T>(this Style<T> style, Avalonia.Controls.Button value) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> IncreaseButton<T>(this Style<T> style, Avalonia.Controls.Button? value) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -413,7 +413,7 @@ public static Style<T> IncreaseButton<T>(this Style<T> style, IBinding binding) 
  // DecreaseButton
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> DecreaseButton<T>(this Style<T> style, Avalonia.Controls.Button value) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> DecreaseButton<T>(this Style<T> style, Avalonia.Controls.Button? value) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

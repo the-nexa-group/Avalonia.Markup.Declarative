@@ -16,7 +16,7 @@ public static partial class Rotate3DTransform_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform AngleX(this Avalonia.Media.Rotate3DTransform control, System.Double value)  
-=> control._set(() => control.AngleX = value!);
+=> control._set(() => control.AngleX = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform AngleX(this Avalonia.Media.Rotate3DTransform control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -25,7 +25,7 @@ public static Avalonia.Media.Rotate3DTransform AngleX(this Avalonia.Media.Rotate
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.Rotate3DTransform AngleX(this Avalonia.Media.Rotate3DTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Rotate3DTransform.AngleXProperty, ps, () => control.AngleX = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Rotate3DTransform.AngleXProperty, ps, () => control.AngleX = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform AngleX(this Avalonia.Media.Rotate3DTransform control, IBinding binding)  
@@ -38,14 +38,14 @@ public static Avalonia.Media.Rotate3DTransform AngleX(this Avalonia.Media.Rotate
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.Rotate3DTransform AngleX<TValue>(this Avalonia.Media.Rotate3DTransform control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Rotate3DTransform.AngleXProperty, ps, () => control.AngleX = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Rotate3DTransform.AngleXProperty, ps, () => control.AngleX = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // AngleY
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform AngleY(this Avalonia.Media.Rotate3DTransform control, System.Double value)  
-=> control._set(() => control.AngleY = value!);
+=> control._set(() => control.AngleY = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform AngleY(this Avalonia.Media.Rotate3DTransform control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -54,7 +54,7 @@ public static Avalonia.Media.Rotate3DTransform AngleY(this Avalonia.Media.Rotate
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.Rotate3DTransform AngleY(this Avalonia.Media.Rotate3DTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Rotate3DTransform.AngleYProperty, ps, () => control.AngleY = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Rotate3DTransform.AngleYProperty, ps, () => control.AngleY = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform AngleY(this Avalonia.Media.Rotate3DTransform control, IBinding binding)  
@@ -67,14 +67,14 @@ public static Avalonia.Media.Rotate3DTransform AngleY(this Avalonia.Media.Rotate
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.Rotate3DTransform AngleY<TValue>(this Avalonia.Media.Rotate3DTransform control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Rotate3DTransform.AngleYProperty, ps, () => control.AngleY = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Rotate3DTransform.AngleYProperty, ps, () => control.AngleY = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // AngleZ
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform AngleZ(this Avalonia.Media.Rotate3DTransform control, System.Double value)  
-=> control._set(() => control.AngleZ = value!);
+=> control._set(() => control.AngleZ = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform AngleZ(this Avalonia.Media.Rotate3DTransform control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -83,7 +83,7 @@ public static Avalonia.Media.Rotate3DTransform AngleZ(this Avalonia.Media.Rotate
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.Rotate3DTransform AngleZ(this Avalonia.Media.Rotate3DTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Rotate3DTransform.AngleZProperty, ps, () => control.AngleZ = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Rotate3DTransform.AngleZProperty, ps, () => control.AngleZ = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform AngleZ(this Avalonia.Media.Rotate3DTransform control, IBinding binding)  
@@ -96,14 +96,14 @@ public static Avalonia.Media.Rotate3DTransform AngleZ(this Avalonia.Media.Rotate
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.Rotate3DTransform AngleZ<TValue>(this Avalonia.Media.Rotate3DTransform control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Rotate3DTransform.AngleZProperty, ps, () => control.AngleZ = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Rotate3DTransform.AngleZProperty, ps, () => control.AngleZ = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // CenterX
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform CenterX(this Avalonia.Media.Rotate3DTransform control, System.Double value)  
-=> control._set(() => control.CenterX = value!);
+=> control._set(() => control.CenterX = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform CenterX(this Avalonia.Media.Rotate3DTransform control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -112,7 +112,7 @@ public static Avalonia.Media.Rotate3DTransform CenterX(this Avalonia.Media.Rotat
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.Rotate3DTransform CenterX(this Avalonia.Media.Rotate3DTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Rotate3DTransform.CenterXProperty, ps, () => control.CenterX = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Rotate3DTransform.CenterXProperty, ps, () => control.CenterX = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform CenterX(this Avalonia.Media.Rotate3DTransform control, IBinding binding)  
@@ -125,14 +125,14 @@ public static Avalonia.Media.Rotate3DTransform CenterX(this Avalonia.Media.Rotat
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.Rotate3DTransform CenterX<TValue>(this Avalonia.Media.Rotate3DTransform control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Rotate3DTransform.CenterXProperty, ps, () => control.CenterX = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Rotate3DTransform.CenterXProperty, ps, () => control.CenterX = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // CenterY
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform CenterY(this Avalonia.Media.Rotate3DTransform control, System.Double value)  
-=> control._set(() => control.CenterY = value!);
+=> control._set(() => control.CenterY = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform CenterY(this Avalonia.Media.Rotate3DTransform control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -141,7 +141,7 @@ public static Avalonia.Media.Rotate3DTransform CenterY(this Avalonia.Media.Rotat
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.Rotate3DTransform CenterY(this Avalonia.Media.Rotate3DTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Rotate3DTransform.CenterYProperty, ps, () => control.CenterY = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Rotate3DTransform.CenterYProperty, ps, () => control.CenterY = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform CenterY(this Avalonia.Media.Rotate3DTransform control, IBinding binding)  
@@ -154,14 +154,14 @@ public static Avalonia.Media.Rotate3DTransform CenterY(this Avalonia.Media.Rotat
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.Rotate3DTransform CenterY<TValue>(this Avalonia.Media.Rotate3DTransform control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Rotate3DTransform.CenterYProperty, ps, () => control.CenterY = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Rotate3DTransform.CenterYProperty, ps, () => control.CenterY = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // CenterZ
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform CenterZ(this Avalonia.Media.Rotate3DTransform control, System.Double value)  
-=> control._set(() => control.CenterZ = value!);
+=> control._set(() => control.CenterZ = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform CenterZ(this Avalonia.Media.Rotate3DTransform control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -170,7 +170,7 @@ public static Avalonia.Media.Rotate3DTransform CenterZ(this Avalonia.Media.Rotat
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.Rotate3DTransform CenterZ(this Avalonia.Media.Rotate3DTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Rotate3DTransform.CenterZProperty, ps, () => control.CenterZ = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Rotate3DTransform.CenterZProperty, ps, () => control.CenterZ = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform CenterZ(this Avalonia.Media.Rotate3DTransform control, IBinding binding)  
@@ -183,14 +183,14 @@ public static Avalonia.Media.Rotate3DTransform CenterZ(this Avalonia.Media.Rotat
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.Rotate3DTransform CenterZ<TValue>(this Avalonia.Media.Rotate3DTransform control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Rotate3DTransform.CenterZProperty, ps, () => control.CenterZ = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Rotate3DTransform.CenterZProperty, ps, () => control.CenterZ = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Depth
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform Depth(this Avalonia.Media.Rotate3DTransform control, System.Double value)  
-=> control._set(() => control.Depth = value!);
+=> control._set(() => control.Depth = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform Depth(this Avalonia.Media.Rotate3DTransform control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -199,7 +199,7 @@ public static Avalonia.Media.Rotate3DTransform Depth(this Avalonia.Media.Rotate3
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.Rotate3DTransform Depth(this Avalonia.Media.Rotate3DTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Rotate3DTransform.DepthProperty, ps, () => control.Depth = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Rotate3DTransform.DepthProperty, ps, () => control.Depth = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.Rotate3DTransform Depth(this Avalonia.Media.Rotate3DTransform control, IBinding binding)  
@@ -212,7 +212,7 @@ public static Avalonia.Media.Rotate3DTransform Depth(this Avalonia.Media.Rotate3
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.Rotate3DTransform Depth<TValue>(this Avalonia.Media.Rotate3DTransform control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Rotate3DTransform.DepthProperty, ps, () => control.Depth = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Rotate3DTransform.DepthProperty, ps, () => control.Depth = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

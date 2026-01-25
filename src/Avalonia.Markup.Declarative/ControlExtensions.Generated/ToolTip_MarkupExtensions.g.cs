@@ -15,11 +15,11 @@ public static partial class ToolTip_MarkupExtensions
  // Tip
 
 /*AttachedPropertyMagicalSetterGenerator*/
-public static T ToolTip_Tip<T>(this T control, System.Object value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Control
+public static T ToolTip_Tip<T>(this T control, System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Control
  => control._setEx(Avalonia.Controls.ToolTip.TipProperty, ps, () => Avalonia.Controls.ToolTip.SetTip(control, value), bindingMode, converter, bindingSource);
 
 /*AttachedPropertyBindFromExpressionSetterGenerator*/
-public static T ToolTip_Tip<T>(this T control, Func<System.Object> func, Action<System.Object>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Control 
+public static T ToolTip_Tip<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.ToolTip.TipProperty!, func, onChanged, expression);
 
 
@@ -70,11 +70,11 @@ public static T ToolTip_VerticalOffset<T>(this T control, Func<System.Double> fu
  // CustomPopupPlacementCallback
 
 /*AttachedPropertyMagicalSetterGenerator*/
-public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Control
+public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Control
  => control._setEx(Avalonia.Controls.ToolTip.CustomPopupPlacementCallbackProperty, ps, () => Avalonia.Controls.ToolTip.SetCustomPopupPlacementCallback(control, value), bindingMode, converter, bindingSource);
 
 /*AttachedPropertyBindFromExpressionSetterGenerator*/
-public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, Func<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> func, Action<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Control 
+public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, Func<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> func, Action<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.ToolTip.CustomPopupPlacementCallbackProperty!, func, onChanged, expression);
 
 

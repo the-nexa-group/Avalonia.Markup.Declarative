@@ -16,7 +16,7 @@ public static partial class TextPresenter_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T ShowSelectionHighlight<T>(this T control, System.Boolean value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.ShowSelectionHighlight = value!);
+=> control._set(() => control.ShowSelectionHighlight = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T ShowSelectionHighlight<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -25,7 +25,7 @@ public static T ShowSelectionHighlight<T>(this T control, Func<System.Boolean> f
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ShowSelectionHighlight<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.ShowSelectionHighlightProperty, ps, () => control.ShowSelectionHighlight = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.ShowSelectionHighlightProperty, ps, () => control.ShowSelectionHighlight = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T ShowSelectionHighlight<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -38,14 +38,14 @@ public static T ShowSelectionHighlight<T>(this T control, AvaloniaProperty avalo
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T ShowSelectionHighlight<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.ShowSelectionHighlightProperty, ps, () => control.ShowSelectionHighlight = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.ShowSelectionHighlightProperty, ps, () => control.ShowSelectionHighlight = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // CaretIndex
 
 /*ValueSetterGenerator*/
 public static T CaretIndex<T>(this T control, System.Int32 value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.CaretIndex = value!);
+=> control._set(() => control.CaretIndex = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T CaretIndex<T>(this T control, Func<System.Int32> func, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -54,7 +54,7 @@ public static T CaretIndex<T>(this T control, Func<System.Int32> func, Action<Sy
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T CaretIndex<T>(this T control,System.Int32 value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretIndexProperty, ps, () => control.CaretIndex = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretIndexProperty, ps, () => control.CaretIndex = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T CaretIndex<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -67,14 +67,14 @@ public static T CaretIndex<T>(this T control, AvaloniaProperty avaloniaProperty,
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T CaretIndex<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Int32> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretIndexProperty, ps, () => control.CaretIndex = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretIndexProperty, ps, () => control.CaretIndex = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // RevealPassword
 
 /*ValueSetterGenerator*/
 public static T RevealPassword<T>(this T control, System.Boolean value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.RevealPassword = value!);
+=> control._set(() => control.RevealPassword = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T RevealPassword<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -83,7 +83,7 @@ public static T RevealPassword<T>(this T control, Func<System.Boolean> func, Act
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T RevealPassword<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.RevealPasswordProperty, ps, () => control.RevealPassword = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.RevealPasswordProperty, ps, () => control.RevealPassword = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T RevealPassword<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -96,14 +96,14 @@ public static T RevealPassword<T>(this T control, AvaloniaProperty avaloniaPrope
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T RevealPassword<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.RevealPasswordProperty, ps, () => control.RevealPassword = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.RevealPasswordProperty, ps, () => control.RevealPassword = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // PasswordChar
 
 /*ValueSetterGenerator*/
 public static T PasswordChar<T>(this T control, System.Char value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.PasswordChar = value!);
+=> control._set(() => control.PasswordChar = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T PasswordChar<T>(this T control, Func<System.Char> func, Action<System.Char>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -112,7 +112,7 @@ public static T PasswordChar<T>(this T control, Func<System.Char> func, Action<S
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T PasswordChar<T>(this T control,System.Char value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.PasswordCharProperty, ps, () => control.PasswordChar = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.PasswordCharProperty, ps, () => control.PasswordChar = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T PasswordChar<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -125,23 +125,23 @@ public static T PasswordChar<T>(this T control, AvaloniaProperty avaloniaPropert
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T PasswordChar<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Char> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.PasswordCharProperty, ps, () => control.PasswordChar = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.PasswordCharProperty, ps, () => control.PasswordChar = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SelectionBrush
 
 /*ValueSetterGenerator*/
-public static T SelectionBrush<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.SelectionBrush = value!);
+public static T SelectionBrush<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._set(() => control.SelectionBrush = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T SelectionBrush<T>(this T control, Func<Avalonia.Media.IBrush> func, Action<Avalonia.Media.IBrush>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static T SelectionBrush<T>(this T control, Func<Avalonia.Media.IBrush?> func, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.SelectionBrushProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T SelectionBrush<T>(this T control,Avalonia.Media.IBrush value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionBrushProperty, ps, () => control.SelectionBrush = value!, bindingMode, converter, bindingSource);
+public static T SelectionBrush<T>(this T control,Avalonia.Media.IBrush? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionBrushProperty, ps, () => control.SelectionBrush = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SelectionBrush<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -153,24 +153,24 @@ public static T SelectionBrush<T>(this T control, AvaloniaProperty avaloniaPrope
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T SelectionBrush<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionBrushProperty, ps, () => control.SelectionBrush = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T SelectionBrush<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionBrushProperty, ps, () => control.SelectionBrush = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SelectionForegroundBrush
 
 /*ValueSetterGenerator*/
-public static T SelectionForegroundBrush<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.SelectionForegroundBrush = value!);
+public static T SelectionForegroundBrush<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._set(() => control.SelectionForegroundBrush = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T SelectionForegroundBrush<T>(this T control, Func<Avalonia.Media.IBrush> func, Action<Avalonia.Media.IBrush>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static T SelectionForegroundBrush<T>(this T control, Func<Avalonia.Media.IBrush?> func, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.SelectionForegroundBrushProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T SelectionForegroundBrush<T>(this T control,Avalonia.Media.IBrush value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionForegroundBrushProperty, ps, () => control.SelectionForegroundBrush = value!, bindingMode, converter, bindingSource);
+public static T SelectionForegroundBrush<T>(this T control,Avalonia.Media.IBrush? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionForegroundBrushProperty, ps, () => control.SelectionForegroundBrush = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SelectionForegroundBrush<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -182,24 +182,24 @@ public static T SelectionForegroundBrush<T>(this T control, AvaloniaProperty ava
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T SelectionForegroundBrush<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionForegroundBrushProperty, ps, () => control.SelectionForegroundBrush = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T SelectionForegroundBrush<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionForegroundBrushProperty, ps, () => control.SelectionForegroundBrush = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // CaretBrush
 
 /*ValueSetterGenerator*/
-public static T CaretBrush<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.CaretBrush = value!);
+public static T CaretBrush<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._set(() => control.CaretBrush = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T CaretBrush<T>(this T control, Func<Avalonia.Media.IBrush> func, Action<Avalonia.Media.IBrush>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static T CaretBrush<T>(this T control, Func<Avalonia.Media.IBrush?> func, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.CaretBrushProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T CaretBrush<T>(this T control,Avalonia.Media.IBrush value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretBrushProperty, ps, () => control.CaretBrush = value!, bindingMode, converter, bindingSource);
+public static T CaretBrush<T>(this T control,Avalonia.Media.IBrush? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretBrushProperty, ps, () => control.CaretBrush = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T CaretBrush<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -211,15 +211,15 @@ public static T CaretBrush<T>(this T control, AvaloniaProperty avaloniaProperty,
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T CaretBrush<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretBrushProperty, ps, () => control.CaretBrush = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T CaretBrush<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretBrushProperty, ps, () => control.CaretBrush = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // CaretBlinkInterval
 
 /*ValueSetterGenerator*/
 public static T CaretBlinkInterval<T>(this T control, System.TimeSpan value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.CaretBlinkInterval = value!);
+=> control._set(() => control.CaretBlinkInterval = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T CaretBlinkInterval<T>(this T control, Func<System.TimeSpan> func, Action<System.TimeSpan>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -228,7 +228,7 @@ public static T CaretBlinkInterval<T>(this T control, Func<System.TimeSpan> func
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T CaretBlinkInterval<T>(this T control,System.TimeSpan value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretBlinkIntervalProperty, ps, () => control.CaretBlinkInterval = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretBlinkIntervalProperty, ps, () => control.CaretBlinkInterval = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T CaretBlinkInterval<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -241,14 +241,14 @@ public static T CaretBlinkInterval<T>(this T control, AvaloniaProperty avaloniaP
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T CaretBlinkInterval<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.TimeSpan> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretBlinkIntervalProperty, ps, () => control.CaretBlinkInterval = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretBlinkIntervalProperty, ps, () => control.CaretBlinkInterval = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SelectionStart
 
 /*ValueSetterGenerator*/
 public static T SelectionStart<T>(this T control, System.Int32 value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.SelectionStart = value!);
+=> control._set(() => control.SelectionStart = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T SelectionStart<T>(this T control, Func<System.Int32> func, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -257,7 +257,7 @@ public static T SelectionStart<T>(this T control, Func<System.Int32> func, Actio
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectionStart<T>(this T control,System.Int32 value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionStartProperty, ps, () => control.SelectionStart = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionStartProperty, ps, () => control.SelectionStart = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SelectionStart<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -270,14 +270,14 @@ public static T SelectionStart<T>(this T control, AvaloniaProperty avaloniaPrope
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T SelectionStart<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Int32> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionStartProperty, ps, () => control.SelectionStart = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionStartProperty, ps, () => control.SelectionStart = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SelectionEnd
 
 /*ValueSetterGenerator*/
 public static T SelectionEnd<T>(this T control, System.Int32 value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.SelectionEnd = value!);
+=> control._set(() => control.SelectionEnd = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T SelectionEnd<T>(this T control, Func<System.Int32> func, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -286,7 +286,7 @@ public static T SelectionEnd<T>(this T control, Func<System.Int32> func, Action<
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectionEnd<T>(this T control,System.Int32 value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionEndProperty, ps, () => control.SelectionEnd = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionEndProperty, ps, () => control.SelectionEnd = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SelectionEnd<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -299,23 +299,23 @@ public static T SelectionEnd<T>(this T control, AvaloniaProperty avaloniaPropert
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T SelectionEnd<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Int32> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionEndProperty, ps, () => control.SelectionEnd = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionEndProperty, ps, () => control.SelectionEnd = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Text
 
 /*ValueSetterGenerator*/
-public static T Text<T>(this T control, System.String value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.Text = value!);
+public static T Text<T>(this T control, System.String? value) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._set(() => control.Text = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T Text<T>(this T control, Func<System.String> func, Action<System.String>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static T Text<T>(this T control, Func<System.String?> func, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.TextProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T Text<T>(this T control,System.String value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextProperty, ps, () => control.Text = value!, bindingMode, converter, bindingSource);
+public static T Text<T>(this T control,System.String? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextProperty, ps, () => control.Text = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Text<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -327,24 +327,24 @@ public static T Text<T>(this T control, AvaloniaProperty avaloniaProperty, Bindi
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T Text<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextProperty, ps, () => control.Text = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T Text<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextProperty, ps, () => control.Text = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // PreeditText
 
 /*ValueSetterGenerator*/
-public static T PreeditText<T>(this T control, System.String value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.PreeditText = value!);
+public static T PreeditText<T>(this T control, System.String? value) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._set(() => control.PreeditText = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T PreeditText<T>(this T control, Func<System.String> func, Action<System.String>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static T PreeditText<T>(this T control, Func<System.String?> func, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.PreeditTextProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T PreeditText<T>(this T control,System.String value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.PreeditTextProperty, ps, () => control.PreeditText = value!, bindingMode, converter, bindingSource);
+public static T PreeditText<T>(this T control,System.String? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.PreeditTextProperty, ps, () => control.PreeditText = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T PreeditText<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -356,15 +356,15 @@ public static T PreeditText<T>(this T control, AvaloniaProperty avaloniaProperty
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T PreeditText<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.PreeditTextProperty, ps, () => control.PreeditText = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T PreeditText<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.PreeditTextProperty, ps, () => control.PreeditText = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // PreeditTextCursorPosition
 
 /*ValueSetterGenerator*/
 public static T PreeditTextCursorPosition<T>(this T control, System.Nullable<System.Int32> value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.PreeditTextCursorPosition = value!);
+=> control._set(() => control.PreeditTextCursorPosition = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T PreeditTextCursorPosition<T>(this T control, Func<System.Nullable<System.Int32>> func, Action<System.Nullable<System.Int32>>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -373,7 +373,7 @@ public static T PreeditTextCursorPosition<T>(this T control, Func<System.Nullabl
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T PreeditTextCursorPosition<T>(this T control,System.Nullable<System.Int32> value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.PreeditTextCursorPositionProperty, ps, () => control.PreeditTextCursorPosition = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.PreeditTextCursorPositionProperty, ps, () => control.PreeditTextCursorPosition = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T PreeditTextCursorPosition<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -386,14 +386,14 @@ public static T PreeditTextCursorPosition<T>(this T control, AvaloniaProperty av
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T PreeditTextCursorPosition<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Nullable<System.Int32>> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.PreeditTextCursorPositionProperty, ps, () => control.PreeditTextCursorPosition = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.PreeditTextCursorPositionProperty, ps, () => control.PreeditTextCursorPosition = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // TextAlignment
 
 /*ValueSetterGenerator*/
 public static T TextAlignment<T>(this T control, Avalonia.Media.TextAlignment value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.TextAlignment = value!);
+=> control._set(() => control.TextAlignment = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T TextAlignment<T>(this T control, Func<Avalonia.Media.TextAlignment> func, Action<Avalonia.Media.TextAlignment>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -402,7 +402,7 @@ public static T TextAlignment<T>(this T control, Func<Avalonia.Media.TextAlignme
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T TextAlignment<T>(this T control,Avalonia.Media.TextAlignment value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextAlignmentProperty, ps, () => control.TextAlignment = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextAlignmentProperty, ps, () => control.TextAlignment = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T TextAlignment<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -415,14 +415,14 @@ public static T TextAlignment<T>(this T control, AvaloniaProperty avaloniaProper
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T TextAlignment<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.TextAlignment> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextAlignmentProperty, ps, () => control.TextAlignment = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextAlignmentProperty, ps, () => control.TextAlignment = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // TextWrapping
 
 /*ValueSetterGenerator*/
 public static T TextWrapping<T>(this T control, Avalonia.Media.TextWrapping value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.TextWrapping = value!);
+=> control._set(() => control.TextWrapping = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T TextWrapping<T>(this T control, Func<Avalonia.Media.TextWrapping> func, Action<Avalonia.Media.TextWrapping>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -431,7 +431,7 @@ public static T TextWrapping<T>(this T control, Func<Avalonia.Media.TextWrapping
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T TextWrapping<T>(this T control,Avalonia.Media.TextWrapping value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextWrappingProperty, ps, () => control.TextWrapping = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextWrappingProperty, ps, () => control.TextWrapping = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T TextWrapping<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -444,14 +444,14 @@ public static T TextWrapping<T>(this T control, AvaloniaProperty avaloniaPropert
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T TextWrapping<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.TextWrapping> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextWrappingProperty, ps, () => control.TextWrapping = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextWrappingProperty, ps, () => control.TextWrapping = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // LineHeight
 
 /*ValueSetterGenerator*/
 public static T LineHeight<T>(this T control, System.Double value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.LineHeight = value!);
+=> control._set(() => control.LineHeight = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T LineHeight<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -460,7 +460,7 @@ public static T LineHeight<T>(this T control, Func<System.Double> func, Action<S
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T LineHeight<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.LineHeightProperty, ps, () => control.LineHeight = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.LineHeightProperty, ps, () => control.LineHeight = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T LineHeight<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -473,14 +473,14 @@ public static T LineHeight<T>(this T control, AvaloniaProperty avaloniaProperty,
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T LineHeight<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.LineHeightProperty, ps, () => control.LineHeight = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.LineHeightProperty, ps, () => control.LineHeight = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // LetterSpacing
 
 /*ValueSetterGenerator*/
 public static T LetterSpacing<T>(this T control, System.Double value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.LetterSpacing = value!);
+=> control._set(() => control.LetterSpacing = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T LetterSpacing<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -489,7 +489,7 @@ public static T LetterSpacing<T>(this T control, Func<System.Double> func, Actio
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T LetterSpacing<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.LetterSpacingProperty, ps, () => control.LetterSpacing = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.LetterSpacingProperty, ps, () => control.LetterSpacing = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T LetterSpacing<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -502,23 +502,23 @@ public static T LetterSpacing<T>(this T control, AvaloniaProperty avaloniaProper
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T LetterSpacing<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.LetterSpacingProperty, ps, () => control.LetterSpacing = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.LetterSpacingProperty, ps, () => control.LetterSpacing = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Background
 
 /*ValueSetterGenerator*/
-public static T Background<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._set(() => control.Background = value!);
+public static T Background<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._set(() => control.Background = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T Background<T>(this T control, Func<Avalonia.Media.IBrush> func, Action<Avalonia.Media.IBrush>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static T Background<T>(this T control, Func<Avalonia.Media.IBrush?> func, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.BackgroundProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T Background<T>(this T control,Avalonia.Media.IBrush value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.BackgroundProperty, ps, () => control.Background = value!, bindingMode, converter, bindingSource);
+public static T Background<T>(this T control,Avalonia.Media.IBrush? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.BackgroundProperty, ps, () => control.Background = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Background<T>(this T control, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
@@ -530,8 +530,8 @@ public static T Background<T>(this T control, AvaloniaProperty avaloniaProperty,
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T Background<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
-=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.BackgroundProperty, ps, () => control.Background = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T Background<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Presenters.TextPresenter 
+=> control._setEx(Avalonia.Controls.Presenters.TextPresenter.BackgroundProperty, ps, () => control.Background = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 
@@ -592,7 +592,7 @@ public static Style<T> PasswordChar<T>(this Style<T> style, IBinding binding) wh
  // SelectionBrush
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> SelectionBrush<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> SelectionBrush<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.SelectionBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -603,7 +603,7 @@ public static Style<T> SelectionBrush<T>(this Style<T> style, IBinding binding) 
  // SelectionForegroundBrush
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.SelectionForegroundBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -614,7 +614,7 @@ public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, IBinding
  // CaretBrush
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> CaretBrush<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> CaretBrush<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.CaretBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -658,7 +658,7 @@ public static Style<T> SelectionEnd<T>(this Style<T> style, IBinding binding) wh
  // Text
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> Text<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -669,7 +669,7 @@ public static Style<T> Text<T>(this Style<T> style, IBinding binding) where T : 
  // PreeditText
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> PreeditText<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> PreeditText<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.PreeditTextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -735,7 +735,7 @@ public static Style<T> LetterSpacing<T>(this Style<T> style, IBinding binding) w
  // Background
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.BackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

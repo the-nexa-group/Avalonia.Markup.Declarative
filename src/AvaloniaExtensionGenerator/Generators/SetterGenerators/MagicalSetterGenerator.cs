@@ -9,6 +9,6 @@ public class MagicalSetterGenerator : ExtensionGeneratorBase<PropertyExtensionIn
         + $"(this {info.ReturnType} control,"
         + $"{info.ValueTypeSource} value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null,"
         + $" [CallerArgumentExpression(nameof(value))] string? ps = null) {info.GenericConstraint} {Environment.NewLine}"
-        + $"=> control._setEx({info.ControlTypeName}.{info.FieldInfo.Name}, ps, () => control.{info.MemberName} = value!, bindingMode, converter, bindingSource);";
+        + $"=> control._setEx({info.ControlTypeName}.{info.FieldInfo.Name}, ps, () => control.{info.MemberName} = value, bindingMode, converter, bindingSource);";
 
 }

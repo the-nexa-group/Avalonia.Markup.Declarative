@@ -16,7 +16,7 @@ public static partial class SelectableTextBlock_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T SelectionStart<T>(this T control, System.Int32 value) where T : Avalonia.Controls.SelectableTextBlock 
-=> control._set(() => control.SelectionStart = value!);
+=> control._set(() => control.SelectionStart = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T SelectionStart<T>(this T control, Func<System.Int32> func, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SelectableTextBlock 
@@ -25,7 +25,7 @@ public static T SelectionStart<T>(this T control, Func<System.Int32> func, Actio
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectionStart<T>(this T control,System.Int32 value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SelectableTextBlock 
-=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionStartProperty, ps, () => control.SelectionStart = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionStartProperty, ps, () => control.SelectionStart = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SelectionStart<T>(this T control, IBinding binding) where T : Avalonia.Controls.SelectableTextBlock 
@@ -38,14 +38,14 @@ public static T SelectionStart<T>(this T control, AvaloniaProperty avaloniaPrope
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T SelectionStart<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Int32> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SelectableTextBlock 
-=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionStartProperty, ps, () => control.SelectionStart = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionStartProperty, ps, () => control.SelectionStart = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SelectionEnd
 
 /*ValueSetterGenerator*/
 public static T SelectionEnd<T>(this T control, System.Int32 value) where T : Avalonia.Controls.SelectableTextBlock 
-=> control._set(() => control.SelectionEnd = value!);
+=> control._set(() => control.SelectionEnd = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T SelectionEnd<T>(this T control, Func<System.Int32> func, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SelectableTextBlock 
@@ -54,7 +54,7 @@ public static T SelectionEnd<T>(this T control, Func<System.Int32> func, Action<
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectionEnd<T>(this T control,System.Int32 value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SelectableTextBlock 
-=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionEndProperty, ps, () => control.SelectionEnd = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionEndProperty, ps, () => control.SelectionEnd = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SelectionEnd<T>(this T control, IBinding binding) where T : Avalonia.Controls.SelectableTextBlock 
@@ -67,23 +67,23 @@ public static T SelectionEnd<T>(this T control, AvaloniaProperty avaloniaPropert
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T SelectionEnd<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Int32> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SelectableTextBlock 
-=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionEndProperty, ps, () => control.SelectionEnd = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionEndProperty, ps, () => control.SelectionEnd = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SelectionBrush
 
 /*ValueSetterGenerator*/
-public static T SelectionBrush<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.SelectableTextBlock 
-=> control._set(() => control.SelectionBrush = value!);
+public static T SelectionBrush<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.SelectableTextBlock 
+=> control._set(() => control.SelectionBrush = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T SelectionBrush<T>(this T control, Func<Avalonia.Media.IBrush> func, Action<Avalonia.Media.IBrush>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SelectableTextBlock 
+public static T SelectionBrush<T>(this T control, Func<Avalonia.Media.IBrush?> func, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SelectableTextBlock 
    => control._set(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T SelectionBrush<T>(this T control,Avalonia.Media.IBrush value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SelectableTextBlock 
-=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty, ps, () => control.SelectionBrush = value!, bindingMode, converter, bindingSource);
+public static T SelectionBrush<T>(this T control,Avalonia.Media.IBrush? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SelectableTextBlock 
+=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty, ps, () => control.SelectionBrush = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SelectionBrush<T>(this T control, IBinding binding) where T : Avalonia.Controls.SelectableTextBlock 
@@ -95,24 +95,24 @@ public static T SelectionBrush<T>(this T control, AvaloniaProperty avaloniaPrope
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T SelectionBrush<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SelectableTextBlock 
-=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty, ps, () => control.SelectionBrush = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T SelectionBrush<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SelectableTextBlock 
+=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty, ps, () => control.SelectionBrush = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SelectionForegroundBrush
 
 /*ValueSetterGenerator*/
-public static T SelectionForegroundBrush<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.SelectableTextBlock 
-=> control._set(() => control.SelectionForegroundBrush = value!);
+public static T SelectionForegroundBrush<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.SelectableTextBlock 
+=> control._set(() => control.SelectionForegroundBrush = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T SelectionForegroundBrush<T>(this T control, Func<Avalonia.Media.IBrush> func, Action<Avalonia.Media.IBrush>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SelectableTextBlock 
+public static T SelectionForegroundBrush<T>(this T control, Func<Avalonia.Media.IBrush?> func, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SelectableTextBlock 
    => control._set(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T SelectionForegroundBrush<T>(this T control,Avalonia.Media.IBrush value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SelectableTextBlock 
-=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty, ps, () => control.SelectionForegroundBrush = value!, bindingMode, converter, bindingSource);
+public static T SelectionForegroundBrush<T>(this T control,Avalonia.Media.IBrush? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SelectableTextBlock 
+=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty, ps, () => control.SelectionForegroundBrush = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T SelectionForegroundBrush<T>(this T control, IBinding binding) where T : Avalonia.Controls.SelectableTextBlock 
@@ -124,8 +124,8 @@ public static T SelectionForegroundBrush<T>(this T control, AvaloniaProperty ava
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T SelectionForegroundBrush<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SelectableTextBlock 
-=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty, ps, () => control.SelectionForegroundBrush = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T SelectionForegroundBrush<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SelectableTextBlock 
+=> control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty, ps, () => control.SelectionForegroundBrush = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 
@@ -168,7 +168,7 @@ public static Style<T> SelectionEnd<T>(this Style<T> style, IBinding binding) wh
  // SelectionBrush
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> SelectionBrush<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.SelectableTextBlock 
+public static Style<T> SelectionBrush<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.SelectableTextBlock 
 => style._addSetter(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -179,7 +179,7 @@ public static Style<T> SelectionBrush<T>(this Style<T> style, IBinding binding) 
  // SelectionForegroundBrush
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.SelectableTextBlock 
+public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.SelectableTextBlock 
 => style._addSetter(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

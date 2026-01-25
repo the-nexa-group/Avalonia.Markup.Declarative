@@ -16,7 +16,7 @@ public static partial class ToggleButton_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T IsChecked<T>(this T control, System.Nullable<System.Boolean> value) where T : Avalonia.Controls.Primitives.ToggleButton 
-=> control._set(() => control.IsChecked = value!);
+=> control._set(() => control.IsChecked = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T IsChecked<T>(this T control, Func<System.Nullable<System.Boolean>> func, Action<System.Nullable<System.Boolean>>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.ToggleButton 
@@ -25,7 +25,7 @@ public static T IsChecked<T>(this T control, Func<System.Nullable<System.Boolean
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IsChecked<T>(this T control,System.Nullable<System.Boolean> value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.ToggleButton 
-=> control._setEx(Avalonia.Controls.Primitives.ToggleButton.IsCheckedProperty, ps, () => control.IsChecked = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.ToggleButton.IsCheckedProperty, ps, () => control.IsChecked = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T IsChecked<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.ToggleButton 
@@ -38,14 +38,14 @@ public static T IsChecked<T>(this T control, AvaloniaProperty avaloniaProperty, 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T IsChecked<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Nullable<System.Boolean>> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.ToggleButton 
-=> control._setEx(Avalonia.Controls.Primitives.ToggleButton.IsCheckedProperty, ps, () => control.IsChecked = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.ToggleButton.IsCheckedProperty, ps, () => control.IsChecked = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsThreeState
 
 /*ValueSetterGenerator*/
 public static T IsThreeState<T>(this T control, System.Boolean value) where T : Avalonia.Controls.Primitives.ToggleButton 
-=> control._set(() => control.IsThreeState = value!);
+=> control._set(() => control.IsThreeState = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T IsThreeState<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.ToggleButton 
@@ -54,7 +54,7 @@ public static T IsThreeState<T>(this T control, Func<System.Boolean> func, Actio
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IsThreeState<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.ToggleButton 
-=> control._setEx(Avalonia.Controls.Primitives.ToggleButton.IsThreeStateProperty, ps, () => control.IsThreeState = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.ToggleButton.IsThreeStateProperty, ps, () => control.IsThreeState = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T IsThreeState<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.ToggleButton 
@@ -67,7 +67,7 @@ public static T IsThreeState<T>(this T control, AvaloniaProperty avaloniaPropert
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T IsThreeState<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.ToggleButton 
-=> control._setEx(Avalonia.Controls.Primitives.ToggleButton.IsThreeStateProperty, ps, () => control.IsThreeState = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Primitives.ToggleButton.IsThreeStateProperty, ps, () => control.IsThreeState = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

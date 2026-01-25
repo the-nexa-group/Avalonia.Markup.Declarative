@@ -16,7 +16,7 @@ public static partial class Brush_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T Opacity<T>(this T control, System.Double value) where T : Avalonia.Media.Brush 
-=> control._set(() => control.Opacity = value!);
+=> control._set(() => control.Opacity = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Opacity<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.Brush 
@@ -25,7 +25,7 @@ public static T Opacity<T>(this T control, Func<System.Double> func, Action<Syst
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Opacity<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.Brush 
-=> control._setEx(Avalonia.Media.Brush.OpacityProperty, ps, () => control.Opacity = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Brush.OpacityProperty, ps, () => control.Opacity = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Opacity<T>(this T control, IBinding binding) where T : Avalonia.Media.Brush 
@@ -38,23 +38,23 @@ public static T Opacity<T>(this T control, AvaloniaProperty avaloniaProperty, Bi
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Opacity<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.Brush 
-=> control._setEx(Avalonia.Media.Brush.OpacityProperty, ps, () => control.Opacity = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Brush.OpacityProperty, ps, () => control.Opacity = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Transform
 
 /*ValueSetterGenerator*/
-public static T Transform<T>(this T control, Avalonia.Media.ITransform value) where T : Avalonia.Media.Brush 
-=> control._set(() => control.Transform = value!);
+public static T Transform<T>(this T control, Avalonia.Media.ITransform? value) where T : Avalonia.Media.Brush 
+=> control._set(() => control.Transform = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T Transform<T>(this T control, Func<Avalonia.Media.ITransform> func, Action<Avalonia.Media.ITransform>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.Brush 
+public static T Transform<T>(this T control, Func<Avalonia.Media.ITransform?> func, Action<Avalonia.Media.ITransform?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.Brush 
    => control._set(Avalonia.Media.Brush.TransformProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T Transform<T>(this T control,Avalonia.Media.ITransform value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.Brush 
-=> control._setEx(Avalonia.Media.Brush.TransformProperty, ps, () => control.Transform = value!, bindingMode, converter, bindingSource);
+public static T Transform<T>(this T control,Avalonia.Media.ITransform? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.Brush 
+=> control._setEx(Avalonia.Media.Brush.TransformProperty, ps, () => control.Transform = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Transform<T>(this T control, IBinding binding) where T : Avalonia.Media.Brush 
@@ -66,15 +66,15 @@ public static T Transform<T>(this T control, AvaloniaProperty avaloniaProperty, 
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T Transform<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.ITransform> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.Brush 
-=> control._setEx(Avalonia.Media.Brush.TransformProperty, ps, () => control.Transform = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T Transform<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.ITransform?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.Brush 
+=> control._setEx(Avalonia.Media.Brush.TransformProperty, ps, () => control.Transform = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // TransformOrigin
 
 /*ValueSetterGenerator*/
 public static T TransformOrigin<T>(this T control, Avalonia.RelativePoint value) where T : Avalonia.Media.Brush 
-=> control._set(() => control.TransformOrigin = value!);
+=> control._set(() => control.TransformOrigin = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T TransformOrigin<T>(this T control, Func<Avalonia.RelativePoint> func, Action<Avalonia.RelativePoint>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.Brush 
@@ -90,7 +90,7 @@ public static T TransformOrigin<T>(this T control, Avalonia.Point point = defaul
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T TransformOrigin<T>(this T control,Avalonia.RelativePoint value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.Brush 
-=> control._setEx(Avalonia.Media.Brush.TransformOriginProperty, ps, () => control.TransformOrigin = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Brush.TransformOriginProperty, ps, () => control.TransformOrigin = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T TransformOrigin<T>(this T control, IBinding binding) where T : Avalonia.Media.Brush 
@@ -103,7 +103,7 @@ public static T TransformOrigin<T>(this T control, AvaloniaProperty avaloniaProp
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T TransformOrigin<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.RelativePoint> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.Brush 
-=> control._setEx(Avalonia.Media.Brush.TransformOriginProperty, ps, () => control.TransformOrigin = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.Brush.TransformOriginProperty, ps, () => control.TransformOrigin = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

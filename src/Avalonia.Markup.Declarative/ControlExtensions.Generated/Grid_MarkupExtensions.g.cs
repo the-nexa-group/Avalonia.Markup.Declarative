@@ -16,7 +16,7 @@ public static partial class Grid_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T ShowGridLines<T>(this T control, System.Boolean value) where T : Avalonia.Controls.Grid 
-=> control._set(() => control.ShowGridLines = value!);
+=> control._set(() => control.ShowGridLines = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T ShowGridLines<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Grid 
@@ -25,7 +25,7 @@ public static T ShowGridLines<T>(this T control, Func<System.Boolean> func, Acti
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ShowGridLines<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Grid 
-=> control._setEx(Avalonia.Controls.Grid.ShowGridLinesProperty, ps, () => control.ShowGridLines = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Grid.ShowGridLinesProperty, ps, () => control.ShowGridLines = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T ShowGridLines<T>(this T control, IBinding binding) where T : Avalonia.Controls.Grid 
@@ -38,14 +38,14 @@ public static T ShowGridLines<T>(this T control, AvaloniaProperty avaloniaProper
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T ShowGridLines<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Grid 
-=> control._setEx(Avalonia.Controls.Grid.ShowGridLinesProperty, ps, () => control.ShowGridLines = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Grid.ShowGridLinesProperty, ps, () => control.ShowGridLines = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // RowSpacing
 
 /*ValueSetterGenerator*/
 public static T RowSpacing<T>(this T control, System.Double value) where T : Avalonia.Controls.Grid 
-=> control._set(() => control.RowSpacing = value!);
+=> control._set(() => control.RowSpacing = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T RowSpacing<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Grid 
@@ -54,7 +54,7 @@ public static T RowSpacing<T>(this T control, Func<System.Double> func, Action<S
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T RowSpacing<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Grid 
-=> control._setEx(Avalonia.Controls.Grid.RowSpacingProperty, ps, () => control.RowSpacing = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Grid.RowSpacingProperty, ps, () => control.RowSpacing = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T RowSpacing<T>(this T control, IBinding binding) where T : Avalonia.Controls.Grid 
@@ -67,14 +67,14 @@ public static T RowSpacing<T>(this T control, AvaloniaProperty avaloniaProperty,
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T RowSpacing<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Grid 
-=> control._setEx(Avalonia.Controls.Grid.RowSpacingProperty, ps, () => control.RowSpacing = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Grid.RowSpacingProperty, ps, () => control.RowSpacing = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ColumnSpacing
 
 /*ValueSetterGenerator*/
 public static T ColumnSpacing<T>(this T control, System.Double value) where T : Avalonia.Controls.Grid 
-=> control._set(() => control.ColumnSpacing = value!);
+=> control._set(() => control.ColumnSpacing = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T ColumnSpacing<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Grid 
@@ -83,7 +83,7 @@ public static T ColumnSpacing<T>(this T control, Func<System.Double> func, Actio
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ColumnSpacing<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Grid 
-=> control._setEx(Avalonia.Controls.Grid.ColumnSpacingProperty, ps, () => control.ColumnSpacing = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Grid.ColumnSpacingProperty, ps, () => control.ColumnSpacing = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T ColumnSpacing<T>(this T control, IBinding binding) where T : Avalonia.Controls.Grid 
@@ -96,7 +96,7 @@ public static T ColumnSpacing<T>(this T control, AvaloniaProperty avaloniaProper
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T ColumnSpacing<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Grid 
-=> control._setEx(Avalonia.Controls.Grid.ColumnSpacingProperty, ps, () => control.ColumnSpacing = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Grid.ColumnSpacingProperty, ps, () => control.ColumnSpacing = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

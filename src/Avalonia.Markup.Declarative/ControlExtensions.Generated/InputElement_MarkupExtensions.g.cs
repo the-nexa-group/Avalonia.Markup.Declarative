@@ -16,7 +16,7 @@ public static partial class InputElement_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T Focusable<T>(this T control, System.Boolean value) where T : Avalonia.Input.InputElement 
-=> control._set(() => control.Focusable = value!);
+=> control._set(() => control.Focusable = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Focusable<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Input.InputElement 
@@ -25,7 +25,7 @@ public static T Focusable<T>(this T control, Func<System.Boolean> func, Action<S
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Focusable<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.InputElement 
-=> control._setEx(Avalonia.Input.InputElement.FocusableProperty, ps, () => control.Focusable = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Input.InputElement.FocusableProperty, ps, () => control.Focusable = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Focusable<T>(this T control, IBinding binding) where T : Avalonia.Input.InputElement 
@@ -38,14 +38,14 @@ public static T Focusable<T>(this T control, AvaloniaProperty avaloniaProperty, 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Focusable<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.InputElement 
-=> control._setEx(Avalonia.Input.InputElement.FocusableProperty, ps, () => control.Focusable = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Input.InputElement.FocusableProperty, ps, () => control.Focusable = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsEnabled
 
 /*ValueSetterGenerator*/
 public static T IsEnabled<T>(this T control, System.Boolean value) where T : Avalonia.Input.InputElement 
-=> control._set(() => control.IsEnabled = value!);
+=> control._set(() => control.IsEnabled = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T IsEnabled<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Input.InputElement 
@@ -54,7 +54,7 @@ public static T IsEnabled<T>(this T control, Func<System.Boolean> func, Action<S
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IsEnabled<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.InputElement 
-=> control._setEx(Avalonia.Input.InputElement.IsEnabledProperty, ps, () => control.IsEnabled = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Input.InputElement.IsEnabledProperty, ps, () => control.IsEnabled = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T IsEnabled<T>(this T control, IBinding binding) where T : Avalonia.Input.InputElement 
@@ -67,23 +67,23 @@ public static T IsEnabled<T>(this T control, AvaloniaProperty avaloniaProperty, 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T IsEnabled<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.InputElement 
-=> control._setEx(Avalonia.Input.InputElement.IsEnabledProperty, ps, () => control.IsEnabled = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Input.InputElement.IsEnabledProperty, ps, () => control.IsEnabled = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Cursor
 
 /*ValueSetterGenerator*/
-public static T Cursor<T>(this T control, Avalonia.Input.Cursor value) where T : Avalonia.Input.InputElement 
-=> control._set(() => control.Cursor = value!);
+public static T Cursor<T>(this T control, Avalonia.Input.Cursor? value) where T : Avalonia.Input.InputElement 
+=> control._set(() => control.Cursor = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T Cursor<T>(this T control, Func<Avalonia.Input.Cursor> func, Action<Avalonia.Input.Cursor>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Input.InputElement 
+public static T Cursor<T>(this T control, Func<Avalonia.Input.Cursor?> func, Action<Avalonia.Input.Cursor?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Input.InputElement 
    => control._set(Avalonia.Input.InputElement.CursorProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T Cursor<T>(this T control,Avalonia.Input.Cursor value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.InputElement 
-=> control._setEx(Avalonia.Input.InputElement.CursorProperty, ps, () => control.Cursor = value!, bindingMode, converter, bindingSource);
+public static T Cursor<T>(this T control,Avalonia.Input.Cursor? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.InputElement 
+=> control._setEx(Avalonia.Input.InputElement.CursorProperty, ps, () => control.Cursor = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Cursor<T>(this T control, IBinding binding) where T : Avalonia.Input.InputElement 
@@ -95,15 +95,15 @@ public static T Cursor<T>(this T control, AvaloniaProperty avaloniaProperty, Bin
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T Cursor<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Input.Cursor> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.InputElement 
-=> control._setEx(Avalonia.Input.InputElement.CursorProperty, ps, () => control.Cursor = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T Cursor<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Input.Cursor?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.InputElement 
+=> control._setEx(Avalonia.Input.InputElement.CursorProperty, ps, () => control.Cursor = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsHitTestVisible
 
 /*ValueSetterGenerator*/
 public static T IsHitTestVisible<T>(this T control, System.Boolean value) where T : Avalonia.Input.InputElement 
-=> control._set(() => control.IsHitTestVisible = value!);
+=> control._set(() => control.IsHitTestVisible = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T IsHitTestVisible<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Input.InputElement 
@@ -112,7 +112,7 @@ public static T IsHitTestVisible<T>(this T control, Func<System.Boolean> func, A
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IsHitTestVisible<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.InputElement 
-=> control._setEx(Avalonia.Input.InputElement.IsHitTestVisibleProperty, ps, () => control.IsHitTestVisible = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Input.InputElement.IsHitTestVisibleProperty, ps, () => control.IsHitTestVisible = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T IsHitTestVisible<T>(this T control, IBinding binding) where T : Avalonia.Input.InputElement 
@@ -125,14 +125,14 @@ public static T IsHitTestVisible<T>(this T control, AvaloniaProperty avaloniaPro
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T IsHitTestVisible<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.InputElement 
-=> control._setEx(Avalonia.Input.InputElement.IsHitTestVisibleProperty, ps, () => control.IsHitTestVisible = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Input.InputElement.IsHitTestVisibleProperty, ps, () => control.IsHitTestVisible = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsTabStop
 
 /*ValueSetterGenerator*/
 public static T IsTabStop<T>(this T control, System.Boolean value) where T : Avalonia.Input.InputElement 
-=> control._set(() => control.IsTabStop = value!);
+=> control._set(() => control.IsTabStop = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T IsTabStop<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Input.InputElement 
@@ -141,7 +141,7 @@ public static T IsTabStop<T>(this T control, Func<System.Boolean> func, Action<S
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IsTabStop<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.InputElement 
-=> control._setEx(Avalonia.Input.InputElement.IsTabStopProperty, ps, () => control.IsTabStop = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Input.InputElement.IsTabStopProperty, ps, () => control.IsTabStop = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T IsTabStop<T>(this T control, IBinding binding) where T : Avalonia.Input.InputElement 
@@ -154,14 +154,14 @@ public static T IsTabStop<T>(this T control, AvaloniaProperty avaloniaProperty, 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T IsTabStop<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.InputElement 
-=> control._setEx(Avalonia.Input.InputElement.IsTabStopProperty, ps, () => control.IsTabStop = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Input.InputElement.IsTabStopProperty, ps, () => control.IsTabStop = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // TabIndex
 
 /*ValueSetterGenerator*/
 public static T TabIndex<T>(this T control, System.Int32 value) where T : Avalonia.Input.InputElement 
-=> control._set(() => control.TabIndex = value!);
+=> control._set(() => control.TabIndex = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T TabIndex<T>(this T control, Func<System.Int32> func, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Input.InputElement 
@@ -170,7 +170,7 @@ public static T TabIndex<T>(this T control, Func<System.Int32> func, Action<Syst
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T TabIndex<T>(this T control,System.Int32 value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.InputElement 
-=> control._setEx(Avalonia.Input.InputElement.TabIndexProperty, ps, () => control.TabIndex = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Input.InputElement.TabIndexProperty, ps, () => control.TabIndex = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T TabIndex<T>(this T control, IBinding binding) where T : Avalonia.Input.InputElement 
@@ -183,7 +183,7 @@ public static T TabIndex<T>(this T control, AvaloniaProperty avaloniaProperty, B
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T TabIndex<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Int32> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.InputElement 
-=> control._setEx(Avalonia.Input.InputElement.TabIndexProperty, ps, () => control.TabIndex = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Input.InputElement.TabIndexProperty, ps, () => control.TabIndex = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 
@@ -391,7 +391,7 @@ public static Style<T> IsEnabled<T>(this Style<T> style, IBinding binding) where
  // Cursor
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Cursor<T>(this Style<T> style, Avalonia.Input.Cursor value) where T : Avalonia.Input.InputElement 
+public static Style<T> Cursor<T>(this Style<T> style, Avalonia.Input.Cursor? value) where T : Avalonia.Input.InputElement 
 => style._addSetter(Avalonia.Input.InputElement.CursorProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

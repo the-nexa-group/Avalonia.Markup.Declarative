@@ -16,7 +16,7 @@ public static partial class TranslateTransform_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.TranslateTransform X(this Avalonia.Media.TranslateTransform control, System.Double value)  
-=> control._set(() => control.X = value!);
+=> control._set(() => control.X = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.TranslateTransform X(this Avalonia.Media.TranslateTransform control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -25,7 +25,7 @@ public static Avalonia.Media.TranslateTransform X(this Avalonia.Media.TranslateT
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.TranslateTransform X(this Avalonia.Media.TranslateTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.TranslateTransform.XProperty, ps, () => control.X = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TranslateTransform.XProperty, ps, () => control.X = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.TranslateTransform X(this Avalonia.Media.TranslateTransform control, IBinding binding)  
@@ -38,14 +38,14 @@ public static Avalonia.Media.TranslateTransform X(this Avalonia.Media.TranslateT
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.TranslateTransform X<TValue>(this Avalonia.Media.TranslateTransform control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.TranslateTransform.XProperty, ps, () => control.X = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TranslateTransform.XProperty, ps, () => control.X = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Y
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.TranslateTransform Y(this Avalonia.Media.TranslateTransform control, System.Double value)  
-=> control._set(() => control.Y = value!);
+=> control._set(() => control.Y = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.TranslateTransform Y(this Avalonia.Media.TranslateTransform control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -54,7 +54,7 @@ public static Avalonia.Media.TranslateTransform Y(this Avalonia.Media.TranslateT
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.TranslateTransform Y(this Avalonia.Media.TranslateTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.TranslateTransform.YProperty, ps, () => control.Y = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TranslateTransform.YProperty, ps, () => control.Y = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.TranslateTransform Y(this Avalonia.Media.TranslateTransform control, IBinding binding)  
@@ -67,7 +67,7 @@ public static Avalonia.Media.TranslateTransform Y(this Avalonia.Media.TranslateT
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.TranslateTransform Y<TValue>(this Avalonia.Media.TranslateTransform control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.TranslateTransform.YProperty, ps, () => control.Y = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.TranslateTransform.YProperty, ps, () => control.Y = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

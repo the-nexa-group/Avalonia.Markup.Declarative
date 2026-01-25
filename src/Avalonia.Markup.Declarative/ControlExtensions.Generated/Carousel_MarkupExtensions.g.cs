@@ -15,17 +15,17 @@ public static partial class Carousel_MarkupExtensions
  // PageTransition
 
 /*ValueSetterGenerator*/
-public static T PageTransition<T>(this T control, Avalonia.Animation.IPageTransition value) where T : Avalonia.Controls.Carousel 
-=> control._set(() => control.PageTransition = value!);
+public static T PageTransition<T>(this T control, Avalonia.Animation.IPageTransition? value) where T : Avalonia.Controls.Carousel 
+=> control._set(() => control.PageTransition = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T PageTransition<T>(this T control, Func<Avalonia.Animation.IPageTransition> func, Action<Avalonia.Animation.IPageTransition>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Carousel 
+public static T PageTransition<T>(this T control, Func<Avalonia.Animation.IPageTransition?> func, Action<Avalonia.Animation.IPageTransition?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Carousel 
    => control._set(Avalonia.Controls.Carousel.PageTransitionProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T PageTransition<T>(this T control,Avalonia.Animation.IPageTransition value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Carousel 
-=> control._setEx(Avalonia.Controls.Carousel.PageTransitionProperty, ps, () => control.PageTransition = value!, bindingMode, converter, bindingSource);
+public static T PageTransition<T>(this T control,Avalonia.Animation.IPageTransition? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Carousel 
+=> control._setEx(Avalonia.Controls.Carousel.PageTransitionProperty, ps, () => control.PageTransition = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T PageTransition<T>(this T control, IBinding binding) where T : Avalonia.Controls.Carousel 
@@ -37,8 +37,8 @@ public static T PageTransition<T>(this T control, AvaloniaProperty avaloniaPrope
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T PageTransition<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Animation.IPageTransition> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Carousel 
-=> control._setEx(Avalonia.Controls.Carousel.PageTransitionProperty, ps, () => control.PageTransition = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T PageTransition<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Animation.IPageTransition?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Carousel 
+=> control._setEx(Avalonia.Controls.Carousel.PageTransitionProperty, ps, () => control.PageTransition = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 
@@ -46,7 +46,7 @@ public static T PageTransition<TValue,T>(this T control, TValue value, FuncValue
  // PageTransition
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> PageTransition<T>(this Style<T> style, Avalonia.Animation.IPageTransition value) where T : Avalonia.Controls.Carousel 
+public static Style<T> PageTransition<T>(this Style<T> style, Avalonia.Animation.IPageTransition? value) where T : Avalonia.Controls.Carousel 
 => style._addSetter(Avalonia.Controls.Carousel.PageTransitionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

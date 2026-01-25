@@ -16,7 +16,7 @@ public static partial class StackPanel_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T Spacing<T>(this T control, System.Double value) where T : Avalonia.Controls.StackPanel 
-=> control._set(() => control.Spacing = value!);
+=> control._set(() => control.Spacing = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Spacing<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.StackPanel 
@@ -25,7 +25,7 @@ public static T Spacing<T>(this T control, Func<System.Double> func, Action<Syst
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Spacing<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.StackPanel 
-=> control._setEx(Avalonia.Controls.StackPanel.SpacingProperty, ps, () => control.Spacing = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.StackPanel.SpacingProperty, ps, () => control.Spacing = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Spacing<T>(this T control, IBinding binding) where T : Avalonia.Controls.StackPanel 
@@ -38,14 +38,14 @@ public static T Spacing<T>(this T control, AvaloniaProperty avaloniaProperty, Bi
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Spacing<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.StackPanel 
-=> control._setEx(Avalonia.Controls.StackPanel.SpacingProperty, ps, () => control.Spacing = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.StackPanel.SpacingProperty, ps, () => control.Spacing = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Orientation
 
 /*ValueSetterGenerator*/
 public static T Orientation<T>(this T control, Avalonia.Layout.Orientation value) where T : Avalonia.Controls.StackPanel 
-=> control._set(() => control.Orientation = value!);
+=> control._set(() => control.Orientation = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Orientation<T>(this T control, Func<Avalonia.Layout.Orientation> func, Action<Avalonia.Layout.Orientation>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.StackPanel 
@@ -54,7 +54,7 @@ public static T Orientation<T>(this T control, Func<Avalonia.Layout.Orientation>
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Orientation<T>(this T control,Avalonia.Layout.Orientation value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.StackPanel 
-=> control._setEx(Avalonia.Controls.StackPanel.OrientationProperty, ps, () => control.Orientation = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.StackPanel.OrientationProperty, ps, () => control.Orientation = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Orientation<T>(this T control, IBinding binding) where T : Avalonia.Controls.StackPanel 
@@ -67,14 +67,14 @@ public static T Orientation<T>(this T control, AvaloniaProperty avaloniaProperty
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Orientation<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Layout.Orientation> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.StackPanel 
-=> control._setEx(Avalonia.Controls.StackPanel.OrientationProperty, ps, () => control.Orientation = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.StackPanel.OrientationProperty, ps, () => control.Orientation = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // AreHorizontalSnapPointsRegular
 
 /*ValueSetterGenerator*/
 public static T AreHorizontalSnapPointsRegular<T>(this T control, System.Boolean value) where T : Avalonia.Controls.StackPanel 
-=> control._set(() => control.AreHorizontalSnapPointsRegular = value!);
+=> control._set(() => control.AreHorizontalSnapPointsRegular = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T AreHorizontalSnapPointsRegular<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.StackPanel 
@@ -83,7 +83,7 @@ public static T AreHorizontalSnapPointsRegular<T>(this T control, Func<System.Bo
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T AreHorizontalSnapPointsRegular<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.StackPanel 
-=> control._setEx(Avalonia.Controls.StackPanel.AreHorizontalSnapPointsRegularProperty, ps, () => control.AreHorizontalSnapPointsRegular = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.StackPanel.AreHorizontalSnapPointsRegularProperty, ps, () => control.AreHorizontalSnapPointsRegular = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T AreHorizontalSnapPointsRegular<T>(this T control, IBinding binding) where T : Avalonia.Controls.StackPanel 
@@ -96,14 +96,14 @@ public static T AreHorizontalSnapPointsRegular<T>(this T control, AvaloniaProper
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T AreHorizontalSnapPointsRegular<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.StackPanel 
-=> control._setEx(Avalonia.Controls.StackPanel.AreHorizontalSnapPointsRegularProperty, ps, () => control.AreHorizontalSnapPointsRegular = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.StackPanel.AreHorizontalSnapPointsRegularProperty, ps, () => control.AreHorizontalSnapPointsRegular = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // AreVerticalSnapPointsRegular
 
 /*ValueSetterGenerator*/
 public static T AreVerticalSnapPointsRegular<T>(this T control, System.Boolean value) where T : Avalonia.Controls.StackPanel 
-=> control._set(() => control.AreVerticalSnapPointsRegular = value!);
+=> control._set(() => control.AreVerticalSnapPointsRegular = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T AreVerticalSnapPointsRegular<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.StackPanel 
@@ -112,7 +112,7 @@ public static T AreVerticalSnapPointsRegular<T>(this T control, Func<System.Bool
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T AreVerticalSnapPointsRegular<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.StackPanel 
-=> control._setEx(Avalonia.Controls.StackPanel.AreVerticalSnapPointsRegularProperty, ps, () => control.AreVerticalSnapPointsRegular = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.StackPanel.AreVerticalSnapPointsRegularProperty, ps, () => control.AreVerticalSnapPointsRegular = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T AreVerticalSnapPointsRegular<T>(this T control, IBinding binding) where T : Avalonia.Controls.StackPanel 
@@ -125,7 +125,7 @@ public static T AreVerticalSnapPointsRegular<T>(this T control, AvaloniaProperty
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T AreVerticalSnapPointsRegular<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.StackPanel 
-=> control._setEx(Avalonia.Controls.StackPanel.AreVerticalSnapPointsRegularProperty, ps, () => control.AreVerticalSnapPointsRegular = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.StackPanel.AreVerticalSnapPointsRegularProperty, ps, () => control.AreVerticalSnapPointsRegular = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

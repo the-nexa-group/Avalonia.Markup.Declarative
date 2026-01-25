@@ -16,7 +16,7 @@ public static partial class DropShadowEffect_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.DropShadowEffect OffsetX(this Avalonia.Media.DropShadowEffect control, System.Double value)  
-=> control._set(() => control.OffsetX = value!);
+=> control._set(() => control.OffsetX = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.DropShadowEffect OffsetX(this Avalonia.Media.DropShadowEffect control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -25,7 +25,7 @@ public static Avalonia.Media.DropShadowEffect OffsetX(this Avalonia.Media.DropSh
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.DropShadowEffect OffsetX(this Avalonia.Media.DropShadowEffect control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.DropShadowEffect.OffsetXProperty, ps, () => control.OffsetX = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.DropShadowEffect.OffsetXProperty, ps, () => control.OffsetX = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.DropShadowEffect OffsetX(this Avalonia.Media.DropShadowEffect control, IBinding binding)  
@@ -38,14 +38,14 @@ public static Avalonia.Media.DropShadowEffect OffsetX(this Avalonia.Media.DropSh
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.DropShadowEffect OffsetX<TValue>(this Avalonia.Media.DropShadowEffect control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.DropShadowEffect.OffsetXProperty, ps, () => control.OffsetX = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.DropShadowEffect.OffsetXProperty, ps, () => control.OffsetX = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // OffsetY
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.DropShadowEffect OffsetY(this Avalonia.Media.DropShadowEffect control, System.Double value)  
-=> control._set(() => control.OffsetY = value!);
+=> control._set(() => control.OffsetY = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.DropShadowEffect OffsetY(this Avalonia.Media.DropShadowEffect control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -54,7 +54,7 @@ public static Avalonia.Media.DropShadowEffect OffsetY(this Avalonia.Media.DropSh
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.DropShadowEffect OffsetY(this Avalonia.Media.DropShadowEffect control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.DropShadowEffect.OffsetYProperty, ps, () => control.OffsetY = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.DropShadowEffect.OffsetYProperty, ps, () => control.OffsetY = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.DropShadowEffect OffsetY(this Avalonia.Media.DropShadowEffect control, IBinding binding)  
@@ -67,7 +67,7 @@ public static Avalonia.Media.DropShadowEffect OffsetY(this Avalonia.Media.DropSh
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.DropShadowEffect OffsetY<TValue>(this Avalonia.Media.DropShadowEffect control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.DropShadowEffect.OffsetYProperty, ps, () => control.OffsetY = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.DropShadowEffect.OffsetYProperty, ps, () => control.OffsetY = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

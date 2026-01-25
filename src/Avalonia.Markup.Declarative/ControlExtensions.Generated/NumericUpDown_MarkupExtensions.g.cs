@@ -16,7 +16,7 @@ public static partial class NumericUpDown_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T AllowSpin<T>(this T control, System.Boolean value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.AllowSpin = value!);
+=> control._set(() => control.AllowSpin = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T AllowSpin<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
@@ -25,7 +25,7 @@ public static T AllowSpin<T>(this T control, Func<System.Boolean> func, Action<S
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T AllowSpin<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.AllowSpinProperty, ps, () => control.AllowSpin = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.AllowSpinProperty, ps, () => control.AllowSpin = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T AllowSpin<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -38,14 +38,14 @@ public static T AllowSpin<T>(this T control, AvaloniaProperty avaloniaProperty, 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T AllowSpin<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.AllowSpinProperty, ps, () => control.AllowSpin = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.AllowSpinProperty, ps, () => control.AllowSpin = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ButtonSpinnerLocation
 
 /*ValueSetterGenerator*/
 public static T ButtonSpinnerLocation<T>(this T control, Avalonia.Controls.Location value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.ButtonSpinnerLocation = value!);
+=> control._set(() => control.ButtonSpinnerLocation = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T ButtonSpinnerLocation<T>(this T control, Func<Avalonia.Controls.Location> func, Action<Avalonia.Controls.Location>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
@@ -54,7 +54,7 @@ public static T ButtonSpinnerLocation<T>(this T control, Func<Avalonia.Controls.
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ButtonSpinnerLocation<T>(this T control,Avalonia.Controls.Location value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.ButtonSpinnerLocationProperty, ps, () => control.ButtonSpinnerLocation = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.ButtonSpinnerLocationProperty, ps, () => control.ButtonSpinnerLocation = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T ButtonSpinnerLocation<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -67,14 +67,14 @@ public static T ButtonSpinnerLocation<T>(this T control, AvaloniaProperty avalon
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T ButtonSpinnerLocation<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Location> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.ButtonSpinnerLocationProperty, ps, () => control.ButtonSpinnerLocation = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.ButtonSpinnerLocationProperty, ps, () => control.ButtonSpinnerLocation = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ShowButtonSpinner
 
 /*ValueSetterGenerator*/
 public static T ShowButtonSpinner<T>(this T control, System.Boolean value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.ShowButtonSpinner = value!);
+=> control._set(() => control.ShowButtonSpinner = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T ShowButtonSpinner<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
@@ -83,7 +83,7 @@ public static T ShowButtonSpinner<T>(this T control, Func<System.Boolean> func, 
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ShowButtonSpinner<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.ShowButtonSpinnerProperty, ps, () => control.ShowButtonSpinner = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.ShowButtonSpinnerProperty, ps, () => control.ShowButtonSpinner = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T ShowButtonSpinner<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -96,14 +96,14 @@ public static T ShowButtonSpinner<T>(this T control, AvaloniaProperty avaloniaPr
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T ShowButtonSpinner<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.ShowButtonSpinnerProperty, ps, () => control.ShowButtonSpinner = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.ShowButtonSpinnerProperty, ps, () => control.ShowButtonSpinner = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ClipValueToMinMax
 
 /*ValueSetterGenerator*/
 public static T ClipValueToMinMax<T>(this T control, System.Boolean value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.ClipValueToMinMax = value!);
+=> control._set(() => control.ClipValueToMinMax = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T ClipValueToMinMax<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
@@ -112,7 +112,7 @@ public static T ClipValueToMinMax<T>(this T control, Func<System.Boolean> func, 
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ClipValueToMinMax<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.ClipValueToMinMaxProperty, ps, () => control.ClipValueToMinMax = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.ClipValueToMinMaxProperty, ps, () => control.ClipValueToMinMax = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T ClipValueToMinMax<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -125,23 +125,23 @@ public static T ClipValueToMinMax<T>(this T control, AvaloniaProperty avaloniaPr
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T ClipValueToMinMax<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.ClipValueToMinMaxProperty, ps, () => control.ClipValueToMinMax = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.ClipValueToMinMaxProperty, ps, () => control.ClipValueToMinMax = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // NumberFormat
 
 /*ValueSetterGenerator*/
-public static T NumberFormat<T>(this T control, System.Globalization.NumberFormatInfo value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.NumberFormat = value!);
+public static T NumberFormat<T>(this T control, System.Globalization.NumberFormatInfo? value) where T : Avalonia.Controls.NumericUpDown 
+=> control._set(() => control.NumberFormat = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T NumberFormat<T>(this T control, Func<System.Globalization.NumberFormatInfo> func, Action<System.Globalization.NumberFormatInfo>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
+public static T NumberFormat<T>(this T control, Func<System.Globalization.NumberFormatInfo?> func, Action<System.Globalization.NumberFormatInfo?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.NumberFormatProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T NumberFormat<T>(this T control,System.Globalization.NumberFormatInfo value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.NumberFormatProperty, ps, () => control.NumberFormat = value!, bindingMode, converter, bindingSource);
+public static T NumberFormat<T>(this T control,System.Globalization.NumberFormatInfo? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
+=> control._setEx(Avalonia.Controls.NumericUpDown.NumberFormatProperty, ps, () => control.NumberFormat = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T NumberFormat<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -153,15 +153,15 @@ public static T NumberFormat<T>(this T control, AvaloniaProperty avaloniaPropert
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T NumberFormat<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Globalization.NumberFormatInfo> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.NumberFormatProperty, ps, () => control.NumberFormat = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T NumberFormat<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Globalization.NumberFormatInfo?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
+=> control._setEx(Avalonia.Controls.NumericUpDown.NumberFormatProperty, ps, () => control.NumberFormat = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // FormatString
 
 /*ValueSetterGenerator*/
 public static T FormatString<T>(this T control, System.String value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.FormatString = value!);
+=> control._set(() => control.FormatString = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T FormatString<T>(this T control, Func<System.String> func, Action<System.String>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
@@ -170,7 +170,7 @@ public static T FormatString<T>(this T control, Func<System.String> func, Action
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T FormatString<T>(this T control,System.String value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.FormatStringProperty, ps, () => control.FormatString = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.FormatStringProperty, ps, () => control.FormatString = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T FormatString<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -183,14 +183,14 @@ public static T FormatString<T>(this T control, AvaloniaProperty avaloniaPropert
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T FormatString<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.FormatStringProperty, ps, () => control.FormatString = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.FormatStringProperty, ps, () => control.FormatString = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Increment
 
 /*ValueSetterGenerator*/
 public static T Increment<T>(this T control, System.Decimal value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.Increment = value!);
+=> control._set(() => control.Increment = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Increment<T>(this T control, Func<System.Decimal> func, Action<System.Decimal>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
@@ -199,7 +199,7 @@ public static T Increment<T>(this T control, Func<System.Decimal> func, Action<S
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Increment<T>(this T control,System.Decimal value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.IncrementProperty, ps, () => control.Increment = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.IncrementProperty, ps, () => control.Increment = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Increment<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -212,14 +212,14 @@ public static T Increment<T>(this T control, AvaloniaProperty avaloniaProperty, 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Increment<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Decimal> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.IncrementProperty, ps, () => control.Increment = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.IncrementProperty, ps, () => control.Increment = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsReadOnly
 
 /*ValueSetterGenerator*/
 public static T IsReadOnly<T>(this T control, System.Boolean value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.IsReadOnly = value!);
+=> control._set(() => control.IsReadOnly = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T IsReadOnly<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
@@ -228,7 +228,7 @@ public static T IsReadOnly<T>(this T control, Func<System.Boolean> func, Action<
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IsReadOnly<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.IsReadOnlyProperty, ps, () => control.IsReadOnly = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.IsReadOnlyProperty, ps, () => control.IsReadOnly = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T IsReadOnly<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -241,14 +241,14 @@ public static T IsReadOnly<T>(this T control, AvaloniaProperty avaloniaProperty,
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T IsReadOnly<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.IsReadOnlyProperty, ps, () => control.IsReadOnly = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.IsReadOnlyProperty, ps, () => control.IsReadOnly = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Maximum
 
 /*ValueSetterGenerator*/
 public static T Maximum<T>(this T control, System.Decimal value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.Maximum = value!);
+=> control._set(() => control.Maximum = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Maximum<T>(this T control, Func<System.Decimal> func, Action<System.Decimal>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
@@ -257,7 +257,7 @@ public static T Maximum<T>(this T control, Func<System.Decimal> func, Action<Sys
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Maximum<T>(this T control,System.Decimal value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.MaximumProperty, ps, () => control.Maximum = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.MaximumProperty, ps, () => control.Maximum = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Maximum<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -270,14 +270,14 @@ public static T Maximum<T>(this T control, AvaloniaProperty avaloniaProperty, Bi
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Maximum<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Decimal> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.MaximumProperty, ps, () => control.Maximum = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.MaximumProperty, ps, () => control.Maximum = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Minimum
 
 /*ValueSetterGenerator*/
 public static T Minimum<T>(this T control, System.Decimal value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.Minimum = value!);
+=> control._set(() => control.Minimum = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Minimum<T>(this T control, Func<System.Decimal> func, Action<System.Decimal>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
@@ -286,7 +286,7 @@ public static T Minimum<T>(this T control, Func<System.Decimal> func, Action<Sys
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Minimum<T>(this T control,System.Decimal value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.MinimumProperty, ps, () => control.Minimum = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.MinimumProperty, ps, () => control.Minimum = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Minimum<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -299,14 +299,14 @@ public static T Minimum<T>(this T control, AvaloniaProperty avaloniaProperty, Bi
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Minimum<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Decimal> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.MinimumProperty, ps, () => control.Minimum = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.MinimumProperty, ps, () => control.Minimum = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ParsingNumberStyle
 
 /*ValueSetterGenerator*/
 public static T ParsingNumberStyle<T>(this T control, System.Globalization.NumberStyles value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.ParsingNumberStyle = value!);
+=> control._set(() => control.ParsingNumberStyle = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T ParsingNumberStyle<T>(this T control, Func<System.Globalization.NumberStyles> func, Action<System.Globalization.NumberStyles>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
@@ -315,7 +315,7 @@ public static T ParsingNumberStyle<T>(this T control, Func<System.Globalization.
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ParsingNumberStyle<T>(this T control,System.Globalization.NumberStyles value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.ParsingNumberStyleProperty, ps, () => control.ParsingNumberStyle = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.ParsingNumberStyleProperty, ps, () => control.ParsingNumberStyle = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T ParsingNumberStyle<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -328,23 +328,23 @@ public static T ParsingNumberStyle<T>(this T control, AvaloniaProperty avaloniaP
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T ParsingNumberStyle<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Globalization.NumberStyles> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.ParsingNumberStyleProperty, ps, () => control.ParsingNumberStyle = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.ParsingNumberStyleProperty, ps, () => control.ParsingNumberStyle = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Text
 
 /*ValueSetterGenerator*/
-public static T Text<T>(this T control, System.String value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.Text = value!);
+public static T Text<T>(this T control, System.String? value) where T : Avalonia.Controls.NumericUpDown 
+=> control._set(() => control.Text = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T Text<T>(this T control, Func<System.String> func, Action<System.String>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
+public static T Text<T>(this T control, Func<System.String?> func, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.TextProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T Text<T>(this T control,System.String value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.TextProperty, ps, () => control.Text = value!, bindingMode, converter, bindingSource);
+public static T Text<T>(this T control,System.String? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
+=> control._setEx(Avalonia.Controls.NumericUpDown.TextProperty, ps, () => control.Text = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Text<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -356,24 +356,24 @@ public static T Text<T>(this T control, AvaloniaProperty avaloniaProperty, Bindi
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T Text<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.TextProperty, ps, () => control.Text = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T Text<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
+=> control._setEx(Avalonia.Controls.NumericUpDown.TextProperty, ps, () => control.Text = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // TextConverter
 
 /*ValueSetterGenerator*/
-public static T TextConverter<T>(this T control, Avalonia.Data.Converters.IValueConverter value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.TextConverter = value!);
+public static T TextConverter<T>(this T control, Avalonia.Data.Converters.IValueConverter? value) where T : Avalonia.Controls.NumericUpDown 
+=> control._set(() => control.TextConverter = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T TextConverter<T>(this T control, Func<Avalonia.Data.Converters.IValueConverter> func, Action<Avalonia.Data.Converters.IValueConverter>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
+public static T TextConverter<T>(this T control, Func<Avalonia.Data.Converters.IValueConverter?> func, Action<Avalonia.Data.Converters.IValueConverter?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.TextConverterProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T TextConverter<T>(this T control,Avalonia.Data.Converters.IValueConverter value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.TextConverterProperty, ps, () => control.TextConverter = value!, bindingMode, converter, bindingSource);
+public static T TextConverter<T>(this T control,Avalonia.Data.Converters.IValueConverter? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
+=> control._setEx(Avalonia.Controls.NumericUpDown.TextConverterProperty, ps, () => control.TextConverter = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T TextConverter<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -385,15 +385,15 @@ public static T TextConverter<T>(this T control, AvaloniaProperty avaloniaProper
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T TextConverter<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Data.Converters.IValueConverter> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.TextConverterProperty, ps, () => control.TextConverter = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T TextConverter<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Data.Converters.IValueConverter?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
+=> control._setEx(Avalonia.Controls.NumericUpDown.TextConverterProperty, ps, () => control.TextConverter = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Value
 
 /*ValueSetterGenerator*/
 public static T Value<T>(this T control, System.Nullable<System.Decimal> value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.Value = value!);
+=> control._set(() => control.Value = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Value<T>(this T control, Func<System.Nullable<System.Decimal>> func, Action<System.Nullable<System.Decimal>>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
@@ -402,7 +402,7 @@ public static T Value<T>(this T control, Func<System.Nullable<System.Decimal>> f
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Value<T>(this T control,System.Nullable<System.Decimal> value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.ValueProperty, ps, () => control.Value = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.ValueProperty, ps, () => control.Value = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Value<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -415,23 +415,23 @@ public static T Value<T>(this T control, AvaloniaProperty avaloniaProperty, Bind
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Value<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Nullable<System.Decimal>> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.ValueProperty, ps, () => control.Value = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.ValueProperty, ps, () => control.Value = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Watermark
 
 /*ValueSetterGenerator*/
-public static T Watermark<T>(this T control, System.String value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.Watermark = value!);
+public static T Watermark<T>(this T control, System.String? value) where T : Avalonia.Controls.NumericUpDown 
+=> control._set(() => control.Watermark = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T Watermark<T>(this T control, Func<System.String> func, Action<System.String>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
+public static T Watermark<T>(this T control, Func<System.String?> func, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.WatermarkProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T Watermark<T>(this T control,System.String value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.WatermarkProperty, ps, () => control.Watermark = value!, bindingMode, converter, bindingSource);
+public static T Watermark<T>(this T control,System.String? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
+=> control._setEx(Avalonia.Controls.NumericUpDown.WatermarkProperty, ps, () => control.Watermark = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Watermark<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -443,15 +443,15 @@ public static T Watermark<T>(this T control, AvaloniaProperty avaloniaProperty, 
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T Watermark<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.WatermarkProperty, ps, () => control.Watermark = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T Watermark<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
+=> control._setEx(Avalonia.Controls.NumericUpDown.WatermarkProperty, ps, () => control.Watermark = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // HorizontalContentAlignment
 
 /*ValueSetterGenerator*/
 public static T HorizontalContentAlignment<T>(this T control, Avalonia.Layout.HorizontalAlignment value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.HorizontalContentAlignment = value!);
+=> control._set(() => control.HorizontalContentAlignment = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T HorizontalContentAlignment<T>(this T control, Func<Avalonia.Layout.HorizontalAlignment> func, Action<Avalonia.Layout.HorizontalAlignment>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
@@ -460,7 +460,7 @@ public static T HorizontalContentAlignment<T>(this T control, Func<Avalonia.Layo
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T HorizontalContentAlignment<T>(this T control,Avalonia.Layout.HorizontalAlignment value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.HorizontalContentAlignmentProperty, ps, () => control.HorizontalContentAlignment = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.HorizontalContentAlignmentProperty, ps, () => control.HorizontalContentAlignment = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T HorizontalContentAlignment<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -473,14 +473,14 @@ public static T HorizontalContentAlignment<T>(this T control, AvaloniaProperty a
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T HorizontalContentAlignment<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Layout.HorizontalAlignment> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.HorizontalContentAlignmentProperty, ps, () => control.HorizontalContentAlignment = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.HorizontalContentAlignmentProperty, ps, () => control.HorizontalContentAlignment = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // VerticalContentAlignment
 
 /*ValueSetterGenerator*/
 public static T VerticalContentAlignment<T>(this T control, Avalonia.Layout.VerticalAlignment value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.VerticalContentAlignment = value!);
+=> control._set(() => control.VerticalContentAlignment = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T VerticalContentAlignment<T>(this T control, Func<Avalonia.Layout.VerticalAlignment> func, Action<Avalonia.Layout.VerticalAlignment>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
@@ -489,7 +489,7 @@ public static T VerticalContentAlignment<T>(this T control, Func<Avalonia.Layout
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T VerticalContentAlignment<T>(this T control,Avalonia.Layout.VerticalAlignment value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.VerticalContentAlignmentProperty, ps, () => control.VerticalContentAlignment = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.VerticalContentAlignmentProperty, ps, () => control.VerticalContentAlignment = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T VerticalContentAlignment<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -502,14 +502,14 @@ public static T VerticalContentAlignment<T>(this T control, AvaloniaProperty ava
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T VerticalContentAlignment<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Layout.VerticalAlignment> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.VerticalContentAlignmentProperty, ps, () => control.VerticalContentAlignment = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.VerticalContentAlignmentProperty, ps, () => control.VerticalContentAlignment = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // TextAlignment
 
 /*ValueSetterGenerator*/
 public static T TextAlignment<T>(this T control, Avalonia.Media.TextAlignment value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.TextAlignment = value!);
+=> control._set(() => control.TextAlignment = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T TextAlignment<T>(this T control, Func<Avalonia.Media.TextAlignment> func, Action<Avalonia.Media.TextAlignment>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
@@ -518,7 +518,7 @@ public static T TextAlignment<T>(this T control, Func<Avalonia.Media.TextAlignme
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T TextAlignment<T>(this T control,Avalonia.Media.TextAlignment value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.TextAlignmentProperty, ps, () => control.TextAlignment = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.TextAlignmentProperty, ps, () => control.TextAlignment = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T TextAlignment<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -531,23 +531,23 @@ public static T TextAlignment<T>(this T control, AvaloniaProperty avaloniaProper
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T TextAlignment<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.TextAlignment> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.TextAlignmentProperty, ps, () => control.TextAlignment = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.NumericUpDown.TextAlignmentProperty, ps, () => control.TextAlignment = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // InnerLeftContent
 
 /*ValueSetterGenerator*/
-public static T InnerLeftContent<T>(this T control, System.Object value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.InnerLeftContent = value!);
+public static T InnerLeftContent<T>(this T control, System.Object? value) where T : Avalonia.Controls.NumericUpDown 
+=> control._set(() => control.InnerLeftContent = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T InnerLeftContent<T>(this T control, Func<System.Object> func, Action<System.Object>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
+public static T InnerLeftContent<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T InnerLeftContent<T>(this T control,System.Object value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty, ps, () => control.InnerLeftContent = value!, bindingMode, converter, bindingSource);
+public static T InnerLeftContent<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
+=> control._setEx(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty, ps, () => control.InnerLeftContent = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T InnerLeftContent<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -559,24 +559,24 @@ public static T InnerLeftContent<T>(this T control, AvaloniaProperty avaloniaPro
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T InnerLeftContent<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty, ps, () => control.InnerLeftContent = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T InnerLeftContent<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
+=> control._setEx(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty, ps, () => control.InnerLeftContent = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // InnerRightContent
 
 /*ValueSetterGenerator*/
-public static T InnerRightContent<T>(this T control, System.Object value) where T : Avalonia.Controls.NumericUpDown 
-=> control._set(() => control.InnerRightContent = value!);
+public static T InnerRightContent<T>(this T control, System.Object? value) where T : Avalonia.Controls.NumericUpDown 
+=> control._set(() => control.InnerRightContent = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T InnerRightContent<T>(this T control, Func<System.Object> func, Action<System.Object>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
+public static T InnerRightContent<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.InnerRightContentProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T InnerRightContent<T>(this T control,System.Object value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.InnerRightContentProperty, ps, () => control.InnerRightContent = value!, bindingMode, converter, bindingSource);
+public static T InnerRightContent<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
+=> control._setEx(Avalonia.Controls.NumericUpDown.InnerRightContentProperty, ps, () => control.InnerRightContent = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T InnerRightContent<T>(this T control, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
@@ -588,8 +588,8 @@ public static T InnerRightContent<T>(this T control, AvaloniaProperty avaloniaPr
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T InnerRightContent<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
-=> control._setEx(Avalonia.Controls.NumericUpDown.InnerRightContentProperty, ps, () => control.InnerRightContent = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T InnerRightContent<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.NumericUpDown 
+=> control._setEx(Avalonia.Controls.NumericUpDown.InnerRightContentProperty, ps, () => control.InnerRightContent = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 
@@ -661,7 +661,7 @@ public static Style<T> ClipValueToMinMax<T>(this Style<T> style, IBinding bindin
  // NumberFormat
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> NumberFormat<T>(this Style<T> style, System.Globalization.NumberFormatInfo value) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> NumberFormat<T>(this Style<T> style, System.Globalization.NumberFormatInfo? value) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.NumberFormatProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -738,7 +738,7 @@ public static Style<T> ParsingNumberStyle<T>(this Style<T> style, IBinding bindi
  // Text
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> Text<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -749,7 +749,7 @@ public static Style<T> Text<T>(this Style<T> style, IBinding binding) where T : 
  // TextConverter
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> TextConverter<T>(this Style<T> style, Avalonia.Data.Converters.IValueConverter value) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> TextConverter<T>(this Style<T> style, Avalonia.Data.Converters.IValueConverter? value) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.TextConverterProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -771,7 +771,7 @@ public static Style<T> Value<T>(this Style<T> style, IBinding binding) where T :
  // Watermark
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Watermark<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> Watermark<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.WatermarkProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -815,7 +815,7 @@ public static Style<T> TextAlignment<T>(this Style<T> style, IBinding binding) w
  // InnerLeftContent
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> InnerLeftContent<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> InnerLeftContent<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -826,7 +826,7 @@ public static Style<T> InnerLeftContent<T>(this Style<T> style, IBinding binding
  // InnerRightContent
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> InnerRightContent<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> InnerRightContent<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.InnerRightContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

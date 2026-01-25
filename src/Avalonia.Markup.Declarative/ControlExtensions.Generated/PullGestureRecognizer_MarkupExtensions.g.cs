@@ -16,7 +16,7 @@ public static partial class PullGestureRecognizer_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T PullDirection<T>(this T control, Avalonia.Input.PullDirection value) where T : Avalonia.Input.PullGestureRecognizer 
-=> control._set(() => control.PullDirection = value!);
+=> control._set(() => control.PullDirection = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T PullDirection<T>(this T control, Func<Avalonia.Input.PullDirection> func, Action<Avalonia.Input.PullDirection>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Input.PullGestureRecognizer 
@@ -25,7 +25,7 @@ public static T PullDirection<T>(this T control, Func<Avalonia.Input.PullDirecti
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T PullDirection<T>(this T control,Avalonia.Input.PullDirection value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.PullGestureRecognizer 
-=> control._setEx(Avalonia.Input.PullGestureRecognizer.PullDirectionProperty, ps, () => control.PullDirection = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Input.PullGestureRecognizer.PullDirectionProperty, ps, () => control.PullDirection = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T PullDirection<T>(this T control, IBinding binding) where T : Avalonia.Input.PullGestureRecognizer 
@@ -38,7 +38,7 @@ public static T PullDirection<T>(this T control, AvaloniaProperty avaloniaProper
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T PullDirection<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Input.PullDirection> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.PullGestureRecognizer 
-=> control._setEx(Avalonia.Input.PullGestureRecognizer.PullDirectionProperty, ps, () => control.PullDirection = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Input.PullGestureRecognizer.PullDirectionProperty, ps, () => control.PullDirection = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

@@ -16,7 +16,7 @@ public static partial class WindowBase_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T Topmost<T>(this T control, System.Boolean value) where T : Avalonia.Controls.WindowBase 
-=> control._set(() => control.Topmost = value!);
+=> control._set(() => control.Topmost = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T Topmost<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.WindowBase 
@@ -25,7 +25,7 @@ public static T Topmost<T>(this T control, Func<System.Boolean> func, Action<Sys
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Topmost<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.WindowBase 
-=> control._setEx(Avalonia.Controls.WindowBase.TopmostProperty, ps, () => control.Topmost = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.WindowBase.TopmostProperty, ps, () => control.Topmost = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Topmost<T>(this T control, IBinding binding) where T : Avalonia.Controls.WindowBase 
@@ -38,7 +38,7 @@ public static T Topmost<T>(this T control, AvaloniaProperty avaloniaProperty, Bi
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T Topmost<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.WindowBase 
-=> control._setEx(Avalonia.Controls.WindowBase.TopmostProperty, ps, () => control.Topmost = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.WindowBase.TopmostProperty, ps, () => control.Topmost = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

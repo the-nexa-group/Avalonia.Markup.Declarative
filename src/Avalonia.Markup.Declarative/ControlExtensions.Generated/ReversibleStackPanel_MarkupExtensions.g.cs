@@ -16,7 +16,7 @@ public static partial class ReversibleStackPanel_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T ReverseOrder<T>(this T control, System.Boolean value) where T : Avalonia.Controls.ReversibleStackPanel 
-=> control._set(() => control.ReverseOrder = value!);
+=> control._set(() => control.ReverseOrder = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T ReverseOrder<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ReversibleStackPanel 
@@ -25,7 +25,7 @@ public static T ReverseOrder<T>(this T control, Func<System.Boolean> func, Actio
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ReverseOrder<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ReversibleStackPanel 
-=> control._setEx(Avalonia.Controls.ReversibleStackPanel.ReverseOrderProperty, ps, () => control.ReverseOrder = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.ReversibleStackPanel.ReverseOrderProperty, ps, () => control.ReverseOrder = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T ReverseOrder<T>(this T control, IBinding binding) where T : Avalonia.Controls.ReversibleStackPanel 
@@ -38,7 +38,7 @@ public static T ReverseOrder<T>(this T control, AvaloniaProperty avaloniaPropert
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T ReverseOrder<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ReversibleStackPanel 
-=> control._setEx(Avalonia.Controls.ReversibleStackPanel.ReverseOrderProperty, ps, () => control.ReverseOrder = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.ReversibleStackPanel.ReverseOrderProperty, ps, () => control.ReverseOrder = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

@@ -16,7 +16,7 @@ public static partial class SplitView_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T CompactPaneLength<T>(this T control, System.Double value) where T : Avalonia.Controls.SplitView 
-=> control._set(() => control.CompactPaneLength = value!);
+=> control._set(() => control.CompactPaneLength = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T CompactPaneLength<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SplitView 
@@ -25,7 +25,7 @@ public static T CompactPaneLength<T>(this T control, Func<System.Double> func, A
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T CompactPaneLength<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.CompactPaneLengthProperty, ps, () => control.CompactPaneLength = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SplitView.CompactPaneLengthProperty, ps, () => control.CompactPaneLength = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T CompactPaneLength<T>(this T control, IBinding binding) where T : Avalonia.Controls.SplitView 
@@ -38,14 +38,14 @@ public static T CompactPaneLength<T>(this T control, AvaloniaProperty avaloniaPr
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T CompactPaneLength<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.CompactPaneLengthProperty, ps, () => control.CompactPaneLength = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SplitView.CompactPaneLengthProperty, ps, () => control.CompactPaneLength = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // DisplayMode
 
 /*ValueSetterGenerator*/
 public static T DisplayMode<T>(this T control, Avalonia.Controls.SplitViewDisplayMode value) where T : Avalonia.Controls.SplitView 
-=> control._set(() => control.DisplayMode = value!);
+=> control._set(() => control.DisplayMode = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T DisplayMode<T>(this T control, Func<Avalonia.Controls.SplitViewDisplayMode> func, Action<Avalonia.Controls.SplitViewDisplayMode>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SplitView 
@@ -54,7 +54,7 @@ public static T DisplayMode<T>(this T control, Func<Avalonia.Controls.SplitViewD
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T DisplayMode<T>(this T control,Avalonia.Controls.SplitViewDisplayMode value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.DisplayModeProperty, ps, () => control.DisplayMode = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SplitView.DisplayModeProperty, ps, () => control.DisplayMode = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T DisplayMode<T>(this T control, IBinding binding) where T : Avalonia.Controls.SplitView 
@@ -67,14 +67,14 @@ public static T DisplayMode<T>(this T control, AvaloniaProperty avaloniaProperty
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T DisplayMode<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.SplitViewDisplayMode> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.DisplayModeProperty, ps, () => control.DisplayMode = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SplitView.DisplayModeProperty, ps, () => control.DisplayMode = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsPaneOpen
 
 /*ValueSetterGenerator*/
 public static T IsPaneOpen<T>(this T control, System.Boolean value) where T : Avalonia.Controls.SplitView 
-=> control._set(() => control.IsPaneOpen = value!);
+=> control._set(() => control.IsPaneOpen = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T IsPaneOpen<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SplitView 
@@ -83,7 +83,7 @@ public static T IsPaneOpen<T>(this T control, Func<System.Boolean> func, Action<
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IsPaneOpen<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.IsPaneOpenProperty, ps, () => control.IsPaneOpen = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SplitView.IsPaneOpenProperty, ps, () => control.IsPaneOpen = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T IsPaneOpen<T>(this T control, IBinding binding) where T : Avalonia.Controls.SplitView 
@@ -96,14 +96,14 @@ public static T IsPaneOpen<T>(this T control, AvaloniaProperty avaloniaProperty,
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T IsPaneOpen<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.IsPaneOpenProperty, ps, () => control.IsPaneOpen = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SplitView.IsPaneOpenProperty, ps, () => control.IsPaneOpen = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // OpenPaneLength
 
 /*ValueSetterGenerator*/
 public static T OpenPaneLength<T>(this T control, System.Double value) where T : Avalonia.Controls.SplitView 
-=> control._set(() => control.OpenPaneLength = value!);
+=> control._set(() => control.OpenPaneLength = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T OpenPaneLength<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SplitView 
@@ -112,7 +112,7 @@ public static T OpenPaneLength<T>(this T control, Func<System.Double> func, Acti
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T OpenPaneLength<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.OpenPaneLengthProperty, ps, () => control.OpenPaneLength = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SplitView.OpenPaneLengthProperty, ps, () => control.OpenPaneLength = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T OpenPaneLength<T>(this T control, IBinding binding) where T : Avalonia.Controls.SplitView 
@@ -125,23 +125,23 @@ public static T OpenPaneLength<T>(this T control, AvaloniaProperty avaloniaPrope
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T OpenPaneLength<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.OpenPaneLengthProperty, ps, () => control.OpenPaneLength = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SplitView.OpenPaneLengthProperty, ps, () => control.OpenPaneLength = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // PaneBackground
 
 /*ValueSetterGenerator*/
-public static T PaneBackground<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.SplitView 
-=> control._set(() => control.PaneBackground = value!);
+public static T PaneBackground<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.SplitView 
+=> control._set(() => control.PaneBackground = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T PaneBackground<T>(this T control, Func<Avalonia.Media.IBrush> func, Action<Avalonia.Media.IBrush>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SplitView 
+public static T PaneBackground<T>(this T control, Func<Avalonia.Media.IBrush?> func, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.PaneBackgroundProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T PaneBackground<T>(this T control,Avalonia.Media.IBrush value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.PaneBackgroundProperty, ps, () => control.PaneBackground = value!, bindingMode, converter, bindingSource);
+public static T PaneBackground<T>(this T control,Avalonia.Media.IBrush? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
+=> control._setEx(Avalonia.Controls.SplitView.PaneBackgroundProperty, ps, () => control.PaneBackground = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T PaneBackground<T>(this T control, IBinding binding) where T : Avalonia.Controls.SplitView 
@@ -153,15 +153,15 @@ public static T PaneBackground<T>(this T control, AvaloniaProperty avaloniaPrope
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T PaneBackground<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.PaneBackgroundProperty, ps, () => control.PaneBackground = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T PaneBackground<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
+=> control._setEx(Avalonia.Controls.SplitView.PaneBackgroundProperty, ps, () => control.PaneBackground = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // PanePlacement
 
 /*ValueSetterGenerator*/
 public static T PanePlacement<T>(this T control, Avalonia.Controls.SplitViewPanePlacement value) where T : Avalonia.Controls.SplitView 
-=> control._set(() => control.PanePlacement = value!);
+=> control._set(() => control.PanePlacement = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T PanePlacement<T>(this T control, Func<Avalonia.Controls.SplitViewPanePlacement> func, Action<Avalonia.Controls.SplitViewPanePlacement>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SplitView 
@@ -170,7 +170,7 @@ public static T PanePlacement<T>(this T control, Func<Avalonia.Controls.SplitVie
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T PanePlacement<T>(this T control,Avalonia.Controls.SplitViewPanePlacement value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.PanePlacementProperty, ps, () => control.PanePlacement = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SplitView.PanePlacementProperty, ps, () => control.PanePlacement = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T PanePlacement<T>(this T control, IBinding binding) where T : Avalonia.Controls.SplitView 
@@ -183,23 +183,23 @@ public static T PanePlacement<T>(this T control, AvaloniaProperty avaloniaProper
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T PanePlacement<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.SplitViewPanePlacement> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.PanePlacementProperty, ps, () => control.PanePlacement = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SplitView.PanePlacementProperty, ps, () => control.PanePlacement = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Pane
 
 /*ValueSetterGenerator*/
-public static T Pane<T>(this T control, System.Object value) where T : Avalonia.Controls.SplitView 
-=> control._set(() => control.Pane = value!);
+public static T Pane<T>(this T control, System.Object? value) where T : Avalonia.Controls.SplitView 
+=> control._set(() => control.Pane = value);
 
 /*BindFromExpressionSetterGenerator*/
-public static T Pane<T>(this T control, Func<System.Object> func, Action<System.Object>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SplitView 
+public static T Pane<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.PaneProperty!, func, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
-public static T Pane<T>(this T control,System.Object value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.PaneProperty, ps, () => control.Pane = value!, bindingMode, converter, bindingSource);
+public static T Pane<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
+=> control._setEx(Avalonia.Controls.SplitView.PaneProperty, ps, () => control.Pane = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T Pane<T>(this T control, IBinding binding) where T : Avalonia.Controls.SplitView 
@@ -211,15 +211,15 @@ public static T Pane<T>(this T control, AvaloniaProperty avaloniaProperty, Bindi
 
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
-public static T Pane<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.PaneProperty, ps, () => control.Pane = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+public static T Pane<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
+=> control._setEx(Avalonia.Controls.SplitView.PaneProperty, ps, () => control.Pane = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // PaneTemplate
 
 /*ValueSetterGenerator*/
 public static T PaneTemplate<T>(this T control, Avalonia.Controls.Templates.IDataTemplate value) where T : Avalonia.Controls.SplitView 
-=> control._set(() => control.PaneTemplate = value!);
+=> control._set(() => control.PaneTemplate = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T PaneTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate> func, Action<Avalonia.Controls.Templates.IDataTemplate>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SplitView 
@@ -228,7 +228,7 @@ public static T PaneTemplate<T>(this T control, Func<Avalonia.Controls.Templates
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T PaneTemplate<T>(this T control,Avalonia.Controls.Templates.IDataTemplate value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.PaneTemplateProperty, ps, () => control.PaneTemplate = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SplitView.PaneTemplateProperty, ps, () => control.PaneTemplate = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T PaneTemplate<T>(this T control, IBinding binding) where T : Avalonia.Controls.SplitView 
@@ -241,14 +241,14 @@ public static T PaneTemplate<T>(this T control, AvaloniaProperty avaloniaPropert
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T PaneTemplate<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Templates.IDataTemplate> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.PaneTemplateProperty, ps, () => control.PaneTemplate = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SplitView.PaneTemplateProperty, ps, () => control.PaneTemplate = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // UseLightDismissOverlayMode
 
 /*ValueSetterGenerator*/
 public static T UseLightDismissOverlayMode<T>(this T control, System.Boolean value) where T : Avalonia.Controls.SplitView 
-=> control._set(() => control.UseLightDismissOverlayMode = value!);
+=> control._set(() => control.UseLightDismissOverlayMode = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T UseLightDismissOverlayMode<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SplitView 
@@ -257,7 +257,7 @@ public static T UseLightDismissOverlayMode<T>(this T control, Func<System.Boolea
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T UseLightDismissOverlayMode<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.UseLightDismissOverlayModeProperty, ps, () => control.UseLightDismissOverlayMode = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SplitView.UseLightDismissOverlayModeProperty, ps, () => control.UseLightDismissOverlayMode = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T UseLightDismissOverlayMode<T>(this T control, IBinding binding) where T : Avalonia.Controls.SplitView 
@@ -270,7 +270,7 @@ public static T UseLightDismissOverlayMode<T>(this T control, AvaloniaProperty a
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T UseLightDismissOverlayMode<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitView 
-=> control._setEx(Avalonia.Controls.SplitView.UseLightDismissOverlayModeProperty, ps, () => control.UseLightDismissOverlayMode = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.SplitView.UseLightDismissOverlayModeProperty, ps, () => control.UseLightDismissOverlayMode = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 
@@ -368,7 +368,7 @@ public static Style<T> OpenPaneLength<T>(this Style<T> style, IBinding binding) 
  // PaneBackground
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> PaneBackground<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.SplitView 
+public static Style<T> PaneBackground<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.SplitView 
 => style._addSetter(Avalonia.Controls.SplitView.PaneBackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -390,7 +390,7 @@ public static Style<T> PanePlacement<T>(this Style<T> style, IBinding binding) w
  // Pane
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Pane<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.SplitView 
+public static Style<T> Pane<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.SplitView 
 => style._addSetter(Avalonia.Controls.SplitView.PaneProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

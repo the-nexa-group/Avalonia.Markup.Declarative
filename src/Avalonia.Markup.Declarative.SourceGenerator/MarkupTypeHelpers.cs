@@ -83,7 +83,15 @@ internal static class MarkupTypeHelpers
     internal static string GetPropertyTypeName(PropertyDeclarationSyntax property, SemanticModel semanticModel)
     {
         var typeInfo = semanticModel.GetTypeInfo(property.Type);
-        return typeInfo.Type?.ToDisplayString() ?? property.Type.ToString();
+
+        if (typeInfo.Type == null)
+            return property.Type.ToString();
+
+        return typeInfo.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat
+            .WithMiscellaneousOptions(
+                SymbolDisplayMiscellaneousOptions.UseSpecialTypes | 
+                SymbolDisplayMiscellaneousOptions.ExpandNullable
+            ));
     }
 
     internal static string GetNullableLambdaParameterTypeName(PropertyDeclarationSyntax property, SemanticModel semanticModel)

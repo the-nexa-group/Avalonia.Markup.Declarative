@@ -1,5 +1,6 @@
 using AvaloniaExtensionGenerator.Generators;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace AvaloniaExtensionGenerator.ExtensionInfos;
 public class PropertyExtensionInfo : IMemberExtensionInfo
@@ -26,7 +27,9 @@ public class PropertyExtensionInfo : IMemberExtensionInfo
         MemberName = field.Name.Replace("Property", "");
         ValueType = field.FieldType.GetGenericArguments().Last();
         ControlTypeName = ControlType.GetTypeDeclarationSourceCode();
-        ValueTypeSource = ValueType.GetTypeDeclarationSourceCode();
+
+        bool isReferenceNullable = field.GetCustomAttribute<NullableAttribute>() != null && !ValueType.IsValueType;
+        ValueTypeSource = ValueType.GetTypeDeclarationSourceCode(isReferenceNullable);
 
         IsAttachedProperty = field.FieldType.Name.StartsWith("AttachedProperty");
         IsGeneric = !field.DeclaringType.IsSealed;

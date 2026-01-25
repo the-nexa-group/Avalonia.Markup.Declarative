@@ -16,7 +16,7 @@ public static partial class ArcSegment_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.ArcSegment IsLargeArc(this Avalonia.Media.ArcSegment control, System.Boolean value)  
-=> control._set(() => control.IsLargeArc = value!);
+=> control._set(() => control.IsLargeArc = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.ArcSegment IsLargeArc(this Avalonia.Media.ArcSegment control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -25,7 +25,7 @@ public static Avalonia.Media.ArcSegment IsLargeArc(this Avalonia.Media.ArcSegmen
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.ArcSegment IsLargeArc(this Avalonia.Media.ArcSegment control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.ArcSegment.IsLargeArcProperty, ps, () => control.IsLargeArc = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.ArcSegment.IsLargeArcProperty, ps, () => control.IsLargeArc = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.ArcSegment IsLargeArc(this Avalonia.Media.ArcSegment control, IBinding binding)  
@@ -38,14 +38,14 @@ public static Avalonia.Media.ArcSegment IsLargeArc(this Avalonia.Media.ArcSegmen
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.ArcSegment IsLargeArc<TValue>(this Avalonia.Media.ArcSegment control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.ArcSegment.IsLargeArcProperty, ps, () => control.IsLargeArc = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.ArcSegment.IsLargeArcProperty, ps, () => control.IsLargeArc = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Point
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.ArcSegment Point(this Avalonia.Media.ArcSegment control, Avalonia.Point value)  
-=> control._set(() => control.Point = value!);
+=> control._set(() => control.Point = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.ArcSegment Point(this Avalonia.Media.ArcSegment control, Func<Avalonia.Point> func, Action<Avalonia.Point>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -54,7 +54,7 @@ public static Avalonia.Media.ArcSegment Point(this Avalonia.Media.ArcSegment con
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.ArcSegment Point(this Avalonia.Media.ArcSegment control,Avalonia.Point value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.ArcSegment.PointProperty, ps, () => control.Point = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.ArcSegment.PointProperty, ps, () => control.Point = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.ArcSegment Point(this Avalonia.Media.ArcSegment control, IBinding binding)  
@@ -67,14 +67,14 @@ public static Avalonia.Media.ArcSegment Point(this Avalonia.Media.ArcSegment con
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.ArcSegment Point<TValue>(this Avalonia.Media.ArcSegment control, TValue value, FuncValueConverter<TValue, Avalonia.Point> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.ArcSegment.PointProperty, ps, () => control.Point = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.ArcSegment.PointProperty, ps, () => control.Point = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // RotationAngle
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.ArcSegment RotationAngle(this Avalonia.Media.ArcSegment control, System.Double value)  
-=> control._set(() => control.RotationAngle = value!);
+=> control._set(() => control.RotationAngle = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.ArcSegment RotationAngle(this Avalonia.Media.ArcSegment control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -83,7 +83,7 @@ public static Avalonia.Media.ArcSegment RotationAngle(this Avalonia.Media.ArcSeg
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.ArcSegment RotationAngle(this Avalonia.Media.ArcSegment control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.ArcSegment.RotationAngleProperty, ps, () => control.RotationAngle = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.ArcSegment.RotationAngleProperty, ps, () => control.RotationAngle = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.ArcSegment RotationAngle(this Avalonia.Media.ArcSegment control, IBinding binding)  
@@ -96,14 +96,14 @@ public static Avalonia.Media.ArcSegment RotationAngle(this Avalonia.Media.ArcSeg
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.ArcSegment RotationAngle<TValue>(this Avalonia.Media.ArcSegment control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.ArcSegment.RotationAngleProperty, ps, () => control.RotationAngle = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.ArcSegment.RotationAngleProperty, ps, () => control.RotationAngle = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Size
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.ArcSegment Size(this Avalonia.Media.ArcSegment control, Avalonia.Size value)  
-=> control._set(() => control.Size = value!);
+=> control._set(() => control.Size = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.ArcSegment Size(this Avalonia.Media.ArcSegment control, Func<Avalonia.Size> func, Action<Avalonia.Size>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -119,7 +119,7 @@ public static Avalonia.Media.ArcSegment Size(this Avalonia.Media.ArcSegment cont
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.ArcSegment Size(this Avalonia.Media.ArcSegment control,Avalonia.Size value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.ArcSegment.SizeProperty, ps, () => control.Size = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.ArcSegment.SizeProperty, ps, () => control.Size = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.ArcSegment Size(this Avalonia.Media.ArcSegment control, IBinding binding)  
@@ -132,14 +132,14 @@ public static Avalonia.Media.ArcSegment Size(this Avalonia.Media.ArcSegment cont
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.ArcSegment Size<TValue>(this Avalonia.Media.ArcSegment control, TValue value, FuncValueConverter<TValue, Avalonia.Size> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.ArcSegment.SizeProperty, ps, () => control.Size = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.ArcSegment.SizeProperty, ps, () => control.Size = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SweepDirection
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.ArcSegment SweepDirection(this Avalonia.Media.ArcSegment control, Avalonia.Media.SweepDirection value)  
-=> control._set(() => control.SweepDirection = value!);
+=> control._set(() => control.SweepDirection = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.ArcSegment SweepDirection(this Avalonia.Media.ArcSegment control, Func<Avalonia.Media.SweepDirection> func, Action<Avalonia.Media.SweepDirection>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -148,7 +148,7 @@ public static Avalonia.Media.ArcSegment SweepDirection(this Avalonia.Media.ArcSe
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.ArcSegment SweepDirection(this Avalonia.Media.ArcSegment control,Avalonia.Media.SweepDirection value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.ArcSegment.SweepDirectionProperty, ps, () => control.SweepDirection = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.ArcSegment.SweepDirectionProperty, ps, () => control.SweepDirection = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.ArcSegment SweepDirection(this Avalonia.Media.ArcSegment control, IBinding binding)  
@@ -161,7 +161,7 @@ public static Avalonia.Media.ArcSegment SweepDirection(this Avalonia.Media.ArcSe
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.ArcSegment SweepDirection<TValue>(this Avalonia.Media.ArcSegment control, TValue value, FuncValueConverter<TValue, Avalonia.Media.SweepDirection> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.ArcSegment.SweepDirectionProperty, ps, () => control.SweepDirection = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.ArcSegment.SweepDirectionProperty, ps, () => control.SweepDirection = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

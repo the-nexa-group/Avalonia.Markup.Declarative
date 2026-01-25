@@ -2,7 +2,7 @@ namespace AvaloniaExtensionGenerator.Generators;
 
 public static class TypeFormatExtensions
 {
-    public static string GetTypeDeclarationSourceCode(this Type valueType)
+    public static string GetTypeDeclarationSourceCode(this Type valueType, bool isNullable = false)
     {
         var result = valueType.Name;
         if (valueType.IsGenericType)
@@ -10,7 +10,7 @@ public static class TypeFormatExtensions
             result = result.Split('`')[0];
             var genericArguments = valueType
                 .GetGenericArguments()
-                .Select(GetTypeDeclarationSourceCode);
+                .Select(innerType => GetTypeDeclarationSourceCode(innerType));
 
             var args = string.Join(",", genericArguments);
             result += $"<{args}>";
@@ -19,6 +19,11 @@ public static class TypeFormatExtensions
         if (!string.IsNullOrWhiteSpace(valueType.Namespace))
         {
             result = valueType.Namespace + "." + result;
+        }
+
+        if (isNullable)
+        {
+            result += "?";
         }
 
         return result;

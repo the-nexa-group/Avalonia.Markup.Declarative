@@ -16,7 +16,7 @@ public static partial class MatrixTransform_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTransform control, Avalonia.Matrix value)  
-=> control._set(() => control.Matrix = value!);
+=> control._set(() => control.Matrix = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTransform control, Func<Avalonia.Matrix> func, Action<Avalonia.Matrix>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
@@ -32,7 +32,7 @@ public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTr
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTransform control,Avalonia.Matrix value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.MatrixTransform.MatrixProperty, ps, () => control.Matrix = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.MatrixTransform.MatrixProperty, ps, () => control.Matrix = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTransform control, IBinding binding)  
@@ -45,7 +45,7 @@ public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTr
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static Avalonia.Media.MatrixTransform Matrix<TValue>(this Avalonia.Media.MatrixTransform control, TValue value, FuncValueConverter<TValue, Avalonia.Matrix> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.MatrixTransform.MatrixProperty, ps, () => control.Matrix = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Media.MatrixTransform.MatrixProperty, ps, () => control.Matrix = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

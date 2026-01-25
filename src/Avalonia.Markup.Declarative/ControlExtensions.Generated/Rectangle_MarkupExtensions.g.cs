@@ -16,7 +16,7 @@ public static partial class Rectangle_MarkupExtensions
 
 /*ValueSetterGenerator*/
 public static T RadiusX<T>(this T control, System.Double value) where T : Avalonia.Controls.Shapes.Rectangle 
-=> control._set(() => control.RadiusX = value!);
+=> control._set(() => control.RadiusX = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T RadiusX<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Shapes.Rectangle 
@@ -25,7 +25,7 @@ public static T RadiusX<T>(this T control, Func<System.Double> func, Action<Syst
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T RadiusX<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Shapes.Rectangle 
-=> control._setEx(Avalonia.Controls.Shapes.Rectangle.RadiusXProperty, ps, () => control.RadiusX = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Shapes.Rectangle.RadiusXProperty, ps, () => control.RadiusX = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T RadiusX<T>(this T control, IBinding binding) where T : Avalonia.Controls.Shapes.Rectangle 
@@ -38,14 +38,14 @@ public static T RadiusX<T>(this T control, AvaloniaProperty avaloniaProperty, Bi
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T RadiusX<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Shapes.Rectangle 
-=> control._setEx(Avalonia.Controls.Shapes.Rectangle.RadiusXProperty, ps, () => control.RadiusX = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Shapes.Rectangle.RadiusXProperty, ps, () => control.RadiusX = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // RadiusY
 
 /*ValueSetterGenerator*/
 public static T RadiusY<T>(this T control, System.Double value) where T : Avalonia.Controls.Shapes.Rectangle 
-=> control._set(() => control.RadiusY = value!);
+=> control._set(() => control.RadiusY = value);
 
 /*BindFromExpressionSetterGenerator*/
 public static T RadiusY<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Shapes.Rectangle 
@@ -54,7 +54,7 @@ public static T RadiusY<T>(this T control, Func<System.Double> func, Action<Syst
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T RadiusY<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Shapes.Rectangle 
-=> control._setEx(Avalonia.Controls.Shapes.Rectangle.RadiusYProperty, ps, () => control.RadiusY = value!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Shapes.Rectangle.RadiusYProperty, ps, () => control.RadiusY = value, bindingMode, converter, bindingSource);
 
 /*BindSetterGenerator*/
 public static T RadiusY<T>(this T control, IBinding binding) where T : Avalonia.Controls.Shapes.Rectangle 
@@ -67,7 +67,7 @@ public static T RadiusY<T>(this T control, AvaloniaProperty avaloniaProperty, Bi
 /*MagicalSetterWithConverterGenerator*/
 [Obsolete]
 public static T RadiusY<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Shapes.Rectangle 
-=> control._setEx(Avalonia.Controls.Shapes.Rectangle.RadiusYProperty, ps, () => control.RadiusY = converter.TryConvert(value)!, bindingMode, converter, bindingSource);
+=> control._setEx(Avalonia.Controls.Shapes.Rectangle.RadiusYProperty, ps, () => control.RadiusY = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 
