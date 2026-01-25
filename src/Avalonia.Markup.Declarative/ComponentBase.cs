@@ -61,6 +61,8 @@ public abstract class ComponentBase : ViewBase, IMvuComponent
         StateHasChanged();
     }
 
+    protected virtual void OnStateChanged() {}
+
     [RequiresUnreferencedCode("Method InjectServices is using reflection to iterate through Type hierarchy. That's can not be analyzed statically.")]
     private void InjectServices()
     {
@@ -185,6 +187,8 @@ public abstract class ComponentBase : ViewBase, IMvuComponent
         {
             _isUpdatingState = false;
         }
+        
+        OnStateChanged();
     }
 
     [Obsolete("Should not used directly and will be removed in future")]
