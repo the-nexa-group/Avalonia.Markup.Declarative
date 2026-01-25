@@ -4,7 +4,7 @@ namespace AvaloniaMarkupSample.MvuSample;
 
 public class CanvasSampleMvuView : ComponentBase
 {
-    protected override object Build() =>
+    protected override Control Build() =>
         new Grid().Rows("30, 40, *")
             .Children(
 

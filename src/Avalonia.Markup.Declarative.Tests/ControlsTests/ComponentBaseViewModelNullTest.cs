@@ -168,7 +168,7 @@ public class ComponentBaseViewModelNullTest
         {
         }
 
-        protected override object Build(TestViewModel? vm)
+        protected override Control Build(TestViewModel? vm)
         {
             BuildCallCount++;
 
@@ -191,7 +191,7 @@ public class ComponentBaseViewModelNullTest
         {
         }
 
-        protected override object Build(TestViewModel? vm)
+        protected override Control Build(TestViewModel? vm)
         {
             // This simulates the LayerItemView scenario:
             // vm.Invalidated += StateHasChanged;
@@ -233,7 +233,7 @@ public class ComponentBaseViewModelNullTest
         {
         }
 
-        protected override object Build(LayerItemViewModelStub? vm)
+        protected override Control Build(LayerItemViewModelStub? vm)
         {
             // This mirrors the real LayerItemView scenario
             if (vm == null)

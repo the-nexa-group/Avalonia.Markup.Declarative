@@ -9,7 +9,7 @@ namespace Avalonia.Markup.Declarative.Tests.ControlsTests;
 
 public class ColorPickerView : ComponentBase
 {
-    protected override object Build() =>
+    protected override Control Build() =>
         new TabControl()
             .SelectedIndex(() => ColorTypeIndex, v => ColorTypeIndex = v)
             .Items(

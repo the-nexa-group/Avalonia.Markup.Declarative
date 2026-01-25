@@ -3,7 +3,7 @@ using Avalonia.Controls;
 
 namespace Avalonia.Markup.Declarative;
 
-public class FuncComponent<TViewModel>(TViewModel model, Func<TViewModel, Control> build) : ComponentBase
+public class FuncComponent<TViewModel>(TViewModel model, Func<TViewModel, Control?> build) : ComponentBase
 {
-    protected override object Build() => build.Invoke(model);
+    protected override Control? Build() => build.Invoke(model);
 }

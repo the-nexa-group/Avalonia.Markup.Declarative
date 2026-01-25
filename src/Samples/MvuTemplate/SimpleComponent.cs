@@ -32,7 +32,7 @@ public class SimpleComponent(SampleDataService dataService) : ComponentBase //co
     ];
 
     //Markup
-    protected override object Build() =>
+    protected override Control Build() =>
         new Grid().Cols("150, *")
             .BindClass(() => Bounds.Width < 400, "narrow")
             .Children(

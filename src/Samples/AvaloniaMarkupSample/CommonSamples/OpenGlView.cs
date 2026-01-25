@@ -6,7 +6,7 @@ namespace AvaloniaMarkupSample.CommonSamples;
 [method: DynamicDependency(DynamicallyAccessedMemberTypes.PublicProperties, typeof(OpenGlView))]
 public class OpenGlView() : ComponentBase
 {
-    protected override object Build() =>
+    protected override Control Build() =>
         new Grid()
             .Background(Brushes.WhiteSmoke)
             .Children(

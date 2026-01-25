@@ -29,7 +29,7 @@ public class CommandBindingTests : AvaloniaTestBase
     {
         public CommandView() : base(new Vm()) { }
 
-        protected override object Build(Vm? vm) =>
+        protected override Control Build(Vm? vm) =>
             new StackPanel()
                 .Children(
                     new TextBlock().Ref(out _text).Text(() => vm!.MyObject.MyProperty),

@@ -33,7 +33,7 @@ public class StyleBindingTests : AvaloniaTestBase
                 .Foreground(Brushes.YellowGreen)
         ];
 
-        protected override object Build() =>
+        protected override Control Build() =>
             new TabControl()
                 .Ref(out _tabs)
                 .ItemTemplate<TabVm>(tab => new TextBlock().Text(tab.Title))

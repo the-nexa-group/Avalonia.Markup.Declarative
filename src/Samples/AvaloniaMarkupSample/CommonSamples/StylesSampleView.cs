@@ -11,7 +11,7 @@ public class StylesSampleView : ViewBase
             .FontSize(26d)
     ];
 
-    protected override object Build() =>
+    protected override Control Build() =>
         new StackPanel()
             .Classes("sample-wrapper")
             .Children(

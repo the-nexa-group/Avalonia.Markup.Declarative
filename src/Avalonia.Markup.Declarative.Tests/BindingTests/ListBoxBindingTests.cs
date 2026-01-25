@@ -7,7 +7,7 @@ public class ListBoxBindingTests : AvaloniaTestBase
 {
     public class ListBoxSampleView : ComponentBase
     {
-        protected override object Build() =>
+        protected override Control Build() =>
             new StackPanel()
                 .Children(
                     new ListBox()

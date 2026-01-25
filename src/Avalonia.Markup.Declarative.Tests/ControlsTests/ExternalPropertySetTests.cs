@@ -6,7 +6,7 @@ namespace Avalonia.Markup.Declarative.Tests.ControlsTests;
 
 public class SliderWithLabel : ComponentBase
 {
-    protected override object Build() =>
+    protected override Control Build() =>
         new StackPanel()
             .Children(
                 new TextBlock()
@@ -32,7 +32,7 @@ public class SliderWithLabel : ComponentBase
 }
 public class ExternalPropertySetTestView : ComponentBase
 {
-    protected override object Build() => new SliderWithLabel()
+    protected override Control Build() => new SliderWithLabel()
         .Ref(out SliderWithLabel)
         .Label(() => "Hello world") // Initial label value with lazy evaluation
         .Value(() => Value, v => Value = v);

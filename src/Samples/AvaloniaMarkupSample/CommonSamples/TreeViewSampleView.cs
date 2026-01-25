@@ -5,7 +5,7 @@ namespace AvaloniaMarkupSample.CommonSamples;
 
 public class TreeViewSampleView : ComponentBase
 {
-    protected override object Build() =>
+    protected override Control Build() =>
         new StackPanel()
             .Children(
                 new TreeView()

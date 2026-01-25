@@ -7,7 +7,7 @@ namespace ReactiveSample.Views;
 
 internal class MainView : ReactiveViewBase<MainViewModel>
 {
-    protected override object Build(MainViewModel vm) =>
+    protected override Control Build(MainViewModel vm) =>
         new Grid()
             .Rows("*, Auto")
             .Children([

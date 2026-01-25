@@ -11,7 +11,7 @@ public class ExpressionBindingTests : AvaloniaTestBase
 
     public class ExpressionBindingTestView : ComponentBase
     {
-        protected override object Build() =>
+        protected override Control Build() =>
             new StackPanel().Children(
                 new ToggleSwitch()
                     .OnContent("Erase mode: On")

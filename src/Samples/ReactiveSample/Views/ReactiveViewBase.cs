@@ -29,9 +29,9 @@ public abstract class ReactiveViewBase<TViewModel> : ViewBase, IViewFor<TViewMod
     }
 
 
-    protected abstract object Build(TViewModel vm);
+    protected abstract Control Build(TViewModel vm);
 
-    protected override object Build() => Build((TViewModel)(_cachedDataContext ?? DataContext!));
+    protected override Control Build() => Build((TViewModel)(_cachedDataContext ?? DataContext!));
 
     protected override void OnBeforeReload()
     {

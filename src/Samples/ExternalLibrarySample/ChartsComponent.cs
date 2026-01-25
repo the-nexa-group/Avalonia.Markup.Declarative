@@ -11,7 +11,7 @@ public class ChartsComponent() : ComponentBase
     protected override StyleGroup? BuildStyles() => [];
 
     //Markup
-    protected override object Build() =>
+    protected override Control Build() =>
         new Grid().Cols("Auto, *")
             .Children(
                 new StackPanel().Children(

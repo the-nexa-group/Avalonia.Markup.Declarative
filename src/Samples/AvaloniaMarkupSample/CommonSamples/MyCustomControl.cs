@@ -87,7 +87,7 @@ public class MyCustomControl : ViewBase
         NewValue = SavedValue;
     }
 
-    protected override object Build()
+    protected override Control Build()
         => new Grid()
             .Rows("Auto, Auto, *, Auto")
             .Children(

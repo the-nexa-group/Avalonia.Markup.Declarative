@@ -30,9 +30,9 @@ public abstract class ComponentBase<TViewModel> : ComponentBase
         Initialize();
     }
 
-    protected abstract object Build(TViewModel? vm);
+    protected abstract Control? Build(TViewModel? vm);
 
-    protected override object Build() => Build(ViewModel);
+    protected override Control? Build() => Build(ViewModel);
 }
 
 [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties | DynamicallyAccessedMemberTypes.NonPublicProperties | DynamicallyAccessedMemberTypes.NonPublicFields)]

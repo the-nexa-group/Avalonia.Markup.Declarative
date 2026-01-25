@@ -2,7 +2,7 @@
 
 public class Component : ComponentBase
 {
-    protected override object Build() =>
+    protected override Control Build() =>
         new StackPanel()
             .Children(
                 new TextBlock()

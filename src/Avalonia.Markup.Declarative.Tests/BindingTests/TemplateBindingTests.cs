@@ -16,7 +16,7 @@ public class TemplateBindingTests : AvaloniaTestBase
             )
         );
 
-        protected override object Build() =>
+        protected override Control Build() =>
             new Button()
                 .Content("Initial")
                 .Template(() => MyControlTemplate)

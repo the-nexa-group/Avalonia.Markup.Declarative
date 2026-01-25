@@ -43,7 +43,7 @@ public class MyCustomControlBindingTests : AvaloniaTestBase
         public void Save() => SavedValue = NewValue;
         public void Cancel() => NewValue = SavedValue;
 
-        protected override object Build() =>
+        protected override Control Build() =>
             new Grid()
                 .Children(
                     new TextBox().Ref(out TextBox).Text(NewValueProperty, BindingMode.TwoWay),
@@ -58,7 +58,7 @@ public class MyCustomControlBindingTests : AvaloniaTestBase
 
     public class Host : ViewBase
     {
-        protected override object Build() => new TestCustomControl().Ref(out Control);
+        protected override Control Build() => new TestCustomControl().Ref(out Control);
         public TestCustomControl Control = null!;
     }
 

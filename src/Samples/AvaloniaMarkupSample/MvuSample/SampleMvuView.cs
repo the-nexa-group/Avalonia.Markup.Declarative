@@ -19,7 +19,7 @@ public class SampleMvuView : ComponentBase
     ];
 
 
-    protected override object Build() =>
+    protected override Control Build() =>
         new ScrollViewer()
             .VerticalScrollBarVisibility(ScrollBarVisibility.Hidden)
             .Content(

@@ -25,7 +25,7 @@ public class BindPropertyStatePopTest : AvaloniaTestBase
 
     public class SliderWrapper : ComponentBase
     {
-        protected override object Build() =>
+        protected override Control Build() =>
             new StackPanel().Children(
                 new NumericUpDown()
                     .Col(1)
@@ -45,7 +45,7 @@ public class BindPropertyStatePopTest : AvaloniaTestBase
     }
     public class SliderTestView : ComponentBase
     {
-        protected override object Build() =>
+        protected override Control Build() =>
             new SliderWrapper()
                 .Ref(out _wrapper)
                 .Value(() => Value, v => Value = v);

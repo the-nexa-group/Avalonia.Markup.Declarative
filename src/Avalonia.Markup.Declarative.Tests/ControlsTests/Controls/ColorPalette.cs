@@ -62,7 +62,7 @@ public class ColorPalette : ComponentBase
     public event Action<Color>? ColorAdded;
     public event Action<Color>? ColorRemoved;
 
-    protected override object Build() =>
+    protected override Control Build() =>
         new Grid()
             .Children(
 

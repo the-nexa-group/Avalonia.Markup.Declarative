@@ -16,7 +16,7 @@ public class ModalHostTests : AvaloniaTestBase
         public bool WasMainContentNullDuringBuild { get; private set; }
         public bool AvaloniaOnPropertyChangedFiredForMainContent { get; private set; }
 
-        protected override object Build()
+        protected override Control Build()
         {
             var children = new List<Control>();
 

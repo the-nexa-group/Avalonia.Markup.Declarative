@@ -22,7 +22,7 @@ internal class PageView2 : ReactiveViewBase<PageViewModel2>
              .Setter(Control.VerticalAlignmentProperty, VerticalAlignment.Center),
     ];
 
-    protected override object Build(PageViewModel2 vm)
+    protected override Control Build(PageViewModel2 vm)
     {
         var controls = new StackPanel()
             .Children([

@@ -8,7 +8,7 @@ public class BrushBindingTests : AvaloniaTestBase
 {
     public class BorderBrushView : ComponentBase
     {
-        protected override object Build() =>
+        protected override Control Build() =>
             new Border()
                 .Ref(out _border)
                 .BorderBrush(() => BorderColor)

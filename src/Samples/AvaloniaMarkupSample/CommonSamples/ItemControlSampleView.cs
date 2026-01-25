@@ -2,7 +2,7 @@
 
 public class ItemControlSampleView : ComponentBase
 {
-    protected override object Build() =>
+    protected override Control Build() =>
         new StackPanel()
             .Children(
                 new ListBox()

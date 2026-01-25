@@ -1,5 +1,6 @@
 using Avalonia.Threading;
 using System.Reflection;
+using Avalonia.Controls;
 
 namespace Avalonia.Markup.Declarative.Tests.ControlsTests
 {
@@ -11,12 +12,12 @@ namespace Avalonia.Markup.Declarative.Tests.ControlsTests
         {
             [Inject]
             public TestService? Service { get; private set; }
-            protected override object Build() => new object();
+            protected override Control? Build() => null;
         }
 
         public class DerivedComponent : BaseComponent
         {
-            protected override object Build() => new object();
+            protected override Control? Build() => null;
         }
 
         [Fact]

@@ -15,7 +15,7 @@ public class MainView : ViewBase
             .BorderThickness(1)
     ];
 
-    protected override object Build() =>
+    protected override Control Build() =>
         new TabControl()
             .SelectedIndex(0)
             .TabStripPlacement(Dock.Left)

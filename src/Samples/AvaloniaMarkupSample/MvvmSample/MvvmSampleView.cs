@@ -2,7 +2,7 @@
 
 public class MvvmSampleView() : ViewBase<MvvmSampleViewModel>(new MvvmSampleViewModel())
 {
-    protected override object Build(MvvmSampleViewModel? vm) =>
+    protected override Control Build(MvvmSampleViewModel? vm) =>
         new StackPanel()
             .Children(
                 new TextBlock()

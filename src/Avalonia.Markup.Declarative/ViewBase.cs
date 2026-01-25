@@ -42,7 +42,7 @@ public abstract class ViewBase<TViewModel> : ViewBase
 
     protected ViewBase(TViewModel viewModel, ViewInitializationStrategy initializationStrategy) 
         : base(initializationStrategy)
-{
+    {
         DataContext = viewModel;
         
         // If Immediate strategy was requested, initialize now that DataContext is set
@@ -50,9 +50,9 @@ public abstract class ViewBase<TViewModel> : ViewBase
             Initialize();
     }
 
-    protected abstract object Build(TViewModel? vm);
+    protected abstract Control? Build(TViewModel? vm);
 
-    protected override object Build() => Build(ViewModel);
+    protected override Control? Build() => Build(ViewModel);
 }
 
 /// <summary>
@@ -75,7 +75,7 @@ public abstract class ViewBase : Decorator, IReloadable, IDeclarativeViewBase
 
     public event Action? ViewInitialized;
 
-    protected abstract object Build();
+    protected abstract Control? Build();
 
     protected virtual StyleGroup? BuildStyles() => null;
 
@@ -144,7 +144,7 @@ public abstract class ViewBase : Decorator, IReloadable, IDeclarativeViewBase
 
                 context.SetState(ViewBuildContextState.ViewBuilding);
                 var content = Build();
-                Child = content as Control;
+                Child = content;
             }
 
             _isInitialized = true;

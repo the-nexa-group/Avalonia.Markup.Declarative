@@ -7,7 +7,7 @@ public class NumericUpDownBindingTests : AvaloniaTestBase
 {
     public class NumericView : ComponentBase
     {
-        protected override object Build() =>
+        protected override Control Build() =>
             new NumericUpDown()
                 .Ref(out _num)
                 .Value(() => (decimal?)Counter, v => Counter = v ?? Counter);

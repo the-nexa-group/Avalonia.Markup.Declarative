@@ -4,7 +4,7 @@ namespace AvaloniaMarkupSample.MvuSample;
 
 public class SliderEx : ComponentBase
 {
-    protected override object Build() =>
+    protected override Control Build() =>
         new Grid()
             .Rows("Auto,Auto")
             .Cols("Auto,*, 60, 20")

@@ -33,7 +33,7 @@ public class TestViewModel : INotifyPropertyChanged
 
 public class TestView(TestViewModel vm) : ViewBase<TestViewModel>(vm)
 {
-    protected override object Build(TestViewModel? vm) =>
+    protected override Control Build(TestViewModel? vm) =>
         new StackPanel().Children(
             new TextBlock()
                 .Text(() => vm?.MyObject.MyProperty ?? "", val => vm!.MyObject = new MyObject(val))

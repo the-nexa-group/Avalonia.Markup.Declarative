@@ -15,7 +15,7 @@ internal class PageView1 : ReactiveViewBase<PageViewModel1>
              .Setter(Control.VerticalAlignmentProperty, VerticalAlignment.Center),
     ];
 
-    protected override object Build(PageViewModel1 vm) =>
+    protected override Control Build(PageViewModel1 vm) =>
         new StackPanel()
             .Children([
                 new TextBlock()
