@@ -18,7 +18,7 @@ namespace Avalonia.Markup.Declarative;
 public static class ControlPropertyExtensions
 {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TControl _set<TControl>(this TControl control, Action setAction)
+    public static TAvObject _set<TAvObject>(this TAvObject control, Action setAction)
     {
         setAction();
         return control;
@@ -27,7 +27,7 @@ public static class ControlPropertyExtensions
     /// <summary>
     /// Used to bind one avalonia property to another
     /// </summary>
-    /// <typeparam name="TControl"></typeparam>
+    /// <typeparam name="TAvObject"></typeparam>
     /// <param name="control"></param>
     /// <param name="avaloniaProperty"></param>
     /// <param name="propertyToBindTo"></param>
@@ -35,9 +35,9 @@ public static class ControlPropertyExtensions
     /// <param name="converter"></param>
     /// <param name="overrideView"></param>
     /// <returns></returns>
-    public static TControl _set<TControl>(this TControl control, AvaloniaProperty avaloniaProperty,
+    public static TAvObject _set<TAvObject>(this TAvObject control, AvaloniaProperty avaloniaProperty,
         AvaloniaProperty propertyToBindTo, BindingMode? bindingMode, IValueConverter? converter, ViewBase? overrideView)
-        where TControl : AvaloniaObject
+        where TAvObject : AvaloniaObject
     {
         var view = overrideView ?? ViewBuildContext.CurrentView;
         var binding = new Binding()
@@ -55,13 +55,13 @@ public static class ControlPropertyExtensions
     /// <summary>
     /// Used to pass Binding object constructed by end-user
     /// </summary>
-    /// <typeparam name="TControl"></typeparam>
+    /// <typeparam name="TAvObject"></typeparam>
     /// <param name="control"></param>
     /// <param name="avaloniaProperty"></param>
     /// <param name="binding"></param>
     /// <returns></returns>
-    public static TControl _set<TControl>(this TControl control, AvaloniaProperty avaloniaProperty, IBinding binding)
-        where TControl : AvaloniaObject
+    public static TAvObject _set<TAvObject>(this TAvObject control, AvaloniaProperty avaloniaProperty, IBinding binding)
+        where TAvObject : AvaloniaObject
     {
         control[!avaloniaProperty] = binding;
         return control;
@@ -70,7 +70,7 @@ public static class ControlPropertyExtensions
     /// <summary>
     /// Creates *Avalonia property* binding based on expression argument
     /// </summary>
-    /// <typeparam name="TControl"></typeparam>
+    /// <typeparam name="TAvObject"></typeparam>
     /// <typeparam name="TValue"></typeparam>
     /// <param name="control"></param>
     /// <param name="avaloniaProperty"></param>
@@ -79,8 +79,8 @@ public static class ControlPropertyExtensions
     /// <param name="expression"></param>
     /// <returns></returns>
     /// <exception cref="InvalidOperationException"></exception>
-    public static TControl _set<TControl, TValue>(this TControl control, AvaloniaProperty<TValue> avaloniaProperty, Func<TValue> getterFunc, Action<TValue>? setChangedHandler, string? expression)
-        where TControl : AvaloniaObject
+    public static TAvObject _set<TAvObject, TValue>(this TAvObject control, AvaloniaProperty<TValue> avaloniaProperty, Func<TValue> getterFunc, Action<TValue>? setChangedHandler, string? expression)
+        where TAvObject : AvaloniaObject
     {
         var view = ViewBuildContext.CurrentView;
 
@@ -112,7 +112,7 @@ public static class ControlPropertyExtensions
             };
         }
 
-        var state = new ViewPropertyComputedState<TControl, TValue>(expression, getterFunc, handler, control, avaloniaProperty);
+        var state = new ViewPropertyComputedState<TAvObject, TValue>(expression, getterFunc, handler, control, avaloniaProperty);
 
         view.AddComputedState(state, control);
         return control;
@@ -121,7 +121,7 @@ public static class ControlPropertyExtensions
     /// <summary>
     /// Creates *Common property* binding based on expression argument
     /// </summary>
-    /// <typeparam name="TControl"></typeparam>
+    /// <typeparam name="TAvObject"></typeparam>
     /// <typeparam name="TValue"></typeparam>
     /// <param name="control"></param>
     /// <param name="setter">Property setter action</param>
@@ -130,63 +130,105 @@ public static class ControlPropertyExtensions
     /// <param name="expression"></param>
     /// <returns></returns>
     /// <exception cref="InvalidOperationException"></exception>
-public static TControl _set<TControl, TValue>(this TControl control, Action<TValue> setter, Func<TValue> getterFunc, Action<TValue>? setChangedHandler, string? expression)
-    where TControl : AvaloniaObject
-{
-    var view = ViewBuildContext.CurrentView;
-
-    if (view == null)
-        throw new InvalidOperationException("Current view is not set. Control must be put into view (inherited from ViewBase of ComponentBase) that can store binding information.");
-
-    var handler = setChangedHandler;
-
-    if (view is ComponentBase componentBase && setChangedHandler != null)
+    public static TAvObject _set<TAvObject, TValue>(this TAvObject control, Action<TValue> setter, Func<TValue> getterFunc, Action<TValue>? setChangedHandler, string? expression)
+        where TAvObject : AvaloniaObject
     {
-        // Extract property name for tracking (if possible)
-        string propertyName = expression ?? "unknown";
+        var view = ViewBuildContext.CurrentView;
 
-        if (control is ComponentBase childComponent)
-        {
-            // Register callback on PARENT to handle child changes by expression key
-            componentBase.RegisterPropertyCallback(propertyName, value =>
-            {
-                try
-                {
-                    if (value is TValue typedValue)
-                        setChangedHandler(typedValue);
-                    else if (value is null)
-                        setChangedHandler(default!);
-                    else
-                        setChangedHandler((TValue)Convert.ChangeType(value, typeof(TValue))!);
-                }
-                catch
-                {
-                    // ignore conversion issues
-                }
-            });
+        if (view == null)
+            throw new InvalidOperationException("Current view is not set. Control must be put into view (inherited from ViewBase of ComponentBase) that can store binding information.");
 
-            // When child local setter fires via binding, bubble to parent listeners
-            handler = v =>
-            {
-                setChangedHandler(v);
-                componentBase.NotifyExternalPropertyChanged(propertyName, v);
-            };
-        }
-        else
+        var handler = setChangedHandler;
+
+        if (view is ComponentBase componentBase && setChangedHandler != null)
         {
-            handler = v => componentBase.UpdateState(() => setChangedHandler(v), bubbleToParent: true);
+            // Extract property name for tracking (if possible)
+            string propertyName = expression ?? "unknown";
+
+            if (control is ComponentBase childComponent)
+            {
+                // Register callback on PARENT to handle child changes by expression key
+                componentBase.RegisterPropertyCallback(propertyName, value =>
+                {
+                    try
+                    {
+                        if (value is TValue typedValue)
+                            setChangedHandler(typedValue);
+                        else if (value is null)
+                            setChangedHandler(default!);
+                        else
+                            setChangedHandler((TValue)Convert.ChangeType(value, typeof(TValue))!);
+                    }
+                    catch
+                    {
+                        // ignore conversion issues
+                    }
+                });
+
+                // When child local setter fires via binding, bubble to parent listeners
+                handler = v =>
+                {
+                    setChangedHandler(v);
+                    componentBase.NotifyExternalPropertyChanged(propertyName, v);
+                };
+            }
+            else
+            {
+                handler = v => componentBase.UpdateState(() => setChangedHandler(v), bubbleToParent: true);
+            }
         }
+
+        var state = new ViewPropertyComputedState<TAvObject, TValue>(expression, setter, getterFunc, handler, control);
+        view.AddComputedState(state, control);
+        return control;
+    }
+    
+    /// <summary>
+    /// Binds an Avalonia Property to a getter and setter function.
+    /// </summary>
+    public static TAvObject Bind<TAvObject, TValue>(
+        this TAvObject control,
+        AvaloniaProperty<TValue> property,
+        Func<TValue> getter,
+        Action<TValue>? setter = null)
+        where TAvObject : AvaloniaObject
+    {
+        return control._set(property, getter, setter, null);
     }
 
-    var state = new ViewPropertyComputedState<TControl, TValue>(expression, setter, getterFunc, handler, control);
-    view.AddComputedState(state, control);
-    return control;
-}
+    /// <summary>
+    /// Binds an Avalonia Property to another Avalonia Property from another object.
+    /// </summary>
+    /// <param name="control"></param>
+    /// <param name="property">Destination property to bind to.</param>
+    /// <param name="otherProperty">Source property to bind from.</param>
+    /// <param name="otherObject">Source object to bind from.</param>
+    /// <param name="mode">Binding mode, i.e. source to destination or bidirectional</param>
+    /// <typeparam name="TAvObject"></typeparam>
+    /// <typeparam name="TValue"></typeparam>
+    /// <returns></returns>
+    public static TAvObject Bind<TAvObject, TValue>(
+        this TAvObject control,
+        AvaloniaProperty<TValue> property,
+        AvaloniaProperty<TValue> otherProperty,
+        object otherObject,
+        BindingMode mode = BindingMode.Default)
+        where TAvObject : AvaloniaObject
+    {
+        control.Bind(property, new Binding
+        {
+            Path = otherProperty.Name,
+            Source = otherObject,
+            Mode = mode
+        });
+
+        return control;
+    }
 
     /// <summary>
     /// Creates binding to property on DataContext of the control parsed from Value's expression arg , used by generated extensions
     /// </summary>
-    /// <typeparam name="TControl"></typeparam>
+    /// <typeparam name="TAvObject"></typeparam>
     /// <param name="control"></param>
     /// <param name="destProperty"></param>
     /// <param name="sourcePropertyPathString"></param>
@@ -195,10 +237,10 @@ public static TControl _set<TControl, TValue>(this TControl control, Action<TVal
     /// <param name="converter"></param>
     /// <param name="bindingSource"></param>
     /// <returns></returns>
-    public static TControl _setEx<TControl>(this TControl control, AvaloniaProperty destProperty,
+    public static TAvObject _setEx<TAvObject>(this TAvObject control, AvaloniaProperty destProperty,
         string? sourcePropertyPathString, Action setAction,
         BindingMode? bindingMode, IValueConverter? converter, object? bindingSource)
-        where TControl : AvaloniaObject
+        where TAvObject : AvaloniaObject
     {
         if (sourcePropertyPathString == null
             || bindingMode.HasValue
