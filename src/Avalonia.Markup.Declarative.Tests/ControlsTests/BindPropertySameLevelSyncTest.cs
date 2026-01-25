@@ -26,7 +26,7 @@ public class BindPropertySameLevelSyncTest : AvaloniaTestBase
 
     public class SliderWrapperEx : ComponentBase
     {
-o        protected override Control Build() =>
+        protected override Control Build() =>
         new Grid()
             .Rows("Auto,Auto")
             .Cols("Auto,*, 20")
