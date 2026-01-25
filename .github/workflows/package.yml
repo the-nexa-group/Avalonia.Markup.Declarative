@@ -41,7 +41,7 @@ jobs:
       - name: Pack
         # Generates a version like 1.0.0-ci-PR23 or 1.0.0-preview.runID
         run: |
-          dotnet pack Avalonia.Markup.Declarative/Avalonia.Markup.Declarative.csproj \
+          dotnet pack src/Avalonia.Markup.Declarative/Avalonia.Markup.Declarative.csproj \
           -c Release \
           --no-build \
           --include-symbols \
