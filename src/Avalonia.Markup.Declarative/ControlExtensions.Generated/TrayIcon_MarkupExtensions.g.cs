@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T Command<T>(this T control, System.Windows.Input.ICommand? value)
 /*BindFromExpressionSetterGenerator*/
 public static T Command<T>(this T control, Func<System.Windows.Input.ICommand?> func, Action<System.Windows.Input.ICommand?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.TrayIcon 
    => control._set(Avalonia.Controls.TrayIcon.CommandProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Command<T>(this T control, Func<ValueTask<System.Windows.Input.ICommand?>> getter, Func<System.Windows.Input.ICommand?>? fallbackGetter = null, Action<System.Windows.Input.ICommand?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.TrayIcon 
+   => control._set(Avalonia.Controls.TrayIcon.CommandProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T CommandParameter<T>(this T control, System.Object? value) where 
 public static T CommandParameter<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.TrayIcon 
    => control._set(Avalonia.Controls.TrayIcon.CommandParameterProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T CommandParameter<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.TrayIcon 
+   => control._set(Avalonia.Controls.TrayIcon.CommandParameterProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T CommandParameter<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.TrayIcon 
@@ -79,6 +88,10 @@ public static T Menu<T>(this T control, Avalonia.Controls.NativeMenu? value) whe
 /*BindFromExpressionSetterGenerator*/
 public static T Menu<T>(this T control, Func<Avalonia.Controls.NativeMenu?> func, Action<Avalonia.Controls.NativeMenu?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.TrayIcon 
    => control._set(Avalonia.Controls.TrayIcon.MenuProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Menu<T>(this T control, Func<ValueTask<Avalonia.Controls.NativeMenu?>> getter, Func<Avalonia.Controls.NativeMenu?>? fallbackGetter = null, Action<Avalonia.Controls.NativeMenu?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.TrayIcon 
+   => control._set(Avalonia.Controls.TrayIcon.MenuProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -109,6 +122,10 @@ public static T Icon<T>(this T control, Avalonia.Controls.WindowIcon? value) whe
 public static T Icon<T>(this T control, Func<Avalonia.Controls.WindowIcon?> func, Action<Avalonia.Controls.WindowIcon?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.TrayIcon 
    => control._set(Avalonia.Controls.TrayIcon.IconProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Icon<T>(this T control, Func<ValueTask<Avalonia.Controls.WindowIcon?>> getter, Func<Avalonia.Controls.WindowIcon?>? fallbackGetter = null, Action<Avalonia.Controls.WindowIcon?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.TrayIcon 
+   => control._set(Avalonia.Controls.TrayIcon.IconProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Icon<T>(this T control,Avalonia.Controls.WindowIcon? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.TrayIcon 
@@ -138,6 +155,10 @@ public static T ToolTipText<T>(this T control, System.String? value) where T : A
 public static T ToolTipText<T>(this T control, Func<System.String?> func, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.TrayIcon 
    => control._set(Avalonia.Controls.TrayIcon.ToolTipTextProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ToolTipText<T>(this T control, Func<ValueTask<System.String?>> getter, Func<System.String?>? fallbackGetter = null, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.TrayIcon 
+   => control._set(Avalonia.Controls.TrayIcon.ToolTipTextProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ToolTipText<T>(this T control,System.String? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.TrayIcon 
@@ -166,6 +187,10 @@ public static T IsVisible<T>(this T control, System.Boolean value) where T : Ava
 /*BindFromExpressionSetterGenerator*/
 public static T IsVisible<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.TrayIcon 
    => control._set(Avalonia.Controls.TrayIcon.IsVisibleProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T IsVisible<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.TrayIcon 
+   => control._set(Avalonia.Controls.TrayIcon.IsVisibleProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

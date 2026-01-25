@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static Avalonia.Media.PolyLineSegment Points(this Avalonia.Media.PolyLine
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.PolyLineSegment Points(this Avalonia.Media.PolyLineSegment control, Func<System.Collections.Generic.IList<Avalonia.Point>> func, Action<System.Collections.Generic.IList<Avalonia.Point>>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
    => control._set(Avalonia.Media.PolyLineSegment.PointsProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static Avalonia.Media.PolyLineSegment Points(this Avalonia.Media.PolyLineSegment control, Func<ValueTask<System.Collections.Generic.IList<Avalonia.Point>>> getter, Func<System.Collections.Generic.IList<Avalonia.Point>>? fallbackGetter = null, Action<System.Collections.Generic.IList<Avalonia.Point>>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
+   => control._set(Avalonia.Media.PolyLineSegment.PointsProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

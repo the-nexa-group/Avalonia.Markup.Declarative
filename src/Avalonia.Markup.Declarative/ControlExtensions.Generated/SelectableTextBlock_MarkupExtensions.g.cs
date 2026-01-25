@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T SelectionStart<T>(this T control, System.Int32 value) where T : 
 /*BindFromExpressionSetterGenerator*/
 public static T SelectionStart<T>(this T control, Func<System.Int32> func, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SelectableTextBlock 
    => control._set(Avalonia.Controls.SelectableTextBlock.SelectionStartProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SelectionStart<T>(this T control, Func<ValueTask<System.Int32>> getter, Func<System.Int32>? fallbackGetter = null, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.SelectableTextBlock 
+   => control._set(Avalonia.Controls.SelectableTextBlock.SelectionStartProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T SelectionEnd<T>(this T control, System.Int32 value) where T : Av
 public static T SelectionEnd<T>(this T control, Func<System.Int32> func, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SelectableTextBlock 
    => control._set(Avalonia.Controls.SelectableTextBlock.SelectionEndProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SelectionEnd<T>(this T control, Func<ValueTask<System.Int32>> getter, Func<System.Int32>? fallbackGetter = null, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.SelectableTextBlock 
+   => control._set(Avalonia.Controls.SelectableTextBlock.SelectionEndProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectionEnd<T>(this T control,System.Int32 value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SelectableTextBlock 
@@ -80,6 +89,10 @@ public static T SelectionBrush<T>(this T control, Avalonia.Media.IBrush? value) 
 public static T SelectionBrush<T>(this T control, Func<Avalonia.Media.IBrush?> func, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SelectableTextBlock 
    => control._set(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SelectionBrush<T>(this T control, Func<ValueTask<Avalonia.Media.IBrush?>> getter, Func<Avalonia.Media.IBrush?>? fallbackGetter = null, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.SelectableTextBlock 
+   => control._set(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectionBrush<T>(this T control,Avalonia.Media.IBrush? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SelectableTextBlock 
@@ -108,6 +121,10 @@ public static T SelectionForegroundBrush<T>(this T control, Avalonia.Media.IBrus
 /*BindFromExpressionSetterGenerator*/
 public static T SelectionForegroundBrush<T>(this T control, Func<Avalonia.Media.IBrush?> func, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.SelectableTextBlock 
    => control._set(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SelectionForegroundBrush<T>(this T control, Func<ValueTask<Avalonia.Media.IBrush?>> getter, Func<Avalonia.Media.IBrush?>? fallbackGetter = null, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.SelectableTextBlock 
+   => control._set(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

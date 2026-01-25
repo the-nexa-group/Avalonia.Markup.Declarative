@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static Avalonia.Media.RotateTransform Angle(this Avalonia.Media.RotateTra
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.RotateTransform Angle(this Avalonia.Media.RotateTransform control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
    => control._set(Avalonia.Media.RotateTransform.AngleProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static Avalonia.Media.RotateTransform Angle(this Avalonia.Media.RotateTransform control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
+   => control._set(Avalonia.Media.RotateTransform.AngleProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static Avalonia.Media.RotateTransform CenterX(this Avalonia.Media.RotateT
 public static Avalonia.Media.RotateTransform CenterX(this Avalonia.Media.RotateTransform control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
    => control._set(Avalonia.Media.RotateTransform.CenterXProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static Avalonia.Media.RotateTransform CenterX(this Avalonia.Media.RotateTransform control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
+   => control._set(Avalonia.Media.RotateTransform.CenterXProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static Avalonia.Media.RotateTransform CenterX(this Avalonia.Media.RotateTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
@@ -79,6 +88,10 @@ public static Avalonia.Media.RotateTransform CenterY(this Avalonia.Media.RotateT
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.RotateTransform CenterY(this Avalonia.Media.RotateTransform control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
    => control._set(Avalonia.Media.RotateTransform.CenterYProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static Avalonia.Media.RotateTransform CenterY(this Avalonia.Media.RotateTransform control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
+   => control._set(Avalonia.Media.RotateTransform.CenterYProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

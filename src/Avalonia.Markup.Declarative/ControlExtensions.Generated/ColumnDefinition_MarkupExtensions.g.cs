@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T MaxWidth<T>(this T control, System.Double value) where T : Avalo
 /*BindFromExpressionSetterGenerator*/
 public static T MaxWidth<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ColumnDefinition 
    => control._set(Avalonia.Controls.ColumnDefinition.MaxWidthProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T MaxWidth<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ColumnDefinition 
+   => control._set(Avalonia.Controls.ColumnDefinition.MaxWidthProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T MinWidth<T>(this T control, System.Double value) where T : Avalo
 public static T MinWidth<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ColumnDefinition 
    => control._set(Avalonia.Controls.ColumnDefinition.MinWidthProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T MinWidth<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ColumnDefinition 
+   => control._set(Avalonia.Controls.ColumnDefinition.MinWidthProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T MinWidth<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ColumnDefinition 
@@ -79,6 +88,10 @@ public static T Width<T>(this T control, Avalonia.Controls.GridLength value) whe
 /*BindFromExpressionSetterGenerator*/
 public static T Width<T>(this T control, Func<Avalonia.Controls.GridLength> func, Action<Avalonia.Controls.GridLength>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ColumnDefinition 
    => control._set(Avalonia.Controls.ColumnDefinition.WidthProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Width<T>(this T control, Func<ValueTask<Avalonia.Controls.GridLength>> getter, Func<Avalonia.Controls.GridLength>? fallbackGetter = null, Action<Avalonia.Controls.GridLength>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ColumnDefinition 
+   => control._set(Avalonia.Controls.ColumnDefinition.WidthProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*ValueOverloadsSetterGenerator*/
 

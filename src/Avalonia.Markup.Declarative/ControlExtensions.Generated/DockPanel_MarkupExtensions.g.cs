@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T LastChildFill<T>(this T control, System.Boolean value) where T :
 /*BindFromExpressionSetterGenerator*/
 public static T LastChildFill<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.DockPanel 
    => control._set(Avalonia.Controls.DockPanel.LastChildFillProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T LastChildFill<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DockPanel 
+   => control._set(Avalonia.Controls.DockPanel.LastChildFillProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T HorizontalSpacing<T>(this T control, System.Double value) where 
 public static T HorizontalSpacing<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.DockPanel 
    => control._set(Avalonia.Controls.DockPanel.HorizontalSpacingProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T HorizontalSpacing<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DockPanel 
+   => control._set(Avalonia.Controls.DockPanel.HorizontalSpacingProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T HorizontalSpacing<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DockPanel 
@@ -79,6 +88,10 @@ public static T VerticalSpacing<T>(this T control, System.Double value) where T 
 /*BindFromExpressionSetterGenerator*/
 public static T VerticalSpacing<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.DockPanel 
    => control._set(Avalonia.Controls.DockPanel.VerticalSpacingProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T VerticalSpacing<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DockPanel 
+   => control._set(Avalonia.Controls.DockPanel.VerticalSpacingProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

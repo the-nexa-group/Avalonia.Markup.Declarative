@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T DataContext<T>(this T control, System.Object? value) where T : A
 /*BindFromExpressionSetterGenerator*/
 public static T DataContext<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Application 
    => control._set(Avalonia.Application.DataContextProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T DataContext<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Application 
+   => control._set(Avalonia.Application.DataContextProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T RequestedThemeVariant<T>(this T control, Avalonia.Styling.ThemeV
 public static T RequestedThemeVariant<T>(this T control, Func<Avalonia.Styling.ThemeVariant?> func, Action<Avalonia.Styling.ThemeVariant?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Application 
    => control._set(Avalonia.Application.RequestedThemeVariantProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T RequestedThemeVariant<T>(this T control, Func<ValueTask<Avalonia.Styling.ThemeVariant?>> getter, Func<Avalonia.Styling.ThemeVariant?>? fallbackGetter = null, Action<Avalonia.Styling.ThemeVariant?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Application 
+   => control._set(Avalonia.Application.RequestedThemeVariantProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T RequestedThemeVariant<T>(this T control,Avalonia.Styling.ThemeVariant? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Application 
@@ -79,6 +88,10 @@ public static T Name<T>(this T control, System.String? value) where T : Avalonia
 /*BindFromExpressionSetterGenerator*/
 public static T Name<T>(this T control, Func<System.String?> func, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Application 
    => control._set(Avalonia.Application.NameProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Name<T>(this T control, Func<ValueTask<System.String?>> getter, Func<System.String?>? fallbackGetter = null, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Application 
+   => control._set(Avalonia.Application.NameProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

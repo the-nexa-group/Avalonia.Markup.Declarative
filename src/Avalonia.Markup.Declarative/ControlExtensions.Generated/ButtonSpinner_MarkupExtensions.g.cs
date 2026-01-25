@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T AllowSpin<T>(this T control, System.Boolean value) where T : Ava
 /*BindFromExpressionSetterGenerator*/
 public static T AllowSpin<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.AllowSpinProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T AllowSpin<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ButtonSpinner 
+   => control._set(Avalonia.Controls.ButtonSpinner.AllowSpinProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T ShowButtonSpinner<T>(this T control, System.Boolean value) where
 public static T ShowButtonSpinner<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.ShowButtonSpinnerProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ShowButtonSpinner<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ButtonSpinner 
+   => control._set(Avalonia.Controls.ButtonSpinner.ShowButtonSpinnerProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ShowButtonSpinner<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ButtonSpinner 
@@ -79,6 +88,10 @@ public static T ButtonSpinnerLocation<T>(this T control, Avalonia.Controls.Locat
 /*BindFromExpressionSetterGenerator*/
 public static T ButtonSpinnerLocation<T>(this T control, Func<Avalonia.Controls.Location> func, Action<Avalonia.Controls.Location>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.ButtonSpinnerLocationProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ButtonSpinnerLocation<T>(this T control, Func<ValueTask<Avalonia.Controls.Location>> getter, Func<Avalonia.Controls.Location>? fallbackGetter = null, Action<Avalonia.Controls.Location>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ButtonSpinner 
+   => control._set(Avalonia.Controls.ButtonSpinner.ButtonSpinnerLocationProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

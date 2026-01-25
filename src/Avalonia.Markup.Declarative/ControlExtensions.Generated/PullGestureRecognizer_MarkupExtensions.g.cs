@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T PullDirection<T>(this T control, Avalonia.Input.PullDirection va
 /*BindFromExpressionSetterGenerator*/
 public static T PullDirection<T>(this T control, Func<Avalonia.Input.PullDirection> func, Action<Avalonia.Input.PullDirection>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Input.PullGestureRecognizer 
    => control._set(Avalonia.Input.PullGestureRecognizer.PullDirectionProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T PullDirection<T>(this T control, Func<ValueTask<Avalonia.Input.PullDirection>> getter, Func<Avalonia.Input.PullDirection>? fallbackGetter = null, Action<Avalonia.Input.PullDirection>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Input.PullGestureRecognizer 
+   => control._set(Avalonia.Input.PullGestureRecognizer.PullDirectionProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

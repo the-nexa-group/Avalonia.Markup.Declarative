@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T Position<T>(this T control, Avalonia.Controls.Notifications.Noti
 /*BindFromExpressionSetterGenerator*/
 public static T Position<T>(this T control, Func<Avalonia.Controls.Notifications.NotificationPosition> func, Action<Avalonia.Controls.Notifications.NotificationPosition>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Notifications.WindowNotificationManager 
    => control._set(Avalonia.Controls.Notifications.WindowNotificationManager.PositionProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Position<T>(this T control, Func<ValueTask<Avalonia.Controls.Notifications.NotificationPosition>> getter, Func<Avalonia.Controls.Notifications.NotificationPosition>? fallbackGetter = null, Action<Avalonia.Controls.Notifications.NotificationPosition>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Notifications.WindowNotificationManager 
+   => control._set(Avalonia.Controls.Notifications.WindowNotificationManager.PositionProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -50,6 +55,10 @@ public static T MaxItems<T>(this T control, System.Int32 value) where T : Avalon
 /*BindFromExpressionSetterGenerator*/
 public static T MaxItems<T>(this T control, Func<System.Int32> func, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Notifications.WindowNotificationManager 
    => control._set(Avalonia.Controls.Notifications.WindowNotificationManager.MaxItemsProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T MaxItems<T>(this T control, Func<ValueTask<System.Int32>> getter, Func<System.Int32>? fallbackGetter = null, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Notifications.WindowNotificationManager 
+   => control._set(Avalonia.Controls.Notifications.WindowNotificationManager.MaxItemsProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

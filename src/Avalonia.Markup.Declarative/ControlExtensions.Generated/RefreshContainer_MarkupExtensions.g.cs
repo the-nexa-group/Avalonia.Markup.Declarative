@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T Visualizer<T>(this T control, Avalonia.Controls.RefreshVisualize
 /*BindFromExpressionSetterGenerator*/
 public static T Visualizer<T>(this T control, Func<Avalonia.Controls.RefreshVisualizer?> func, Action<Avalonia.Controls.RefreshVisualizer?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.RefreshContainer 
    => control._set(Avalonia.Controls.RefreshContainer.VisualizerProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Visualizer<T>(this T control, Func<ValueTask<Avalonia.Controls.RefreshVisualizer?>> getter, Func<Avalonia.Controls.RefreshVisualizer?>? fallbackGetter = null, Action<Avalonia.Controls.RefreshVisualizer?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.RefreshContainer 
+   => control._set(Avalonia.Controls.RefreshContainer.VisualizerProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -50,6 +55,10 @@ public static T PullDirection<T>(this T control, Avalonia.Input.PullDirection va
 /*BindFromExpressionSetterGenerator*/
 public static T PullDirection<T>(this T control, Func<Avalonia.Input.PullDirection> func, Action<Avalonia.Input.PullDirection>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.RefreshContainer 
    => control._set(Avalonia.Controls.RefreshContainer.PullDirectionProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T PullDirection<T>(this T control, Func<ValueTask<Avalonia.Input.PullDirection>> getter, Func<Avalonia.Input.PullDirection>? fallbackGetter = null, Action<Avalonia.Input.PullDirection>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.RefreshContainer 
+   => control._set(Avalonia.Controls.RefreshContainer.PullDirectionProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

@@ -27,8 +27,8 @@ public class GeneratorHost(ExtensionGeneratorConfig config)
                 "System",
                 "System.Numerics",
                 "System.Linq.Expressions",
-                "System.Runtime.CompilerServices"
-
+                "System.Runtime.CompilerServices",
+                "System.Threading.Tasks"
             ]
         };
 
@@ -58,6 +58,7 @@ public class GeneratorHost(ExtensionGeneratorConfig config)
 
                 new ValueSetterGenerator(),
                 new BindFromExpressionSetterGenerator(),
+                new BindFromExpressionAsyncSetterGenerator(),
                 new ValueOverloadsSetterGenerator(),
 
                 //obsolete candidates

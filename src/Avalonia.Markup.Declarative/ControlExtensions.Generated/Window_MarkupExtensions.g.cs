@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T SizeToContent<T>(this T control, Avalonia.Controls.SizeToContent
 /*BindFromExpressionSetterGenerator*/
 public static T SizeToContent<T>(this T control, Func<Avalonia.Controls.SizeToContent> func, Action<Avalonia.Controls.SizeToContent>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.SizeToContentProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SizeToContent<T>(this T control, Func<ValueTask<Avalonia.Controls.SizeToContent>> getter, Func<Avalonia.Controls.SizeToContent>? fallbackGetter = null, Action<Avalonia.Controls.SizeToContent>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.SizeToContentProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T ExtendClientAreaToDecorationsHint<T>(this T control, System.Bool
 public static T ExtendClientAreaToDecorationsHint<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.ExtendClientAreaToDecorationsHintProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ExtendClientAreaToDecorationsHint<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.ExtendClientAreaToDecorationsHintProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ExtendClientAreaToDecorationsHint<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Window 
@@ -79,6 +88,10 @@ public static T ExtendClientAreaChromeHints<T>(this T control, Avalonia.Platform
 /*BindFromExpressionSetterGenerator*/
 public static T ExtendClientAreaChromeHints<T>(this T control, Func<Avalonia.Platform.ExtendClientAreaChromeHints> func, Action<Avalonia.Platform.ExtendClientAreaChromeHints>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.ExtendClientAreaChromeHintsProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ExtendClientAreaChromeHints<T>(this T control, Func<ValueTask<Avalonia.Platform.ExtendClientAreaChromeHints>> getter, Func<Avalonia.Platform.ExtendClientAreaChromeHints>? fallbackGetter = null, Action<Avalonia.Platform.ExtendClientAreaChromeHints>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.ExtendClientAreaChromeHintsProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -109,6 +122,10 @@ public static T ExtendClientAreaTitleBarHeightHint<T>(this T control, System.Dou
 public static T ExtendClientAreaTitleBarHeightHint<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.ExtendClientAreaTitleBarHeightHintProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ExtendClientAreaTitleBarHeightHint<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.ExtendClientAreaTitleBarHeightHintProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ExtendClientAreaTitleBarHeightHint<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Window 
@@ -137,6 +154,10 @@ public static T SystemDecorations<T>(this T control, Avalonia.Controls.SystemDec
 /*BindFromExpressionSetterGenerator*/
 public static T SystemDecorations<T>(this T control, Func<Avalonia.Controls.SystemDecorations> func, Action<Avalonia.Controls.SystemDecorations>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.SystemDecorationsProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SystemDecorations<T>(this T control, Func<ValueTask<Avalonia.Controls.SystemDecorations>> getter, Func<Avalonia.Controls.SystemDecorations>? fallbackGetter = null, Action<Avalonia.Controls.SystemDecorations>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.SystemDecorationsProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -167,6 +188,10 @@ public static T ShowActivated<T>(this T control, System.Boolean value) where T :
 public static T ShowActivated<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.ShowActivatedProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ShowActivated<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.ShowActivatedProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ShowActivated<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Window 
@@ -195,6 +220,10 @@ public static T ShowInTaskbar<T>(this T control, System.Boolean value) where T :
 /*BindFromExpressionSetterGenerator*/
 public static T ShowInTaskbar<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.ShowInTaskbarProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ShowInTaskbar<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.ShowInTaskbarProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -225,6 +254,10 @@ public static T ClosingBehavior<T>(this T control, Avalonia.Controls.WindowClosi
 public static T ClosingBehavior<T>(this T control, Func<Avalonia.Controls.WindowClosingBehavior> func, Action<Avalonia.Controls.WindowClosingBehavior>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.ClosingBehaviorProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ClosingBehavior<T>(this T control, Func<ValueTask<Avalonia.Controls.WindowClosingBehavior>> getter, Func<Avalonia.Controls.WindowClosingBehavior>? fallbackGetter = null, Action<Avalonia.Controls.WindowClosingBehavior>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.ClosingBehaviorProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ClosingBehavior<T>(this T control,Avalonia.Controls.WindowClosingBehavior value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Window 
@@ -253,6 +286,10 @@ public static T WindowState<T>(this T control, Avalonia.Controls.WindowState val
 /*BindFromExpressionSetterGenerator*/
 public static T WindowState<T>(this T control, Func<Avalonia.Controls.WindowState> func, Action<Avalonia.Controls.WindowState>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.WindowStateProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T WindowState<T>(this T control, Func<ValueTask<Avalonia.Controls.WindowState>> getter, Func<Avalonia.Controls.WindowState>? fallbackGetter = null, Action<Avalonia.Controls.WindowState>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.WindowStateProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -283,6 +320,10 @@ public static T Title<T>(this T control, System.String? value) where T : Avaloni
 public static T Title<T>(this T control, Func<System.String?> func, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.TitleProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Title<T>(this T control, Func<ValueTask<System.String?>> getter, Func<System.String?>? fallbackGetter = null, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.TitleProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Title<T>(this T control,System.String? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Window 
@@ -311,6 +352,10 @@ public static T Icon<T>(this T control, Avalonia.Controls.WindowIcon? value) whe
 /*BindFromExpressionSetterGenerator*/
 public static T Icon<T>(this T control, Func<Avalonia.Controls.WindowIcon?> func, Action<Avalonia.Controls.WindowIcon?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.IconProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Icon<T>(this T control, Func<ValueTask<Avalonia.Controls.WindowIcon?>> getter, Func<Avalonia.Controls.WindowIcon?>? fallbackGetter = null, Action<Avalonia.Controls.WindowIcon?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.IconProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -341,6 +386,10 @@ public static T WindowStartupLocation<T>(this T control, Avalonia.Controls.Windo
 public static T WindowStartupLocation<T>(this T control, Func<Avalonia.Controls.WindowStartupLocation> func, Action<Avalonia.Controls.WindowStartupLocation>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.WindowStartupLocationProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T WindowStartupLocation<T>(this T control, Func<ValueTask<Avalonia.Controls.WindowStartupLocation>> getter, Func<Avalonia.Controls.WindowStartupLocation>? fallbackGetter = null, Action<Avalonia.Controls.WindowStartupLocation>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.WindowStartupLocationProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T WindowStartupLocation<T>(this T control,Avalonia.Controls.WindowStartupLocation value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Window 
@@ -369,6 +418,10 @@ public static T CanResize<T>(this T control, System.Boolean value) where T : Ava
 /*BindFromExpressionSetterGenerator*/
 public static T CanResize<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.CanResizeProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T CanResize<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.CanResizeProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -399,6 +452,10 @@ public static T CanMinimize<T>(this T control, System.Boolean value) where T : A
 public static T CanMinimize<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.CanMinimizeProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T CanMinimize<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.CanMinimizeProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T CanMinimize<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Window 
@@ -427,6 +484,10 @@ public static T CanMaximize<T>(this T control, System.Boolean value) where T : A
 /*BindFromExpressionSetterGenerator*/
 public static T CanMaximize<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.CanMaximizeProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T CanMaximize<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.CanMaximizeProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

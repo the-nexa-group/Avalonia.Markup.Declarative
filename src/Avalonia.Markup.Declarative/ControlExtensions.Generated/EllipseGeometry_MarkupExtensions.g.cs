@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T Rect<T>(this T control, Avalonia.Rect value) where T : Avalonia.
 /*BindFromExpressionSetterGenerator*/
 public static T Rect<T>(this T control, Func<Avalonia.Rect> func, Action<Avalonia.Rect>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.EllipseGeometry 
    => control._set(Avalonia.Media.EllipseGeometry.RectProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Rect<T>(this T control, Func<ValueTask<Avalonia.Rect>> getter, Func<Avalonia.Rect>? fallbackGetter = null, Action<Avalonia.Rect>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.EllipseGeometry 
+   => control._set(Avalonia.Media.EllipseGeometry.RectProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*ValueOverloadsSetterGenerator*/
 
@@ -62,6 +67,10 @@ public static T RadiusX<T>(this T control, System.Double value) where T : Avalon
 public static T RadiusX<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.EllipseGeometry 
    => control._set(Avalonia.Media.EllipseGeometry.RadiusXProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T RadiusX<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.EllipseGeometry 
+   => control._set(Avalonia.Media.EllipseGeometry.RadiusXProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T RadiusX<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.EllipseGeometry 
@@ -91,6 +100,10 @@ public static T RadiusY<T>(this T control, System.Double value) where T : Avalon
 public static T RadiusY<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.EllipseGeometry 
    => control._set(Avalonia.Media.EllipseGeometry.RadiusYProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T RadiusY<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.EllipseGeometry 
+   => control._set(Avalonia.Media.EllipseGeometry.RadiusYProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T RadiusY<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.EllipseGeometry 
@@ -119,6 +132,10 @@ public static T Center<T>(this T control, Avalonia.Point value) where T : Avalon
 /*BindFromExpressionSetterGenerator*/
 public static T Center<T>(this T control, Func<Avalonia.Point> func, Action<Avalonia.Point>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.EllipseGeometry 
    => control._set(Avalonia.Media.EllipseGeometry.CenterProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Center<T>(this T control, Func<ValueTask<Avalonia.Point>> getter, Func<Avalonia.Point>? fallbackGetter = null, Action<Avalonia.Point>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.EllipseGeometry 
+   => control._set(Avalonia.Media.EllipseGeometry.CenterProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

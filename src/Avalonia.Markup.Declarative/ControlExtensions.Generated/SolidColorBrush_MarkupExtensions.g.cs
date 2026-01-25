@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static Avalonia.Media.SolidColorBrush Color(this Avalonia.Media.SolidColo
 /*BindFromExpressionSetterGenerator*/
 public static Avalonia.Media.SolidColorBrush Color(this Avalonia.Media.SolidColorBrush control, Func<Avalonia.Media.Color> func, Action<Avalonia.Media.Color>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)  
    => control._set(Avalonia.Media.SolidColorBrush.ColorProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static Avalonia.Media.SolidColorBrush Color(this Avalonia.Media.SolidColorBrush control, Func<ValueTask<Avalonia.Media.Color>> getter, Func<Avalonia.Media.Color>? fallbackGetter = null, Action<Avalonia.Media.Color>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
+   => control._set(Avalonia.Media.SolidColorBrush.ColorProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

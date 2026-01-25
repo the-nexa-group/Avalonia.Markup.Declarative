@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T AlignmentX<T>(this T control, Avalonia.Media.AlignmentX value) w
 /*BindFromExpressionSetterGenerator*/
 public static T AlignmentX<T>(this T control, Func<Avalonia.Media.AlignmentX> func, Action<Avalonia.Media.AlignmentX>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TileBrush 
    => control._set(Avalonia.Media.TileBrush.AlignmentXProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T AlignmentX<T>(this T control, Func<ValueTask<Avalonia.Media.AlignmentX>> getter, Func<Avalonia.Media.AlignmentX>? fallbackGetter = null, Action<Avalonia.Media.AlignmentX>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TileBrush 
+   => control._set(Avalonia.Media.TileBrush.AlignmentXProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T AlignmentY<T>(this T control, Avalonia.Media.AlignmentY value) w
 public static T AlignmentY<T>(this T control, Func<Avalonia.Media.AlignmentY> func, Action<Avalonia.Media.AlignmentY>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TileBrush 
    => control._set(Avalonia.Media.TileBrush.AlignmentYProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T AlignmentY<T>(this T control, Func<ValueTask<Avalonia.Media.AlignmentY>> getter, Func<Avalonia.Media.AlignmentY>? fallbackGetter = null, Action<Avalonia.Media.AlignmentY>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TileBrush 
+   => control._set(Avalonia.Media.TileBrush.AlignmentYProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T AlignmentY<T>(this T control,Avalonia.Media.AlignmentY value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TileBrush 
@@ -79,6 +88,10 @@ public static T DestinationRect<T>(this T control, Avalonia.RelativeRect value) 
 /*BindFromExpressionSetterGenerator*/
 public static T DestinationRect<T>(this T control, Func<Avalonia.RelativeRect> func, Action<Avalonia.RelativeRect>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TileBrush 
    => control._set(Avalonia.Media.TileBrush.DestinationRectProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T DestinationRect<T>(this T control, Func<ValueTask<Avalonia.RelativeRect>> getter, Func<Avalonia.RelativeRect>? fallbackGetter = null, Action<Avalonia.RelativeRect>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TileBrush 
+   => control._set(Avalonia.Media.TileBrush.DestinationRectProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*ValueOverloadsSetterGenerator*/
 
@@ -122,6 +135,10 @@ public static T SourceRect<T>(this T control, Avalonia.RelativeRect value) where
 public static T SourceRect<T>(this T control, Func<Avalonia.RelativeRect> func, Action<Avalonia.RelativeRect>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TileBrush 
    => control._set(Avalonia.Media.TileBrush.SourceRectProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SourceRect<T>(this T control, Func<ValueTask<Avalonia.RelativeRect>> getter, Func<Avalonia.RelativeRect>? fallbackGetter = null, Action<Avalonia.RelativeRect>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TileBrush 
+   => control._set(Avalonia.Media.TileBrush.SourceRectProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*ValueOverloadsSetterGenerator*/
 
 public static T SourceRect<T>(this T control, System.Double x = default!, System.Double y = default!, System.Double width = default!, System.Double height = default!, Avalonia.RelativeUnit unit = default!) where T : Avalonia.Media.TileBrush 
@@ -164,6 +181,10 @@ public static T Stretch<T>(this T control, Avalonia.Media.Stretch value) where T
 public static T Stretch<T>(this T control, Func<Avalonia.Media.Stretch> func, Action<Avalonia.Media.Stretch>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TileBrush 
    => control._set(Avalonia.Media.TileBrush.StretchProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Stretch<T>(this T control, Func<ValueTask<Avalonia.Media.Stretch>> getter, Func<Avalonia.Media.Stretch>? fallbackGetter = null, Action<Avalonia.Media.Stretch>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TileBrush 
+   => control._set(Avalonia.Media.TileBrush.StretchProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Stretch<T>(this T control,Avalonia.Media.Stretch value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TileBrush 
@@ -192,6 +213,10 @@ public static T TileMode<T>(this T control, Avalonia.Media.TileMode value) where
 /*BindFromExpressionSetterGenerator*/
 public static T TileMode<T>(this T control, Func<Avalonia.Media.TileMode> func, Action<Avalonia.Media.TileMode>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TileBrush 
    => control._set(Avalonia.Media.TileBrush.TileModeProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T TileMode<T>(this T control, Func<ValueTask<Avalonia.Media.TileMode>> getter, Func<Avalonia.Media.TileMode>? fallbackGetter = null, Action<Avalonia.Media.TileMode>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TileBrush 
+   => control._set(Avalonia.Media.TileBrush.TileModeProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

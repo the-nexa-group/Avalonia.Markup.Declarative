@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T Location<T>(this T control, Avalonia.Media.TextDecorationLocatio
 /*BindFromExpressionSetterGenerator*/
 public static T Location<T>(this T control, Func<Avalonia.Media.TextDecorationLocation> func, Action<Avalonia.Media.TextDecorationLocation>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.LocationProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Location<T>(this T control, Func<ValueTask<Avalonia.Media.TextDecorationLocation>> getter, Func<Avalonia.Media.TextDecorationLocation>? fallbackGetter = null, Action<Avalonia.Media.TextDecorationLocation>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TextDecoration 
+   => control._set(Avalonia.Media.TextDecoration.LocationProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T Stroke<T>(this T control, Avalonia.Media.IBrush? value) where T 
 public static T Stroke<T>(this T control, Func<Avalonia.Media.IBrush?> func, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Stroke<T>(this T control, Func<ValueTask<Avalonia.Media.IBrush?>> getter, Func<Avalonia.Media.IBrush?>? fallbackGetter = null, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TextDecoration 
+   => control._set(Avalonia.Media.TextDecoration.StrokeProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Stroke<T>(this T control,Avalonia.Media.IBrush? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TextDecoration 
@@ -79,6 +88,10 @@ public static T StrokeThicknessUnit<T>(this T control, Avalonia.Media.TextDecora
 /*BindFromExpressionSetterGenerator*/
 public static T StrokeThicknessUnit<T>(this T control, Func<Avalonia.Media.TextDecorationUnit> func, Action<Avalonia.Media.TextDecorationUnit>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeThicknessUnitProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T StrokeThicknessUnit<T>(this T control, Func<ValueTask<Avalonia.Media.TextDecorationUnit>> getter, Func<Avalonia.Media.TextDecorationUnit>? fallbackGetter = null, Action<Avalonia.Media.TextDecorationUnit>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TextDecoration 
+   => control._set(Avalonia.Media.TextDecoration.StrokeThicknessUnitProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -109,6 +122,10 @@ public static T StrokeDashArray<T>(this T control, Avalonia.Collections.Avalonia
 public static T StrokeDashArray<T>(this T control, Func<Avalonia.Collections.AvaloniaList<System.Double>?> func, Action<Avalonia.Collections.AvaloniaList<System.Double>?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeDashArrayProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T StrokeDashArray<T>(this T control, Func<ValueTask<Avalonia.Collections.AvaloniaList<System.Double>?>> getter, Func<Avalonia.Collections.AvaloniaList<System.Double>?>? fallbackGetter = null, Action<Avalonia.Collections.AvaloniaList<System.Double>?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TextDecoration 
+   => control._set(Avalonia.Media.TextDecoration.StrokeDashArrayProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T StrokeDashArray<T>(this T control,Avalonia.Collections.AvaloniaList<System.Double>? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TextDecoration 
@@ -137,6 +154,10 @@ public static T StrokeDashOffset<T>(this T control, System.Double value) where T
 /*BindFromExpressionSetterGenerator*/
 public static T StrokeDashOffset<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeDashOffsetProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T StrokeDashOffset<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TextDecoration 
+   => control._set(Avalonia.Media.TextDecoration.StrokeDashOffsetProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -167,6 +188,10 @@ public static T StrokeThickness<T>(this T control, System.Double value) where T 
 public static T StrokeThickness<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeThicknessProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T StrokeThickness<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TextDecoration 
+   => control._set(Avalonia.Media.TextDecoration.StrokeThicknessProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T StrokeThickness<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TextDecoration 
@@ -195,6 +220,10 @@ public static T StrokeLineCap<T>(this T control, Avalonia.Media.PenLineCap value
 /*BindFromExpressionSetterGenerator*/
 public static T StrokeLineCap<T>(this T control, Func<Avalonia.Media.PenLineCap> func, Action<Avalonia.Media.PenLineCap>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeLineCapProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T StrokeLineCap<T>(this T control, Func<ValueTask<Avalonia.Media.PenLineCap>> getter, Func<Avalonia.Media.PenLineCap>? fallbackGetter = null, Action<Avalonia.Media.PenLineCap>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TextDecoration 
+   => control._set(Avalonia.Media.TextDecoration.StrokeLineCapProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -225,6 +254,10 @@ public static T StrokeOffset<T>(this T control, System.Double value) where T : A
 public static T StrokeOffset<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeOffsetProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T StrokeOffset<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TextDecoration 
+   => control._set(Avalonia.Media.TextDecoration.StrokeOffsetProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T StrokeOffset<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.TextDecoration 
@@ -253,6 +286,10 @@ public static T StrokeOffsetUnit<T>(this T control, Avalonia.Media.TextDecoratio
 /*BindFromExpressionSetterGenerator*/
 public static T StrokeOffsetUnit<T>(this T control, Func<Avalonia.Media.TextDecorationUnit> func, Action<Avalonia.Media.TextDecorationUnit>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeOffsetUnitProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T StrokeOffsetUnit<T>(this T control, Func<ValueTask<Avalonia.Media.TextDecorationUnit>> getter, Func<Avalonia.Media.TextDecorationUnit>? fallbackGetter = null, Action<Avalonia.Media.TextDecorationUnit>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.TextDecoration 
+   => control._set(Avalonia.Media.TextDecoration.StrokeOffsetUnitProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

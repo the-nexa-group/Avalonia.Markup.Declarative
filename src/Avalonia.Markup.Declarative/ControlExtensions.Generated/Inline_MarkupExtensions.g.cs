@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T TextDecorations<T>(this T control, Avalonia.Media.TextDecoration
 /*BindFromExpressionSetterGenerator*/
 public static T TextDecorations<T>(this T control, Func<Avalonia.Media.TextDecorationCollection?> func, Action<Avalonia.Media.TextDecorationCollection?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Documents.Inline 
    => control._set(Avalonia.Controls.Documents.Inline.TextDecorationsProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T TextDecorations<T>(this T control, Func<ValueTask<Avalonia.Media.TextDecorationCollection?>> getter, Func<Avalonia.Media.TextDecorationCollection?>? fallbackGetter = null, Action<Avalonia.Media.TextDecorationCollection?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Documents.Inline 
+   => control._set(Avalonia.Controls.Documents.Inline.TextDecorationsProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -50,6 +55,10 @@ public static T BaselineAlignment<T>(this T control, Avalonia.Media.BaselineAlig
 /*BindFromExpressionSetterGenerator*/
 public static T BaselineAlignment<T>(this T control, Func<Avalonia.Media.BaselineAlignment> func, Action<Avalonia.Media.BaselineAlignment>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Documents.Inline 
    => control._set(Avalonia.Controls.Documents.Inline.BaselineAlignmentProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T BaselineAlignment<T>(this T control, Func<ValueTask<Avalonia.Media.BaselineAlignment>> getter, Func<Avalonia.Media.BaselineAlignment>? fallbackGetter = null, Action<Avalonia.Media.BaselineAlignment>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Documents.Inline 
+   => control._set(Avalonia.Controls.Documents.Inline.BaselineAlignmentProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

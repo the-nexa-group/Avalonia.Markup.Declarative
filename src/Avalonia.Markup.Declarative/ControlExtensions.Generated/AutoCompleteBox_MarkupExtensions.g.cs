@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T CaretIndex<T>(this T control, System.Int32 value) where T : Aval
 /*BindFromExpressionSetterGenerator*/
 public static T CaretIndex<T>(this T control, Func<System.Int32> func, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.CaretIndexProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T CaretIndex<T>(this T control, Func<ValueTask<System.Int32>> getter, Func<System.Int32>? fallbackGetter = null, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.CaretIndexProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T Watermark<T>(this T control, System.String? value) where T : Ava
 public static T Watermark<T>(this T control, Func<System.String?> func, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.WatermarkProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Watermark<T>(this T control, Func<ValueTask<System.String?>> getter, Func<System.String?>? fallbackGetter = null, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.WatermarkProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Watermark<T>(this T control,System.String? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.AutoCompleteBox 
@@ -79,6 +88,10 @@ public static T MinimumPrefixLength<T>(this T control, System.Int32 value) where
 /*BindFromExpressionSetterGenerator*/
 public static T MinimumPrefixLength<T>(this T control, Func<System.Int32> func, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.MinimumPrefixLengthProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T MinimumPrefixLength<T>(this T control, Func<ValueTask<System.Int32>> getter, Func<System.Int32>? fallbackGetter = null, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.MinimumPrefixLengthProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -109,6 +122,10 @@ public static T MinimumPopulateDelay<T>(this T control, System.TimeSpan value) w
 public static T MinimumPopulateDelay<T>(this T control, Func<System.TimeSpan> func, Action<System.TimeSpan>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.MinimumPopulateDelayProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T MinimumPopulateDelay<T>(this T control, Func<ValueTask<System.TimeSpan>> getter, Func<System.TimeSpan>? fallbackGetter = null, Action<System.TimeSpan>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.MinimumPopulateDelayProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T MinimumPopulateDelay<T>(this T control,System.TimeSpan value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.AutoCompleteBox 
@@ -137,6 +154,10 @@ public static T MaxDropDownHeight<T>(this T control, System.Double value) where 
 /*BindFromExpressionSetterGenerator*/
 public static T MaxDropDownHeight<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.MaxDropDownHeightProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T MaxDropDownHeight<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.MaxDropDownHeightProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -167,6 +188,10 @@ public static T IsTextCompletionEnabled<T>(this T control, System.Boolean value)
 public static T IsTextCompletionEnabled<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.IsTextCompletionEnabledProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T IsTextCompletionEnabled<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.IsTextCompletionEnabledProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IsTextCompletionEnabled<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.AutoCompleteBox 
@@ -195,6 +220,10 @@ public static T ItemTemplate<T>(this T control, Avalonia.Controls.Templates.IDat
 /*BindFromExpressionSetterGenerator*/
 public static T ItemTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate?> func, Action<Avalonia.Controls.Templates.IDataTemplate?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.ItemTemplateProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ItemTemplate<T>(this T control, Func<ValueTask<Avalonia.Controls.Templates.IDataTemplate?>> getter, Func<Avalonia.Controls.Templates.IDataTemplate?>? fallbackGetter = null, Action<Avalonia.Controls.Templates.IDataTemplate?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.ItemTemplateProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -225,6 +254,10 @@ public static T ClearSelectionOnLostFocus<T>(this T control, System.Boolean valu
 public static T ClearSelectionOnLostFocus<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.ClearSelectionOnLostFocusProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ClearSelectionOnLostFocus<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.ClearSelectionOnLostFocusProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ClearSelectionOnLostFocus<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.AutoCompleteBox 
@@ -253,6 +286,10 @@ public static T IsDropDownOpen<T>(this T control, System.Boolean value) where T 
 /*BindFromExpressionSetterGenerator*/
 public static T IsDropDownOpen<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.IsDropDownOpenProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T IsDropDownOpen<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.IsDropDownOpenProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -283,6 +320,10 @@ public static T SelectedItem<T>(this T control, System.Object? value) where T : 
 public static T SelectedItem<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.SelectedItemProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SelectedItem<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.SelectedItemProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectedItem<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.AutoCompleteBox 
@@ -311,6 +352,10 @@ public static T Text<T>(this T control, System.String? value) where T : Avalonia
 /*BindFromExpressionSetterGenerator*/
 public static T Text<T>(this T control, Func<System.String?> func, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.TextProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Text<T>(this T control, Func<ValueTask<System.String?>> getter, Func<System.String?>? fallbackGetter = null, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.TextProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -341,6 +386,10 @@ public static T FilterMode<T>(this T control, Avalonia.Controls.AutoCompleteFilt
 public static T FilterMode<T>(this T control, Func<Avalonia.Controls.AutoCompleteFilterMode> func, Action<Avalonia.Controls.AutoCompleteFilterMode>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.FilterModeProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T FilterMode<T>(this T control, Func<ValueTask<Avalonia.Controls.AutoCompleteFilterMode>> getter, Func<Avalonia.Controls.AutoCompleteFilterMode>? fallbackGetter = null, Action<Avalonia.Controls.AutoCompleteFilterMode>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.FilterModeProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T FilterMode<T>(this T control,Avalonia.Controls.AutoCompleteFilterMode value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.AutoCompleteBox 
@@ -369,6 +418,10 @@ public static T ItemFilter<T>(this T control, Avalonia.Controls.AutoCompleteFilt
 /*BindFromExpressionSetterGenerator*/
 public static T ItemFilter<T>(this T control, Func<Avalonia.Controls.AutoCompleteFilterPredicate<System.Object>?> func, Action<Avalonia.Controls.AutoCompleteFilterPredicate<System.Object>?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.ItemFilterProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ItemFilter<T>(this T control, Func<ValueTask<Avalonia.Controls.AutoCompleteFilterPredicate<System.Object>?>> getter, Func<Avalonia.Controls.AutoCompleteFilterPredicate<System.Object>?>? fallbackGetter = null, Action<Avalonia.Controls.AutoCompleteFilterPredicate<System.Object>?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.ItemFilterProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -399,6 +452,10 @@ public static T TextFilter<T>(this T control, Avalonia.Controls.AutoCompleteFilt
 public static T TextFilter<T>(this T control, Func<Avalonia.Controls.AutoCompleteFilterPredicate<System.String>?> func, Action<Avalonia.Controls.AutoCompleteFilterPredicate<System.String>?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.TextFilterProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T TextFilter<T>(this T control, Func<ValueTask<Avalonia.Controls.AutoCompleteFilterPredicate<System.String>?>> getter, Func<Avalonia.Controls.AutoCompleteFilterPredicate<System.String>?>? fallbackGetter = null, Action<Avalonia.Controls.AutoCompleteFilterPredicate<System.String>?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.TextFilterProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T TextFilter<T>(this T control,Avalonia.Controls.AutoCompleteFilterPredicate<System.String>? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.AutoCompleteBox 
@@ -427,6 +484,10 @@ public static T ItemSelector<T>(this T control, Avalonia.Controls.AutoCompleteSe
 /*BindFromExpressionSetterGenerator*/
 public static T ItemSelector<T>(this T control, Func<Avalonia.Controls.AutoCompleteSelector<System.Object>?> func, Action<Avalonia.Controls.AutoCompleteSelector<System.Object>?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.ItemSelectorProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ItemSelector<T>(this T control, Func<ValueTask<Avalonia.Controls.AutoCompleteSelector<System.Object>?>> getter, Func<Avalonia.Controls.AutoCompleteSelector<System.Object>?>? fallbackGetter = null, Action<Avalonia.Controls.AutoCompleteSelector<System.Object>?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.ItemSelectorProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -457,6 +518,10 @@ public static T TextSelector<T>(this T control, Avalonia.Controls.AutoCompleteSe
 public static T TextSelector<T>(this T control, Func<Avalonia.Controls.AutoCompleteSelector<System.String>?> func, Action<Avalonia.Controls.AutoCompleteSelector<System.String>?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.TextSelectorProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T TextSelector<T>(this T control, Func<ValueTask<Avalonia.Controls.AutoCompleteSelector<System.String>?>> getter, Func<Avalonia.Controls.AutoCompleteSelector<System.String>?>? fallbackGetter = null, Action<Avalonia.Controls.AutoCompleteSelector<System.String>?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.TextSelectorProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T TextSelector<T>(this T control,Avalonia.Controls.AutoCompleteSelector<System.String>? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.AutoCompleteBox 
@@ -485,6 +550,10 @@ public static T ItemsSource<T>(this T control, System.Collections.IEnumerable? v
 /*BindFromExpressionSetterGenerator*/
 public static T ItemsSource<T>(this T control, Func<System.Collections.IEnumerable?> func, Action<System.Collections.IEnumerable?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.ItemsSourceProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ItemsSource<T>(this T control, Func<ValueTask<System.Collections.IEnumerable?>> getter, Func<System.Collections.IEnumerable?>? fallbackGetter = null, Action<System.Collections.IEnumerable?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.ItemsSourceProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -515,6 +584,10 @@ public static T AsyncPopulator<T>(this T control, System.Func<System.String,Syst
 public static T AsyncPopulator<T>(this T control, Func<System.Func<System.String,System.Threading.CancellationToken,System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<System.Object>>>?> func, Action<System.Func<System.String,System.Threading.CancellationToken,System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<System.Object>>>?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.AsyncPopulatorProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T AsyncPopulator<T>(this T control, Func<ValueTask<System.Func<System.String,System.Threading.CancellationToken,System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<System.Object>>>?>> getter, Func<System.Func<System.String,System.Threading.CancellationToken,System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<System.Object>>>?>? fallbackGetter = null, Action<System.Func<System.String,System.Threading.CancellationToken,System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<System.Object>>>?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.AsyncPopulatorProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T AsyncPopulator<T>(this T control,System.Func<System.String,System.Threading.CancellationToken,System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<System.Object>>>? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.AutoCompleteBox 
@@ -543,6 +616,10 @@ public static T MaxLength<T>(this T control, System.Int32 value) where T : Avalo
 /*BindFromExpressionSetterGenerator*/
 public static T MaxLength<T>(this T control, Func<System.Int32> func, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.MaxLengthProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T MaxLength<T>(this T control, Func<ValueTask<System.Int32>> getter, Func<System.Int32>? fallbackGetter = null, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.MaxLengthProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -573,6 +650,10 @@ public static T InnerLeftContent<T>(this T control, System.Object? value) where 
 public static T InnerLeftContent<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.InnerLeftContentProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T InnerLeftContent<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.InnerLeftContentProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T InnerLeftContent<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.AutoCompleteBox 
@@ -601,6 +682,10 @@ public static T InnerRightContent<T>(this T control, System.Object? value) where
 /*BindFromExpressionSetterGenerator*/
 public static T InnerRightContent<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.InnerRightContentProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T InnerRightContent<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.InnerRightContentProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T RequestedThemeVariant<T>(this T control, Avalonia.Styling.ThemeV
 /*BindFromExpressionSetterGenerator*/
 public static T RequestedThemeVariant<T>(this T control, Func<Avalonia.Styling.ThemeVariant?> func, Action<Avalonia.Styling.ThemeVariant?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ThemeVariantScope 
    => control._set(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T RequestedThemeVariant<T>(this T control, Func<ValueTask<Avalonia.Styling.ThemeVariant?>> getter, Func<Avalonia.Styling.ThemeVariant?>? fallbackGetter = null, Action<Avalonia.Styling.ThemeVariant?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ThemeVariantScope 
+   => control._set(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

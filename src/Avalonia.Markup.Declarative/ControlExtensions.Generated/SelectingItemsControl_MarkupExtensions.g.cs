@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T AutoScrollToSelectedItem<T>(this T control, System.Boolean value
 /*BindFromExpressionSetterGenerator*/
 public static T AutoScrollToSelectedItem<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.AutoScrollToSelectedItemProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T AutoScrollToSelectedItem<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+   => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.AutoScrollToSelectedItemProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T SelectedIndex<T>(this T control, System.Int32 value) where T : A
 public static T SelectedIndex<T>(this T control, Func<System.Int32> func, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedIndexProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SelectedIndex<T>(this T control, Func<ValueTask<System.Int32>> getter, Func<System.Int32>? fallbackGetter = null, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+   => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedIndexProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectedIndex<T>(this T control,System.Int32 value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
@@ -79,6 +88,10 @@ public static T SelectedItem<T>(this T control, System.Object? value) where T : 
 /*BindFromExpressionSetterGenerator*/
 public static T SelectedItem<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItemProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SelectedItem<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+   => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItemProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -109,6 +122,10 @@ public static T SelectedValue<T>(this T control, System.Object? value) where T :
 public static T SelectedValue<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SelectedValue<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+   => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectedValue<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
@@ -138,6 +155,10 @@ public static T SelectedValueBinding<T>(this T control, Avalonia.Data.IBinding? 
 public static T SelectedValueBinding<T>(this T control, Func<Avalonia.Data.IBinding?> func, Action<Avalonia.Data.IBinding?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBindingProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SelectedValueBinding<T>(this T control, Func<ValueTask<Avalonia.Data.IBinding?>> getter, Func<Avalonia.Data.IBinding?>? fallbackGetter = null, Action<Avalonia.Data.IBinding?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+   => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBindingProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectedValueBinding<T>(this T control,Avalonia.Data.IBinding? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
@@ -162,6 +183,10 @@ public static T IsTextSearchEnabled<T>(this T control, System.Boolean value) whe
 /*BindFromExpressionSetterGenerator*/
 public static T IsTextSearchEnabled<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.IsTextSearchEnabledProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T IsTextSearchEnabled<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+   => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.IsTextSearchEnabledProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -191,6 +216,10 @@ public static T WrapSelection<T>(this T control, System.Boolean value) where T :
 /*BindFromExpressionSetterGenerator*/
 public static T WrapSelection<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelectionProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T WrapSelection<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+   => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelectionProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

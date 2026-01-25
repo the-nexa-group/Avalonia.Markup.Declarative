@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T OffContent<T>(this T control, System.Object? value) where T : Av
 /*BindFromExpressionSetterGenerator*/
 public static T OffContent<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OffContentProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T OffContent<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ToggleSwitch 
+   => control._set(Avalonia.Controls.ToggleSwitch.OffContentProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T OffContentTemplate<T>(this T control, Avalonia.Controls.Template
 public static T OffContentTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate?> func, Action<Avalonia.Controls.Templates.IDataTemplate?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OffContentTemplateProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T OffContentTemplate<T>(this T control, Func<ValueTask<Avalonia.Controls.Templates.IDataTemplate?>> getter, Func<Avalonia.Controls.Templates.IDataTemplate?>? fallbackGetter = null, Action<Avalonia.Controls.Templates.IDataTemplate?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ToggleSwitch 
+   => control._set(Avalonia.Controls.ToggleSwitch.OffContentTemplateProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T OffContentTemplate<T>(this T control,Avalonia.Controls.Templates.IDataTemplate? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ToggleSwitch 
@@ -79,6 +88,10 @@ public static T OnContent<T>(this T control, System.Object? value) where T : Ava
 /*BindFromExpressionSetterGenerator*/
 public static T OnContent<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OnContentProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T OnContent<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ToggleSwitch 
+   => control._set(Avalonia.Controls.ToggleSwitch.OnContentProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -109,6 +122,10 @@ public static T OnContentTemplate<T>(this T control, Avalonia.Controls.Templates
 public static T OnContentTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate?> func, Action<Avalonia.Controls.Templates.IDataTemplate?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OnContentTemplateProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T OnContentTemplate<T>(this T control, Func<ValueTask<Avalonia.Controls.Templates.IDataTemplate?>> getter, Func<Avalonia.Controls.Templates.IDataTemplate?>? fallbackGetter = null, Action<Avalonia.Controls.Templates.IDataTemplate?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ToggleSwitch 
+   => control._set(Avalonia.Controls.ToggleSwitch.OnContentTemplateProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T OnContentTemplate<T>(this T control,Avalonia.Controls.Templates.IDataTemplate? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ToggleSwitch 
@@ -137,6 +154,10 @@ public static T KnobTransitions<T>(this T control, Avalonia.Animation.Transition
 /*BindFromExpressionSetterGenerator*/
 public static T KnobTransitions<T>(this T control, Func<Avalonia.Animation.Transitions?> func, Action<Avalonia.Animation.Transitions?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.KnobTransitionsProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T KnobTransitions<T>(this T control, Func<ValueTask<Avalonia.Animation.Transitions?>> getter, Func<Avalonia.Animation.Transitions?>? fallbackGetter = null, Action<Avalonia.Animation.Transitions?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ToggleSwitch 
+   => control._set(Avalonia.Controls.ToggleSwitch.KnobTransitionsProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

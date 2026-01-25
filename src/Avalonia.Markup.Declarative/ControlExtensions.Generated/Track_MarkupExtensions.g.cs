@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T Minimum<T>(this T control, System.Double value) where T : Avalon
 /*BindFromExpressionSetterGenerator*/
 public static T Minimum<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.MinimumProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Minimum<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
+   => control._set(Avalonia.Controls.Primitives.Track.MinimumProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T Maximum<T>(this T control, System.Double value) where T : Avalon
 public static T Maximum<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.MaximumProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Maximum<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
+   => control._set(Avalonia.Controls.Primitives.Track.MaximumProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Maximum<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
@@ -79,6 +88,10 @@ public static T Value<T>(this T control, System.Double value) where T : Avalonia
 /*BindFromExpressionSetterGenerator*/
 public static T Value<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.ValueProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Value<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
+   => control._set(Avalonia.Controls.Primitives.Track.ValueProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -109,6 +122,10 @@ public static T ViewportSize<T>(this T control, System.Double value) where T : A
 public static T ViewportSize<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.ViewportSizeProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ViewportSize<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
+   => control._set(Avalonia.Controls.Primitives.Track.ViewportSizeProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ViewportSize<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
@@ -137,6 +154,10 @@ public static T Orientation<T>(this T control, Avalonia.Layout.Orientation value
 /*BindFromExpressionSetterGenerator*/
 public static T Orientation<T>(this T control, Func<Avalonia.Layout.Orientation> func, Action<Avalonia.Layout.Orientation>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.OrientationProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Orientation<T>(this T control, Func<ValueTask<Avalonia.Layout.Orientation>> getter, Func<Avalonia.Layout.Orientation>? fallbackGetter = null, Action<Avalonia.Layout.Orientation>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
+   => control._set(Avalonia.Controls.Primitives.Track.OrientationProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -167,6 +188,10 @@ public static T Thumb<T>(this T control, Avalonia.Controls.Primitives.Thumb? val
 public static T Thumb<T>(this T control, Func<Avalonia.Controls.Primitives.Thumb?> func, Action<Avalonia.Controls.Primitives.Thumb?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.ThumbProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Thumb<T>(this T control, Func<ValueTask<Avalonia.Controls.Primitives.Thumb?>> getter, Func<Avalonia.Controls.Primitives.Thumb?>? fallbackGetter = null, Action<Avalonia.Controls.Primitives.Thumb?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
+   => control._set(Avalonia.Controls.Primitives.Track.ThumbProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Thumb<T>(this T control,Avalonia.Controls.Primitives.Thumb? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
@@ -195,6 +220,10 @@ public static T IncreaseButton<T>(this T control, Avalonia.Controls.Button? valu
 /*BindFromExpressionSetterGenerator*/
 public static T IncreaseButton<T>(this T control, Func<Avalonia.Controls.Button?> func, Action<Avalonia.Controls.Button?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T IncreaseButton<T>(this T control, Func<ValueTask<Avalonia.Controls.Button?>> getter, Func<Avalonia.Controls.Button?>? fallbackGetter = null, Action<Avalonia.Controls.Button?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
+   => control._set(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -225,6 +254,10 @@ public static T DecreaseButton<T>(this T control, Avalonia.Controls.Button? valu
 public static T DecreaseButton<T>(this T control, Func<Avalonia.Controls.Button?> func, Action<Avalonia.Controls.Button?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T DecreaseButton<T>(this T control, Func<ValueTask<Avalonia.Controls.Button?>> getter, Func<Avalonia.Controls.Button?>? fallbackGetter = null, Action<Avalonia.Controls.Button?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
+   => control._set(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T DecreaseButton<T>(this T control,Avalonia.Controls.Button? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
@@ -253,6 +286,10 @@ public static T IsDirectionReversed<T>(this T control, System.Boolean value) whe
 /*BindFromExpressionSetterGenerator*/
 public static T IsDirectionReversed<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.IsDirectionReversedProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T IsDirectionReversed<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
+   => control._set(Avalonia.Controls.Primitives.Track.IsDirectionReversedProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -283,6 +320,10 @@ public static T IgnoreThumbDrag<T>(this T control, System.Boolean value) where T
 public static T IgnoreThumbDrag<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.IgnoreThumbDragProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T IgnoreThumbDrag<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
+   => control._set(Avalonia.Controls.Primitives.Track.IgnoreThumbDragProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IgnoreThumbDrag<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Track 
@@ -311,6 +352,10 @@ public static T DeferThumbDrag<T>(this T control, System.Boolean value) where T 
 /*BindFromExpressionSetterGenerator*/
 public static T DeferThumbDrag<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.DeferThumbDragProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T DeferThumbDrag<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Track 
+   => control._set(Avalonia.Controls.Primitives.Track.DeferThumbDragProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

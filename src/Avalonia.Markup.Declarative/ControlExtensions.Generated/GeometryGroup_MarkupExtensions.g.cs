@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T Children<T>(this T control, Avalonia.Media.GeometryCollection va
 /*BindFromExpressionSetterGenerator*/
 public static T Children<T>(this T control, Func<Avalonia.Media.GeometryCollection> func, Action<Avalonia.Media.GeometryCollection>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.GeometryGroup 
    => control._set(Avalonia.Media.GeometryGroup.ChildrenProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Children<T>(this T control, Func<ValueTask<Avalonia.Media.GeometryCollection>> getter, Func<Avalonia.Media.GeometryCollection>? fallbackGetter = null, Action<Avalonia.Media.GeometryCollection>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.GeometryGroup 
+   => control._set(Avalonia.Media.GeometryGroup.ChildrenProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -50,6 +55,10 @@ public static T FillRule<T>(this T control, Avalonia.Media.FillRule value) where
 /*BindFromExpressionSetterGenerator*/
 public static T FillRule<T>(this T control, Func<Avalonia.Media.FillRule> func, Action<Avalonia.Media.FillRule>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.GeometryGroup 
    => control._set(Avalonia.Media.GeometryGroup.FillRuleProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T FillRule<T>(this T control, Func<ValueTask<Avalonia.Media.FillRule>> getter, Func<Avalonia.Media.FillRule>? fallbackGetter = null, Action<Avalonia.Media.FillRule>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.GeometryGroup 
+   => control._set(Avalonia.Media.GeometryGroup.FillRuleProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

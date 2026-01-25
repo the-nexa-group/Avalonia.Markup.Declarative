@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T Opacity<T>(this T control, System.Double value) where T : Avalon
 /*BindFromExpressionSetterGenerator*/
 public static T Opacity<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.Brush 
    => control._set(Avalonia.Media.Brush.OpacityProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Opacity<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.Brush 
+   => control._set(Avalonia.Media.Brush.OpacityProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T Transform<T>(this T control, Avalonia.Media.ITransform? value) w
 public static T Transform<T>(this T control, Func<Avalonia.Media.ITransform?> func, Action<Avalonia.Media.ITransform?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.Brush 
    => control._set(Avalonia.Media.Brush.TransformProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Transform<T>(this T control, Func<ValueTask<Avalonia.Media.ITransform?>> getter, Func<Avalonia.Media.ITransform?>? fallbackGetter = null, Action<Avalonia.Media.ITransform?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.Brush 
+   => control._set(Avalonia.Media.Brush.TransformProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Transform<T>(this T control,Avalonia.Media.ITransform? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.Brush 
@@ -79,6 +88,10 @@ public static T TransformOrigin<T>(this T control, Avalonia.RelativePoint value)
 /*BindFromExpressionSetterGenerator*/
 public static T TransformOrigin<T>(this T control, Func<Avalonia.RelativePoint> func, Action<Avalonia.RelativePoint>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.Brush 
    => control._set(Avalonia.Media.Brush.TransformOriginProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T TransformOrigin<T>(this T control, Func<ValueTask<Avalonia.RelativePoint>> getter, Func<Avalonia.RelativePoint>? fallbackGetter = null, Action<Avalonia.RelativePoint>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.Brush 
+   => control._set(Avalonia.Media.Brush.TransformOriginProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*ValueOverloadsSetterGenerator*/
 

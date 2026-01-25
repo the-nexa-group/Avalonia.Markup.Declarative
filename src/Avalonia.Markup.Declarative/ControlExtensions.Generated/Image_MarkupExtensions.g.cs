@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T Source<T>(this T control, Avalonia.Media.IImage? value) where T 
 /*BindFromExpressionSetterGenerator*/
 public static T Source<T>(this T control, Func<Avalonia.Media.IImage?> func, Action<Avalonia.Media.IImage?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.SourceProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Source<T>(this T control, Func<ValueTask<Avalonia.Media.IImage?>> getter, Func<Avalonia.Media.IImage?>? fallbackGetter = null, Action<Avalonia.Media.IImage?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Image 
+   => control._set(Avalonia.Controls.Image.SourceProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T BlendMode<T>(this T control, Avalonia.Media.Imaging.BitmapBlendi
 public static T BlendMode<T>(this T control, Func<Avalonia.Media.Imaging.BitmapBlendingMode> func, Action<Avalonia.Media.Imaging.BitmapBlendingMode>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.BlendModeProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T BlendMode<T>(this T control, Func<ValueTask<Avalonia.Media.Imaging.BitmapBlendingMode>> getter, Func<Avalonia.Media.Imaging.BitmapBlendingMode>? fallbackGetter = null, Action<Avalonia.Media.Imaging.BitmapBlendingMode>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Image 
+   => control._set(Avalonia.Controls.Image.BlendModeProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T BlendMode<T>(this T control,Avalonia.Media.Imaging.BitmapBlendingMode value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Image 
@@ -80,6 +89,10 @@ public static T Stretch<T>(this T control, Avalonia.Media.Stretch value) where T
 public static T Stretch<T>(this T control, Func<Avalonia.Media.Stretch> func, Action<Avalonia.Media.Stretch>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.StretchProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Stretch<T>(this T control, Func<ValueTask<Avalonia.Media.Stretch>> getter, Func<Avalonia.Media.Stretch>? fallbackGetter = null, Action<Avalonia.Media.Stretch>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Image 
+   => control._set(Avalonia.Controls.Image.StretchProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Stretch<T>(this T control,Avalonia.Media.Stretch value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Image 
@@ -108,6 +121,10 @@ public static T StretchDirection<T>(this T control, Avalonia.Media.StretchDirect
 /*BindFromExpressionSetterGenerator*/
 public static T StretchDirection<T>(this T control, Func<Avalonia.Media.StretchDirection> func, Action<Avalonia.Media.StretchDirection>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.StretchDirectionProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T StretchDirection<T>(this T control, Func<ValueTask<Avalonia.Media.StretchDirection>> getter, Func<Avalonia.Media.StretchDirection>? fallbackGetter = null, Action<Avalonia.Media.StretchDirection>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Image 
+   => control._set(Avalonia.Controls.Image.StretchDirectionProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

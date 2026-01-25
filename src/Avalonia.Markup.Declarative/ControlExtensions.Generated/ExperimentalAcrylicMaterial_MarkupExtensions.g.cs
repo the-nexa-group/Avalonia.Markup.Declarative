@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T TintColor<T>(this T control, Avalonia.Media.Color value) where T
 /*BindFromExpressionSetterGenerator*/
 public static T TintColor<T>(this T control, Func<Avalonia.Media.Color> func, Action<Avalonia.Media.Color>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.TintColorProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T TintColor<T>(this T control, Func<ValueTask<Avalonia.Media.Color>> getter, Func<Avalonia.Media.Color>? fallbackGetter = null, Action<Avalonia.Media.Color>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
+   => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.TintColorProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T BackgroundSource<T>(this T control, Avalonia.Media.AcrylicBackgr
 public static T BackgroundSource<T>(this T control, Func<Avalonia.Media.AcrylicBackgroundSource> func, Action<Avalonia.Media.AcrylicBackgroundSource>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.BackgroundSourceProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T BackgroundSource<T>(this T control, Func<ValueTask<Avalonia.Media.AcrylicBackgroundSource>> getter, Func<Avalonia.Media.AcrylicBackgroundSource>? fallbackGetter = null, Action<Avalonia.Media.AcrylicBackgroundSource>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
+   => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.BackgroundSourceProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T BackgroundSource<T>(this T control,Avalonia.Media.AcrylicBackgroundSource value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
@@ -79,6 +88,10 @@ public static T TintOpacity<T>(this T control, System.Double value) where T : Av
 /*BindFromExpressionSetterGenerator*/
 public static T TintOpacity<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.TintOpacityProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T TintOpacity<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
+   => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.TintOpacityProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -109,6 +122,10 @@ public static T MaterialOpacity<T>(this T control, System.Double value) where T 
 public static T MaterialOpacity<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.MaterialOpacityProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T MaterialOpacity<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
+   => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.MaterialOpacityProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T MaterialOpacity<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
@@ -138,6 +155,10 @@ public static T PlatformTransparencyCompensationLevel<T>(this T control, System.
 public static T PlatformTransparencyCompensationLevel<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.PlatformTransparencyCompensationLevelProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T PlatformTransparencyCompensationLevel<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
+   => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.PlatformTransparencyCompensationLevelProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T PlatformTransparencyCompensationLevel<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
@@ -166,6 +187,10 @@ public static T FallbackColor<T>(this T control, Avalonia.Media.Color value) whe
 /*BindFromExpressionSetterGenerator*/
 public static T FallbackColor<T>(this T control, Func<Avalonia.Media.Color> func, Action<Avalonia.Media.Color>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.FallbackColorProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T FallbackColor<T>(this T control, Func<ValueTask<Avalonia.Media.Color>> getter, Func<Avalonia.Media.Color>? fallbackGetter = null, Action<Avalonia.Media.Color>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
+   => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.FallbackColorProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

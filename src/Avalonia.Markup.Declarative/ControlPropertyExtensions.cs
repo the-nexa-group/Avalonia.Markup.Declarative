@@ -11,6 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace Avalonia.Markup.Declarative;
@@ -183,48 +184,7 @@ public static class ControlPropertyExtensions
         return control;
     }
     
-    /// <summary>
-    /// Binds an Avalonia Property to a getter and setter function.
-    /// </summary>
-    public static TAvObject Bind<TAvObject, TValue>(
-        this TAvObject control,
-        AvaloniaProperty<TValue> property,
-        Func<TValue> getter,
-        Action<TValue>? setter = null)
-        where TAvObject : AvaloniaObject
-    {
-        return control._set(property, getter, setter, null);
-    }
-
-    /// <summary>
-    /// Binds an Avalonia Property to another Avalonia Property from another object.
-    /// </summary>
-    /// <param name="control"></param>
-    /// <param name="property">Destination property to bind to.</param>
-    /// <param name="otherProperty">Source property to bind from.</param>
-    /// <param name="otherObject">Source object to bind from.</param>
-    /// <param name="mode">Binding mode, i.e. source to destination or bidirectional</param>
-    /// <typeparam name="TAvObject"></typeparam>
-    /// <typeparam name="TValue"></typeparam>
-    /// <returns></returns>
-    public static TAvObject Bind<TAvObject, TValue>(
-        this TAvObject control,
-        AvaloniaProperty<TValue> property,
-        AvaloniaProperty<TValue> otherProperty,
-        object otherObject,
-        BindingMode mode = BindingMode.Default)
-        where TAvObject : AvaloniaObject
-    {
-        control.Bind(property, new Binding
-        {
-            Path = otherProperty.Name,
-            Source = otherObject,
-            Mode = mode
-        });
-
-        return control;
-    }
-
+    
     /// <summary>
     /// Creates binding to property on DataContext of the control parsed from Value's expression arg , used by generated extensions
     /// </summary>
@@ -281,7 +241,100 @@ public static class ControlPropertyExtensions
 
         return control;
     }
+    
+    public static TAvObject _set<TAvObject, TValue>(
+        this TAvObject control, 
+        AvaloniaProperty<TValue> avaloniaProperty, 
+        Func<ValueTask<TValue>> getterFunc, 
+        Func<TValue>? fallbackGetter = null,
+        Action<TValue>? setChangedHandler = null, 
+        string? expression = null)
+        where TAvObject : AvaloniaObject
+    {
+        var view = ViewBuildContext.CurrentView;
 
+        if (view == null)
+            throw new InvalidOperationException("Current view is not set! If you are using expression binding inside of FuncTemplate, wrap it's content into FuncView or FuncComponent, to make bindings work.");
+
+        var handler = PrepareHandler(view, setChangedHandler, expression);
+
+        var state = new ViewPropertyAsyncComputedState<TAvObject, TValue>(
+            expression, getterFunc, fallbackGetter, handler, control, avaloniaProperty);
+
+        view.AddComputedState(state, control);
+        return control;
+    }
+    
+
+    private static Action<TValue>? PrepareHandler<TValue>(ViewBase view, Action<TValue>? handler, string? expression)
+    {
+        if (view is ComponentBase cb && handler != null)
+        {
+            return v =>
+            {
+                cb.UpdateState(() => handler(v), bubbleToParent: true);
+                if (!string.IsNullOrEmpty(expression)) cb.NotifyExternalPropertyChanged(expression, v);
+            };
+        }
+        return handler;
+    }
+    
+    /// <summary>
+    /// Binds an Avalonia Property to a getter and setter function.
+    /// </summary>
+    public static TAvObject Bind<TAvObject, TValue>(
+        this TAvObject control,
+        AvaloniaProperty<TValue> property,
+        Func<TValue> getter,
+        Action<TValue>? setter = null)
+        where TAvObject : AvaloniaObject
+    {
+        return control._set(property, getter, setter, null);
+    }
+
+    /// <summary>
+    /// Binds an Avalonia Property to another Avalonia Property from another object.
+    /// </summary>
+    /// <param name="control"></param>
+    /// <param name="property">Destination property to bind to.</param>
+    /// <param name="otherProperty">Source property to bind from.</param>
+    /// <param name="otherObject">Source object to bind from.</param>
+    /// <param name="mode">Binding mode, i.e. source to destination or bidirectional</param>
+    /// <typeparam name="TAvObject"></typeparam>
+    /// <typeparam name="TValue"></typeparam>
+    /// <returns></returns>
+    public static TAvObject Bind<TAvObject, TValue>(
+        this TAvObject control,
+        AvaloniaProperty<TValue> property,
+        AvaloniaProperty<TValue> otherProperty,
+        object otherObject,
+        BindingMode mode = BindingMode.Default)
+        where TAvObject : AvaloniaObject
+    {
+        control.Bind(property, new Binding
+        {
+            Path = otherProperty.Name,
+            Source = otherObject,
+            Mode = mode
+        });
+
+        return control;
+    }
+    
+    /// <summary>
+    /// Binds an Avalonia Property to a Value Task getter, allowing for async bindings.
+    /// <param name="fallbackGetter">What to set the Property to whiles the async operation is still going.</param>
+    /// </summary>
+    public static TAvObject Bind<TAvObject, TValue>(
+        this TAvObject control,
+        AvaloniaProperty<TValue> property,
+        Func<ValueTask<TValue>> getter,
+        Func<TValue>? fallbackGetter = null)
+        where TAvObject : AvaloniaObject
+    {
+        return control._set(property, getter, fallbackGetter);
+    }
+    
     public static TElement DataContext<TElement, TDataContext>(
         this TElement control,
         TDataContext value,

@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T ClickMode<T>(this T control, Avalonia.Controls.ClickMode value) 
 /*BindFromExpressionSetterGenerator*/
 public static T ClickMode<T>(this T control, Func<Avalonia.Controls.ClickMode> func, Action<Avalonia.Controls.ClickMode>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.ClickModeProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ClickMode<T>(this T control, Func<ValueTask<Avalonia.Controls.ClickMode>> getter, Func<Avalonia.Controls.ClickMode>? fallbackGetter = null, Action<Avalonia.Controls.ClickMode>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Button 
+   => control._set(Avalonia.Controls.Button.ClickModeProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T Command<T>(this T control, System.Windows.Input.ICommand? value)
 public static T Command<T>(this T control, Func<System.Windows.Input.ICommand?> func, Action<System.Windows.Input.ICommand?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.CommandProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Command<T>(this T control, Func<ValueTask<System.Windows.Input.ICommand?>> getter, Func<System.Windows.Input.ICommand?>? fallbackGetter = null, Action<System.Windows.Input.ICommand?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Button 
+   => control._set(Avalonia.Controls.Button.CommandProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Command<T>(this T control,System.Windows.Input.ICommand? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
@@ -79,6 +88,10 @@ public static T HotKey<T>(this T control, Avalonia.Input.KeyGesture? value) wher
 /*BindFromExpressionSetterGenerator*/
 public static T HotKey<T>(this T control, Func<Avalonia.Input.KeyGesture?> func, Action<Avalonia.Input.KeyGesture?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.HotKeyProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T HotKey<T>(this T control, Func<ValueTask<Avalonia.Input.KeyGesture?>> getter, Func<Avalonia.Input.KeyGesture?>? fallbackGetter = null, Action<Avalonia.Input.KeyGesture?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Button 
+   => control._set(Avalonia.Controls.Button.HotKeyProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -109,6 +122,10 @@ public static T CommandParameter<T>(this T control, System.Object? value) where 
 public static T CommandParameter<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.CommandParameterProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T CommandParameter<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Button 
+   => control._set(Avalonia.Controls.Button.CommandParameterProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T CommandParameter<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
@@ -137,6 +154,10 @@ public static T IsDefault<T>(this T control, System.Boolean value) where T : Ava
 /*BindFromExpressionSetterGenerator*/
 public static T IsDefault<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.IsDefaultProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T IsDefault<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Button 
+   => control._set(Avalonia.Controls.Button.IsDefaultProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -167,6 +188,10 @@ public static T IsCancel<T>(this T control, System.Boolean value) where T : Aval
 public static T IsCancel<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.IsCancelProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T IsCancel<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Button 
+   => control._set(Avalonia.Controls.Button.IsCancelProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IsCancel<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
@@ -195,6 +220,10 @@ public static T Flyout<T>(this T control, Avalonia.Controls.Primitives.FlyoutBas
 /*BindFromExpressionSetterGenerator*/
 public static T Flyout<T>(this T control, Func<Avalonia.Controls.Primitives.FlyoutBase?> func, Action<Avalonia.Controls.Primitives.FlyoutBase?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.FlyoutProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Flyout<T>(this T control, Func<ValueTask<Avalonia.Controls.Primitives.FlyoutBase?>> getter, Func<Avalonia.Controls.Primitives.FlyoutBase?>? fallbackGetter = null, Action<Avalonia.Controls.Primitives.FlyoutBase?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Button 
+   => control._set(Avalonia.Controls.Button.FlyoutProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

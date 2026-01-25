@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T CornerRadius<T>(this T control, Avalonia.CornerRadius value) whe
 /*BindFromExpressionSetterGenerator*/
 public static T CornerRadius<T>(this T control, Func<Avalonia.CornerRadius> func, Action<Avalonia.CornerRadius>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
    => control._set(Avalonia.Controls.ExperimentalAcrylicBorder.CornerRadiusProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T CornerRadius<T>(this T control, Func<ValueTask<Avalonia.CornerRadius>> getter, Func<Avalonia.CornerRadius>? fallbackGetter = null, Action<Avalonia.CornerRadius>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
+   => control._set(Avalonia.Controls.ExperimentalAcrylicBorder.CornerRadiusProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*ValueOverloadsSetterGenerator*/
 
@@ -59,6 +64,10 @@ public static T Material<T>(this T control, Avalonia.Media.ExperimentalAcrylicMa
 /*BindFromExpressionSetterGenerator*/
 public static T Material<T>(this T control, Func<Avalonia.Media.ExperimentalAcrylicMaterial> func, Action<Avalonia.Media.ExperimentalAcrylicMaterial>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
    => control._set(Avalonia.Controls.ExperimentalAcrylicBorder.MaterialProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Material<T>(this T control, Func<ValueTask<Avalonia.Media.ExperimentalAcrylicMaterial>> getter, Func<Avalonia.Media.ExperimentalAcrylicMaterial>? fallbackGetter = null, Action<Avalonia.Media.ExperimentalAcrylicMaterial>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
+   => control._set(Avalonia.Controls.ExperimentalAcrylicBorder.MaterialProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

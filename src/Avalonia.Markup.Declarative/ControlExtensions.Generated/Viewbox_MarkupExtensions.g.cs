@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T Stretch<T>(this T control, Avalonia.Media.Stretch value) where T
 /*BindFromExpressionSetterGenerator*/
 public static T Stretch<T>(this T control, Func<Avalonia.Media.Stretch> func, Action<Avalonia.Media.Stretch>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.StretchProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Stretch<T>(this T control, Func<ValueTask<Avalonia.Media.Stretch>> getter, Func<Avalonia.Media.Stretch>? fallbackGetter = null, Action<Avalonia.Media.Stretch>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Viewbox 
+   => control._set(Avalonia.Controls.Viewbox.StretchProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T StretchDirection<T>(this T control, Avalonia.Media.StretchDirect
 public static T StretchDirection<T>(this T control, Func<Avalonia.Media.StretchDirection> func, Action<Avalonia.Media.StretchDirection>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.StretchDirectionProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T StretchDirection<T>(this T control, Func<ValueTask<Avalonia.Media.StretchDirection>> getter, Func<Avalonia.Media.StretchDirection>? fallbackGetter = null, Action<Avalonia.Media.StretchDirection>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Viewbox 
+   => control._set(Avalonia.Controls.Viewbox.StretchDirectionProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T StretchDirection<T>(this T control,Avalonia.Media.StretchDirection value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Viewbox 
@@ -79,6 +88,10 @@ public static T Child<T>(this T control, Avalonia.Controls.Control? value) where
 /*BindFromExpressionSetterGenerator*/
 public static T Child<T>(this T control, Func<Avalonia.Controls.Control?> func, Action<Avalonia.Controls.Control?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.ChildProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Child<T>(this T control, Func<ValueTask<Avalonia.Controls.Control?>> getter, Func<Avalonia.Controls.Control?>? fallbackGetter = null, Action<Avalonia.Controls.Control?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Viewbox 
+   => control._set(Avalonia.Controls.Viewbox.ChildProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

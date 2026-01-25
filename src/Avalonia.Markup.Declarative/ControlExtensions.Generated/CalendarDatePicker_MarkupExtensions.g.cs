@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T DisplayDate<T>(this T control, System.DateTime value) where T : 
 /*BindFromExpressionSetterGenerator*/
 public static T DisplayDate<T>(this T control, Func<System.DateTime> func, Action<System.DateTime>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.DisplayDateProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T DisplayDate<T>(this T control, Func<ValueTask<System.DateTime>> getter, Func<System.DateTime>? fallbackGetter = null, Action<System.DateTime>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.DisplayDateProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T DisplayDateStart<T>(this T control, System.Nullable<System.DateT
 public static T DisplayDateStart<T>(this T control, Func<System.Nullable<System.DateTime>> func, Action<System.Nullable<System.DateTime>>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.DisplayDateStartProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T DisplayDateStart<T>(this T control, Func<ValueTask<System.Nullable<System.DateTime>>> getter, Func<System.Nullable<System.DateTime>>? fallbackGetter = null, Action<System.Nullable<System.DateTime>>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.DisplayDateStartProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T DisplayDateStart<T>(this T control,System.Nullable<System.DateTime> value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.CalendarDatePicker 
@@ -79,6 +88,10 @@ public static T DisplayDateEnd<T>(this T control, System.Nullable<System.DateTim
 /*BindFromExpressionSetterGenerator*/
 public static T DisplayDateEnd<T>(this T control, Func<System.Nullable<System.DateTime>> func, Action<System.Nullable<System.DateTime>>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.DisplayDateEndProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T DisplayDateEnd<T>(this T control, Func<ValueTask<System.Nullable<System.DateTime>>> getter, Func<System.Nullable<System.DateTime>>? fallbackGetter = null, Action<System.Nullable<System.DateTime>>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.DisplayDateEndProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -109,6 +122,10 @@ public static T FirstDayOfWeek<T>(this T control, System.DayOfWeek value) where 
 public static T FirstDayOfWeek<T>(this T control, Func<System.DayOfWeek> func, Action<System.DayOfWeek>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.FirstDayOfWeekProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T FirstDayOfWeek<T>(this T control, Func<ValueTask<System.DayOfWeek>> getter, Func<System.DayOfWeek>? fallbackGetter = null, Action<System.DayOfWeek>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.FirstDayOfWeekProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T FirstDayOfWeek<T>(this T control,System.DayOfWeek value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.CalendarDatePicker 
@@ -137,6 +154,10 @@ public static T IsDropDownOpen<T>(this T control, System.Boolean value) where T 
 /*BindFromExpressionSetterGenerator*/
 public static T IsDropDownOpen<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.IsDropDownOpenProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T IsDropDownOpen<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.IsDropDownOpenProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -167,6 +188,10 @@ public static T IsTodayHighlighted<T>(this T control, System.Boolean value) wher
 public static T IsTodayHighlighted<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.IsTodayHighlightedProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T IsTodayHighlighted<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.IsTodayHighlightedProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T IsTodayHighlighted<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.CalendarDatePicker 
@@ -195,6 +220,10 @@ public static T SelectedDate<T>(this T control, System.Nullable<System.DateTime>
 /*BindFromExpressionSetterGenerator*/
 public static T SelectedDate<T>(this T control, Func<System.Nullable<System.DateTime>> func, Action<System.Nullable<System.DateTime>>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.SelectedDateProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SelectedDate<T>(this T control, Func<ValueTask<System.Nullable<System.DateTime>>> getter, Func<System.Nullable<System.DateTime>>? fallbackGetter = null, Action<System.Nullable<System.DateTime>>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.SelectedDateProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -225,6 +254,10 @@ public static T SelectedDateFormat<T>(this T control, Avalonia.Controls.Calendar
 public static T SelectedDateFormat<T>(this T control, Func<Avalonia.Controls.CalendarDatePickerFormat> func, Action<Avalonia.Controls.CalendarDatePickerFormat>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.SelectedDateFormatProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SelectedDateFormat<T>(this T control, Func<ValueTask<Avalonia.Controls.CalendarDatePickerFormat>> getter, Func<Avalonia.Controls.CalendarDatePickerFormat>? fallbackGetter = null, Action<Avalonia.Controls.CalendarDatePickerFormat>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.SelectedDateFormatProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T SelectedDateFormat<T>(this T control,Avalonia.Controls.CalendarDatePickerFormat value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.CalendarDatePicker 
@@ -253,6 +286,10 @@ public static T CustomDateFormatString<T>(this T control, System.String value) w
 /*BindFromExpressionSetterGenerator*/
 public static T CustomDateFormatString<T>(this T control, Func<System.String> func, Action<System.String>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.CustomDateFormatStringProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T CustomDateFormatString<T>(this T control, Func<ValueTask<System.String>> getter, Func<System.String>? fallbackGetter = null, Action<System.String>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.CustomDateFormatStringProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -283,6 +320,10 @@ public static T Text<T>(this T control, System.String? value) where T : Avalonia
 public static T Text<T>(this T control, Func<System.String?> func, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.TextProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Text<T>(this T control, Func<ValueTask<System.String?>> getter, Func<System.String?>? fallbackGetter = null, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.TextProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Text<T>(this T control,System.String? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.CalendarDatePicker 
@@ -311,6 +352,10 @@ public static T Watermark<T>(this T control, System.String? value) where T : Ava
 /*BindFromExpressionSetterGenerator*/
 public static T Watermark<T>(this T control, Func<System.String?> func, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.WatermarkProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Watermark<T>(this T control, Func<ValueTask<System.String?>> getter, Func<System.String?>? fallbackGetter = null, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.WatermarkProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -341,6 +386,10 @@ public static T UseFloatingWatermark<T>(this T control, System.Boolean value) wh
 public static T UseFloatingWatermark<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.UseFloatingWatermarkProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T UseFloatingWatermark<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.UseFloatingWatermarkProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T UseFloatingWatermark<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.CalendarDatePicker 
@@ -370,6 +419,10 @@ public static T HorizontalContentAlignment<T>(this T control, Avalonia.Layout.Ho
 public static T HorizontalContentAlignment<T>(this T control, Func<Avalonia.Layout.HorizontalAlignment> func, Action<Avalonia.Layout.HorizontalAlignment>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.HorizontalContentAlignmentProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T HorizontalContentAlignment<T>(this T control, Func<ValueTask<Avalonia.Layout.HorizontalAlignment>> getter, Func<Avalonia.Layout.HorizontalAlignment>? fallbackGetter = null, Action<Avalonia.Layout.HorizontalAlignment>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.HorizontalContentAlignmentProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T HorizontalContentAlignment<T>(this T control,Avalonia.Layout.HorizontalAlignment value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.CalendarDatePicker 
@@ -398,6 +451,10 @@ public static T VerticalContentAlignment<T>(this T control, Avalonia.Layout.Vert
 /*BindFromExpressionSetterGenerator*/
 public static T VerticalContentAlignment<T>(this T control, Func<Avalonia.Layout.VerticalAlignment> func, Action<Avalonia.Layout.VerticalAlignment>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.VerticalContentAlignmentProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T VerticalContentAlignment<T>(this T control, Func<ValueTask<Avalonia.Layout.VerticalAlignment>> getter, Func<Avalonia.Layout.VerticalAlignment>? fallbackGetter = null, Action<Avalonia.Layout.VerticalAlignment>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.VerticalContentAlignmentProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

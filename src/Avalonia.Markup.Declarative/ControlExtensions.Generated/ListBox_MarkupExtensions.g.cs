@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T SelectedItems<T>(this T control, System.Collections.IList? value
 /*BindFromExpressionSetterGenerator*/
 public static T SelectedItems<T>(this T control, Func<System.Collections.IList?> func, Action<System.Collections.IList?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectedItemsProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SelectedItems<T>(this T control, Func<ValueTask<System.Collections.IList?>> getter, Func<System.Collections.IList?>? fallbackGetter = null, Action<System.Collections.IList?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ListBox 
+   => control._set(Avalonia.Controls.ListBox.SelectedItemsProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T Selection<T>(this T control, Avalonia.Controls.Selection.ISelect
 public static T Selection<T>(this T control, Func<Avalonia.Controls.Selection.ISelectionModel?> func, Action<Avalonia.Controls.Selection.ISelectionModel?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectionProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Selection<T>(this T control, Func<ValueTask<Avalonia.Controls.Selection.ISelectionModel?>> getter, Func<Avalonia.Controls.Selection.ISelectionModel?>? fallbackGetter = null, Action<Avalonia.Controls.Selection.ISelectionModel?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ListBox 
+   => control._set(Avalonia.Controls.ListBox.SelectionProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Selection<T>(this T control,Avalonia.Controls.Selection.ISelectionModel? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ListBox 
@@ -79,6 +88,10 @@ public static T SelectionMode<T>(this T control, Avalonia.Controls.SelectionMode
 /*BindFromExpressionSetterGenerator*/
 public static T SelectionMode<T>(this T control, Func<Avalonia.Controls.SelectionMode> func, Action<Avalonia.Controls.SelectionMode>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectionModeProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T SelectionMode<T>(this T control, Func<ValueTask<Avalonia.Controls.SelectionMode>> getter, Func<Avalonia.Controls.SelectionMode>? fallbackGetter = null, Action<Avalonia.Controls.SelectionMode>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ListBox 
+   => control._set(Avalonia.Controls.ListBox.SelectionModeProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T Geometry1<T>(this T control, Avalonia.Media.Geometry? value) whe
 /*BindFromExpressionSetterGenerator*/
 public static T Geometry1<T>(this T control, Func<Avalonia.Media.Geometry?> func, Action<Avalonia.Media.Geometry?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry1Property!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Geometry1<T>(this T control, Func<ValueTask<Avalonia.Media.Geometry?>> getter, Func<Avalonia.Media.Geometry?>? fallbackGetter = null, Action<Avalonia.Media.Geometry?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.CombinedGeometry 
+   => control._set(Avalonia.Media.CombinedGeometry.Geometry1Property!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T Geometry2<T>(this T control, Avalonia.Media.Geometry? value) whe
 public static T Geometry2<T>(this T control, Func<Avalonia.Media.Geometry?> func, Action<Avalonia.Media.Geometry?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry2Property!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Geometry2<T>(this T control, Func<ValueTask<Avalonia.Media.Geometry?>> getter, Func<Avalonia.Media.Geometry?>? fallbackGetter = null, Action<Avalonia.Media.Geometry?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.CombinedGeometry 
+   => control._set(Avalonia.Media.CombinedGeometry.Geometry2Property!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Geometry2<T>(this T control,Avalonia.Media.Geometry? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.CombinedGeometry 
@@ -79,6 +88,10 @@ public static T GeometryCombineMode<T>(this T control, Avalonia.Media.GeometryCo
 /*BindFromExpressionSetterGenerator*/
 public static T GeometryCombineMode<T>(this T control, Func<Avalonia.Media.GeometryCombineMode> func, Action<Avalonia.Media.GeometryCombineMode>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.GeometryCombineModeProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T GeometryCombineMode<T>(this T control, Func<ValueTask<Avalonia.Media.GeometryCombineMode>> getter, Func<Avalonia.Media.GeometryCombineMode>? fallbackGetter = null, Action<Avalonia.Media.GeometryCombineMode>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.CombinedGeometry 
+   => control._set(Avalonia.Media.CombinedGeometry.GeometryCombineModeProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

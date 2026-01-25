@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T FocusAdorner<T>(this T control, Avalonia.Controls.ITemplate<Aval
 /*BindFromExpressionSetterGenerator*/
 public static T FocusAdorner<T>(this T control, Func<Avalonia.Controls.ITemplate<Avalonia.Controls.Control>?> func, Action<Avalonia.Controls.ITemplate<Avalonia.Controls.Control>?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.FocusAdornerProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T FocusAdorner<T>(this T control, Func<ValueTask<Avalonia.Controls.ITemplate<Avalonia.Controls.Control>?>> getter, Func<Avalonia.Controls.ITemplate<Avalonia.Controls.Control>?>? fallbackGetter = null, Action<Avalonia.Controls.ITemplate<Avalonia.Controls.Control>?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Control 
+   => control._set(Avalonia.Controls.Control.FocusAdornerProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T Tag<T>(this T control, System.Object? value) where T : Avalonia.
 public static T Tag<T>(this T control, Func<System.Object?> func, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.TagProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Tag<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Control 
+   => control._set(Avalonia.Controls.Control.TagProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T Tag<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Control 
@@ -80,6 +89,10 @@ public static T ContextMenu<T>(this T control, Avalonia.Controls.ContextMenu? va
 public static T ContextMenu<T>(this T control, Func<Avalonia.Controls.ContextMenu?> func, Action<Avalonia.Controls.ContextMenu?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextMenuProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ContextMenu<T>(this T control, Func<ValueTask<Avalonia.Controls.ContextMenu?>> getter, Func<Avalonia.Controls.ContextMenu?>? fallbackGetter = null, Action<Avalonia.Controls.ContextMenu?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Control 
+   => control._set(Avalonia.Controls.Control.ContextMenuProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ContextMenu<T>(this T control,Avalonia.Controls.ContextMenu? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Control 
@@ -108,6 +121,10 @@ public static T ContextFlyout<T>(this T control, Avalonia.Controls.Primitives.Fl
 /*BindFromExpressionSetterGenerator*/
 public static T ContextFlyout<T>(this T control, Func<Avalonia.Controls.Primitives.FlyoutBase?> func, Action<Avalonia.Controls.Primitives.FlyoutBase?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextFlyoutProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ContextFlyout<T>(this T control, Func<ValueTask<Avalonia.Controls.Primitives.FlyoutBase?>> getter, Func<Avalonia.Controls.Primitives.FlyoutBase?>? fallbackGetter = null, Action<Avalonia.Controls.Primitives.FlyoutBase?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Control 
+   => control._set(Avalonia.Controls.Control.ContextFlyoutProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

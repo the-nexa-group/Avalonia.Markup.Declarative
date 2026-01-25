@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T PageTransition<T>(this T control, Avalonia.Animation.IPageTransi
 /*BindFromExpressionSetterGenerator*/
 public static T PageTransition<T>(this T control, Func<Avalonia.Animation.IPageTransition?> func, Action<Avalonia.Animation.IPageTransition?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.TransitioningContentControl 
    => control._set(Avalonia.Controls.TransitioningContentControl.PageTransitionProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T PageTransition<T>(this T control, Func<ValueTask<Avalonia.Animation.IPageTransition?>> getter, Func<Avalonia.Animation.IPageTransition?>? fallbackGetter = null, Action<Avalonia.Animation.IPageTransition?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.TransitioningContentControl 
+   => control._set(Avalonia.Controls.TransitioningContentControl.PageTransitionProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -50,6 +55,10 @@ public static T IsTransitionReversed<T>(this T control, System.Boolean value) wh
 /*BindFromExpressionSetterGenerator*/
 public static T IsTransitionReversed<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.TransitioningContentControl 
    => control._set(Avalonia.Controls.TransitioningContentControl.IsTransitionReversedProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T IsTransitionReversed<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.TransitioningContentControl 
+   => control._set(Avalonia.Controls.TransitioningContentControl.IsTransitionReversedProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

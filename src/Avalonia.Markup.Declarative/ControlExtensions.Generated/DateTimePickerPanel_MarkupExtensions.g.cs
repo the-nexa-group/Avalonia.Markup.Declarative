@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T ItemHeight<T>(this T control, System.Double value) where T : Ava
 /*BindFromExpressionSetterGenerator*/
 public static T ItemHeight<T>(this T control, Func<System.Double> func, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
    => control._set(Avalonia.Controls.Primitives.DateTimePickerPanel.ItemHeightProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ItemHeight<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
+   => control._set(Avalonia.Controls.Primitives.DateTimePickerPanel.ItemHeightProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T PanelType<T>(this T control, Avalonia.Controls.Primitives.DateTi
 public static T PanelType<T>(this T control, Func<Avalonia.Controls.Primitives.DateTimePickerPanelType> func, Action<Avalonia.Controls.Primitives.DateTimePickerPanelType>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
    => control._set(Avalonia.Controls.Primitives.DateTimePickerPanel.PanelTypeProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T PanelType<T>(this T control, Func<ValueTask<Avalonia.Controls.Primitives.DateTimePickerPanelType>> getter, Func<Avalonia.Controls.Primitives.DateTimePickerPanelType>? fallbackGetter = null, Action<Avalonia.Controls.Primitives.DateTimePickerPanelType>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
+   => control._set(Avalonia.Controls.Primitives.DateTimePickerPanel.PanelTypeProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T PanelType<T>(this T control,Avalonia.Controls.Primitives.DateTimePickerPanelType value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
@@ -80,6 +89,10 @@ public static T ItemFormat<T>(this T control, System.String value) where T : Ava
 public static T ItemFormat<T>(this T control, Func<System.String> func, Action<System.String>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
    => control._set(Avalonia.Controls.Primitives.DateTimePickerPanel.ItemFormatProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ItemFormat<T>(this T control, Func<ValueTask<System.String>> getter, Func<System.String>? fallbackGetter = null, Action<System.String>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
+   => control._set(Avalonia.Controls.Primitives.DateTimePickerPanel.ItemFormatProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ItemFormat<T>(this T control,System.String value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
@@ -108,6 +121,10 @@ public static T ShouldLoop<T>(this T control, System.Boolean value) where T : Av
 /*BindFromExpressionSetterGenerator*/
 public static T ShouldLoop<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
    => control._set(Avalonia.Controls.Primitives.DateTimePickerPanel.ShouldLoopProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ShouldLoop<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
+   => control._set(Avalonia.Controls.Primitives.DateTimePickerPanel.ShouldLoopProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

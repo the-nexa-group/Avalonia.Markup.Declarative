@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T Transitions<T>(this T control, Avalonia.Animation.Transitions? v
 /*BindFromExpressionSetterGenerator*/
 public static T Transitions<T>(this T control, Func<Avalonia.Animation.Transitions?> func, Action<Avalonia.Animation.Transitions?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Animation.Animatable 
    => control._set(Avalonia.Animation.Animatable.TransitionsProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T Transitions<T>(this T control, Func<ValueTask<Avalonia.Animation.Transitions?>> getter, Func<Avalonia.Animation.Transitions?>? fallbackGetter = null, Action<Avalonia.Animation.Transitions?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Animation.Animatable 
+   => control._set(Avalonia.Animation.Animatable.TransitionsProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]

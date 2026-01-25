@@ -5,6 +5,7 @@ using System;
 using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 
 namespace Avalonia.Markup.Declarative;
 [global::System.CodeDom.Compiler.GeneratedCode("AvaloniaExtensionGenerator", "1.0.0.0")]
@@ -21,6 +22,10 @@ public static T ContentTransition<T>(this T control, Avalonia.Animation.IPageTra
 /*BindFromExpressionSetterGenerator*/
 public static T ContentTransition<T>(this T control, Func<Avalonia.Animation.IPageTransition?> func, Action<Avalonia.Animation.IPageTransition?>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Expander 
    => control._set(Avalonia.Controls.Expander.ContentTransitionProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ContentTransition<T>(this T control, Func<ValueTask<Avalonia.Animation.IPageTransition?>> getter, Func<Avalonia.Animation.IPageTransition?>? fallbackGetter = null, Action<Avalonia.Animation.IPageTransition?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Expander 
+   => control._set(Avalonia.Controls.Expander.ContentTransitionProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
@@ -51,6 +56,10 @@ public static T ExpandDirection<T>(this T control, Avalonia.Controls.ExpandDirec
 public static T ExpandDirection<T>(this T control, Func<Avalonia.Controls.ExpandDirection> func, Action<Avalonia.Controls.ExpandDirection>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Expander 
    => control._set(Avalonia.Controls.Expander.ExpandDirectionProperty!, func, onChanged, expression);
 
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T ExpandDirection<T>(this T control, Func<ValueTask<Avalonia.Controls.ExpandDirection>> getter, Func<Avalonia.Controls.ExpandDirection>? fallbackGetter = null, Action<Avalonia.Controls.ExpandDirection>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Expander 
+   => control._set(Avalonia.Controls.Expander.ExpandDirectionProperty!, getter, fallbackGetter, onChanged, expression);
+
 /*MagicalSetterGenerator*/
 [Obsolete]
 public static T ExpandDirection<T>(this T control,Avalonia.Controls.ExpandDirection value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Expander 
@@ -79,6 +88,10 @@ public static T IsExpanded<T>(this T control, System.Boolean value) where T : Av
 /*BindFromExpressionSetterGenerator*/
 public static T IsExpanded<T>(this T control, Func<System.Boolean> func, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null) where T : Avalonia.Controls.Expander 
    => control._set(Avalonia.Controls.Expander.IsExpandedProperty!, func, onChanged, expression);
+
+/*BindFromExpressionAsyncSetterGenerator*/
+public static T IsExpanded<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Expander 
+   => control._set(Avalonia.Controls.Expander.IsExpandedProperty!, getter, fallbackGetter, onChanged, expression);
 
 /*MagicalSetterGenerator*/
 [Obsolete]
