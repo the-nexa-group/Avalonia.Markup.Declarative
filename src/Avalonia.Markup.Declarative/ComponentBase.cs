@@ -8,7 +8,6 @@ using Avalonia.Threading;
 
 namespace Avalonia.Markup.Declarative;
 
-[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties | DynamicallyAccessedMemberTypes.NonPublicProperties | DynamicallyAccessedMemberTypes.NonPublicFields)]
 public abstract class ComponentBase<TViewModel> : ComponentBase
 {
     public virtual TViewModel? ViewModel
