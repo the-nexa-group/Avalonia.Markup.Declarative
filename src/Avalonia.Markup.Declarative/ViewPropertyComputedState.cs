@@ -13,6 +13,7 @@ internal class ViewPropertyComputedState<TValue> : ExpressionBindingBase, IObser
     
     private Func<TValue> GetterFunc { get; }
     private TValue Value => GetterFunc();
+    private readonly List<IObserver<TValue>> _observers = [];
 
     public ViewPropertyComputedState(string? expressionString, Func<TValue> getterFunc)
     {
@@ -27,9 +28,7 @@ internal class ViewPropertyComputedState<TValue> : ExpressionBindingBase, IObser
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Value"));
         NotifyObservers(Value);
     }
-
-    private readonly List<IObserver<TValue>> _observers = [];
-
+    
     public IDisposable Subscribe(IObserver<TValue> observer)
     {
         if (!_observers.Contains(observer))
@@ -63,6 +62,8 @@ internal class ViewPropertyComputedState<TControl, TValue> : ExpressionBindingBa
 {
     private static readonly EqualityComparer<TValue> Comparer = EqualityComparer<TValue>.Default;
     
+    public Func<TValue> GetterFunc { get; }
+    
     private readonly IObservable<TValue>? _obs;
     private readonly TControl? _control;
     private readonly AvaloniaProperty<TValue>? _avaloniaProperty;
@@ -83,7 +84,6 @@ internal class ViewPropertyComputedState<TControl, TValue> : ExpressionBindingBa
     private bool _isUpdatingFromGetter; // Flag to prevent recursive updates
     private bool _isInitializing = true; // Track if we're in initialization phase
     private TValue Value => GetterFunc();
-    public Func<TValue> GetterFunc { get; }
 
     internal ViewPropertyComputedState(string? expressionString,
         Func<TValue> getterFunc,
@@ -132,15 +132,15 @@ internal class ViewPropertyComputedState<TControl, TValue> : ExpressionBindingBa
         Action<TValue>? setChangedHandler,
         TControl? control)
     {
-      _control = control;
+        _control = control;
         Setter = setter;
         SetChangedHandler = setChangedHandler;
-      ExpressionString = expressionString;
+        ExpressionString = expressionString;
         GetterFunc = getterFunc;
-     _parentView = ViewBuildContext.CurrentView; // Capture the current view context for property bubbling
+        _parentView = ViewBuildContext.CurrentView; // Capture the current view context for property bubbling
 
-    if (control == null) 
-        return;
+        if (control == null) 
+            return;
 
         // During initialization, always set the value
         _isInitializing = true;
@@ -162,7 +162,7 @@ internal class ViewPropertyComputedState<TControl, TValue> : ExpressionBindingBa
             return;
             
         UpdateControlValue();
-      NotifyObservers(Value);
+        NotifyObservers(Value);
     }
 
     private void UpdateControlValue()
@@ -284,7 +284,7 @@ internal class ViewPropertyComputedState<TControl, TValue> : ExpressionBindingBa
 
 internal abstract class ExpressionBindingBase
 {
-    internal string? ExpressionString { get; set; }
+    internal string? ExpressionString { get; init; }
 
     public override bool Equals(object? obj)
     {

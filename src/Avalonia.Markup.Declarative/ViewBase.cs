@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using Avalonia.Threading;
 using System;
 using System.Collections.Generic;
@@ -61,7 +61,7 @@ public abstract class ViewBase<TViewModel> : ViewBase
 public abstract class ViewBase : Decorator, IReloadable, IDeclarativeViewBase
 {
     internal List<ExpressionBindingBase> ViewComputedStates { get; } = [];
-    internal List<IDeclarativeViewBase> DependentViews { get; set; } = [];
+    internal HashSet<IDeclarativeViewBase> DependentViews { get; set; } = [];
 
     private INotifyPropertyChanged? _currentObservedDataContext;
 
@@ -112,13 +112,9 @@ public abstract class ViewBase : Decorator, IReloadable, IDeclarativeViewBase
     /// Called from constructor, right before initialization and building UI
     /// Override this method when you want to run some stuff before creation of children controls
     /// </summary>
-    protected virtual void OnCreated()
-    {
-    }
+    protected virtual void OnCreated() {}
 
-    protected virtual void OnAfterInitialized() 
-    {
-    }
+    protected virtual void OnAfterInitialized() {}
 
     public void Initialize()
     {
@@ -215,7 +211,7 @@ public abstract class ViewBase : Decorator, IReloadable, IDeclarativeViewBase
     /// </summary>
     protected void RecomputeAllBindings()
     {
-        foreach (var state in ViewComputedStates.ToList()) 
+        foreach (var state in ViewComputedStates) 
             state.OnPropertyChanged();
     }
 

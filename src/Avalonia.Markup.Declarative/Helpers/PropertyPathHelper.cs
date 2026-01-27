@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Avalonia.Markup.Declarative.Helpers;
 
@@ -7,35 +7,29 @@ internal static class PropertyPathHelper
     private static readonly char[] StopChars = [' ', '?', ',', '\"', '@', '\t', '\n'];
     public static string GetNameFromPropertyPath(string? path)
     {
-        if (path == null)
-            return "";
+        if (string.IsNullOrEmpty(path)) 
+            return string.Empty;
 
+        ReadOnlySpan<char> pathSpan = path.AsSpan();
+        var startIndex = Math.Max(0, pathSpan.LastIndexOf(')'));
         var propFound = false;
-
-        //found closing bracket - ignore all characters that was before
-        var startIndex = Math.Max(0,path.LastIndexOf(')'));
-
-        for (var i = startIndex; i < path.Length; i++)
+        
+        for (var i = startIndex; i < pathSpan.Length; i++)
         {
-            var curChar = path[i];
-
-            //found special characters after property name, ie: @vm.Property ?? 0
-            if (propFound && Array.IndexOf(StopChars, curChar) > -1)
-                return path.Substring(startIndex, i - startIndex);
-          
+            var curChar = pathSpan[i];
+            if (propFound && StopChars.Contains(curChar))
+                return pathSpan[startIndex..i].ToString();
+            
             if (!propFound && curChar == '.')
             {
-                //found start of property name
-                startIndex = ++i;
+                startIndex = i + 1;
                 propFound = true;
             }
         }
 
-        //no special characters - just property name, ie: vm.Property
         if (propFound)
-            return path.Substring(startIndex);
+            return pathSpan[startIndex..].ToString();
 
-        //no parent object, ie: TextProperty
-        return path.TrimStart('@');
+        return pathSpan.TrimStart('@').ToString();
     }
 }

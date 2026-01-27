@@ -225,7 +225,8 @@ internal class ViewPropertyAsyncComputedState<TControl, TValue> : ExpressionBind
 
     public void NotifyObservers(TValue value)
     {
-        foreach (var observer in _observers.ToArray()) observer.OnNext(value);
+        foreach (var observer in _observers)
+            observer.OnNext(value);
     }
 
     private class Unsubscriber(ICollection<IObserver<TValue>> observers, IObserver<TValue> observer) : IDisposable
