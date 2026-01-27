@@ -48,7 +48,7 @@ public abstract class ComponentBase : ViewBase, IMvuComponent
     protected ComponentBase() : this(ViewInitializationStrategy.Immediate)
     {
     }
-
+   
     protected ComponentBase(ViewInitializationStrategy viewInitializationStrategy) : base(viewInitializationStrategy)
     {
     }
@@ -61,55 +61,9 @@ public abstract class ComponentBase : ViewBase, IMvuComponent
         StateHasChanged();
     }
 
+    protected virtual void InjectServices() { }
+
     protected virtual void OnStateChanged() {}
-
-    [RequiresUnreferencedCode("Method InjectServices is using reflection to iterate through Type hierarchy. That's can not be analyzed statically.")]
-    private void InjectServices()
-    {
-        var componentType = GetType();
-        var types = new List<Type>();
-
-        // Walk up the inheritance chain, but stop at object
-        for (var type = componentType; type != null && type != typeof(object); type = type.BaseType)
-        {
-            types.Add(type);
-        }
-
-        // Go from base to derived so base properties are injected first
-        types.Reverse();
-
-        foreach (var type in types)
-        {
-            var injectProps = type.GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly)
-                .Where(x => x.GetCustomAttribute(typeof(InjectAttribute)) != null)
-                .ToArray();
-
-            foreach (var propertyInfo in injectProps)
-            {
-                var service = GetServiceFromProvider(propertyInfo.PropertyType);
-
-                if (propertyInfo.CanWrite)
-                {
-                    propertyInfo.SetValue(this, service);
-                }
-                else
-                {
-                    if (type.GetField($"<{propertyInfo.Name}>k__BackingField", BindingFlags.NonPublic | BindingFlags.Instance) is { } backingField)
-                        backingField.SetValue(this, service);
-                    else
-                        throw new InvalidOperationException($"Can't inject {service?.GetType()} service. Ensure that target property: {type.Name}.{propertyInfo.Name} has public setter or it's an auto-property");
-                }
-            }
-        }
-    }
-
-    private static object? GetServiceFromProvider(Type serviceType)
-    {
-        if (AppBuilderExtensions.ServiceProvider == null)
-            throw new InvalidOperationException("Please set Service Provider by calling UseServiceProvider on AppBuilder");
-
-        return AppBuilderExtensions.ServiceProvider.GetService(serviceType);
-    }
 
     /// <summary>
     /// Creates a new instance of the control using the component factory. Injects services into the control if needed.

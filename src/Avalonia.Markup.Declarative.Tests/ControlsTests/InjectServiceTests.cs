@@ -4,18 +4,18 @@ using Avalonia.Controls;
 
 namespace Avalonia.Markup.Declarative.Tests.ControlsTests
 {
-    public class InjectServiceTests
+    public partial class InjectServiceTests
     {
         public class TestService { }
 
-        public class BaseComponent : ComponentBase
+        public partial class BaseComponent() : ComponentBase(ViewInitializationStrategy.Immediate)
         {
             [Inject]
             public TestService? Service { get; private set; }
             protected override Control? Build() => null;
         }
 
-        public class DerivedComponent : BaseComponent
+        public partial class DerivedComponent : BaseComponent
         {
             protected override Control? Build() => null;
         }

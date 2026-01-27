@@ -14,7 +14,7 @@ public static class AppBuilderExtensions
     /// <summary>
     /// Gets the current <see cref="IServiceProvider"/> instance.
     /// </summary>
-    internal static IServiceProvider? ServiceProvider => _serviceProvider;
+    public static IServiceProvider? ServiceProvider => _serviceProvider;
 
     /// <summary>
     /// Gets the current <see cref="IComponentControlFactory"/> instance.

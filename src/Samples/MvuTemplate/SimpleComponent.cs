@@ -3,19 +3,17 @@ using Avalonia.Styling;
 
 namespace MvuTemplate;
 
-//prevent from trimming [injected] services by native aot compilation
-[method: DynamicDependency(DynamicallyAccessedMemberTypes.PublicProperties, typeof(SimpleComponent))]
-public class SimpleComponent(SampleDataService dataService) : ComponentBase //constructor dependency injection sample
+public partial class SimpleComponent(SampleDataService dataService) : ComponentBase //constructor dependency injection sample
 {
     // You can also use Service injection into Property with DI container as follows:
     [Inject] public SampleDataService? DataService { get; set; }
-
+    
     //Styles
     protected override StyleGroup? BuildStyles() =>
     [
         new Style<Button>(x => x.Class(":pointerover").Descendant())
             .Background(Brushes.LightBlue),
-
+        
         new Style<Button>()
             .Margin(6)
             .Background(Brushes.DarkSalmon),
