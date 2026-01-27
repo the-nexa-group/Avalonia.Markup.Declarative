@@ -27,11 +27,6 @@ public static T Content<T>(this T control, Func<System.Object?> func, Action<Sys
 public static T Content<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.ContentProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Content<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ContentControl 
-=> control._setEx(Avalonia.Controls.ContentControl.ContentProperty, ps, () => control.Content = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Content<T>(this T control, IBinding binding) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.ContentProperty, binding);
@@ -39,11 +34,6 @@ public static T Content<T>(this T control, IBinding binding) where T : Avalonia.
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Content<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.ContentProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Content<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ContentControl 
-=> control._setEx(Avalonia.Controls.ContentControl.ContentProperty, ps, () => control.Content = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ContentTemplate
@@ -60,11 +50,6 @@ public static T ContentTemplate<T>(this T control, Func<Avalonia.Controls.Templa
 public static T ContentTemplate<T>(this T control, Func<ValueTask<Avalonia.Controls.Templates.IDataTemplate?>> getter, Func<Avalonia.Controls.Templates.IDataTemplate?>? fallbackGetter = null, Action<Avalonia.Controls.Templates.IDataTemplate?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.ContentTemplateProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ContentTemplate<T>(this T control,Avalonia.Controls.Templates.IDataTemplate? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ContentControl 
-=> control._setEx(Avalonia.Controls.ContentControl.ContentTemplateProperty, ps, () => control.ContentTemplate = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ContentTemplate<T>(this T control, IBinding binding) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.ContentTemplateProperty, binding);
@@ -72,11 +57,6 @@ public static T ContentTemplate<T>(this T control, IBinding binding) where T : A
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ContentTemplate<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.ContentTemplateProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ContentTemplate<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Templates.IDataTemplate?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ContentControl 
-=> control._setEx(Avalonia.Controls.ContentControl.ContentTemplateProperty, ps, () => control.ContentTemplate = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // HorizontalContentAlignment
@@ -93,11 +73,6 @@ public static T HorizontalContentAlignment<T>(this T control, Func<Avalonia.Layo
 public static T HorizontalContentAlignment<T>(this T control, Func<ValueTask<Avalonia.Layout.HorizontalAlignment>> getter, Func<Avalonia.Layout.HorizontalAlignment>? fallbackGetter = null, Action<Avalonia.Layout.HorizontalAlignment>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.HorizontalContentAlignmentProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T HorizontalContentAlignment<T>(this T control,Avalonia.Layout.HorizontalAlignment value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ContentControl 
-=> control._setEx(Avalonia.Controls.ContentControl.HorizontalContentAlignmentProperty, ps, () => control.HorizontalContentAlignment = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T HorizontalContentAlignment<T>(this T control, IBinding binding) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.HorizontalContentAlignmentProperty, binding);
@@ -105,11 +80,6 @@ public static T HorizontalContentAlignment<T>(this T control, IBinding binding) 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T HorizontalContentAlignment<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.HorizontalContentAlignmentProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T HorizontalContentAlignment<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Layout.HorizontalAlignment> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ContentControl 
-=> control._setEx(Avalonia.Controls.ContentControl.HorizontalContentAlignmentProperty, ps, () => control.HorizontalContentAlignment = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // VerticalContentAlignment
@@ -126,11 +96,6 @@ public static T VerticalContentAlignment<T>(this T control, Func<Avalonia.Layout
 public static T VerticalContentAlignment<T>(this T control, Func<ValueTask<Avalonia.Layout.VerticalAlignment>> getter, Func<Avalonia.Layout.VerticalAlignment>? fallbackGetter = null, Action<Avalonia.Layout.VerticalAlignment>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.VerticalContentAlignmentProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T VerticalContentAlignment<T>(this T control,Avalonia.Layout.VerticalAlignment value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ContentControl 
-=> control._setEx(Avalonia.Controls.ContentControl.VerticalContentAlignmentProperty, ps, () => control.VerticalContentAlignment = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T VerticalContentAlignment<T>(this T control, IBinding binding) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.VerticalContentAlignmentProperty, binding);
@@ -138,11 +103,6 @@ public static T VerticalContentAlignment<T>(this T control, IBinding binding) wh
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T VerticalContentAlignment<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.VerticalContentAlignmentProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T VerticalContentAlignment<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Layout.VerticalAlignment> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ContentControl 
-=> control._setEx(Avalonia.Controls.ContentControl.VerticalContentAlignmentProperty, ps, () => control.VerticalContentAlignment = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

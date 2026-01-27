@@ -27,11 +27,6 @@ public static T Transitions<T>(this T control, Func<Avalonia.Animation.Transitio
 public static T Transitions<T>(this T control, Func<ValueTask<Avalonia.Animation.Transitions?>> getter, Func<Avalonia.Animation.Transitions?>? fallbackGetter = null, Action<Avalonia.Animation.Transitions?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Animation.Animatable 
    => control._set(Avalonia.Animation.Animatable.TransitionsProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Transitions<T>(this T control,Avalonia.Animation.Transitions? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Animation.Animatable 
-=> control._setEx(Avalonia.Animation.Animatable.TransitionsProperty, ps, () => control.Transitions = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Transitions<T>(this T control, IBinding binding) where T : Avalonia.Animation.Animatable 
    => control._set(Avalonia.Animation.Animatable.TransitionsProperty, binding);
@@ -39,11 +34,6 @@ public static T Transitions<T>(this T control, IBinding binding) where T : Avalo
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Transitions<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Animation.Animatable 
    => control._set(Avalonia.Animation.Animatable.TransitionsProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Transitions<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Animation.Transitions?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Animation.Animatable 
-=> control._setEx(Avalonia.Animation.Animatable.TransitionsProperty, ps, () => control.Transitions = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

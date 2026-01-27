@@ -27,11 +27,6 @@ public static T StartPoint<T>(this T control, Func<Avalonia.Point> func, Action<
 public static T StartPoint<T>(this T control, Func<ValueTask<Avalonia.Point>> getter, Func<Avalonia.Point>? fallbackGetter = null, Action<Avalonia.Point>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.LineGeometry 
    => control._set(Avalonia.Media.LineGeometry.StartPointProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T StartPoint<T>(this T control,Avalonia.Point value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.LineGeometry 
-=> control._setEx(Avalonia.Media.LineGeometry.StartPointProperty, ps, () => control.StartPoint = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T StartPoint<T>(this T control, IBinding binding) where T : Avalonia.Media.LineGeometry 
    => control._set(Avalonia.Media.LineGeometry.StartPointProperty, binding);
@@ -39,11 +34,6 @@ public static T StartPoint<T>(this T control, IBinding binding) where T : Avalon
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T StartPoint<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.LineGeometry 
    => control._set(Avalonia.Media.LineGeometry.StartPointProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T StartPoint<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Point> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.LineGeometry 
-=> control._setEx(Avalonia.Media.LineGeometry.StartPointProperty, ps, () => control.StartPoint = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // EndPoint
@@ -60,11 +50,6 @@ public static T EndPoint<T>(this T control, Func<Avalonia.Point> func, Action<Av
 public static T EndPoint<T>(this T control, Func<ValueTask<Avalonia.Point>> getter, Func<Avalonia.Point>? fallbackGetter = null, Action<Avalonia.Point>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.LineGeometry 
    => control._set(Avalonia.Media.LineGeometry.EndPointProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T EndPoint<T>(this T control,Avalonia.Point value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.LineGeometry 
-=> control._setEx(Avalonia.Media.LineGeometry.EndPointProperty, ps, () => control.EndPoint = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T EndPoint<T>(this T control, IBinding binding) where T : Avalonia.Media.LineGeometry 
    => control._set(Avalonia.Media.LineGeometry.EndPointProperty, binding);
@@ -72,11 +57,6 @@ public static T EndPoint<T>(this T control, IBinding binding) where T : Avalonia
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T EndPoint<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.LineGeometry 
    => control._set(Avalonia.Media.LineGeometry.EndPointProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T EndPoint<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Point> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.LineGeometry 
-=> control._setEx(Avalonia.Media.LineGeometry.EndPointProperty, ps, () => control.EndPoint = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

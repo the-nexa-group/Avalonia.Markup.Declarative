@@ -27,11 +27,6 @@ public static T Points<T>(this T control, Func<System.Collections.Generic.IList<
 public static T Points<T>(this T control, Func<ValueTask<System.Collections.Generic.IList<Avalonia.Point>>> getter, Func<System.Collections.Generic.IList<Avalonia.Point>>? fallbackGetter = null, Action<System.Collections.Generic.IList<Avalonia.Point>>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.PolylineGeometry 
    => control._set(Avalonia.Media.PolylineGeometry.PointsProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Points<T>(this T control,System.Collections.Generic.IList<Avalonia.Point> value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.PolylineGeometry 
-=> control._setEx(Avalonia.Media.PolylineGeometry.PointsProperty, ps, () => control.Points = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Points<T>(this T control, IBinding binding) where T : Avalonia.Media.PolylineGeometry 
    => control._set(Avalonia.Media.PolylineGeometry.PointsProperty, binding);
@@ -39,11 +34,6 @@ public static T Points<T>(this T control, IBinding binding) where T : Avalonia.M
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Points<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.PolylineGeometry 
    => control._set(Avalonia.Media.PolylineGeometry.PointsProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Points<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Collections.Generic.IList<Avalonia.Point>> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.PolylineGeometry 
-=> control._setEx(Avalonia.Media.PolylineGeometry.PointsProperty, ps, () => control.Points = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsFilled
@@ -60,11 +50,6 @@ public static T IsFilled<T>(this T control, Func<System.Boolean> func, Action<Sy
 public static T IsFilled<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.PolylineGeometry 
    => control._set(Avalonia.Media.PolylineGeometry.IsFilledProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T IsFilled<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.PolylineGeometry 
-=> control._setEx(Avalonia.Media.PolylineGeometry.IsFilledProperty, ps, () => control.IsFilled = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T IsFilled<T>(this T control, IBinding binding) where T : Avalonia.Media.PolylineGeometry 
    => control._set(Avalonia.Media.PolylineGeometry.IsFilledProperty, binding);
@@ -72,11 +57,6 @@ public static T IsFilled<T>(this T control, IBinding binding) where T : Avalonia
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T IsFilled<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.PolylineGeometry 
    => control._set(Avalonia.Media.PolylineGeometry.IsFilledProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T IsFilled<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.PolylineGeometry 
-=> control._setEx(Avalonia.Media.PolylineGeometry.IsFilledProperty, ps, () => control.IsFilled = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

@@ -27,11 +27,6 @@ public static T Child<T>(this T control, Func<Avalonia.Controls.Control> func, A
 public static T Child<T>(this T control, Func<ValueTask<Avalonia.Controls.Control>> getter, Func<Avalonia.Controls.Control>? fallbackGetter = null, Action<Avalonia.Controls.Control>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Documents.InlineUIContainer 
    => control._set(Avalonia.Controls.Documents.InlineUIContainer.ChildProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Child<T>(this T control,Avalonia.Controls.Control value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Documents.InlineUIContainer 
-=> control._setEx(Avalonia.Controls.Documents.InlineUIContainer.ChildProperty, ps, () => control.Child = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Child<T>(this T control, IBinding binding) where T : Avalonia.Controls.Documents.InlineUIContainer 
    => control._set(Avalonia.Controls.Documents.InlineUIContainer.ChildProperty, binding);
@@ -39,11 +34,6 @@ public static T Child<T>(this T control, IBinding binding) where T : Avalonia.Co
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Child<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Documents.InlineUIContainer 
    => control._set(Avalonia.Controls.Documents.InlineUIContainer.ChildProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Child<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Control> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Documents.InlineUIContainer 
-=> control._setEx(Avalonia.Controls.Documents.InlineUIContainer.ChildProperty, ps, () => control.Child = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

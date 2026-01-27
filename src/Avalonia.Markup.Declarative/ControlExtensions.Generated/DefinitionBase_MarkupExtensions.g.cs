@@ -27,11 +27,6 @@ public static T SharedSizeGroup<T>(this T control, Func<System.String?> func, Ac
 public static T SharedSizeGroup<T>(this T control, Func<ValueTask<System.String?>> getter, Func<System.String?>? fallbackGetter = null, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DefinitionBase 
    => control._set(Avalonia.Controls.DefinitionBase.SharedSizeGroupProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T SharedSizeGroup<T>(this T control,System.String? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DefinitionBase 
-=> control._setEx(Avalonia.Controls.DefinitionBase.SharedSizeGroupProperty, ps, () => control.SharedSizeGroup = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T SharedSizeGroup<T>(this T control, IBinding binding) where T : Avalonia.Controls.DefinitionBase 
    => control._set(Avalonia.Controls.DefinitionBase.SharedSizeGroupProperty, binding);
@@ -39,11 +34,6 @@ public static T SharedSizeGroup<T>(this T control, IBinding binding) where T : A
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T SharedSizeGroup<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.DefinitionBase 
    => control._set(Avalonia.Controls.DefinitionBase.SharedSizeGroupProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T SharedSizeGroup<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DefinitionBase 
-=> control._setEx(Avalonia.Controls.DefinitionBase.SharedSizeGroupProperty, ps, () => control.SharedSizeGroup = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

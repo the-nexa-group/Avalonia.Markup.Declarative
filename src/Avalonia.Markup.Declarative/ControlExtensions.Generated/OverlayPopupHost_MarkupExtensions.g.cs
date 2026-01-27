@@ -27,11 +27,6 @@ public static T Transform<T>(this T control, Func<Avalonia.Media.Transform?> fun
 public static T Transform<T>(this T control, Func<ValueTask<Avalonia.Media.Transform?>> getter, Func<Avalonia.Media.Transform?>? fallbackGetter = null, Action<Avalonia.Media.Transform?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
    => control._set(Avalonia.Controls.Primitives.OverlayPopupHost.TransformProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Transform<T>(this T control,Avalonia.Media.Transform? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
-=> control._setEx(Avalonia.Controls.Primitives.OverlayPopupHost.TransformProperty, ps, () => control.Transform = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Transform<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
    => control._set(Avalonia.Controls.Primitives.OverlayPopupHost.TransformProperty, binding);
@@ -39,11 +34,6 @@ public static T Transform<T>(this T control, IBinding binding) where T : Avaloni
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Transform<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
    => control._set(Avalonia.Controls.Primitives.OverlayPopupHost.TransformProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Transform<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Transform?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
-=> control._setEx(Avalonia.Controls.Primitives.OverlayPopupHost.TransformProperty, ps, () => control.Transform = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

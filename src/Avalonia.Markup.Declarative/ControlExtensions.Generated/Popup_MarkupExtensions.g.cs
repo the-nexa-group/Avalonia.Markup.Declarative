@@ -27,11 +27,6 @@ public static T WindowManagerAddShadowHint<T>(this T control, Func<System.Boolea
 public static T WindowManagerAddShadowHint<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.WindowManagerAddShadowHintProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T WindowManagerAddShadowHint<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.WindowManagerAddShadowHintProperty, ps, () => control.WindowManagerAddShadowHint = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T WindowManagerAddShadowHint<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.WindowManagerAddShadowHintProperty, binding);
@@ -39,11 +34,6 @@ public static T WindowManagerAddShadowHint<T>(this T control, IBinding binding) 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T WindowManagerAddShadowHint<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.WindowManagerAddShadowHintProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T WindowManagerAddShadowHint<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.WindowManagerAddShadowHintProperty, ps, () => control.WindowManagerAddShadowHint = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Child
@@ -60,11 +50,6 @@ public static T Child<T>(this T control, Func<Avalonia.Controls.Control?> func, 
 public static T Child<T>(this T control, Func<ValueTask<Avalonia.Controls.Control?>> getter, Func<Avalonia.Controls.Control?>? fallbackGetter = null, Action<Avalonia.Controls.Control?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.ChildProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Child<T>(this T control,Avalonia.Controls.Control? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.ChildProperty, ps, () => control.Child = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Child<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.ChildProperty, binding);
@@ -72,11 +57,6 @@ public static T Child<T>(this T control, IBinding binding) where T : Avalonia.Co
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Child<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.ChildProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Child<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Control?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.ChildProperty, ps, () => control.Child = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // InheritsTransform
@@ -93,11 +73,6 @@ public static T InheritsTransform<T>(this T control, Func<System.Boolean> func, 
 public static T InheritsTransform<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.InheritsTransformProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T InheritsTransform<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.InheritsTransformProperty, ps, () => control.InheritsTransform = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T InheritsTransform<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.InheritsTransformProperty, binding);
@@ -105,11 +80,6 @@ public static T InheritsTransform<T>(this T control, IBinding binding) where T :
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T InheritsTransform<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.InheritsTransformProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T InheritsTransform<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.InheritsTransformProperty, ps, () => control.InheritsTransform = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsOpen
@@ -126,11 +96,6 @@ public static T IsOpen<T>(this T control, Func<System.Boolean> func, Action<Syst
 public static T IsOpen<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.IsOpenProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T IsOpen<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.IsOpenProperty, ps, () => control.IsOpen = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T IsOpen<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.IsOpenProperty, binding);
@@ -138,11 +103,6 @@ public static T IsOpen<T>(this T control, IBinding binding) where T : Avalonia.C
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T IsOpen<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.IsOpenProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T IsOpen<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.IsOpenProperty, ps, () => control.IsOpen = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // PlacementAnchor
@@ -159,11 +119,6 @@ public static T PlacementAnchor<T>(this T control, Func<Avalonia.Controls.Primit
 public static T PlacementAnchor<T>(this T control, Func<ValueTask<Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor>> getter, Func<Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor>? fallbackGetter = null, Action<Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementAnchorProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T PlacementAnchor<T>(this T control,Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.PlacementAnchorProperty, ps, () => control.PlacementAnchor = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T PlacementAnchor<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementAnchorProperty, binding);
@@ -171,11 +126,6 @@ public static T PlacementAnchor<T>(this T control, IBinding binding) where T : A
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T PlacementAnchor<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementAnchorProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T PlacementAnchor<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.PlacementAnchorProperty, ps, () => control.PlacementAnchor = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // PlacementConstraintAdjustment
@@ -192,11 +142,6 @@ public static T PlacementConstraintAdjustment<T>(this T control, Func<Avalonia.C
 public static T PlacementConstraintAdjustment<T>(this T control, Func<ValueTask<Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment>> getter, Func<Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment>? fallbackGetter = null, Action<Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementConstraintAdjustmentProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T PlacementConstraintAdjustment<T>(this T control,Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.PlacementConstraintAdjustmentProperty, ps, () => control.PlacementConstraintAdjustment = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T PlacementConstraintAdjustment<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementConstraintAdjustmentProperty, binding);
@@ -204,11 +149,6 @@ public static T PlacementConstraintAdjustment<T>(this T control, IBinding bindin
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T PlacementConstraintAdjustment<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementConstraintAdjustmentProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T PlacementConstraintAdjustment<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.PlacementConstraintAdjustmentProperty, ps, () => control.PlacementConstraintAdjustment = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // PlacementGravity
@@ -225,11 +165,6 @@ public static T PlacementGravity<T>(this T control, Func<Avalonia.Controls.Primi
 public static T PlacementGravity<T>(this T control, Func<ValueTask<Avalonia.Controls.Primitives.PopupPositioning.PopupGravity>> getter, Func<Avalonia.Controls.Primitives.PopupPositioning.PopupGravity>? fallbackGetter = null, Action<Avalonia.Controls.Primitives.PopupPositioning.PopupGravity>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementGravityProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T PlacementGravity<T>(this T control,Avalonia.Controls.Primitives.PopupPositioning.PopupGravity value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.PlacementGravityProperty, ps, () => control.PlacementGravity = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T PlacementGravity<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementGravityProperty, binding);
@@ -237,11 +172,6 @@ public static T PlacementGravity<T>(this T control, IBinding binding) where T : 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T PlacementGravity<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementGravityProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T PlacementGravity<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Primitives.PopupPositioning.PopupGravity> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.PlacementGravityProperty, ps, () => control.PlacementGravity = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Placement
@@ -258,11 +188,6 @@ public static T Placement<T>(this T control, Func<Avalonia.Controls.PlacementMod
 public static T Placement<T>(this T control, Func<ValueTask<Avalonia.Controls.PlacementMode>> getter, Func<Avalonia.Controls.PlacementMode>? fallbackGetter = null, Action<Avalonia.Controls.PlacementMode>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Placement<T>(this T control,Avalonia.Controls.PlacementMode value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.PlacementProperty, ps, () => control.Placement = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Placement<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementProperty, binding);
@@ -270,11 +195,6 @@ public static T Placement<T>(this T control, IBinding binding) where T : Avaloni
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Placement<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Placement<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.PlacementMode> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.PlacementProperty, ps, () => control.Placement = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // PlacementRect
@@ -291,11 +211,6 @@ public static T PlacementRect<T>(this T control, Func<System.Nullable<Avalonia.R
 public static T PlacementRect<T>(this T control, Func<ValueTask<System.Nullable<Avalonia.Rect>>> getter, Func<System.Nullable<Avalonia.Rect>>? fallbackGetter = null, Action<System.Nullable<Avalonia.Rect>>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementRectProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T PlacementRect<T>(this T control,System.Nullable<Avalonia.Rect> value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.PlacementRectProperty, ps, () => control.PlacementRect = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T PlacementRect<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementRectProperty, binding);
@@ -303,11 +218,6 @@ public static T PlacementRect<T>(this T control, IBinding binding) where T : Ava
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T PlacementRect<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementRectProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T PlacementRect<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Nullable<Avalonia.Rect>> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.PlacementRectProperty, ps, () => control.PlacementRect = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // PlacementTarget
@@ -324,11 +234,6 @@ public static T PlacementTarget<T>(this T control, Func<Avalonia.Controls.Contro
 public static T PlacementTarget<T>(this T control, Func<ValueTask<Avalonia.Controls.Control?>> getter, Func<Avalonia.Controls.Control?>? fallbackGetter = null, Action<Avalonia.Controls.Control?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementTargetProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T PlacementTarget<T>(this T control,Avalonia.Controls.Control? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.PlacementTargetProperty, ps, () => control.PlacementTarget = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T PlacementTarget<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementTargetProperty, binding);
@@ -336,11 +241,6 @@ public static T PlacementTarget<T>(this T control, IBinding binding) where T : A
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T PlacementTarget<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementTargetProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T PlacementTarget<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Control?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.PlacementTargetProperty, ps, () => control.PlacementTarget = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // CustomPopupPlacementCallback
@@ -357,11 +257,6 @@ public static T CustomPopupPlacementCallback<T>(this T control, Func<Avalonia.Co
 public static T CustomPopupPlacementCallback<T>(this T control, Func<ValueTask<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?>> getter, Func<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?>? fallbackGetter = null, Action<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallbackProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T CustomPopupPlacementCallback<T>(this T control,Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallbackProperty, ps, () => control.CustomPopupPlacementCallback = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T CustomPopupPlacementCallback<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallbackProperty, binding);
@@ -369,11 +264,6 @@ public static T CustomPopupPlacementCallback<T>(this T control, IBinding binding
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T CustomPopupPlacementCallback<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallbackProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T CustomPopupPlacementCallback<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallbackProperty, ps, () => control.CustomPopupPlacementCallback = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // OverlayDismissEventPassThrough
@@ -390,11 +280,6 @@ public static T OverlayDismissEventPassThrough<T>(this T control, Func<System.Bo
 public static T OverlayDismissEventPassThrough<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.OverlayDismissEventPassThroughProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T OverlayDismissEventPassThrough<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.OverlayDismissEventPassThroughProperty, ps, () => control.OverlayDismissEventPassThrough = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T OverlayDismissEventPassThrough<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.OverlayDismissEventPassThroughProperty, binding);
@@ -402,11 +287,6 @@ public static T OverlayDismissEventPassThrough<T>(this T control, IBinding bindi
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T OverlayDismissEventPassThrough<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.OverlayDismissEventPassThroughProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T OverlayDismissEventPassThrough<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.OverlayDismissEventPassThroughProperty, ps, () => control.OverlayDismissEventPassThrough = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // OverlayInputPassThroughElement
@@ -423,11 +303,6 @@ public static T OverlayInputPassThroughElement<T>(this T control, Func<Avalonia.
 public static T OverlayInputPassThroughElement<T>(this T control, Func<ValueTask<Avalonia.Input.IInputElement?>> getter, Func<Avalonia.Input.IInputElement?>? fallbackGetter = null, Action<Avalonia.Input.IInputElement?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElementProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T OverlayInputPassThroughElement<T>(this T control,Avalonia.Input.IInputElement? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElementProperty, ps, () => control.OverlayInputPassThroughElement = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T OverlayInputPassThroughElement<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElementProperty, binding);
@@ -435,11 +310,6 @@ public static T OverlayInputPassThroughElement<T>(this T control, IBinding bindi
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T OverlayInputPassThroughElement<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElementProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T OverlayInputPassThroughElement<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Input.IInputElement?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElementProperty, ps, () => control.OverlayInputPassThroughElement = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // HorizontalOffset
@@ -456,11 +326,6 @@ public static T HorizontalOffset<T>(this T control, Func<System.Double> func, Ac
 public static T HorizontalOffset<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.HorizontalOffsetProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T HorizontalOffset<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.HorizontalOffsetProperty, ps, () => control.HorizontalOffset = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T HorizontalOffset<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.HorizontalOffsetProperty, binding);
@@ -468,11 +333,6 @@ public static T HorizontalOffset<T>(this T control, IBinding binding) where T : 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T HorizontalOffset<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.HorizontalOffsetProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T HorizontalOffset<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.HorizontalOffsetProperty, ps, () => control.HorizontalOffset = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsLightDismissEnabled
@@ -489,11 +349,6 @@ public static T IsLightDismissEnabled<T>(this T control, Func<System.Boolean> fu
 public static T IsLightDismissEnabled<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.IsLightDismissEnabledProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T IsLightDismissEnabled<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.IsLightDismissEnabledProperty, ps, () => control.IsLightDismissEnabled = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T IsLightDismissEnabled<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.IsLightDismissEnabledProperty, binding);
@@ -501,11 +356,6 @@ public static T IsLightDismissEnabled<T>(this T control, IBinding binding) where
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T IsLightDismissEnabled<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.IsLightDismissEnabledProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T IsLightDismissEnabled<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.IsLightDismissEnabledProperty, ps, () => control.IsLightDismissEnabled = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // VerticalOffset
@@ -522,11 +372,6 @@ public static T VerticalOffset<T>(this T control, Func<System.Double> func, Acti
 public static T VerticalOffset<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.VerticalOffsetProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T VerticalOffset<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.VerticalOffsetProperty, ps, () => control.VerticalOffset = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T VerticalOffset<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.VerticalOffsetProperty, binding);
@@ -534,11 +379,6 @@ public static T VerticalOffset<T>(this T control, IBinding binding) where T : Av
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T VerticalOffset<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.VerticalOffsetProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T VerticalOffset<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.VerticalOffsetProperty, ps, () => control.VerticalOffset = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Topmost
@@ -555,11 +395,6 @@ public static T Topmost<T>(this T control, Func<System.Boolean> func, Action<Sys
 public static T Topmost<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.TopmostProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Topmost<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.TopmostProperty, ps, () => control.Topmost = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Topmost<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.TopmostProperty, binding);
@@ -567,11 +402,6 @@ public static T Topmost<T>(this T control, IBinding binding) where T : Avalonia.
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Topmost<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.TopmostProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Topmost<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.TopmostProperty, ps, () => control.Topmost = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // TakesFocusFromNativeControl
@@ -588,11 +418,6 @@ public static T TakesFocusFromNativeControl<T>(this T control, Func<System.Boole
 public static T TakesFocusFromNativeControl<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControlProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T TakesFocusFromNativeControl<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControlProperty, ps, () => control.TakesFocusFromNativeControl = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T TakesFocusFromNativeControl<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControlProperty, binding);
@@ -600,11 +425,6 @@ public static T TakesFocusFromNativeControl<T>(this T control, IBinding binding)
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T TakesFocusFromNativeControl<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControlProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T TakesFocusFromNativeControl<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControlProperty, ps, () => control.TakesFocusFromNativeControl = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ShouldUseOverlayLayer
@@ -621,11 +441,6 @@ public static T ShouldUseOverlayLayer<T>(this T control, Func<System.Boolean> fu
 public static T ShouldUseOverlayLayer<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayerProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ShouldUseOverlayLayer<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayerProperty, ps, () => control.ShouldUseOverlayLayer = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ShouldUseOverlayLayer<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayerProperty, binding);
@@ -633,11 +448,6 @@ public static T ShouldUseOverlayLayer<T>(this T control, IBinding binding) where
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ShouldUseOverlayLayer<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayerProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ShouldUseOverlayLayer<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.Popup 
-=> control._setEx(Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayerProperty, ps, () => control.ShouldUseOverlayLayer = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

@@ -27,11 +27,6 @@ public static T Children<T>(this T control, Func<Avalonia.Media.GeometryCollecti
 public static T Children<T>(this T control, Func<ValueTask<Avalonia.Media.GeometryCollection>> getter, Func<Avalonia.Media.GeometryCollection>? fallbackGetter = null, Action<Avalonia.Media.GeometryCollection>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.GeometryGroup 
    => control._set(Avalonia.Media.GeometryGroup.ChildrenProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Children<T>(this T control,Avalonia.Media.GeometryCollection value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.GeometryGroup 
-=> control._setEx(Avalonia.Media.GeometryGroup.ChildrenProperty, ps, () => control.Children = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Children<T>(this T control, IBinding binding) where T : Avalonia.Media.GeometryGroup 
    => control._set(Avalonia.Media.GeometryGroup.ChildrenProperty, binding);
@@ -39,11 +34,6 @@ public static T Children<T>(this T control, IBinding binding) where T : Avalonia
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Children<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.GeometryGroup 
    => control._set(Avalonia.Media.GeometryGroup.ChildrenProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Children<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.GeometryCollection> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.GeometryGroup 
-=> control._setEx(Avalonia.Media.GeometryGroup.ChildrenProperty, ps, () => control.Children = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // FillRule
@@ -60,11 +50,6 @@ public static T FillRule<T>(this T control, Func<Avalonia.Media.FillRule> func, 
 public static T FillRule<T>(this T control, Func<ValueTask<Avalonia.Media.FillRule>> getter, Func<Avalonia.Media.FillRule>? fallbackGetter = null, Action<Avalonia.Media.FillRule>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.GeometryGroup 
    => control._set(Avalonia.Media.GeometryGroup.FillRuleProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T FillRule<T>(this T control,Avalonia.Media.FillRule value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.GeometryGroup 
-=> control._setEx(Avalonia.Media.GeometryGroup.FillRuleProperty, ps, () => control.FillRule = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T FillRule<T>(this T control, IBinding binding) where T : Avalonia.Media.GeometryGroup 
    => control._set(Avalonia.Media.GeometryGroup.FillRuleProperty, binding);
@@ -72,11 +57,6 @@ public static T FillRule<T>(this T control, IBinding binding) where T : Avalonia
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T FillRule<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.GeometryGroup 
    => control._set(Avalonia.Media.GeometryGroup.FillRuleProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T FillRule<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.FillRule> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.GeometryGroup 
-=> control._setEx(Avalonia.Media.GeometryGroup.FillRuleProperty, ps, () => control.FillRule = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

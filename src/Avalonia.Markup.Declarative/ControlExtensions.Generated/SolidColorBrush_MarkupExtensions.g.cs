@@ -27,11 +27,6 @@ public static Avalonia.Media.SolidColorBrush Color(this Avalonia.Media.SolidColo
 public static Avalonia.Media.SolidColorBrush Color(this Avalonia.Media.SolidColorBrush control, Func<ValueTask<Avalonia.Media.Color>> getter, Func<Avalonia.Media.Color>? fallbackGetter = null, Action<Avalonia.Media.Color>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.SolidColorBrush.ColorProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.SolidColorBrush Color(this Avalonia.Media.SolidColorBrush control,Avalonia.Media.Color value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.SolidColorBrush.ColorProperty, ps, () => control.Color = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.SolidColorBrush Color(this Avalonia.Media.SolidColorBrush control, IBinding binding)  
    => control._set(Avalonia.Media.SolidColorBrush.ColorProperty, binding);
@@ -39,11 +34,6 @@ public static Avalonia.Media.SolidColorBrush Color(this Avalonia.Media.SolidColo
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.SolidColorBrush Color(this Avalonia.Media.SolidColorBrush control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.SolidColorBrush.ColorProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.SolidColorBrush Color<TValue>(this Avalonia.Media.SolidColorBrush control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Color> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.SolidColorBrush.ColorProperty, ps, () => control.Color = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

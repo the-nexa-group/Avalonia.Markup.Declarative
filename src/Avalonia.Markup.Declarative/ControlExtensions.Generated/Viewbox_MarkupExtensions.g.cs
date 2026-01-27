@@ -27,11 +27,6 @@ public static T Stretch<T>(this T control, Func<Avalonia.Media.Stretch> func, Ac
 public static T Stretch<T>(this T control, Func<ValueTask<Avalonia.Media.Stretch>> getter, Func<Avalonia.Media.Stretch>? fallbackGetter = null, Action<Avalonia.Media.Stretch>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.StretchProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Stretch<T>(this T control,Avalonia.Media.Stretch value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Viewbox 
-=> control._setEx(Avalonia.Controls.Viewbox.StretchProperty, ps, () => control.Stretch = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Stretch<T>(this T control, IBinding binding) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.StretchProperty, binding);
@@ -39,11 +34,6 @@ public static T Stretch<T>(this T control, IBinding binding) where T : Avalonia.
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Stretch<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.StretchProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Stretch<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Stretch> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Viewbox 
-=> control._setEx(Avalonia.Controls.Viewbox.StretchProperty, ps, () => control.Stretch = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // StretchDirection
@@ -60,11 +50,6 @@ public static T StretchDirection<T>(this T control, Func<Avalonia.Media.StretchD
 public static T StretchDirection<T>(this T control, Func<ValueTask<Avalonia.Media.StretchDirection>> getter, Func<Avalonia.Media.StretchDirection>? fallbackGetter = null, Action<Avalonia.Media.StretchDirection>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.StretchDirectionProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T StretchDirection<T>(this T control,Avalonia.Media.StretchDirection value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Viewbox 
-=> control._setEx(Avalonia.Controls.Viewbox.StretchDirectionProperty, ps, () => control.StretchDirection = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T StretchDirection<T>(this T control, IBinding binding) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.StretchDirectionProperty, binding);
@@ -72,11 +57,6 @@ public static T StretchDirection<T>(this T control, IBinding binding) where T : 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T StretchDirection<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.StretchDirectionProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T StretchDirection<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.StretchDirection> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Viewbox 
-=> control._setEx(Avalonia.Controls.Viewbox.StretchDirectionProperty, ps, () => control.StretchDirection = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Child
@@ -93,11 +73,6 @@ public static T Child<T>(this T control, Func<Avalonia.Controls.Control?> func, 
 public static T Child<T>(this T control, Func<ValueTask<Avalonia.Controls.Control?>> getter, Func<Avalonia.Controls.Control?>? fallbackGetter = null, Action<Avalonia.Controls.Control?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.ChildProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Child<T>(this T control,Avalonia.Controls.Control? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Viewbox 
-=> control._setEx(Avalonia.Controls.Viewbox.ChildProperty, ps, () => control.Child = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Child<T>(this T control, IBinding binding) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.ChildProperty, binding);
@@ -105,11 +80,6 @@ public static T Child<T>(this T control, IBinding binding) where T : Avalonia.Co
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Child<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.ChildProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Child<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Control?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Viewbox 
-=> control._setEx(Avalonia.Controls.Viewbox.ChildProperty, ps, () => control.Child = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

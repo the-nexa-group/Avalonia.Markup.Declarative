@@ -27,11 +27,6 @@ public static T Drawing<T>(this T control, Func<Avalonia.Media.Drawing?> func, A
 public static T Drawing<T>(this T control, Func<ValueTask<Avalonia.Media.Drawing?>> getter, Func<Avalonia.Media.Drawing?>? fallbackGetter = null, Action<Avalonia.Media.Drawing?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.DrawingImage 
    => control._set(Avalonia.Media.DrawingImage.DrawingProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Drawing<T>(this T control,Avalonia.Media.Drawing? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.DrawingImage 
-=> control._setEx(Avalonia.Media.DrawingImage.DrawingProperty, ps, () => control.Drawing = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Drawing<T>(this T control, IBinding binding) where T : Avalonia.Media.DrawingImage 
    => control._set(Avalonia.Media.DrawingImage.DrawingProperty, binding);
@@ -39,11 +34,6 @@ public static T Drawing<T>(this T control, IBinding binding) where T : Avalonia.
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Drawing<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.DrawingImage 
    => control._set(Avalonia.Media.DrawingImage.DrawingProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Drawing<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Drawing?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.DrawingImage 
-=> control._setEx(Avalonia.Media.DrawingImage.DrawingProperty, ps, () => control.Drawing = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

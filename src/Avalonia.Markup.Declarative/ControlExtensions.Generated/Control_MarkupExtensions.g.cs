@@ -27,11 +27,6 @@ public static T FocusAdorner<T>(this T control, Func<Avalonia.Controls.ITemplate
 public static T FocusAdorner<T>(this T control, Func<ValueTask<Avalonia.Controls.ITemplate<Avalonia.Controls.Control>?>> getter, Func<Avalonia.Controls.ITemplate<Avalonia.Controls.Control>?>? fallbackGetter = null, Action<Avalonia.Controls.ITemplate<Avalonia.Controls.Control>?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.FocusAdornerProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T FocusAdorner<T>(this T control,Avalonia.Controls.ITemplate<Avalonia.Controls.Control>? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Control 
-=> control._setEx(Avalonia.Controls.Control.FocusAdornerProperty, ps, () => control.FocusAdorner = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T FocusAdorner<T>(this T control, IBinding binding) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.FocusAdornerProperty, binding);
@@ -39,11 +34,6 @@ public static T FocusAdorner<T>(this T control, IBinding binding) where T : Aval
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T FocusAdorner<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.FocusAdornerProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T FocusAdorner<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.ITemplate<Avalonia.Controls.Control>?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Control 
-=> control._setEx(Avalonia.Controls.Control.FocusAdornerProperty, ps, () => control.FocusAdorner = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Tag
@@ -60,11 +50,6 @@ public static T Tag<T>(this T control, Func<System.Object?> func, Action<System.
 public static T Tag<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.TagProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Tag<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Control 
-=> control._setEx(Avalonia.Controls.Control.TagProperty, ps, () => control.Tag = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Tag<T>(this T control, IBinding binding) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.TagProperty, binding);
@@ -72,11 +57,6 @@ public static T Tag<T>(this T control, IBinding binding) where T : Avalonia.Cont
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Tag<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.TagProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Tag<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Control 
-=> control._setEx(Avalonia.Controls.Control.TagProperty, ps, () => control.Tag = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ContextMenu
@@ -93,11 +73,6 @@ public static T ContextMenu<T>(this T control, Func<Avalonia.Controls.ContextMen
 public static T ContextMenu<T>(this T control, Func<ValueTask<Avalonia.Controls.ContextMenu?>> getter, Func<Avalonia.Controls.ContextMenu?>? fallbackGetter = null, Action<Avalonia.Controls.ContextMenu?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextMenuProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ContextMenu<T>(this T control,Avalonia.Controls.ContextMenu? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Control 
-=> control._setEx(Avalonia.Controls.Control.ContextMenuProperty, ps, () => control.ContextMenu = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ContextMenu<T>(this T control, IBinding binding) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextMenuProperty, binding);
@@ -105,11 +80,6 @@ public static T ContextMenu<T>(this T control, IBinding binding) where T : Avalo
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ContextMenu<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextMenuProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ContextMenu<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.ContextMenu?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Control 
-=> control._setEx(Avalonia.Controls.Control.ContextMenuProperty, ps, () => control.ContextMenu = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ContextFlyout
@@ -126,11 +96,6 @@ public static T ContextFlyout<T>(this T control, Func<Avalonia.Controls.Primitiv
 public static T ContextFlyout<T>(this T control, Func<ValueTask<Avalonia.Controls.Primitives.FlyoutBase?>> getter, Func<Avalonia.Controls.Primitives.FlyoutBase?>? fallbackGetter = null, Action<Avalonia.Controls.Primitives.FlyoutBase?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextFlyoutProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ContextFlyout<T>(this T control,Avalonia.Controls.Primitives.FlyoutBase? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Control 
-=> control._setEx(Avalonia.Controls.Control.ContextFlyoutProperty, ps, () => control.ContextFlyout = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ContextFlyout<T>(this T control, IBinding binding) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextFlyoutProperty, binding);
@@ -138,11 +103,6 @@ public static T ContextFlyout<T>(this T control, IBinding binding) where T : Ava
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ContextFlyout<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextFlyoutProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ContextFlyout<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Primitives.FlyoutBase?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Control 
-=> control._setEx(Avalonia.Controls.Control.ContextFlyoutProperty, ps, () => control.ContextFlyout = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

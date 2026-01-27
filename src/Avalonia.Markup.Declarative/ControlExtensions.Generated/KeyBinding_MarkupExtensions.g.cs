@@ -27,11 +27,6 @@ public static T Command<T>(this T control, Func<System.Windows.Input.ICommand> f
 public static T Command<T>(this T control, Func<ValueTask<System.Windows.Input.ICommand>> getter, Func<System.Windows.Input.ICommand>? fallbackGetter = null, Action<System.Windows.Input.ICommand>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Input.KeyBinding 
    => control._set(Avalonia.Input.KeyBinding.CommandProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Command<T>(this T control,System.Windows.Input.ICommand value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.KeyBinding 
-=> control._setEx(Avalonia.Input.KeyBinding.CommandProperty, ps, () => control.Command = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Command<T>(this T control, IBinding binding) where T : Avalonia.Input.KeyBinding 
    => control._set(Avalonia.Input.KeyBinding.CommandProperty, binding);
@@ -39,11 +34,6 @@ public static T Command<T>(this T control, IBinding binding) where T : Avalonia.
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Command<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Input.KeyBinding 
    => control._set(Avalonia.Input.KeyBinding.CommandProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Command<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Windows.Input.ICommand> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.KeyBinding 
-=> control._setEx(Avalonia.Input.KeyBinding.CommandProperty, ps, () => control.Command = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // CommandParameter
@@ -60,11 +50,6 @@ public static T CommandParameter<T>(this T control, Func<System.Object> func, Ac
 public static T CommandParameter<T>(this T control, Func<ValueTask<System.Object>> getter, Func<System.Object>? fallbackGetter = null, Action<System.Object>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Input.KeyBinding 
    => control._set(Avalonia.Input.KeyBinding.CommandParameterProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T CommandParameter<T>(this T control,System.Object value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.KeyBinding 
-=> control._setEx(Avalonia.Input.KeyBinding.CommandParameterProperty, ps, () => control.CommandParameter = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T CommandParameter<T>(this T control, IBinding binding) where T : Avalonia.Input.KeyBinding 
    => control._set(Avalonia.Input.KeyBinding.CommandParameterProperty, binding);
@@ -72,11 +57,6 @@ public static T CommandParameter<T>(this T control, IBinding binding) where T : 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T CommandParameter<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Input.KeyBinding 
    => control._set(Avalonia.Input.KeyBinding.CommandParameterProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T CommandParameter<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.KeyBinding 
-=> control._setEx(Avalonia.Input.KeyBinding.CommandParameterProperty, ps, () => control.CommandParameter = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Gesture
@@ -93,11 +73,6 @@ public static T Gesture<T>(this T control, Func<Avalonia.Input.KeyGesture> func,
 public static T Gesture<T>(this T control, Func<ValueTask<Avalonia.Input.KeyGesture>> getter, Func<Avalonia.Input.KeyGesture>? fallbackGetter = null, Action<Avalonia.Input.KeyGesture>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Input.KeyBinding 
    => control._set(Avalonia.Input.KeyBinding.GestureProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Gesture<T>(this T control,Avalonia.Input.KeyGesture value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.KeyBinding 
-=> control._setEx(Avalonia.Input.KeyBinding.GestureProperty, ps, () => control.Gesture = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Gesture<T>(this T control, IBinding binding) where T : Avalonia.Input.KeyBinding 
    => control._set(Avalonia.Input.KeyBinding.GestureProperty, binding);
@@ -105,11 +80,6 @@ public static T Gesture<T>(this T control, IBinding binding) where T : Avalonia.
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Gesture<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Input.KeyBinding 
    => control._set(Avalonia.Input.KeyBinding.GestureProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Gesture<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Input.KeyGesture> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Input.KeyBinding 
-=> control._setEx(Avalonia.Input.KeyBinding.GestureProperty, ps, () => control.Gesture = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

@@ -27,11 +27,6 @@ public static T Source<T>(this T control, Func<Avalonia.Media.IImage?> func, Act
 public static T Source<T>(this T control, Func<ValueTask<Avalonia.Media.IImage?>> getter, Func<Avalonia.Media.IImage?>? fallbackGetter = null, Action<Avalonia.Media.IImage?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.Imaging.CroppedBitmap 
    => control._set(Avalonia.Media.Imaging.CroppedBitmap.SourceProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Source<T>(this T control,Avalonia.Media.IImage? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.Imaging.CroppedBitmap 
-=> control._setEx(Avalonia.Media.Imaging.CroppedBitmap.SourceProperty, ps, () => control.Source = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Source<T>(this T control, IBinding binding) where T : Avalonia.Media.Imaging.CroppedBitmap 
    => control._set(Avalonia.Media.Imaging.CroppedBitmap.SourceProperty, binding);
@@ -39,11 +34,6 @@ public static T Source<T>(this T control, IBinding binding) where T : Avalonia.M
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Source<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.Imaging.CroppedBitmap 
    => control._set(Avalonia.Media.Imaging.CroppedBitmap.SourceProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Source<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IImage?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.Imaging.CroppedBitmap 
-=> control._setEx(Avalonia.Media.Imaging.CroppedBitmap.SourceProperty, ps, () => control.Source = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SourceRect
@@ -71,11 +61,6 @@ public static T SourceRect<T>(this T control, Avalonia.PixelPoint position = def
 public static T SourceRect<T>(this T control, Avalonia.PixelPoint topLeft = default!, Avalonia.PixelPoint bottomRight = default!) where T : Avalonia.Media.Imaging.CroppedBitmap 
    => control._set(() => control.SourceRect = new Avalonia.PixelRect(topLeft, bottomRight));
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T SourceRect<T>(this T control,Avalonia.PixelRect value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.Imaging.CroppedBitmap 
-=> control._setEx(Avalonia.Media.Imaging.CroppedBitmap.SourceRectProperty, ps, () => control.SourceRect = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T SourceRect<T>(this T control, IBinding binding) where T : Avalonia.Media.Imaging.CroppedBitmap 
    => control._set(Avalonia.Media.Imaging.CroppedBitmap.SourceRectProperty, binding);
@@ -83,11 +68,6 @@ public static T SourceRect<T>(this T control, IBinding binding) where T : Avalon
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T SourceRect<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.Imaging.CroppedBitmap 
    => control._set(Avalonia.Media.Imaging.CroppedBitmap.SourceRectProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T SourceRect<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.PixelRect> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.Imaging.CroppedBitmap 
-=> control._setEx(Avalonia.Media.Imaging.CroppedBitmap.SourceRectProperty, ps, () => control.SourceRect = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

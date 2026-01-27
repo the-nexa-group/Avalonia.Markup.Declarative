@@ -27,11 +27,6 @@ public static T Points<T>(this T control, Func<System.Collections.Generic.IList<
 public static T Points<T>(this T control, Func<ValueTask<System.Collections.Generic.IList<Avalonia.Point>>> getter, Func<System.Collections.Generic.IList<Avalonia.Point>>? fallbackGetter = null, Action<System.Collections.Generic.IList<Avalonia.Point>>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Shapes.Polygon 
    => control._set(Avalonia.Controls.Shapes.Polygon.PointsProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Points<T>(this T control,System.Collections.Generic.IList<Avalonia.Point> value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Shapes.Polygon 
-=> control._setEx(Avalonia.Controls.Shapes.Polygon.PointsProperty, ps, () => control.Points = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Points<T>(this T control, IBinding binding) where T : Avalonia.Controls.Shapes.Polygon 
    => control._set(Avalonia.Controls.Shapes.Polygon.PointsProperty, binding);
@@ -39,11 +34,6 @@ public static T Points<T>(this T control, IBinding binding) where T : Avalonia.C
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Points<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Shapes.Polygon 
    => control._set(Avalonia.Controls.Shapes.Polygon.PointsProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Points<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Collections.Generic.IList<Avalonia.Point>> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Shapes.Polygon 
-=> control._setEx(Avalonia.Controls.Shapes.Polygon.PointsProperty, ps, () => control.Points = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

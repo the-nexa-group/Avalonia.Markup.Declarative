@@ -27,11 +27,6 @@ public static T ItemContainerTheme<T>(this T control, Func<Avalonia.Styling.Cont
 public static T ItemContainerTheme<T>(this T control, Func<ValueTask<Avalonia.Styling.ControlTheme?>> getter, Func<Avalonia.Styling.ControlTheme?>? fallbackGetter = null, Action<Avalonia.Styling.ControlTheme?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemContainerThemeProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ItemContainerTheme<T>(this T control,Avalonia.Styling.ControlTheme? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ItemsControl 
-=> control._setEx(Avalonia.Controls.ItemsControl.ItemContainerThemeProperty, ps, () => control.ItemContainerTheme = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ItemContainerTheme<T>(this T control, IBinding binding) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemContainerThemeProperty, binding);
@@ -39,11 +34,6 @@ public static T ItemContainerTheme<T>(this T control, IBinding binding) where T 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ItemContainerTheme<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemContainerThemeProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ItemContainerTheme<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Styling.ControlTheme?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ItemsControl 
-=> control._setEx(Avalonia.Controls.ItemsControl.ItemContainerThemeProperty, ps, () => control.ItemContainerTheme = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ItemsPanel
@@ -60,11 +50,6 @@ public static T ItemsPanel<T>(this T control, Func<Avalonia.Controls.ITemplate<A
 public static T ItemsPanel<T>(this T control, Func<ValueTask<Avalonia.Controls.ITemplate<Avalonia.Controls.Panel>?>> getter, Func<Avalonia.Controls.ITemplate<Avalonia.Controls.Panel>?>? fallbackGetter = null, Action<Avalonia.Controls.ITemplate<Avalonia.Controls.Panel>?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemsPanelProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ItemsPanel<T>(this T control,Avalonia.Controls.ITemplate<Avalonia.Controls.Panel>? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ItemsControl 
-=> control._setEx(Avalonia.Controls.ItemsControl.ItemsPanelProperty, ps, () => control.ItemsPanel = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ItemsPanel<T>(this T control, IBinding binding) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemsPanelProperty, binding);
@@ -72,11 +57,6 @@ public static T ItemsPanel<T>(this T control, IBinding binding) where T : Avalon
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ItemsPanel<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemsPanelProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ItemsPanel<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.ITemplate<Avalonia.Controls.Panel>?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ItemsControl 
-=> control._setEx(Avalonia.Controls.ItemsControl.ItemsPanelProperty, ps, () => control.ItemsPanel = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ItemsSource
@@ -93,11 +73,6 @@ public static T ItemsSource<T>(this T control, Func<System.Collections.IEnumerab
 public static T ItemsSource<T>(this T control, Func<ValueTask<System.Collections.IEnumerable?>> getter, Func<System.Collections.IEnumerable?>? fallbackGetter = null, Action<System.Collections.IEnumerable?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemsSourceProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ItemsSource<T>(this T control,System.Collections.IEnumerable? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ItemsControl 
-=> control._setEx(Avalonia.Controls.ItemsControl.ItemsSourceProperty, ps, () => control.ItemsSource = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ItemsSource<T>(this T control, IBinding binding) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemsSourceProperty, binding);
@@ -105,11 +80,6 @@ public static T ItemsSource<T>(this T control, IBinding binding) where T : Avalo
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ItemsSource<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemsSourceProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ItemsSource<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Collections.IEnumerable?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ItemsControl 
-=> control._setEx(Avalonia.Controls.ItemsControl.ItemsSourceProperty, ps, () => control.ItemsSource = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ItemTemplate
@@ -126,11 +96,6 @@ public static T ItemTemplate<T>(this T control, Func<Avalonia.Controls.Templates
 public static T ItemTemplate<T>(this T control, Func<ValueTask<Avalonia.Controls.Templates.IDataTemplate?>> getter, Func<Avalonia.Controls.Templates.IDataTemplate?>? fallbackGetter = null, Action<Avalonia.Controls.Templates.IDataTemplate?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemTemplateProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ItemTemplate<T>(this T control,Avalonia.Controls.Templates.IDataTemplate? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ItemsControl 
-=> control._setEx(Avalonia.Controls.ItemsControl.ItemTemplateProperty, ps, () => control.ItemTemplate = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ItemTemplate<T>(this T control, IBinding binding) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemTemplateProperty, binding);
@@ -138,11 +103,6 @@ public static T ItemTemplate<T>(this T control, IBinding binding) where T : Aval
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ItemTemplate<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemTemplateProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ItemTemplate<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Templates.IDataTemplate?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ItemsControl 
-=> control._setEx(Avalonia.Controls.ItemsControl.ItemTemplateProperty, ps, () => control.ItemTemplate = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // DisplayMemberBinding
@@ -159,19 +119,9 @@ public static T DisplayMemberBinding<T>(this T control, Func<Avalonia.Data.IBind
 public static T DisplayMemberBinding<T>(this T control, Func<ValueTask<Avalonia.Data.IBinding?>> getter, Func<Avalonia.Data.IBinding?>? fallbackGetter = null, Action<Avalonia.Data.IBinding?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T DisplayMemberBinding<T>(this T control,Avalonia.Data.IBinding? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ItemsControl 
-=> control._setEx(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty, ps, () => control.DisplayMemberBinding = value, bindingMode, converter, bindingSource);
-
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T DisplayMemberBinding<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T DisplayMemberBinding<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Data.IBinding?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ItemsControl 
-=> control._setEx(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty, ps, () => control.DisplayMemberBinding = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

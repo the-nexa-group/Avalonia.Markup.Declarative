@@ -27,11 +27,6 @@ public static T TintColor<T>(this T control, Func<Avalonia.Media.Color> func, Ac
 public static T TintColor<T>(this T control, Func<ValueTask<Avalonia.Media.Color>> getter, Func<Avalonia.Media.Color>? fallbackGetter = null, Action<Avalonia.Media.Color>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.TintColorProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T TintColor<T>(this T control,Avalonia.Media.Color value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
-=> control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.TintColorProperty, ps, () => control.TintColor = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T TintColor<T>(this T control, IBinding binding) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.TintColorProperty, binding);
@@ -39,11 +34,6 @@ public static T TintColor<T>(this T control, IBinding binding) where T : Avaloni
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T TintColor<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.TintColorProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T TintColor<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Color> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
-=> control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.TintColorProperty, ps, () => control.TintColor = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // BackgroundSource
@@ -60,11 +50,6 @@ public static T BackgroundSource<T>(this T control, Func<Avalonia.Media.AcrylicB
 public static T BackgroundSource<T>(this T control, Func<ValueTask<Avalonia.Media.AcrylicBackgroundSource>> getter, Func<Avalonia.Media.AcrylicBackgroundSource>? fallbackGetter = null, Action<Avalonia.Media.AcrylicBackgroundSource>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.BackgroundSourceProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T BackgroundSource<T>(this T control,Avalonia.Media.AcrylicBackgroundSource value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
-=> control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.BackgroundSourceProperty, ps, () => control.BackgroundSource = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T BackgroundSource<T>(this T control, IBinding binding) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.BackgroundSourceProperty, binding);
@@ -72,11 +57,6 @@ public static T BackgroundSource<T>(this T control, IBinding binding) where T : 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T BackgroundSource<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.BackgroundSourceProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T BackgroundSource<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.AcrylicBackgroundSource> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
-=> control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.BackgroundSourceProperty, ps, () => control.BackgroundSource = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // TintOpacity
@@ -93,11 +73,6 @@ public static T TintOpacity<T>(this T control, Func<System.Double> func, Action<
 public static T TintOpacity<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.TintOpacityProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T TintOpacity<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
-=> control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.TintOpacityProperty, ps, () => control.TintOpacity = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T TintOpacity<T>(this T control, IBinding binding) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.TintOpacityProperty, binding);
@@ -105,11 +80,6 @@ public static T TintOpacity<T>(this T control, IBinding binding) where T : Avalo
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T TintOpacity<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.TintOpacityProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T TintOpacity<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
-=> control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.TintOpacityProperty, ps, () => control.TintOpacity = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // MaterialOpacity
@@ -126,11 +96,6 @@ public static T MaterialOpacity<T>(this T control, Func<System.Double> func, Act
 public static T MaterialOpacity<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.MaterialOpacityProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T MaterialOpacity<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
-=> control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.MaterialOpacityProperty, ps, () => control.MaterialOpacity = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T MaterialOpacity<T>(this T control, IBinding binding) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.MaterialOpacityProperty, binding);
@@ -138,11 +103,6 @@ public static T MaterialOpacity<T>(this T control, IBinding binding) where T : A
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T MaterialOpacity<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.MaterialOpacityProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T MaterialOpacity<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
-=> control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.MaterialOpacityProperty, ps, () => control.MaterialOpacity = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // PlatformTransparencyCompensationLevel
@@ -159,11 +119,6 @@ public static T PlatformTransparencyCompensationLevel<T>(this T control, Func<Sy
 public static T PlatformTransparencyCompensationLevel<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.PlatformTransparencyCompensationLevelProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T PlatformTransparencyCompensationLevel<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
-=> control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.PlatformTransparencyCompensationLevelProperty, ps, () => control.PlatformTransparencyCompensationLevel = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T PlatformTransparencyCompensationLevel<T>(this T control, IBinding binding) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.PlatformTransparencyCompensationLevelProperty, binding);
@@ -171,11 +126,6 @@ public static T PlatformTransparencyCompensationLevel<T>(this T control, IBindin
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T PlatformTransparencyCompensationLevel<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.PlatformTransparencyCompensationLevelProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T PlatformTransparencyCompensationLevel<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
-=> control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.PlatformTransparencyCompensationLevelProperty, ps, () => control.PlatformTransparencyCompensationLevel = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // FallbackColor
@@ -192,11 +142,6 @@ public static T FallbackColor<T>(this T control, Func<Avalonia.Media.Color> func
 public static T FallbackColor<T>(this T control, Func<ValueTask<Avalonia.Media.Color>> getter, Func<Avalonia.Media.Color>? fallbackGetter = null, Action<Avalonia.Media.Color>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.FallbackColorProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T FallbackColor<T>(this T control,Avalonia.Media.Color value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
-=> control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.FallbackColorProperty, ps, () => control.FallbackColor = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T FallbackColor<T>(this T control, IBinding binding) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.FallbackColorProperty, binding);
@@ -204,11 +149,6 @@ public static T FallbackColor<T>(this T control, IBinding binding) where T : Ava
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T FallbackColor<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.FallbackColorProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T FallbackColor<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Color> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
-=> control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.FallbackColorProperty, ps, () => control.FallbackColor = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

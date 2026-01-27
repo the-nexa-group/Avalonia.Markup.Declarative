@@ -34,11 +34,6 @@ public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTr
 public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTransform control, System.Double scaleX = default!, System.Double skewY = default!, System.Double perspX = default!, System.Double skewX = default!, System.Double scaleY = default!, System.Double perspY = default!, System.Double offsetX = default!, System.Double offsetY = default!, System.Double perspZ = default!)  
    => control._set(() => control.Matrix = new Avalonia.Matrix(scaleX, skewY, perspX, skewX, scaleY, perspY, offsetX, offsetY, perspZ));
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTransform control,Avalonia.Matrix value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.MatrixTransform.MatrixProperty, ps, () => control.Matrix = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTransform control, IBinding binding)  
    => control._set(Avalonia.Media.MatrixTransform.MatrixProperty, binding);
@@ -46,11 +41,6 @@ public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTr
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTransform control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.MatrixTransform.MatrixProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.MatrixTransform Matrix<TValue>(this Avalonia.Media.MatrixTransform control, TValue value, FuncValueConverter<TValue, Avalonia.Matrix> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.MatrixTransform.MatrixProperty, ps, () => control.Matrix = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

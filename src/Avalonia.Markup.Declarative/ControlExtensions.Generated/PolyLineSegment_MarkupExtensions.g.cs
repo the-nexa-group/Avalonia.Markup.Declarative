@@ -27,11 +27,6 @@ public static Avalonia.Media.PolyLineSegment Points(this Avalonia.Media.PolyLine
 public static Avalonia.Media.PolyLineSegment Points(this Avalonia.Media.PolyLineSegment control, Func<ValueTask<System.Collections.Generic.IList<Avalonia.Point>>> getter, Func<System.Collections.Generic.IList<Avalonia.Point>>? fallbackGetter = null, Action<System.Collections.Generic.IList<Avalonia.Point>>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.PolyLineSegment.PointsProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.PolyLineSegment Points(this Avalonia.Media.PolyLineSegment control,System.Collections.Generic.IList<Avalonia.Point> value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.PolyLineSegment.PointsProperty, ps, () => control.Points = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.PolyLineSegment Points(this Avalonia.Media.PolyLineSegment control, IBinding binding)  
    => control._set(Avalonia.Media.PolyLineSegment.PointsProperty, binding);
@@ -39,11 +34,6 @@ public static Avalonia.Media.PolyLineSegment Points(this Avalonia.Media.PolyLine
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.PolyLineSegment Points(this Avalonia.Media.PolyLineSegment control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.PolyLineSegment.PointsProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.PolyLineSegment Points<TValue>(this Avalonia.Media.PolyLineSegment control, TValue value, FuncValueConverter<TValue, System.Collections.Generic.IList<Avalonia.Point>> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.PolyLineSegment.PointsProperty, ps, () => control.Points = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

@@ -27,11 +27,6 @@ public static T Command<T>(this T control, Func<System.Windows.Input.ICommand?> 
 public static T Command<T>(this T control, Func<ValueTask<System.Windows.Input.ICommand?>> getter, Func<System.Windows.Input.ICommand?>? fallbackGetter = null, Action<System.Windows.Input.ICommand?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.CommandProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Command<T>(this T control,System.Windows.Input.ICommand? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitButton 
-=> control._setEx(Avalonia.Controls.SplitButton.CommandProperty, ps, () => control.Command = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Command<T>(this T control, IBinding binding) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.CommandProperty, binding);
@@ -39,11 +34,6 @@ public static T Command<T>(this T control, IBinding binding) where T : Avalonia.
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Command<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.CommandProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Command<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Windows.Input.ICommand?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitButton 
-=> control._setEx(Avalonia.Controls.SplitButton.CommandProperty, ps, () => control.Command = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // CommandParameter
@@ -60,11 +50,6 @@ public static T CommandParameter<T>(this T control, Func<System.Object?> func, A
 public static T CommandParameter<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.CommandParameterProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T CommandParameter<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitButton 
-=> control._setEx(Avalonia.Controls.SplitButton.CommandParameterProperty, ps, () => control.CommandParameter = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T CommandParameter<T>(this T control, IBinding binding) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.CommandParameterProperty, binding);
@@ -72,11 +57,6 @@ public static T CommandParameter<T>(this T control, IBinding binding) where T : 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T CommandParameter<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.CommandParameterProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T CommandParameter<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitButton 
-=> control._setEx(Avalonia.Controls.SplitButton.CommandParameterProperty, ps, () => control.CommandParameter = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Flyout
@@ -93,11 +73,6 @@ public static T Flyout<T>(this T control, Func<Avalonia.Controls.Primitives.Flyo
 public static T Flyout<T>(this T control, Func<ValueTask<Avalonia.Controls.Primitives.FlyoutBase?>> getter, Func<Avalonia.Controls.Primitives.FlyoutBase?>? fallbackGetter = null, Action<Avalonia.Controls.Primitives.FlyoutBase?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.FlyoutProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Flyout<T>(this T control,Avalonia.Controls.Primitives.FlyoutBase? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitButton 
-=> control._setEx(Avalonia.Controls.SplitButton.FlyoutProperty, ps, () => control.Flyout = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Flyout<T>(this T control, IBinding binding) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.FlyoutProperty, binding);
@@ -105,11 +80,6 @@ public static T Flyout<T>(this T control, IBinding binding) where T : Avalonia.C
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Flyout<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.FlyoutProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Flyout<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Primitives.FlyoutBase?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitButton 
-=> control._setEx(Avalonia.Controls.SplitButton.FlyoutProperty, ps, () => control.Flyout = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // HotKey
@@ -126,11 +96,6 @@ public static T HotKey<T>(this T control, Func<Avalonia.Input.KeyGesture?> func,
 public static T HotKey<T>(this T control, Func<ValueTask<Avalonia.Input.KeyGesture?>> getter, Func<Avalonia.Input.KeyGesture?>? fallbackGetter = null, Action<Avalonia.Input.KeyGesture?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.HotKeyProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T HotKey<T>(this T control,Avalonia.Input.KeyGesture? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitButton 
-=> control._setEx(Avalonia.Controls.SplitButton.HotKeyProperty, ps, () => control.HotKey = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T HotKey<T>(this T control, IBinding binding) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.HotKeyProperty, binding);
@@ -138,11 +103,6 @@ public static T HotKey<T>(this T control, IBinding binding) where T : Avalonia.C
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T HotKey<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.HotKeyProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T HotKey<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Input.KeyGesture?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.SplitButton 
-=> control._setEx(Avalonia.Controls.SplitButton.HotKeyProperty, ps, () => control.HotKey = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

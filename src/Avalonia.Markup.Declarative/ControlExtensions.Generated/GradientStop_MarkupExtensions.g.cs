@@ -27,11 +27,6 @@ public static Avalonia.Media.GradientStop Offset(this Avalonia.Media.GradientSto
 public static Avalonia.Media.GradientStop Offset(this Avalonia.Media.GradientStop control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.GradientStop.OffsetProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.GradientStop Offset(this Avalonia.Media.GradientStop control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.GradientStop.OffsetProperty, ps, () => control.Offset = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.GradientStop Offset(this Avalonia.Media.GradientStop control, IBinding binding)  
    => control._set(Avalonia.Media.GradientStop.OffsetProperty, binding);
@@ -39,11 +34,6 @@ public static Avalonia.Media.GradientStop Offset(this Avalonia.Media.GradientSto
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.GradientStop Offset(this Avalonia.Media.GradientStop control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.GradientStop.OffsetProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.GradientStop Offset<TValue>(this Avalonia.Media.GradientStop control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.GradientStop.OffsetProperty, ps, () => control.Offset = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Color
@@ -60,11 +50,6 @@ public static Avalonia.Media.GradientStop Color(this Avalonia.Media.GradientStop
 public static Avalonia.Media.GradientStop Color(this Avalonia.Media.GradientStop control, Func<ValueTask<Avalonia.Media.Color>> getter, Func<Avalonia.Media.Color>? fallbackGetter = null, Action<Avalonia.Media.Color>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.GradientStop.ColorProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.GradientStop Color(this Avalonia.Media.GradientStop control,Avalonia.Media.Color value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.GradientStop.ColorProperty, ps, () => control.Color = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.GradientStop Color(this Avalonia.Media.GradientStop control, IBinding binding)  
    => control._set(Avalonia.Media.GradientStop.ColorProperty, binding);
@@ -72,11 +57,6 @@ public static Avalonia.Media.GradientStop Color(this Avalonia.Media.GradientStop
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.GradientStop Color(this Avalonia.Media.GradientStop control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.GradientStop.ColorProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.GradientStop Color<TValue>(this Avalonia.Media.GradientStop control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Color> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.GradientStop.ColorProperty, ps, () => control.Color = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

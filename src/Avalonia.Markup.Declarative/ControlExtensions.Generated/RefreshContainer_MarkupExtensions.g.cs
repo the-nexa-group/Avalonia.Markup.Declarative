@@ -27,11 +27,6 @@ public static T Visualizer<T>(this T control, Func<Avalonia.Controls.RefreshVisu
 public static T Visualizer<T>(this T control, Func<ValueTask<Avalonia.Controls.RefreshVisualizer?>> getter, Func<Avalonia.Controls.RefreshVisualizer?>? fallbackGetter = null, Action<Avalonia.Controls.RefreshVisualizer?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.RefreshContainer 
    => control._set(Avalonia.Controls.RefreshContainer.VisualizerProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Visualizer<T>(this T control,Avalonia.Controls.RefreshVisualizer? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.RefreshContainer 
-=> control._setEx(Avalonia.Controls.RefreshContainer.VisualizerProperty, ps, () => control.Visualizer = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Visualizer<T>(this T control, IBinding binding) where T : Avalonia.Controls.RefreshContainer 
    => control._set(Avalonia.Controls.RefreshContainer.VisualizerProperty, binding);
@@ -39,11 +34,6 @@ public static T Visualizer<T>(this T control, IBinding binding) where T : Avalon
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Visualizer<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.RefreshContainer 
    => control._set(Avalonia.Controls.RefreshContainer.VisualizerProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Visualizer<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.RefreshVisualizer?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.RefreshContainer 
-=> control._setEx(Avalonia.Controls.RefreshContainer.VisualizerProperty, ps, () => control.Visualizer = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // PullDirection
@@ -60,11 +50,6 @@ public static T PullDirection<T>(this T control, Func<Avalonia.Input.PullDirecti
 public static T PullDirection<T>(this T control, Func<ValueTask<Avalonia.Input.PullDirection>> getter, Func<Avalonia.Input.PullDirection>? fallbackGetter = null, Action<Avalonia.Input.PullDirection>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.RefreshContainer 
    => control._set(Avalonia.Controls.RefreshContainer.PullDirectionProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T PullDirection<T>(this T control,Avalonia.Input.PullDirection value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.RefreshContainer 
-=> control._setEx(Avalonia.Controls.RefreshContainer.PullDirectionProperty, ps, () => control.PullDirection = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T PullDirection<T>(this T control, IBinding binding) where T : Avalonia.Controls.RefreshContainer 
    => control._set(Avalonia.Controls.RefreshContainer.PullDirectionProperty, binding);
@@ -72,11 +57,6 @@ public static T PullDirection<T>(this T control, IBinding binding) where T : Ava
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T PullDirection<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.RefreshContainer 
    => control._set(Avalonia.Controls.RefreshContainer.PullDirectionProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T PullDirection<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Input.PullDirection> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.RefreshContainer 
-=> control._setEx(Avalonia.Controls.RefreshContainer.PullDirectionProperty, ps, () => control.PullDirection = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

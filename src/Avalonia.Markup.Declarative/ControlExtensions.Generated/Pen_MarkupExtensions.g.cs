@@ -27,11 +27,6 @@ public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, Func<Ava
 public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, Func<ValueTask<Avalonia.Media.IBrush?>> getter, Func<Avalonia.Media.IBrush?>? fallbackGetter = null, Action<Avalonia.Media.IBrush?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.Pen.BrushProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control,Avalonia.Media.IBrush? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Pen.BrushProperty, ps, () => control.Brush = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, IBinding binding)  
    => control._set(Avalonia.Media.Pen.BrushProperty, binding);
@@ -39,11 +34,6 @@ public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, IBinding
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.Pen.BrushProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.Pen Brush<TValue>(this Avalonia.Media.Pen control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IBrush?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Pen.BrushProperty, ps, () => control.Brush = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Thickness
@@ -60,11 +50,6 @@ public static Avalonia.Media.Pen Thickness(this Avalonia.Media.Pen control, Func
 public static Avalonia.Media.Pen Thickness(this Avalonia.Media.Pen control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.Pen.ThicknessProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.Pen Thickness(this Avalonia.Media.Pen control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Pen.ThicknessProperty, ps, () => control.Thickness = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.Pen Thickness(this Avalonia.Media.Pen control, IBinding binding)  
    => control._set(Avalonia.Media.Pen.ThicknessProperty, binding);
@@ -72,11 +57,6 @@ public static Avalonia.Media.Pen Thickness(this Avalonia.Media.Pen control, IBin
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.Pen Thickness(this Avalonia.Media.Pen control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.Pen.ThicknessProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.Pen Thickness<TValue>(this Avalonia.Media.Pen control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Pen.ThicknessProperty, ps, () => control.Thickness = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // DashStyle
@@ -93,11 +73,6 @@ public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, Func
 public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, Func<ValueTask<Avalonia.Media.IDashStyle?>> getter, Func<Avalonia.Media.IDashStyle?>? fallbackGetter = null, Action<Avalonia.Media.IDashStyle?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.Pen.DashStyleProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control,Avalonia.Media.IDashStyle? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Pen.DashStyleProperty, ps, () => control.DashStyle = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, IBinding binding)  
    => control._set(Avalonia.Media.Pen.DashStyleProperty, binding);
@@ -105,11 +80,6 @@ public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, IBin
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.Pen.DashStyleProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.Pen DashStyle<TValue>(this Avalonia.Media.Pen control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IDashStyle?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Pen.DashStyleProperty, ps, () => control.DashStyle = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // LineCap
@@ -126,11 +96,6 @@ public static Avalonia.Media.Pen LineCap(this Avalonia.Media.Pen control, Func<A
 public static Avalonia.Media.Pen LineCap(this Avalonia.Media.Pen control, Func<ValueTask<Avalonia.Media.PenLineCap>> getter, Func<Avalonia.Media.PenLineCap>? fallbackGetter = null, Action<Avalonia.Media.PenLineCap>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.Pen.LineCapProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.Pen LineCap(this Avalonia.Media.Pen control,Avalonia.Media.PenLineCap value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Pen.LineCapProperty, ps, () => control.LineCap = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.Pen LineCap(this Avalonia.Media.Pen control, IBinding binding)  
    => control._set(Avalonia.Media.Pen.LineCapProperty, binding);
@@ -138,11 +103,6 @@ public static Avalonia.Media.Pen LineCap(this Avalonia.Media.Pen control, IBindi
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.Pen LineCap(this Avalonia.Media.Pen control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.Pen.LineCapProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.Pen LineCap<TValue>(this Avalonia.Media.Pen control, TValue value, FuncValueConverter<TValue, Avalonia.Media.PenLineCap> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Pen.LineCapProperty, ps, () => control.LineCap = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // LineJoin
@@ -159,11 +119,6 @@ public static Avalonia.Media.Pen LineJoin(this Avalonia.Media.Pen control, Func<
 public static Avalonia.Media.Pen LineJoin(this Avalonia.Media.Pen control, Func<ValueTask<Avalonia.Media.PenLineJoin>> getter, Func<Avalonia.Media.PenLineJoin>? fallbackGetter = null, Action<Avalonia.Media.PenLineJoin>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.Pen.LineJoinProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.Pen LineJoin(this Avalonia.Media.Pen control,Avalonia.Media.PenLineJoin value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Pen.LineJoinProperty, ps, () => control.LineJoin = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.Pen LineJoin(this Avalonia.Media.Pen control, IBinding binding)  
    => control._set(Avalonia.Media.Pen.LineJoinProperty, binding);
@@ -171,11 +126,6 @@ public static Avalonia.Media.Pen LineJoin(this Avalonia.Media.Pen control, IBind
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.Pen LineJoin(this Avalonia.Media.Pen control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.Pen.LineJoinProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.Pen LineJoin<TValue>(this Avalonia.Media.Pen control, TValue value, FuncValueConverter<TValue, Avalonia.Media.PenLineJoin> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Pen.LineJoinProperty, ps, () => control.LineJoin = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // MiterLimit
@@ -192,11 +142,6 @@ public static Avalonia.Media.Pen MiterLimit(this Avalonia.Media.Pen control, Fun
 public static Avalonia.Media.Pen MiterLimit(this Avalonia.Media.Pen control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.Pen.MiterLimitProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.Pen MiterLimit(this Avalonia.Media.Pen control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Pen.MiterLimitProperty, ps, () => control.MiterLimit = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.Pen MiterLimit(this Avalonia.Media.Pen control, IBinding binding)  
    => control._set(Avalonia.Media.Pen.MiterLimitProperty, binding);
@@ -204,11 +149,6 @@ public static Avalonia.Media.Pen MiterLimit(this Avalonia.Media.Pen control, IBi
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.Pen MiterLimit(this Avalonia.Media.Pen control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.Pen.MiterLimitProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.Pen MiterLimit<TValue>(this Avalonia.Media.Pen control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.Pen.MiterLimitProperty, ps, () => control.MiterLimit = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

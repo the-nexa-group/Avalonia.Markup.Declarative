@@ -27,11 +27,6 @@ public static T DataContext<T>(this T control, Func<System.Object?> func, Action
 public static T DataContext<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Application 
    => control._set(Avalonia.Application.DataContextProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T DataContext<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Application 
-=> control._setEx(Avalonia.Application.DataContextProperty, ps, () => control.DataContext = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T DataContext<T>(this T control, IBinding binding) where T : Avalonia.Application 
    => control._set(Avalonia.Application.DataContextProperty, binding);
@@ -39,11 +34,6 @@ public static T DataContext<T>(this T control, IBinding binding) where T : Avalo
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T DataContext<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Application 
    => control._set(Avalonia.Application.DataContextProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T DataContext<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Application 
-=> control._setEx(Avalonia.Application.DataContextProperty, ps, () => control.DataContext = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // RequestedThemeVariant
@@ -60,11 +50,6 @@ public static T RequestedThemeVariant<T>(this T control, Func<Avalonia.Styling.T
 public static T RequestedThemeVariant<T>(this T control, Func<ValueTask<Avalonia.Styling.ThemeVariant?>> getter, Func<Avalonia.Styling.ThemeVariant?>? fallbackGetter = null, Action<Avalonia.Styling.ThemeVariant?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Application 
    => control._set(Avalonia.Application.RequestedThemeVariantProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T RequestedThemeVariant<T>(this T control,Avalonia.Styling.ThemeVariant? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Application 
-=> control._setEx(Avalonia.Application.RequestedThemeVariantProperty, ps, () => control.RequestedThemeVariant = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T RequestedThemeVariant<T>(this T control, IBinding binding) where T : Avalonia.Application 
    => control._set(Avalonia.Application.RequestedThemeVariantProperty, binding);
@@ -72,11 +57,6 @@ public static T RequestedThemeVariant<T>(this T control, IBinding binding) where
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T RequestedThemeVariant<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Application 
    => control._set(Avalonia.Application.RequestedThemeVariantProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T RequestedThemeVariant<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Styling.ThemeVariant?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Application 
-=> control._setEx(Avalonia.Application.RequestedThemeVariantProperty, ps, () => control.RequestedThemeVariant = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Name
@@ -93,11 +73,6 @@ public static T Name<T>(this T control, Func<System.String?> func, Action<System
 public static T Name<T>(this T control, Func<ValueTask<System.String?>> getter, Func<System.String?>? fallbackGetter = null, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Application 
    => control._set(Avalonia.Application.NameProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Name<T>(this T control,System.String? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Application 
-=> control._setEx(Avalonia.Application.NameProperty, ps, () => control.Name = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Name<T>(this T control, IBinding binding) where T : Avalonia.Application 
    => control._set(Avalonia.Application.NameProperty, binding);
@@ -105,11 +80,6 @@ public static T Name<T>(this T control, IBinding binding) where T : Avalonia.App
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Name<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Application 
    => control._set(Avalonia.Application.NameProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Name<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Application 
-=> control._setEx(Avalonia.Application.NameProperty, ps, () => control.Name = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

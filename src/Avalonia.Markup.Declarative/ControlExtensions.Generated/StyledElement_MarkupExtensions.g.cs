@@ -27,11 +27,6 @@ public static T DataContext<T>(this T control, Func<System.Object?> func, Action
 public static T DataContext<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.DataContextProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T DataContext<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.StyledElement 
-=> control._setEx(Avalonia.StyledElement.DataContextProperty, ps, () => control.DataContext = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T DataContext<T>(this T control, IBinding binding) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.DataContextProperty, binding);
@@ -39,11 +34,6 @@ public static T DataContext<T>(this T control, IBinding binding) where T : Avalo
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T DataContext<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.DataContextProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T DataContext<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.StyledElement 
-=> control._setEx(Avalonia.StyledElement.DataContextProperty, ps, () => control.DataContext = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Name
@@ -60,11 +50,6 @@ public static T Name<T>(this T control, Func<System.String?> func, Action<System
 public static T Name<T>(this T control, Func<ValueTask<System.String?>> getter, Func<System.String?>? fallbackGetter = null, Action<System.String?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.NameProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Name<T>(this T control,System.String? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.StyledElement 
-=> control._setEx(Avalonia.StyledElement.NameProperty, ps, () => control.Name = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Name<T>(this T control, IBinding binding) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.NameProperty, binding);
@@ -72,11 +57,6 @@ public static T Name<T>(this T control, IBinding binding) where T : Avalonia.Sty
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Name<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.NameProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Name<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.StyledElement 
-=> control._setEx(Avalonia.StyledElement.NameProperty, ps, () => control.Name = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Theme
@@ -93,11 +73,6 @@ public static T Theme<T>(this T control, Func<Avalonia.Styling.ControlTheme?> fu
 public static T Theme<T>(this T control, Func<ValueTask<Avalonia.Styling.ControlTheme?>> getter, Func<Avalonia.Styling.ControlTheme?>? fallbackGetter = null, Action<Avalonia.Styling.ControlTheme?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.ThemeProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Theme<T>(this T control,Avalonia.Styling.ControlTheme? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.StyledElement 
-=> control._setEx(Avalonia.StyledElement.ThemeProperty, ps, () => control.Theme = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Theme<T>(this T control, IBinding binding) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.ThemeProperty, binding);
@@ -105,11 +80,6 @@ public static T Theme<T>(this T control, IBinding binding) where T : Avalonia.St
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Theme<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.ThemeProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Theme<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Styling.ControlTheme?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.StyledElement 
-=> control._setEx(Avalonia.StyledElement.ThemeProperty, ps, () => control.Theme = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

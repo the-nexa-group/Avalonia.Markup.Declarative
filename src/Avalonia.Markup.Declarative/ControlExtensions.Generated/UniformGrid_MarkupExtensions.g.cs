@@ -27,11 +27,6 @@ public static T Rows<T>(this T control, Func<System.Int32> func, Action<System.I
 public static T Rows<T>(this T control, Func<ValueTask<System.Int32>> getter, Func<System.Int32>? fallbackGetter = null, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.RowsProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Rows<T>(this T control,System.Int32 value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.UniformGrid 
-=> control._setEx(Avalonia.Controls.Primitives.UniformGrid.RowsProperty, ps, () => control.Rows = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Rows<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.RowsProperty, binding);
@@ -39,11 +34,6 @@ public static T Rows<T>(this T control, IBinding binding) where T : Avalonia.Con
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Rows<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.RowsProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Rows<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Int32> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.UniformGrid 
-=> control._setEx(Avalonia.Controls.Primitives.UniformGrid.RowsProperty, ps, () => control.Rows = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Columns
@@ -60,11 +50,6 @@ public static T Columns<T>(this T control, Func<System.Int32> func, Action<Syste
 public static T Columns<T>(this T control, Func<ValueTask<System.Int32>> getter, Func<System.Int32>? fallbackGetter = null, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.ColumnsProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Columns<T>(this T control,System.Int32 value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.UniformGrid 
-=> control._setEx(Avalonia.Controls.Primitives.UniformGrid.ColumnsProperty, ps, () => control.Columns = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Columns<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.ColumnsProperty, binding);
@@ -72,11 +57,6 @@ public static T Columns<T>(this T control, IBinding binding) where T : Avalonia.
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Columns<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.ColumnsProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Columns<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Int32> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.UniformGrid 
-=> control._setEx(Avalonia.Controls.Primitives.UniformGrid.ColumnsProperty, ps, () => control.Columns = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // FirstColumn
@@ -93,11 +73,6 @@ public static T FirstColumn<T>(this T control, Func<System.Int32> func, Action<S
 public static T FirstColumn<T>(this T control, Func<ValueTask<System.Int32>> getter, Func<System.Int32>? fallbackGetter = null, Action<System.Int32>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.FirstColumnProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T FirstColumn<T>(this T control,System.Int32 value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.UniformGrid 
-=> control._setEx(Avalonia.Controls.Primitives.UniformGrid.FirstColumnProperty, ps, () => control.FirstColumn = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T FirstColumn<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.FirstColumnProperty, binding);
@@ -105,11 +80,6 @@ public static T FirstColumn<T>(this T control, IBinding binding) where T : Avalo
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T FirstColumn<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.FirstColumnProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T FirstColumn<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Int32> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.UniformGrid 
-=> control._setEx(Avalonia.Controls.Primitives.UniformGrid.FirstColumnProperty, ps, () => control.FirstColumn = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // RowSpacing
@@ -126,11 +96,6 @@ public static T RowSpacing<T>(this T control, Func<System.Double> func, Action<S
 public static T RowSpacing<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.RowSpacingProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T RowSpacing<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.UniformGrid 
-=> control._setEx(Avalonia.Controls.Primitives.UniformGrid.RowSpacingProperty, ps, () => control.RowSpacing = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T RowSpacing<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.RowSpacingProperty, binding);
@@ -138,11 +103,6 @@ public static T RowSpacing<T>(this T control, IBinding binding) where T : Avalon
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T RowSpacing<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.RowSpacingProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T RowSpacing<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.UniformGrid 
-=> control._setEx(Avalonia.Controls.Primitives.UniformGrid.RowSpacingProperty, ps, () => control.RowSpacing = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ColumnSpacing
@@ -159,11 +119,6 @@ public static T ColumnSpacing<T>(this T control, Func<System.Double> func, Actio
 public static T ColumnSpacing<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.ColumnSpacingProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ColumnSpacing<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.UniformGrid 
-=> control._setEx(Avalonia.Controls.Primitives.UniformGrid.ColumnSpacingProperty, ps, () => control.ColumnSpacing = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ColumnSpacing<T>(this T control, IBinding binding) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.ColumnSpacingProperty, binding);
@@ -171,11 +126,6 @@ public static T ColumnSpacing<T>(this T control, IBinding binding) where T : Ava
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ColumnSpacing<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.ColumnSpacingProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ColumnSpacing<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Primitives.UniformGrid 
-=> control._setEx(Avalonia.Controls.Primitives.UniformGrid.ColumnSpacingProperty, ps, () => control.ColumnSpacing = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

@@ -62,10 +62,8 @@ public class GeneratorHost(ExtensionGeneratorConfig config)
                 new ValueOverloadsSetterGenerator(),
 
                 //obsolete candidates
-                new MagicalSetterGenerator(),
                 new BindSetterGenerator(),
-                new AvaloniaPropertyBindSetterGenerator(),
-                new MagicalSetterWithConverterGenerator()
+                new AvaloniaPropertyBindSetterGenerator()
             ),
 
             new("Attached Properties", 

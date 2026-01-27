@@ -27,11 +27,6 @@ public static T RequestedThemeVariant<T>(this T control, Func<Avalonia.Styling.T
 public static T RequestedThemeVariant<T>(this T control, Func<ValueTask<Avalonia.Styling.ThemeVariant?>> getter, Func<Avalonia.Styling.ThemeVariant?>? fallbackGetter = null, Action<Avalonia.Styling.ThemeVariant?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ThemeVariantScope 
    => control._set(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T RequestedThemeVariant<T>(this T control,Avalonia.Styling.ThemeVariant? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ThemeVariantScope 
-=> control._setEx(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty, ps, () => control.RequestedThemeVariant = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T RequestedThemeVariant<T>(this T control, IBinding binding) where T : Avalonia.Controls.ThemeVariantScope 
    => control._set(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty, binding);
@@ -39,11 +34,6 @@ public static T RequestedThemeVariant<T>(this T control, IBinding binding) where
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T RequestedThemeVariant<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ThemeVariantScope 
    => control._set(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T RequestedThemeVariant<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Styling.ThemeVariant?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ThemeVariantScope 
-=> control._setEx(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty, ps, () => control.RequestedThemeVariant = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

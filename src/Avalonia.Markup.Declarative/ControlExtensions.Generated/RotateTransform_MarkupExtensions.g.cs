@@ -27,11 +27,6 @@ public static Avalonia.Media.RotateTransform Angle(this Avalonia.Media.RotateTra
 public static Avalonia.Media.RotateTransform Angle(this Avalonia.Media.RotateTransform control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.RotateTransform.AngleProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.RotateTransform Angle(this Avalonia.Media.RotateTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.RotateTransform.AngleProperty, ps, () => control.Angle = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.RotateTransform Angle(this Avalonia.Media.RotateTransform control, IBinding binding)  
    => control._set(Avalonia.Media.RotateTransform.AngleProperty, binding);
@@ -39,11 +34,6 @@ public static Avalonia.Media.RotateTransform Angle(this Avalonia.Media.RotateTra
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.RotateTransform Angle(this Avalonia.Media.RotateTransform control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.RotateTransform.AngleProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.RotateTransform Angle<TValue>(this Avalonia.Media.RotateTransform control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.RotateTransform.AngleProperty, ps, () => control.Angle = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // CenterX
@@ -60,11 +50,6 @@ public static Avalonia.Media.RotateTransform CenterX(this Avalonia.Media.RotateT
 public static Avalonia.Media.RotateTransform CenterX(this Avalonia.Media.RotateTransform control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.RotateTransform.CenterXProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.RotateTransform CenterX(this Avalonia.Media.RotateTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.RotateTransform.CenterXProperty, ps, () => control.CenterX = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.RotateTransform CenterX(this Avalonia.Media.RotateTransform control, IBinding binding)  
    => control._set(Avalonia.Media.RotateTransform.CenterXProperty, binding);
@@ -72,11 +57,6 @@ public static Avalonia.Media.RotateTransform CenterX(this Avalonia.Media.RotateT
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.RotateTransform CenterX(this Avalonia.Media.RotateTransform control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.RotateTransform.CenterXProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.RotateTransform CenterX<TValue>(this Avalonia.Media.RotateTransform control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.RotateTransform.CenterXProperty, ps, () => control.CenterX = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // CenterY
@@ -93,11 +73,6 @@ public static Avalonia.Media.RotateTransform CenterY(this Avalonia.Media.RotateT
 public static Avalonia.Media.RotateTransform CenterY(this Avalonia.Media.RotateTransform control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.RotateTransform.CenterYProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.RotateTransform CenterY(this Avalonia.Media.RotateTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.RotateTransform.CenterYProperty, ps, () => control.CenterY = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.RotateTransform CenterY(this Avalonia.Media.RotateTransform control, IBinding binding)  
    => control._set(Avalonia.Media.RotateTransform.CenterYProperty, binding);
@@ -105,11 +80,6 @@ public static Avalonia.Media.RotateTransform CenterY(this Avalonia.Media.RotateT
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.RotateTransform CenterY(this Avalonia.Media.RotateTransform control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.RotateTransform.CenterYProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.RotateTransform CenterY<TValue>(this Avalonia.Media.RotateTransform control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.RotateTransform.CenterYProperty, ps, () => control.CenterY = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

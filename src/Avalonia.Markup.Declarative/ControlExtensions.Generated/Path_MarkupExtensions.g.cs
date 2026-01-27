@@ -27,11 +27,6 @@ public static T Data<T>(this T control, Func<Avalonia.Media.Geometry?> func, Act
 public static T Data<T>(this T control, Func<ValueTask<Avalonia.Media.Geometry?>> getter, Func<Avalonia.Media.Geometry?>? fallbackGetter = null, Action<Avalonia.Media.Geometry?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Shapes.Path 
    => control._set(Avalonia.Controls.Shapes.Path.DataProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Data<T>(this T control,Avalonia.Media.Geometry? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Shapes.Path 
-=> control._setEx(Avalonia.Controls.Shapes.Path.DataProperty, ps, () => control.Data = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Data<T>(this T control, IBinding binding) where T : Avalonia.Controls.Shapes.Path 
    => control._set(Avalonia.Controls.Shapes.Path.DataProperty, binding);
@@ -39,11 +34,6 @@ public static T Data<T>(this T control, IBinding binding) where T : Avalonia.Con
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Data<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Shapes.Path 
    => control._set(Avalonia.Controls.Shapes.Path.DataProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Data<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Geometry?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Shapes.Path 
-=> control._setEx(Avalonia.Controls.Shapes.Path.DataProperty, ps, () => control.Data = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

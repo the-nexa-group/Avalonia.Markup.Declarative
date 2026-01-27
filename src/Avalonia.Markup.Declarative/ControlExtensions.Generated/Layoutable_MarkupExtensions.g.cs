@@ -27,11 +27,6 @@ public static T Width<T>(this T control, Func<System.Double> func, Action<System
 public static T Width<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.WidthProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Width<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.WidthProperty, ps, () => control.Width = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Width<T>(this T control, IBinding binding) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.WidthProperty, binding);
@@ -39,11 +34,6 @@ public static T Width<T>(this T control, IBinding binding) where T : Avalonia.La
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Width<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.WidthProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Width<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.WidthProperty, ps, () => control.Width = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Height
@@ -60,11 +50,6 @@ public static T Height<T>(this T control, Func<System.Double> func, Action<Syste
 public static T Height<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.HeightProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Height<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.HeightProperty, ps, () => control.Height = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Height<T>(this T control, IBinding binding) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.HeightProperty, binding);
@@ -72,11 +57,6 @@ public static T Height<T>(this T control, IBinding binding) where T : Avalonia.L
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Height<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.HeightProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Height<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.HeightProperty, ps, () => control.Height = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // MinWidth
@@ -93,11 +73,6 @@ public static T MinWidth<T>(this T control, Func<System.Double> func, Action<Sys
 public static T MinWidth<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MinWidthProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T MinWidth<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.MinWidthProperty, ps, () => control.MinWidth = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T MinWidth<T>(this T control, IBinding binding) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MinWidthProperty, binding);
@@ -105,11 +80,6 @@ public static T MinWidth<T>(this T control, IBinding binding) where T : Avalonia
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T MinWidth<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MinWidthProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T MinWidth<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.MinWidthProperty, ps, () => control.MinWidth = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // MaxWidth
@@ -126,11 +96,6 @@ public static T MaxWidth<T>(this T control, Func<System.Double> func, Action<Sys
 public static T MaxWidth<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MaxWidthProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T MaxWidth<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.MaxWidthProperty, ps, () => control.MaxWidth = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T MaxWidth<T>(this T control, IBinding binding) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MaxWidthProperty, binding);
@@ -138,11 +103,6 @@ public static T MaxWidth<T>(this T control, IBinding binding) where T : Avalonia
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T MaxWidth<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MaxWidthProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T MaxWidth<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.MaxWidthProperty, ps, () => control.MaxWidth = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // MinHeight
@@ -159,11 +119,6 @@ public static T MinHeight<T>(this T control, Func<System.Double> func, Action<Sy
 public static T MinHeight<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MinHeightProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T MinHeight<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.MinHeightProperty, ps, () => control.MinHeight = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T MinHeight<T>(this T control, IBinding binding) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MinHeightProperty, binding);
@@ -171,11 +126,6 @@ public static T MinHeight<T>(this T control, IBinding binding) where T : Avaloni
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T MinHeight<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MinHeightProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T MinHeight<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.MinHeightProperty, ps, () => control.MinHeight = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // MaxHeight
@@ -192,11 +142,6 @@ public static T MaxHeight<T>(this T control, Func<System.Double> func, Action<Sy
 public static T MaxHeight<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MaxHeightProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T MaxHeight<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.MaxHeightProperty, ps, () => control.MaxHeight = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T MaxHeight<T>(this T control, IBinding binding) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MaxHeightProperty, binding);
@@ -204,11 +149,6 @@ public static T MaxHeight<T>(this T control, IBinding binding) where T : Avaloni
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T MaxHeight<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MaxHeightProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T MaxHeight<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.MaxHeightProperty, ps, () => control.MaxHeight = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Margin
@@ -234,11 +174,6 @@ public static T Margin<T>(this T control, System.Double horizontal = default!, S
 public static T Margin<T>(this T control, System.Double left = default!, System.Double top = default!, System.Double right = default!, System.Double bottom = default!) where T : Avalonia.Layout.Layoutable 
    => control._set(() => control.Margin = new Avalonia.Thickness(left, top, right, bottom));
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Margin<T>(this T control,Avalonia.Thickness value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.MarginProperty, ps, () => control.Margin = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Margin<T>(this T control, IBinding binding) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MarginProperty, binding);
@@ -246,11 +181,6 @@ public static T Margin<T>(this T control, IBinding binding) where T : Avalonia.L
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Margin<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MarginProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Margin<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Thickness> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.MarginProperty, ps, () => control.Margin = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // HorizontalAlignment
@@ -267,11 +197,6 @@ public static T HorizontalAlignment<T>(this T control, Func<Avalonia.Layout.Hori
 public static T HorizontalAlignment<T>(this T control, Func<ValueTask<Avalonia.Layout.HorizontalAlignment>> getter, Func<Avalonia.Layout.HorizontalAlignment>? fallbackGetter = null, Action<Avalonia.Layout.HorizontalAlignment>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.HorizontalAlignmentProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T HorizontalAlignment<T>(this T control,Avalonia.Layout.HorizontalAlignment value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.HorizontalAlignmentProperty, ps, () => control.HorizontalAlignment = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T HorizontalAlignment<T>(this T control, IBinding binding) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.HorizontalAlignmentProperty, binding);
@@ -279,11 +204,6 @@ public static T HorizontalAlignment<T>(this T control, IBinding binding) where T
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T HorizontalAlignment<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.HorizontalAlignmentProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T HorizontalAlignment<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Layout.HorizontalAlignment> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.HorizontalAlignmentProperty, ps, () => control.HorizontalAlignment = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // VerticalAlignment
@@ -300,11 +220,6 @@ public static T VerticalAlignment<T>(this T control, Func<Avalonia.Layout.Vertic
 public static T VerticalAlignment<T>(this T control, Func<ValueTask<Avalonia.Layout.VerticalAlignment>> getter, Func<Avalonia.Layout.VerticalAlignment>? fallbackGetter = null, Action<Avalonia.Layout.VerticalAlignment>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.VerticalAlignmentProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T VerticalAlignment<T>(this T control,Avalonia.Layout.VerticalAlignment value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.VerticalAlignmentProperty, ps, () => control.VerticalAlignment = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T VerticalAlignment<T>(this T control, IBinding binding) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.VerticalAlignmentProperty, binding);
@@ -312,11 +227,6 @@ public static T VerticalAlignment<T>(this T control, IBinding binding) where T :
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T VerticalAlignment<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.VerticalAlignmentProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T VerticalAlignment<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Layout.VerticalAlignment> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.VerticalAlignmentProperty, ps, () => control.VerticalAlignment = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // UseLayoutRounding
@@ -333,11 +243,6 @@ public static T UseLayoutRounding<T>(this T control, Func<System.Boolean> func, 
 public static T UseLayoutRounding<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.UseLayoutRoundingProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T UseLayoutRounding<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.UseLayoutRoundingProperty, ps, () => control.UseLayoutRounding = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T UseLayoutRounding<T>(this T control, IBinding binding) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.UseLayoutRoundingProperty, binding);
@@ -345,11 +250,6 @@ public static T UseLayoutRounding<T>(this T control, IBinding binding) where T :
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T UseLayoutRounding<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.UseLayoutRoundingProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T UseLayoutRounding<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Layout.Layoutable 
-=> control._setEx(Avalonia.Layout.Layoutable.UseLayoutRoundingProperty, ps, () => control.UseLayoutRounding = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

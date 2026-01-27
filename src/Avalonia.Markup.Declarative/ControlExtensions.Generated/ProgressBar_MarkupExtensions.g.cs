@@ -27,11 +27,6 @@ public static T IsIndeterminate<T>(this T control, Func<System.Boolean> func, Ac
 public static T IsIndeterminate<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.IsIndeterminateProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T IsIndeterminate<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ProgressBar 
-=> control._setEx(Avalonia.Controls.ProgressBar.IsIndeterminateProperty, ps, () => control.IsIndeterminate = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T IsIndeterminate<T>(this T control, IBinding binding) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.IsIndeterminateProperty, binding);
@@ -39,11 +34,6 @@ public static T IsIndeterminate<T>(this T control, IBinding binding) where T : A
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T IsIndeterminate<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.IsIndeterminateProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T IsIndeterminate<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ProgressBar 
-=> control._setEx(Avalonia.Controls.ProgressBar.IsIndeterminateProperty, ps, () => control.IsIndeterminate = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ShowProgressText
@@ -60,11 +50,6 @@ public static T ShowProgressText<T>(this T control, Func<System.Boolean> func, A
 public static T ShowProgressText<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.ShowProgressTextProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ShowProgressText<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ProgressBar 
-=> control._setEx(Avalonia.Controls.ProgressBar.ShowProgressTextProperty, ps, () => control.ShowProgressText = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ShowProgressText<T>(this T control, IBinding binding) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.ShowProgressTextProperty, binding);
@@ -72,11 +57,6 @@ public static T ShowProgressText<T>(this T control, IBinding binding) where T : 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ShowProgressText<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.ShowProgressTextProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ShowProgressText<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ProgressBar 
-=> control._setEx(Avalonia.Controls.ProgressBar.ShowProgressTextProperty, ps, () => control.ShowProgressText = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ProgressTextFormat
@@ -93,11 +73,6 @@ public static T ProgressTextFormat<T>(this T control, Func<System.String> func, 
 public static T ProgressTextFormat<T>(this T control, Func<ValueTask<System.String>> getter, Func<System.String>? fallbackGetter = null, Action<System.String>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.ProgressTextFormatProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ProgressTextFormat<T>(this T control,System.String value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ProgressBar 
-=> control._setEx(Avalonia.Controls.ProgressBar.ProgressTextFormatProperty, ps, () => control.ProgressTextFormat = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ProgressTextFormat<T>(this T control, IBinding binding) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.ProgressTextFormatProperty, binding);
@@ -105,11 +80,6 @@ public static T ProgressTextFormat<T>(this T control, IBinding binding) where T 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ProgressTextFormat<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.ProgressTextFormatProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ProgressTextFormat<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ProgressBar 
-=> control._setEx(Avalonia.Controls.ProgressBar.ProgressTextFormatProperty, ps, () => control.ProgressTextFormat = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Orientation
@@ -126,11 +96,6 @@ public static T Orientation<T>(this T control, Func<Avalonia.Layout.Orientation>
 public static T Orientation<T>(this T control, Func<ValueTask<Avalonia.Layout.Orientation>> getter, Func<Avalonia.Layout.Orientation>? fallbackGetter = null, Action<Avalonia.Layout.Orientation>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.OrientationProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Orientation<T>(this T control,Avalonia.Layout.Orientation value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ProgressBar 
-=> control._setEx(Avalonia.Controls.ProgressBar.OrientationProperty, ps, () => control.Orientation = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Orientation<T>(this T control, IBinding binding) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.OrientationProperty, binding);
@@ -138,11 +103,6 @@ public static T Orientation<T>(this T control, IBinding binding) where T : Avalo
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Orientation<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.OrientationProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Orientation<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Layout.Orientation> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ProgressBar 
-=> control._setEx(Avalonia.Controls.ProgressBar.OrientationProperty, ps, () => control.Orientation = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

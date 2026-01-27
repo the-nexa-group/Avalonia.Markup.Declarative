@@ -27,11 +27,6 @@ public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBru
 public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, Func<ValueTask<Avalonia.Media.Drawing?>> getter, Func<Avalonia.Media.Drawing?>? fallbackGetter = null, Action<Avalonia.Media.Drawing?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.DrawingBrush.DrawingProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control,Avalonia.Media.Drawing? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.DrawingBrush.DrawingProperty, ps, () => control.Drawing = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, IBinding binding)  
    => control._set(Avalonia.Media.DrawingBrush.DrawingProperty, binding);
@@ -39,11 +34,6 @@ public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBru
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.DrawingBrush.DrawingProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.DrawingBrush Drawing<TValue>(this Avalonia.Media.DrawingBrush control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Drawing?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.DrawingBrush.DrawingProperty, ps, () => control.Drawing = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

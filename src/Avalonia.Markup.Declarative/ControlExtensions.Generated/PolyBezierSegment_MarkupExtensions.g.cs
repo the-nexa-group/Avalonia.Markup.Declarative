@@ -27,11 +27,6 @@ public static Avalonia.Media.PolyBezierSegment Points(this Avalonia.Media.PolyBe
 public static Avalonia.Media.PolyBezierSegment Points(this Avalonia.Media.PolyBezierSegment control, Func<ValueTask<Avalonia.Points?>> getter, Func<Avalonia.Points?>? fallbackGetter = null, Action<Avalonia.Points?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.PolyBezierSegment.PointsProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.PolyBezierSegment Points(this Avalonia.Media.PolyBezierSegment control,Avalonia.Points? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.PolyBezierSegment.PointsProperty, ps, () => control.Points = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.PolyBezierSegment Points(this Avalonia.Media.PolyBezierSegment control, IBinding binding)  
    => control._set(Avalonia.Media.PolyBezierSegment.PointsProperty, binding);
@@ -39,11 +34,6 @@ public static Avalonia.Media.PolyBezierSegment Points(this Avalonia.Media.PolyBe
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.PolyBezierSegment Points(this Avalonia.Media.PolyBezierSegment control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.PolyBezierSegment.PointsProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.PolyBezierSegment Points<TValue>(this Avalonia.Media.PolyBezierSegment control, TValue value, FuncValueConverter<TValue, Avalonia.Points?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.PolyBezierSegment.PointsProperty, ps, () => control.Points = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

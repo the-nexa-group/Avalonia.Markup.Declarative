@@ -27,11 +27,6 @@ public static Avalonia.Media.SkewTransform AngleX(this Avalonia.Media.SkewTransf
 public static Avalonia.Media.SkewTransform AngleX(this Avalonia.Media.SkewTransform control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.SkewTransform.AngleXProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.SkewTransform AngleX(this Avalonia.Media.SkewTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.SkewTransform.AngleXProperty, ps, () => control.AngleX = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.SkewTransform AngleX(this Avalonia.Media.SkewTransform control, IBinding binding)  
    => control._set(Avalonia.Media.SkewTransform.AngleXProperty, binding);
@@ -39,11 +34,6 @@ public static Avalonia.Media.SkewTransform AngleX(this Avalonia.Media.SkewTransf
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.SkewTransform AngleX(this Avalonia.Media.SkewTransform control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.SkewTransform.AngleXProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.SkewTransform AngleX<TValue>(this Avalonia.Media.SkewTransform control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.SkewTransform.AngleXProperty, ps, () => control.AngleX = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // AngleY
@@ -60,11 +50,6 @@ public static Avalonia.Media.SkewTransform AngleY(this Avalonia.Media.SkewTransf
 public static Avalonia.Media.SkewTransform AngleY(this Avalonia.Media.SkewTransform control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.SkewTransform.AngleYProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.SkewTransform AngleY(this Avalonia.Media.SkewTransform control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.SkewTransform.AngleYProperty, ps, () => control.AngleY = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.SkewTransform AngleY(this Avalonia.Media.SkewTransform control, IBinding binding)  
    => control._set(Avalonia.Media.SkewTransform.AngleYProperty, binding);
@@ -72,11 +57,6 @@ public static Avalonia.Media.SkewTransform AngleY(this Avalonia.Media.SkewTransf
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.SkewTransform AngleY(this Avalonia.Media.SkewTransform control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.SkewTransform.AngleYProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.SkewTransform AngleY<TValue>(this Avalonia.Media.SkewTransform control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.SkewTransform.AngleYProperty, ps, () => control.AngleY = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

@@ -27,11 +27,6 @@ public static Avalonia.Media.VisualBrush Visual(this Avalonia.Media.VisualBrush 
 public static Avalonia.Media.VisualBrush Visual(this Avalonia.Media.VisualBrush control, Func<ValueTask<Avalonia.Visual?>> getter, Func<Avalonia.Visual?>? fallbackGetter = null, Action<Avalonia.Visual?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)  
    => control._set(Avalonia.Media.VisualBrush.VisualProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static Avalonia.Media.VisualBrush Visual(this Avalonia.Media.VisualBrush control,Avalonia.Visual? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.VisualBrush.VisualProperty, ps, () => control.Visual = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static Avalonia.Media.VisualBrush Visual(this Avalonia.Media.VisualBrush control, IBinding binding)  
    => control._set(Avalonia.Media.VisualBrush.VisualProperty, binding);
@@ -39,11 +34,6 @@ public static Avalonia.Media.VisualBrush Visual(this Avalonia.Media.VisualBrush 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static Avalonia.Media.VisualBrush Visual(this Avalonia.Media.VisualBrush control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)  
    => control._set(Avalonia.Media.VisualBrush.VisualProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static Avalonia.Media.VisualBrush Visual<TValue>(this Avalonia.Media.VisualBrush control, TValue value, FuncValueConverter<TValue, Avalonia.Visual?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null)  
-=> control._setEx(Avalonia.Media.VisualBrush.VisualProperty, ps, () => control.Visual = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

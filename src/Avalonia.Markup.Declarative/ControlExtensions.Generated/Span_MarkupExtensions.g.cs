@@ -27,11 +27,6 @@ public static T Inlines<T>(this T control, Func<Avalonia.Controls.Documents.Inli
 public static T Inlines<T>(this T control, Func<ValueTask<Avalonia.Controls.Documents.InlineCollection>> getter, Func<Avalonia.Controls.Documents.InlineCollection>? fallbackGetter = null, Action<Avalonia.Controls.Documents.InlineCollection>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Documents.Span 
    => control._set(Avalonia.Controls.Documents.Span.InlinesProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Inlines<T>(this T control,Avalonia.Controls.Documents.InlineCollection value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Documents.Span 
-=> control._setEx(Avalonia.Controls.Documents.Span.InlinesProperty, ps, () => control.Inlines = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Inlines<T>(this T control, IBinding binding) where T : Avalonia.Controls.Documents.Span 
    => control._set(Avalonia.Controls.Documents.Span.InlinesProperty, binding);
@@ -39,11 +34,6 @@ public static T Inlines<T>(this T control, IBinding binding) where T : Avalonia.
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Inlines<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Documents.Span 
    => control._set(Avalonia.Controls.Documents.Span.InlinesProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Inlines<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Documents.InlineCollection> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Documents.Span 
-=> control._setEx(Avalonia.Controls.Documents.Span.InlinesProperty, ps, () => control.Inlines = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

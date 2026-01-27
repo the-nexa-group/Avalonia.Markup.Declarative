@@ -27,11 +27,6 @@ public static T Duration<T>(this T control, Func<System.TimeSpan> func, Action<S
 public static T Duration<T>(this T control, Func<ValueTask<System.TimeSpan>> getter, Func<System.TimeSpan>? fallbackGetter = null, Action<System.TimeSpan>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Animation.TransitionBase 
    => control._set(Avalonia.Animation.TransitionBase.DurationProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Duration<T>(this T control,System.TimeSpan value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Animation.TransitionBase 
-=> control._setEx(Avalonia.Animation.TransitionBase.DurationProperty, ps, () => control.Duration = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Duration<T>(this T control, IBinding binding) where T : Avalonia.Animation.TransitionBase 
    => control._set(Avalonia.Animation.TransitionBase.DurationProperty, binding);
@@ -39,11 +34,6 @@ public static T Duration<T>(this T control, IBinding binding) where T : Avalonia
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Duration<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Animation.TransitionBase 
    => control._set(Avalonia.Animation.TransitionBase.DurationProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Duration<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.TimeSpan> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Animation.TransitionBase 
-=> control._setEx(Avalonia.Animation.TransitionBase.DurationProperty, ps, () => control.Duration = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Delay
@@ -60,11 +50,6 @@ public static T Delay<T>(this T control, Func<System.TimeSpan> func, Action<Syst
 public static T Delay<T>(this T control, Func<ValueTask<System.TimeSpan>> getter, Func<System.TimeSpan>? fallbackGetter = null, Action<System.TimeSpan>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Animation.TransitionBase 
    => control._set(Avalonia.Animation.TransitionBase.DelayProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Delay<T>(this T control,System.TimeSpan value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Animation.TransitionBase 
-=> control._setEx(Avalonia.Animation.TransitionBase.DelayProperty, ps, () => control.Delay = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Delay<T>(this T control, IBinding binding) where T : Avalonia.Animation.TransitionBase 
    => control._set(Avalonia.Animation.TransitionBase.DelayProperty, binding);
@@ -72,11 +57,6 @@ public static T Delay<T>(this T control, IBinding binding) where T : Avalonia.An
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Delay<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Animation.TransitionBase 
    => control._set(Avalonia.Animation.TransitionBase.DelayProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Delay<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.TimeSpan> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Animation.TransitionBase 
-=> control._setEx(Avalonia.Animation.TransitionBase.DelayProperty, ps, () => control.Delay = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Easing
@@ -93,11 +73,6 @@ public static T Easing<T>(this T control, Func<Avalonia.Animation.Easings.Easing
 public static T Easing<T>(this T control, Func<ValueTask<Avalonia.Animation.Easings.Easing>> getter, Func<Avalonia.Animation.Easings.Easing>? fallbackGetter = null, Action<Avalonia.Animation.Easings.Easing>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Animation.TransitionBase 
    => control._set(Avalonia.Animation.TransitionBase.EasingProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Easing<T>(this T control,Avalonia.Animation.Easings.Easing value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Animation.TransitionBase 
-=> control._setEx(Avalonia.Animation.TransitionBase.EasingProperty, ps, () => control.Easing = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Easing<T>(this T control, IBinding binding) where T : Avalonia.Animation.TransitionBase 
    => control._set(Avalonia.Animation.TransitionBase.EasingProperty, binding);
@@ -105,11 +80,6 @@ public static T Easing<T>(this T control, IBinding binding) where T : Avalonia.A
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Easing<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Animation.TransitionBase 
    => control._set(Avalonia.Animation.TransitionBase.EasingProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Easing<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Animation.Easings.Easing> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Animation.TransitionBase 
-=> control._setEx(Avalonia.Animation.TransitionBase.EasingProperty, ps, () => control.Easing = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

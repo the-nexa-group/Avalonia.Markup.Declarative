@@ -27,11 +27,6 @@ public static T Geometry1<T>(this T control, Func<Avalonia.Media.Geometry?> func
 public static T Geometry1<T>(this T control, Func<ValueTask<Avalonia.Media.Geometry?>> getter, Func<Avalonia.Media.Geometry?>? fallbackGetter = null, Action<Avalonia.Media.Geometry?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry1Property!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Geometry1<T>(this T control,Avalonia.Media.Geometry? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.CombinedGeometry 
-=> control._setEx(Avalonia.Media.CombinedGeometry.Geometry1Property, ps, () => control.Geometry1 = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Geometry1<T>(this T control, IBinding binding) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry1Property, binding);
@@ -39,11 +34,6 @@ public static T Geometry1<T>(this T control, IBinding binding) where T : Avaloni
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Geometry1<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry1Property, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Geometry1<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Geometry?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.CombinedGeometry 
-=> control._setEx(Avalonia.Media.CombinedGeometry.Geometry1Property, ps, () => control.Geometry1 = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Geometry2
@@ -60,11 +50,6 @@ public static T Geometry2<T>(this T control, Func<Avalonia.Media.Geometry?> func
 public static T Geometry2<T>(this T control, Func<ValueTask<Avalonia.Media.Geometry?>> getter, Func<Avalonia.Media.Geometry?>? fallbackGetter = null, Action<Avalonia.Media.Geometry?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry2Property!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Geometry2<T>(this T control,Avalonia.Media.Geometry? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.CombinedGeometry 
-=> control._setEx(Avalonia.Media.CombinedGeometry.Geometry2Property, ps, () => control.Geometry2 = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Geometry2<T>(this T control, IBinding binding) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry2Property, binding);
@@ -72,11 +57,6 @@ public static T Geometry2<T>(this T control, IBinding binding) where T : Avaloni
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Geometry2<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry2Property, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Geometry2<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Geometry?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.CombinedGeometry 
-=> control._setEx(Avalonia.Media.CombinedGeometry.Geometry2Property, ps, () => control.Geometry2 = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // GeometryCombineMode
@@ -93,11 +73,6 @@ public static T GeometryCombineMode<T>(this T control, Func<Avalonia.Media.Geome
 public static T GeometryCombineMode<T>(this T control, Func<ValueTask<Avalonia.Media.GeometryCombineMode>> getter, Func<Avalonia.Media.GeometryCombineMode>? fallbackGetter = null, Action<Avalonia.Media.GeometryCombineMode>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.GeometryCombineModeProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T GeometryCombineMode<T>(this T control,Avalonia.Media.GeometryCombineMode value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.CombinedGeometry 
-=> control._setEx(Avalonia.Media.CombinedGeometry.GeometryCombineModeProperty, ps, () => control.GeometryCombineMode = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T GeometryCombineMode<T>(this T control, IBinding binding) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.GeometryCombineModeProperty, binding);
@@ -105,11 +80,6 @@ public static T GeometryCombineMode<T>(this T control, IBinding binding) where T
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T GeometryCombineMode<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.GeometryCombineModeProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T GeometryCombineMode<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.GeometryCombineMode> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.CombinedGeometry 
-=> control._setEx(Avalonia.Media.CombinedGeometry.GeometryCombineModeProperty, ps, () => control.GeometryCombineMode = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

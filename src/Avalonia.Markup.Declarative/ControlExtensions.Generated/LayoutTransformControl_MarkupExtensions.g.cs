@@ -27,11 +27,6 @@ public static T LayoutTransform<T>(this T control, Func<Avalonia.Media.ITransfor
 public static T LayoutTransform<T>(this T control, Func<ValueTask<Avalonia.Media.ITransform?>> getter, Func<Avalonia.Media.ITransform?>? fallbackGetter = null, Action<Avalonia.Media.ITransform?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.LayoutTransformControl 
    => control._set(Avalonia.Controls.LayoutTransformControl.LayoutTransformProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T LayoutTransform<T>(this T control,Avalonia.Media.ITransform? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.LayoutTransformControl 
-=> control._setEx(Avalonia.Controls.LayoutTransformControl.LayoutTransformProperty, ps, () => control.LayoutTransform = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T LayoutTransform<T>(this T control, IBinding binding) where T : Avalonia.Controls.LayoutTransformControl 
    => control._set(Avalonia.Controls.LayoutTransformControl.LayoutTransformProperty, binding);
@@ -39,11 +34,6 @@ public static T LayoutTransform<T>(this T control, IBinding binding) where T : A
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T LayoutTransform<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.LayoutTransformControl 
    => control._set(Avalonia.Controls.LayoutTransformControl.LayoutTransformProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T LayoutTransform<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.ITransform?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.LayoutTransformControl 
-=> control._setEx(Avalonia.Controls.LayoutTransformControl.LayoutTransformProperty, ps, () => control.LayoutTransform = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // UseRenderTransform
@@ -60,11 +50,6 @@ public static T UseRenderTransform<T>(this T control, Func<System.Boolean> func,
 public static T UseRenderTransform<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.LayoutTransformControl 
    => control._set(Avalonia.Controls.LayoutTransformControl.UseRenderTransformProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T UseRenderTransform<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.LayoutTransformControl 
-=> control._setEx(Avalonia.Controls.LayoutTransformControl.UseRenderTransformProperty, ps, () => control.UseRenderTransform = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T UseRenderTransform<T>(this T control, IBinding binding) where T : Avalonia.Controls.LayoutTransformControl 
    => control._set(Avalonia.Controls.LayoutTransformControl.UseRenderTransformProperty, binding);
@@ -72,11 +57,6 @@ public static T UseRenderTransform<T>(this T control, IBinding binding) where T 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T UseRenderTransform<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.LayoutTransformControl 
    => control._set(Avalonia.Controls.LayoutTransformControl.UseRenderTransformProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T UseRenderTransform<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.LayoutTransformControl 
-=> control._setEx(Avalonia.Controls.LayoutTransformControl.UseRenderTransformProperty, ps, () => control.UseRenderTransform = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

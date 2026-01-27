@@ -27,11 +27,6 @@ public static T SpreadMethod<T>(this T control, Func<Avalonia.Media.GradientSpre
 public static T SpreadMethod<T>(this T control, Func<ValueTask<Avalonia.Media.GradientSpreadMethod>> getter, Func<Avalonia.Media.GradientSpreadMethod>? fallbackGetter = null, Action<Avalonia.Media.GradientSpreadMethod>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.GradientBrush 
    => control._set(Avalonia.Media.GradientBrush.SpreadMethodProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T SpreadMethod<T>(this T control,Avalonia.Media.GradientSpreadMethod value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.GradientBrush 
-=> control._setEx(Avalonia.Media.GradientBrush.SpreadMethodProperty, ps, () => control.SpreadMethod = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T SpreadMethod<T>(this T control, IBinding binding) where T : Avalonia.Media.GradientBrush 
    => control._set(Avalonia.Media.GradientBrush.SpreadMethodProperty, binding);
@@ -39,11 +34,6 @@ public static T SpreadMethod<T>(this T control, IBinding binding) where T : Aval
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T SpreadMethod<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.GradientBrush 
    => control._set(Avalonia.Media.GradientBrush.SpreadMethodProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T SpreadMethod<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.GradientSpreadMethod> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.GradientBrush 
-=> control._setEx(Avalonia.Media.GradientBrush.SpreadMethodProperty, ps, () => control.SpreadMethod = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // GradientStops
@@ -60,11 +50,6 @@ public static T GradientStops<T>(this T control, Func<Avalonia.Media.GradientSto
 public static T GradientStops<T>(this T control, Func<ValueTask<Avalonia.Media.GradientStops>> getter, Func<Avalonia.Media.GradientStops>? fallbackGetter = null, Action<Avalonia.Media.GradientStops>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Media.GradientBrush 
    => control._set(Avalonia.Media.GradientBrush.GradientStopsProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T GradientStops<T>(this T control,Avalonia.Media.GradientStops value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.GradientBrush 
-=> control._setEx(Avalonia.Media.GradientBrush.GradientStopsProperty, ps, () => control.GradientStops = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T GradientStops<T>(this T control, IBinding binding) where T : Avalonia.Media.GradientBrush 
    => control._set(Avalonia.Media.GradientBrush.GradientStopsProperty, binding);
@@ -72,11 +57,6 @@ public static T GradientStops<T>(this T control, IBinding binding) where T : Ava
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T GradientStops<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Media.GradientBrush 
    => control._set(Avalonia.Media.GradientBrush.GradientStopsProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T GradientStops<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.GradientStops> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Media.GradientBrush 
-=> control._setEx(Avalonia.Media.GradientBrush.GradientStopsProperty, ps, () => control.GradientStops = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

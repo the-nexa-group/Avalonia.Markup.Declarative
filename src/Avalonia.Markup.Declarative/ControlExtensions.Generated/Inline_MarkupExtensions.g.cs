@@ -27,11 +27,6 @@ public static T TextDecorations<T>(this T control, Func<Avalonia.Media.TextDecor
 public static T TextDecorations<T>(this T control, Func<ValueTask<Avalonia.Media.TextDecorationCollection?>> getter, Func<Avalonia.Media.TextDecorationCollection?>? fallbackGetter = null, Action<Avalonia.Media.TextDecorationCollection?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Documents.Inline 
    => control._set(Avalonia.Controls.Documents.Inline.TextDecorationsProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T TextDecorations<T>(this T control,Avalonia.Media.TextDecorationCollection? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Documents.Inline 
-=> control._setEx(Avalonia.Controls.Documents.Inline.TextDecorationsProperty, ps, () => control.TextDecorations = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T TextDecorations<T>(this T control, IBinding binding) where T : Avalonia.Controls.Documents.Inline 
    => control._set(Avalonia.Controls.Documents.Inline.TextDecorationsProperty, binding);
@@ -39,11 +34,6 @@ public static T TextDecorations<T>(this T control, IBinding binding) where T : A
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T TextDecorations<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Documents.Inline 
    => control._set(Avalonia.Controls.Documents.Inline.TextDecorationsProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T TextDecorations<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.TextDecorationCollection?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Documents.Inline 
-=> control._setEx(Avalonia.Controls.Documents.Inline.TextDecorationsProperty, ps, () => control.TextDecorations = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // BaselineAlignment
@@ -60,11 +50,6 @@ public static T BaselineAlignment<T>(this T control, Func<Avalonia.Media.Baselin
 public static T BaselineAlignment<T>(this T control, Func<ValueTask<Avalonia.Media.BaselineAlignment>> getter, Func<Avalonia.Media.BaselineAlignment>? fallbackGetter = null, Action<Avalonia.Media.BaselineAlignment>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Documents.Inline 
    => control._set(Avalonia.Controls.Documents.Inline.BaselineAlignmentProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T BaselineAlignment<T>(this T control,Avalonia.Media.BaselineAlignment value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Documents.Inline 
-=> control._setEx(Avalonia.Controls.Documents.Inline.BaselineAlignmentProperty, ps, () => control.BaselineAlignment = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T BaselineAlignment<T>(this T control, IBinding binding) where T : Avalonia.Controls.Documents.Inline 
    => control._set(Avalonia.Controls.Documents.Inline.BaselineAlignmentProperty, binding);
@@ -72,11 +57,6 @@ public static T BaselineAlignment<T>(this T control, IBinding binding) where T :
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T BaselineAlignment<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Documents.Inline 
    => control._set(Avalonia.Controls.Documents.Inline.BaselineAlignmentProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T BaselineAlignment<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.BaselineAlignment> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Documents.Inline 
-=> control._setEx(Avalonia.Controls.Documents.Inline.BaselineAlignmentProperty, ps, () => control.BaselineAlignment = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

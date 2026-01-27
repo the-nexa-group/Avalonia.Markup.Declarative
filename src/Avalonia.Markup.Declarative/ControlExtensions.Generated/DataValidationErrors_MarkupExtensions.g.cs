@@ -27,11 +27,6 @@ public static T ErrorTemplate<T>(this T control, Func<Avalonia.Controls.Template
 public static T ErrorTemplate<T>(this T control, Func<ValueTask<Avalonia.Controls.Templates.IDataTemplate>> getter, Func<Avalonia.Controls.Templates.IDataTemplate>? fallbackGetter = null, Action<Avalonia.Controls.Templates.IDataTemplate>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DataValidationErrors 
    => control._set(Avalonia.Controls.DataValidationErrors.ErrorTemplateProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ErrorTemplate<T>(this T control,Avalonia.Controls.Templates.IDataTemplate value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DataValidationErrors 
-=> control._setEx(Avalonia.Controls.DataValidationErrors.ErrorTemplateProperty, ps, () => control.ErrorTemplate = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ErrorTemplate<T>(this T control, IBinding binding) where T : Avalonia.Controls.DataValidationErrors 
    => control._set(Avalonia.Controls.DataValidationErrors.ErrorTemplateProperty, binding);
@@ -39,11 +34,6 @@ public static T ErrorTemplate<T>(this T control, IBinding binding) where T : Ava
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ErrorTemplate<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.DataValidationErrors 
    => control._set(Avalonia.Controls.DataValidationErrors.ErrorTemplateProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ErrorTemplate<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Templates.IDataTemplate> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DataValidationErrors 
-=> control._setEx(Avalonia.Controls.DataValidationErrors.ErrorTemplateProperty, ps, () => control.ErrorTemplate = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Owner
@@ -60,11 +50,6 @@ public static T Owner<T>(this T control, Func<Avalonia.Controls.Control?> func, 
 public static T Owner<T>(this T control, Func<ValueTask<Avalonia.Controls.Control?>> getter, Func<Avalonia.Controls.Control?>? fallbackGetter = null, Action<Avalonia.Controls.Control?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DataValidationErrors 
    => control._set(Avalonia.Controls.DataValidationErrors.OwnerProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Owner<T>(this T control,Avalonia.Controls.Control? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DataValidationErrors 
-=> control._setEx(Avalonia.Controls.DataValidationErrors.OwnerProperty, ps, () => control.Owner = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Owner<T>(this T control, IBinding binding) where T : Avalonia.Controls.DataValidationErrors 
    => control._set(Avalonia.Controls.DataValidationErrors.OwnerProperty, binding);
@@ -72,11 +57,6 @@ public static T Owner<T>(this T control, IBinding binding) where T : Avalonia.Co
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Owner<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.DataValidationErrors 
    => control._set(Avalonia.Controls.DataValidationErrors.OwnerProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Owner<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Control?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DataValidationErrors 
-=> control._setEx(Avalonia.Controls.DataValidationErrors.OwnerProperty, ps, () => control.Owner = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

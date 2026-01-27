@@ -27,11 +27,6 @@ public static T Date<T>(this T control, Func<System.DateTimeOffset> func, Action
 public static T Date<T>(this T control, Func<ValueTask<System.DateTimeOffset>> getter, Func<System.DateTimeOffset>? fallbackGetter = null, Action<System.DateTimeOffset>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.DateProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Date<T>(this T control,System.DateTimeOffset value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.DateProperty, ps, () => control.Date = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Date<T>(this T control, IBinding binding) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.DateProperty, binding);
@@ -39,11 +34,6 @@ public static T Date<T>(this T control, IBinding binding) where T : Avalonia.Con
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Date<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.DateProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Date<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.DateTimeOffset> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.DateProperty, ps, () => control.Date = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // DayFormat
@@ -60,11 +50,6 @@ public static T DayFormat<T>(this T control, Func<System.String> func, Action<Sy
 public static T DayFormat<T>(this T control, Func<ValueTask<System.String>> getter, Func<System.String>? fallbackGetter = null, Action<System.String>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.DayFormatProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T DayFormat<T>(this T control,System.String value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.DayFormatProperty, ps, () => control.DayFormat = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T DayFormat<T>(this T control, IBinding binding) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.DayFormatProperty, binding);
@@ -72,11 +57,6 @@ public static T DayFormat<T>(this T control, IBinding binding) where T : Avaloni
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T DayFormat<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.DayFormatProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T DayFormat<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.DayFormatProperty, ps, () => control.DayFormat = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // DayVisible
@@ -93,11 +73,6 @@ public static T DayVisible<T>(this T control, Func<System.Boolean> func, Action<
 public static T DayVisible<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.DayVisibleProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T DayVisible<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.DayVisibleProperty, ps, () => control.DayVisible = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T DayVisible<T>(this T control, IBinding binding) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.DayVisibleProperty, binding);
@@ -105,11 +80,6 @@ public static T DayVisible<T>(this T control, IBinding binding) where T : Avalon
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T DayVisible<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.DayVisibleProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T DayVisible<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.DayVisibleProperty, ps, () => control.DayVisible = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // MaxYear
@@ -126,11 +96,6 @@ public static T MaxYear<T>(this T control, Func<System.DateTimeOffset> func, Act
 public static T MaxYear<T>(this T control, Func<ValueTask<System.DateTimeOffset>> getter, Func<System.DateTimeOffset>? fallbackGetter = null, Action<System.DateTimeOffset>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MaxYearProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T MaxYear<T>(this T control,System.DateTimeOffset value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.MaxYearProperty, ps, () => control.MaxYear = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T MaxYear<T>(this T control, IBinding binding) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MaxYearProperty, binding);
@@ -138,11 +103,6 @@ public static T MaxYear<T>(this T control, IBinding binding) where T : Avalonia.
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T MaxYear<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MaxYearProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T MaxYear<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.DateTimeOffset> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.MaxYearProperty, ps, () => control.MaxYear = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // MinYear
@@ -159,11 +119,6 @@ public static T MinYear<T>(this T control, Func<System.DateTimeOffset> func, Act
 public static T MinYear<T>(this T control, Func<ValueTask<System.DateTimeOffset>> getter, Func<System.DateTimeOffset>? fallbackGetter = null, Action<System.DateTimeOffset>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MinYearProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T MinYear<T>(this T control,System.DateTimeOffset value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.MinYearProperty, ps, () => control.MinYear = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T MinYear<T>(this T control, IBinding binding) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MinYearProperty, binding);
@@ -171,11 +126,6 @@ public static T MinYear<T>(this T control, IBinding binding) where T : Avalonia.
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T MinYear<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MinYearProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T MinYear<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.DateTimeOffset> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.MinYearProperty, ps, () => control.MinYear = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // MonthFormat
@@ -192,11 +142,6 @@ public static T MonthFormat<T>(this T control, Func<System.String> func, Action<
 public static T MonthFormat<T>(this T control, Func<ValueTask<System.String>> getter, Func<System.String>? fallbackGetter = null, Action<System.String>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MonthFormatProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T MonthFormat<T>(this T control,System.String value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.MonthFormatProperty, ps, () => control.MonthFormat = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T MonthFormat<T>(this T control, IBinding binding) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MonthFormatProperty, binding);
@@ -204,11 +149,6 @@ public static T MonthFormat<T>(this T control, IBinding binding) where T : Avalo
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T MonthFormat<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MonthFormatProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T MonthFormat<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.MonthFormatProperty, ps, () => control.MonthFormat = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // MonthVisible
@@ -225,11 +165,6 @@ public static T MonthVisible<T>(this T control, Func<System.Boolean> func, Actio
 public static T MonthVisible<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MonthVisibleProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T MonthVisible<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.MonthVisibleProperty, ps, () => control.MonthVisible = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T MonthVisible<T>(this T control, IBinding binding) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MonthVisibleProperty, binding);
@@ -237,11 +172,6 @@ public static T MonthVisible<T>(this T control, IBinding binding) where T : Aval
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T MonthVisible<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MonthVisibleProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T MonthVisible<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.MonthVisibleProperty, ps, () => control.MonthVisible = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // YearFormat
@@ -258,11 +188,6 @@ public static T YearFormat<T>(this T control, Func<System.String> func, Action<S
 public static T YearFormat<T>(this T control, Func<ValueTask<System.String>> getter, Func<System.String>? fallbackGetter = null, Action<System.String>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.YearFormatProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T YearFormat<T>(this T control,System.String value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.YearFormatProperty, ps, () => control.YearFormat = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T YearFormat<T>(this T control, IBinding binding) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.YearFormatProperty, binding);
@@ -270,11 +195,6 @@ public static T YearFormat<T>(this T control, IBinding binding) where T : Avalon
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T YearFormat<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.YearFormatProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T YearFormat<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.String> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.YearFormatProperty, ps, () => control.YearFormat = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // YearVisible
@@ -291,11 +211,6 @@ public static T YearVisible<T>(this T control, Func<System.Boolean> func, Action
 public static T YearVisible<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.YearVisibleProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T YearVisible<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.YearVisibleProperty, ps, () => control.YearVisible = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T YearVisible<T>(this T control, IBinding binding) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.YearVisibleProperty, binding);
@@ -303,11 +218,6 @@ public static T YearVisible<T>(this T control, IBinding binding) where T : Avalo
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T YearVisible<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.YearVisibleProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T YearVisible<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.DatePickerPresenter 
-=> control._setEx(Avalonia.Controls.DatePickerPresenter.YearVisibleProperty, ps, () => control.YearVisible = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

@@ -27,11 +27,6 @@ public static T AllowSpin<T>(this T control, Func<System.Boolean> func, Action<S
 public static T AllowSpin<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.AllowSpinProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T AllowSpin<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ButtonSpinner 
-=> control._setEx(Avalonia.Controls.ButtonSpinner.AllowSpinProperty, ps, () => control.AllowSpin = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T AllowSpin<T>(this T control, IBinding binding) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.AllowSpinProperty, binding);
@@ -39,11 +34,6 @@ public static T AllowSpin<T>(this T control, IBinding binding) where T : Avaloni
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T AllowSpin<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.AllowSpinProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T AllowSpin<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ButtonSpinner 
-=> control._setEx(Avalonia.Controls.ButtonSpinner.AllowSpinProperty, ps, () => control.AllowSpin = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ShowButtonSpinner
@@ -60,11 +50,6 @@ public static T ShowButtonSpinner<T>(this T control, Func<System.Boolean> func, 
 public static T ShowButtonSpinner<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.ShowButtonSpinnerProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ShowButtonSpinner<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ButtonSpinner 
-=> control._setEx(Avalonia.Controls.ButtonSpinner.ShowButtonSpinnerProperty, ps, () => control.ShowButtonSpinner = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ShowButtonSpinner<T>(this T control, IBinding binding) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.ShowButtonSpinnerProperty, binding);
@@ -72,11 +57,6 @@ public static T ShowButtonSpinner<T>(this T control, IBinding binding) where T :
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ShowButtonSpinner<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.ShowButtonSpinnerProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ShowButtonSpinner<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ButtonSpinner 
-=> control._setEx(Avalonia.Controls.ButtonSpinner.ShowButtonSpinnerProperty, ps, () => control.ShowButtonSpinner = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // ButtonSpinnerLocation
@@ -93,11 +73,6 @@ public static T ButtonSpinnerLocation<T>(this T control, Func<Avalonia.Controls.
 public static T ButtonSpinnerLocation<T>(this T control, Func<ValueTask<Avalonia.Controls.Location>> getter, Func<Avalonia.Controls.Location>? fallbackGetter = null, Action<Avalonia.Controls.Location>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.ButtonSpinnerLocationProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ButtonSpinnerLocation<T>(this T control,Avalonia.Controls.Location value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ButtonSpinner 
-=> control._setEx(Avalonia.Controls.ButtonSpinner.ButtonSpinnerLocationProperty, ps, () => control.ButtonSpinnerLocation = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ButtonSpinnerLocation<T>(this T control, IBinding binding) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.ButtonSpinnerLocationProperty, binding);
@@ -105,11 +80,6 @@ public static T ButtonSpinnerLocation<T>(this T control, IBinding binding) where
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ButtonSpinnerLocation<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.ButtonSpinnerLocationProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ButtonSpinnerLocation<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Location> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ButtonSpinner 
-=> control._setEx(Avalonia.Controls.ButtonSpinner.ButtonSpinnerLocationProperty, ps, () => control.ButtonSpinnerLocation = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

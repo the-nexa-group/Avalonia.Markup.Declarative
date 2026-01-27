@@ -27,11 +27,6 @@ public static T IsVisited<T>(this T control, Func<System.Boolean> func, Action<S
 public static T IsVisited<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.HyperlinkButton 
    => control._set(Avalonia.Controls.HyperlinkButton.IsVisitedProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T IsVisited<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.HyperlinkButton 
-=> control._setEx(Avalonia.Controls.HyperlinkButton.IsVisitedProperty, ps, () => control.IsVisited = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T IsVisited<T>(this T control, IBinding binding) where T : Avalonia.Controls.HyperlinkButton 
    => control._set(Avalonia.Controls.HyperlinkButton.IsVisitedProperty, binding);
@@ -39,11 +34,6 @@ public static T IsVisited<T>(this T control, IBinding binding) where T : Avaloni
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T IsVisited<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.HyperlinkButton 
    => control._set(Avalonia.Controls.HyperlinkButton.IsVisitedProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T IsVisited<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.HyperlinkButton 
-=> control._setEx(Avalonia.Controls.HyperlinkButton.IsVisitedProperty, ps, () => control.IsVisited = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // NavigateUri
@@ -60,11 +50,6 @@ public static T NavigateUri<T>(this T control, Func<System.Uri?> func, Action<Sy
 public static T NavigateUri<T>(this T control, Func<ValueTask<System.Uri?>> getter, Func<System.Uri?>? fallbackGetter = null, Action<System.Uri?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.HyperlinkButton 
    => control._set(Avalonia.Controls.HyperlinkButton.NavigateUriProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T NavigateUri<T>(this T control,System.Uri? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.HyperlinkButton 
-=> control._setEx(Avalonia.Controls.HyperlinkButton.NavigateUriProperty, ps, () => control.NavigateUri = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T NavigateUri<T>(this T control, IBinding binding) where T : Avalonia.Controls.HyperlinkButton 
    => control._set(Avalonia.Controls.HyperlinkButton.NavigateUriProperty, binding);
@@ -72,11 +57,6 @@ public static T NavigateUri<T>(this T control, IBinding binding) where T : Avalo
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T NavigateUri<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.HyperlinkButton 
    => control._set(Avalonia.Controls.HyperlinkButton.NavigateUriProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T NavigateUri<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Uri?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.HyperlinkButton 
-=> control._setEx(Avalonia.Controls.HyperlinkButton.NavigateUriProperty, ps, () => control.NavigateUri = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

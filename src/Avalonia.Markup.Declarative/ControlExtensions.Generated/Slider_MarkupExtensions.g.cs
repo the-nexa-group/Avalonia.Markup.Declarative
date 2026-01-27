@@ -27,11 +27,6 @@ public static T Orientation<T>(this T control, Func<Avalonia.Layout.Orientation>
 public static T Orientation<T>(this T control, Func<ValueTask<Avalonia.Layout.Orientation>> getter, Func<Avalonia.Layout.Orientation>? fallbackGetter = null, Action<Avalonia.Layout.Orientation>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.OrientationProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Orientation<T>(this T control,Avalonia.Layout.Orientation value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Slider 
-=> control._setEx(Avalonia.Controls.Slider.OrientationProperty, ps, () => control.Orientation = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Orientation<T>(this T control, IBinding binding) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.OrientationProperty, binding);
@@ -39,11 +34,6 @@ public static T Orientation<T>(this T control, IBinding binding) where T : Avalo
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Orientation<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.OrientationProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Orientation<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Layout.Orientation> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Slider 
-=> control._setEx(Avalonia.Controls.Slider.OrientationProperty, ps, () => control.Orientation = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsDirectionReversed
@@ -60,11 +50,6 @@ public static T IsDirectionReversed<T>(this T control, Func<System.Boolean> func
 public static T IsDirectionReversed<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.IsDirectionReversedProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T IsDirectionReversed<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Slider 
-=> control._setEx(Avalonia.Controls.Slider.IsDirectionReversedProperty, ps, () => control.IsDirectionReversed = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T IsDirectionReversed<T>(this T control, IBinding binding) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.IsDirectionReversedProperty, binding);
@@ -72,11 +57,6 @@ public static T IsDirectionReversed<T>(this T control, IBinding binding) where T
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T IsDirectionReversed<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.IsDirectionReversedProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T IsDirectionReversed<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Slider 
-=> control._setEx(Avalonia.Controls.Slider.IsDirectionReversedProperty, ps, () => control.IsDirectionReversed = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsSnapToTickEnabled
@@ -93,11 +73,6 @@ public static T IsSnapToTickEnabled<T>(this T control, Func<System.Boolean> func
 public static T IsSnapToTickEnabled<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.IsSnapToTickEnabledProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T IsSnapToTickEnabled<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Slider 
-=> control._setEx(Avalonia.Controls.Slider.IsSnapToTickEnabledProperty, ps, () => control.IsSnapToTickEnabled = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T IsSnapToTickEnabled<T>(this T control, IBinding binding) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.IsSnapToTickEnabledProperty, binding);
@@ -105,11 +80,6 @@ public static T IsSnapToTickEnabled<T>(this T control, IBinding binding) where T
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T IsSnapToTickEnabled<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.IsSnapToTickEnabledProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T IsSnapToTickEnabled<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Slider 
-=> control._setEx(Avalonia.Controls.Slider.IsSnapToTickEnabledProperty, ps, () => control.IsSnapToTickEnabled = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // TickFrequency
@@ -126,11 +96,6 @@ public static T TickFrequency<T>(this T control, Func<System.Double> func, Actio
 public static T TickFrequency<T>(this T control, Func<ValueTask<System.Double>> getter, Func<System.Double>? fallbackGetter = null, Action<System.Double>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.TickFrequencyProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T TickFrequency<T>(this T control,System.Double value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Slider 
-=> control._setEx(Avalonia.Controls.Slider.TickFrequencyProperty, ps, () => control.TickFrequency = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T TickFrequency<T>(this T control, IBinding binding) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.TickFrequencyProperty, binding);
@@ -138,11 +103,6 @@ public static T TickFrequency<T>(this T control, IBinding binding) where T : Ava
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T TickFrequency<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.TickFrequencyProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T TickFrequency<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Double> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Slider 
-=> control._setEx(Avalonia.Controls.Slider.TickFrequencyProperty, ps, () => control.TickFrequency = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // TickPlacement
@@ -159,11 +119,6 @@ public static T TickPlacement<T>(this T control, Func<Avalonia.Controls.TickPlac
 public static T TickPlacement<T>(this T control, Func<ValueTask<Avalonia.Controls.TickPlacement>> getter, Func<Avalonia.Controls.TickPlacement>? fallbackGetter = null, Action<Avalonia.Controls.TickPlacement>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.TickPlacementProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T TickPlacement<T>(this T control,Avalonia.Controls.TickPlacement value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Slider 
-=> control._setEx(Avalonia.Controls.Slider.TickPlacementProperty, ps, () => control.TickPlacement = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T TickPlacement<T>(this T control, IBinding binding) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.TickPlacementProperty, binding);
@@ -171,11 +126,6 @@ public static T TickPlacement<T>(this T control, IBinding binding) where T : Ava
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T TickPlacement<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.TickPlacementProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T TickPlacement<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.TickPlacement> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Slider 
-=> control._setEx(Avalonia.Controls.Slider.TickPlacementProperty, ps, () => control.TickPlacement = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Ticks
@@ -192,11 +142,6 @@ public static T Ticks<T>(this T control, Func<Avalonia.Collections.AvaloniaList<
 public static T Ticks<T>(this T control, Func<ValueTask<Avalonia.Collections.AvaloniaList<System.Double>?>> getter, Func<Avalonia.Collections.AvaloniaList<System.Double>?>? fallbackGetter = null, Action<Avalonia.Collections.AvaloniaList<System.Double>?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.TicksProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Ticks<T>(this T control,Avalonia.Collections.AvaloniaList<System.Double>? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Slider 
-=> control._setEx(Avalonia.Controls.Slider.TicksProperty, ps, () => control.Ticks = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Ticks<T>(this T control, IBinding binding) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.TicksProperty, binding);
@@ -204,11 +149,6 @@ public static T Ticks<T>(this T control, IBinding binding) where T : Avalonia.Co
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Ticks<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.TicksProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Ticks<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Collections.AvaloniaList<System.Double>?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Slider 
-=> control._setEx(Avalonia.Controls.Slider.TicksProperty, ps, () => control.Ticks = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

@@ -27,11 +27,6 @@ public static T SelectedItems<T>(this T control, Func<System.Collections.IList?>
 public static T SelectedItems<T>(this T control, Func<ValueTask<System.Collections.IList?>> getter, Func<System.Collections.IList?>? fallbackGetter = null, Action<System.Collections.IList?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectedItemsProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T SelectedItems<T>(this T control,System.Collections.IList? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ListBox 
-=> control._setEx(Avalonia.Controls.ListBox.SelectedItemsProperty, ps, () => control.SelectedItems = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T SelectedItems<T>(this T control, IBinding binding) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectedItemsProperty, binding);
@@ -39,11 +34,6 @@ public static T SelectedItems<T>(this T control, IBinding binding) where T : Ava
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T SelectedItems<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectedItemsProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T SelectedItems<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Collections.IList?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ListBox 
-=> control._setEx(Avalonia.Controls.ListBox.SelectedItemsProperty, ps, () => control.SelectedItems = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Selection
@@ -60,11 +50,6 @@ public static T Selection<T>(this T control, Func<Avalonia.Controls.Selection.IS
 public static T Selection<T>(this T control, Func<ValueTask<Avalonia.Controls.Selection.ISelectionModel?>> getter, Func<Avalonia.Controls.Selection.ISelectionModel?>? fallbackGetter = null, Action<Avalonia.Controls.Selection.ISelectionModel?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectionProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Selection<T>(this T control,Avalonia.Controls.Selection.ISelectionModel? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ListBox 
-=> control._setEx(Avalonia.Controls.ListBox.SelectionProperty, ps, () => control.Selection = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Selection<T>(this T control, IBinding binding) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectionProperty, binding);
@@ -72,11 +57,6 @@ public static T Selection<T>(this T control, IBinding binding) where T : Avaloni
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Selection<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectionProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Selection<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Selection.ISelectionModel?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ListBox 
-=> control._setEx(Avalonia.Controls.ListBox.SelectionProperty, ps, () => control.Selection = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // SelectionMode
@@ -93,11 +73,6 @@ public static T SelectionMode<T>(this T control, Func<Avalonia.Controls.Selectio
 public static T SelectionMode<T>(this T control, Func<ValueTask<Avalonia.Controls.SelectionMode>> getter, Func<Avalonia.Controls.SelectionMode>? fallbackGetter = null, Action<Avalonia.Controls.SelectionMode>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectionModeProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T SelectionMode<T>(this T control,Avalonia.Controls.SelectionMode value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ListBox 
-=> control._setEx(Avalonia.Controls.ListBox.SelectionModeProperty, ps, () => control.SelectionMode = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T SelectionMode<T>(this T control, IBinding binding) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectionModeProperty, binding);
@@ -105,11 +80,6 @@ public static T SelectionMode<T>(this T control, IBinding binding) where T : Ava
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T SelectionMode<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectionModeProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T SelectionMode<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.SelectionMode> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.ListBox 
-=> control._setEx(Avalonia.Controls.ListBox.SelectionModeProperty, ps, () => control.SelectionMode = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

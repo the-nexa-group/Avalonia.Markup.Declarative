@@ -27,11 +27,6 @@ public static T Source<T>(this T control, Func<Avalonia.Media.IImage?> func, Act
 public static T Source<T>(this T control, Func<ValueTask<Avalonia.Media.IImage?>> getter, Func<Avalonia.Media.IImage?>? fallbackGetter = null, Action<Avalonia.Media.IImage?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.SourceProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Source<T>(this T control,Avalonia.Media.IImage? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Image 
-=> control._setEx(Avalonia.Controls.Image.SourceProperty, ps, () => control.Source = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Source<T>(this T control, IBinding binding) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.SourceProperty, binding);
@@ -39,11 +34,6 @@ public static T Source<T>(this T control, IBinding binding) where T : Avalonia.C
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Source<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.SourceProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Source<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.IImage?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Image 
-=> control._setEx(Avalonia.Controls.Image.SourceProperty, ps, () => control.Source = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // BlendMode
@@ -60,11 +50,6 @@ public static T BlendMode<T>(this T control, Func<Avalonia.Media.Imaging.BitmapB
 public static T BlendMode<T>(this T control, Func<ValueTask<Avalonia.Media.Imaging.BitmapBlendingMode>> getter, Func<Avalonia.Media.Imaging.BitmapBlendingMode>? fallbackGetter = null, Action<Avalonia.Media.Imaging.BitmapBlendingMode>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.BlendModeProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T BlendMode<T>(this T control,Avalonia.Media.Imaging.BitmapBlendingMode value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Image 
-=> control._setEx(Avalonia.Controls.Image.BlendModeProperty, ps, () => control.BlendMode = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T BlendMode<T>(this T control, IBinding binding) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.BlendModeProperty, binding);
@@ -72,11 +57,6 @@ public static T BlendMode<T>(this T control, IBinding binding) where T : Avaloni
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T BlendMode<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.BlendModeProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T BlendMode<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Imaging.BitmapBlendingMode> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Image 
-=> control._setEx(Avalonia.Controls.Image.BlendModeProperty, ps, () => control.BlendMode = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Stretch
@@ -93,11 +73,6 @@ public static T Stretch<T>(this T control, Func<Avalonia.Media.Stretch> func, Ac
 public static T Stretch<T>(this T control, Func<ValueTask<Avalonia.Media.Stretch>> getter, Func<Avalonia.Media.Stretch>? fallbackGetter = null, Action<Avalonia.Media.Stretch>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.StretchProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Stretch<T>(this T control,Avalonia.Media.Stretch value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Image 
-=> control._setEx(Avalonia.Controls.Image.StretchProperty, ps, () => control.Stretch = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Stretch<T>(this T control, IBinding binding) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.StretchProperty, binding);
@@ -105,11 +80,6 @@ public static T Stretch<T>(this T control, IBinding binding) where T : Avalonia.
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Stretch<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.StretchProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Stretch<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.Stretch> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Image 
-=> control._setEx(Avalonia.Controls.Image.StretchProperty, ps, () => control.Stretch = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // StretchDirection
@@ -126,11 +96,6 @@ public static T StretchDirection<T>(this T control, Func<Avalonia.Media.StretchD
 public static T StretchDirection<T>(this T control, Func<ValueTask<Avalonia.Media.StretchDirection>> getter, Func<Avalonia.Media.StretchDirection>? fallbackGetter = null, Action<Avalonia.Media.StretchDirection>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.StretchDirectionProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T StretchDirection<T>(this T control,Avalonia.Media.StretchDirection value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Image 
-=> control._setEx(Avalonia.Controls.Image.StretchDirectionProperty, ps, () => control.StretchDirection = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T StretchDirection<T>(this T control, IBinding binding) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.StretchDirectionProperty, binding);
@@ -138,11 +103,6 @@ public static T StretchDirection<T>(this T control, IBinding binding) where T : 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T StretchDirection<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.StretchDirectionProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T StretchDirection<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Media.StretchDirection> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Image 
-=> control._setEx(Avalonia.Controls.Image.StretchDirectionProperty, ps, () => control.StretchDirection = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

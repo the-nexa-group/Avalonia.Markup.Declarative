@@ -27,11 +27,6 @@ public static T ClickMode<T>(this T control, Func<Avalonia.Controls.ClickMode> f
 public static T ClickMode<T>(this T control, Func<ValueTask<Avalonia.Controls.ClickMode>> getter, Func<Avalonia.Controls.ClickMode>? fallbackGetter = null, Action<Avalonia.Controls.ClickMode>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.ClickModeProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T ClickMode<T>(this T control,Avalonia.Controls.ClickMode value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
-=> control._setEx(Avalonia.Controls.Button.ClickModeProperty, ps, () => control.ClickMode = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T ClickMode<T>(this T control, IBinding binding) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.ClickModeProperty, binding);
@@ -39,11 +34,6 @@ public static T ClickMode<T>(this T control, IBinding binding) where T : Avaloni
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T ClickMode<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.ClickModeProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T ClickMode<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.ClickMode> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
-=> control._setEx(Avalonia.Controls.Button.ClickModeProperty, ps, () => control.ClickMode = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Command
@@ -60,11 +50,6 @@ public static T Command<T>(this T control, Func<System.Windows.Input.ICommand?> 
 public static T Command<T>(this T control, Func<ValueTask<System.Windows.Input.ICommand?>> getter, Func<System.Windows.Input.ICommand?>? fallbackGetter = null, Action<System.Windows.Input.ICommand?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.CommandProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Command<T>(this T control,System.Windows.Input.ICommand? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
-=> control._setEx(Avalonia.Controls.Button.CommandProperty, ps, () => control.Command = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Command<T>(this T control, IBinding binding) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.CommandProperty, binding);
@@ -72,11 +57,6 @@ public static T Command<T>(this T control, IBinding binding) where T : Avalonia.
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Command<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.CommandProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Command<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Windows.Input.ICommand?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
-=> control._setEx(Avalonia.Controls.Button.CommandProperty, ps, () => control.Command = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // HotKey
@@ -93,11 +73,6 @@ public static T HotKey<T>(this T control, Func<Avalonia.Input.KeyGesture?> func,
 public static T HotKey<T>(this T control, Func<ValueTask<Avalonia.Input.KeyGesture?>> getter, Func<Avalonia.Input.KeyGesture?>? fallbackGetter = null, Action<Avalonia.Input.KeyGesture?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.HotKeyProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T HotKey<T>(this T control,Avalonia.Input.KeyGesture? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
-=> control._setEx(Avalonia.Controls.Button.HotKeyProperty, ps, () => control.HotKey = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T HotKey<T>(this T control, IBinding binding) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.HotKeyProperty, binding);
@@ -105,11 +80,6 @@ public static T HotKey<T>(this T control, IBinding binding) where T : Avalonia.C
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T HotKey<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.HotKeyProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T HotKey<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Input.KeyGesture?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
-=> control._setEx(Avalonia.Controls.Button.HotKeyProperty, ps, () => control.HotKey = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // CommandParameter
@@ -126,11 +96,6 @@ public static T CommandParameter<T>(this T control, Func<System.Object?> func, A
 public static T CommandParameter<T>(this T control, Func<ValueTask<System.Object?>> getter, Func<System.Object?>? fallbackGetter = null, Action<System.Object?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.CommandParameterProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T CommandParameter<T>(this T control,System.Object? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
-=> control._setEx(Avalonia.Controls.Button.CommandParameterProperty, ps, () => control.CommandParameter = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T CommandParameter<T>(this T control, IBinding binding) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.CommandParameterProperty, binding);
@@ -138,11 +103,6 @@ public static T CommandParameter<T>(this T control, IBinding binding) where T : 
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T CommandParameter<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.CommandParameterProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T CommandParameter<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Object?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
-=> control._setEx(Avalonia.Controls.Button.CommandParameterProperty, ps, () => control.CommandParameter = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsDefault
@@ -159,11 +119,6 @@ public static T IsDefault<T>(this T control, Func<System.Boolean> func, Action<S
 public static T IsDefault<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.IsDefaultProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T IsDefault<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
-=> control._setEx(Avalonia.Controls.Button.IsDefaultProperty, ps, () => control.IsDefault = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T IsDefault<T>(this T control, IBinding binding) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.IsDefaultProperty, binding);
@@ -171,11 +126,6 @@ public static T IsDefault<T>(this T control, IBinding binding) where T : Avaloni
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T IsDefault<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.IsDefaultProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T IsDefault<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
-=> control._setEx(Avalonia.Controls.Button.IsDefaultProperty, ps, () => control.IsDefault = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // IsCancel
@@ -192,11 +142,6 @@ public static T IsCancel<T>(this T control, Func<System.Boolean> func, Action<Sy
 public static T IsCancel<T>(this T control, Func<ValueTask<System.Boolean>> getter, Func<System.Boolean>? fallbackGetter = null, Action<System.Boolean>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.IsCancelProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T IsCancel<T>(this T control,System.Boolean value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
-=> control._setEx(Avalonia.Controls.Button.IsCancelProperty, ps, () => control.IsCancel = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T IsCancel<T>(this T control, IBinding binding) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.IsCancelProperty, binding);
@@ -204,11 +149,6 @@ public static T IsCancel<T>(this T control, IBinding binding) where T : Avalonia
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T IsCancel<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.IsCancelProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T IsCancel<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, System.Boolean> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
-=> control._setEx(Avalonia.Controls.Button.IsCancelProperty, ps, () => control.IsCancel = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
  // Flyout
@@ -225,11 +165,6 @@ public static T Flyout<T>(this T control, Func<Avalonia.Controls.Primitives.Flyo
 public static T Flyout<T>(this T control, Func<ValueTask<Avalonia.Controls.Primitives.FlyoutBase?>> getter, Func<Avalonia.Controls.Primitives.FlyoutBase?>? fallbackGetter = null, Action<Avalonia.Controls.Primitives.FlyoutBase?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.FlyoutProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Flyout<T>(this T control,Avalonia.Controls.Primitives.FlyoutBase? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
-=> control._setEx(Avalonia.Controls.Button.FlyoutProperty, ps, () => control.Flyout = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Flyout<T>(this T control, IBinding binding) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.FlyoutProperty, binding);
@@ -237,11 +172,6 @@ public static T Flyout<T>(this T control, IBinding binding) where T : Avalonia.C
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Flyout<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.FlyoutProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Flyout<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Controls.Primitives.FlyoutBase?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Button 
-=> control._setEx(Avalonia.Controls.Button.FlyoutProperty, ps, () => control.Flyout = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 

@@ -27,11 +27,6 @@ public static T Target<T>(this T control, Func<Avalonia.Input.IInputElement?> fu
 public static T Target<T>(this T control, Func<ValueTask<Avalonia.Input.IInputElement?>> getter, Func<Avalonia.Input.IInputElement?>? fallbackGetter = null, Action<Avalonia.Input.IInputElement?>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null) where T : Avalonia.Controls.Label 
    => control._set(Avalonia.Controls.Label.TargetProperty!, getter, fallbackGetter, onChanged, expression);
 
-/*MagicalSetterGenerator*/
-[Obsolete]
-public static T Target<T>(this T control,Avalonia.Input.IInputElement? value, BindingMode? bindingMode = null, IValueConverter? converter = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Label 
-=> control._setEx(Avalonia.Controls.Label.TargetProperty, ps, () => control.Target = value, bindingMode, converter, bindingSource);
-
 /*BindSetterGenerator*/
 public static T Target<T>(this T control, IBinding binding) where T : Avalonia.Controls.Label 
    => control._set(Avalonia.Controls.Label.TargetProperty, binding);
@@ -39,11 +34,6 @@ public static T Target<T>(this T control, IBinding binding) where T : Avalonia.C
 /*AvaloniaPropertyBindSetterGenerator*/
 public static T Target<T>(this T control, AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null) where T : Avalonia.Controls.Label 
    => control._set(Avalonia.Controls.Label.TargetProperty, avaloniaProperty, bindingMode, converter, overrideView);
-
-/*MagicalSetterWithConverterGenerator*/
-[Obsolete]
-public static T Target<TValue,T>(this T control, TValue value, FuncValueConverter<TValue, Avalonia.Input.IInputElement?> converter, BindingMode? bindingMode = null, object? bindingSource = null, [CallerArgumentExpression(nameof(value))] string? ps = null) where T : Avalonia.Controls.Label 
-=> control._setEx(Avalonia.Controls.Label.TargetProperty, ps, () => control.Target = converter.TryConvert(value), bindingMode, converter, bindingSource);
 
 
 
