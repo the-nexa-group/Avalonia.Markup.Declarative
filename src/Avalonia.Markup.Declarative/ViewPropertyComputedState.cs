@@ -1,4 +1,4 @@
-﻿//prevent from warning "Method 'OnPropertyChanged' do not invoke base.OnPropertyChanged" - OnPropertyChanged is abstract
+//prevent from warning "Method 'OnPropertyChanged' do not invoke base.OnPropertyChanged" - OnPropertyChanged is abstract
 #pragma warning disable AVA2001
 
 using System;
@@ -9,6 +9,8 @@ namespace Avalonia.Markup.Declarative;
 
 internal class ViewPropertyComputedState<TValue> : ExpressionBindingBase, IObservable<TValue>, INotifyPropertyChanged
 {
+    private static readonly EqualityComparer<TValue> Comparer = EqualityComparer<TValue>.Default;
+    
     private Func<TValue> GetterFunc { get; }
     private TValue Value => GetterFunc();
 
@@ -59,6 +61,8 @@ internal class ViewPropertyComputedState<TControl, TValue> : ExpressionBindingBa
     where TControl : AvaloniaObject
 
 {
+    private static readonly EqualityComparer<TValue> Comparer = EqualityComparer<TValue>.Default;
+    
     private readonly IObservable<TValue>? _obs;
     private readonly TControl? _control;
     private readonly AvaloniaProperty<TValue>? _avaloniaProperty;
@@ -135,15 +139,15 @@ internal class ViewPropertyComputedState<TControl, TValue> : ExpressionBindingBa
         GetterFunc = getterFunc;
      _parentView = ViewBuildContext.CurrentView; // Capture the current view context for property bubbling
 
-    if (control == null)
-    return;
+    if (control == null) 
+        return;
 
         // During initialization, always set the value
         _isInitializing = true;
         try
-    {
+        {
             UpdateControlValue();
-    }
+        }
         catch
         {
           // If getter fails during initialization, that's OK - the binding might not be ready yet
@@ -212,13 +216,13 @@ internal class ViewPropertyComputedState<TControl, TValue> : ExpressionBindingBa
 
         // Optimize: first check if value hasn't changed from what we last set
         // This avoids unnecessary getter invocations in the common case
-        if (EqualityComparer<TValue>.Default.Equals(value, _lastSetValue))
+        if (Comparer.Equals(value, _lastSetValue))
           return;
 
         // Only invoke getter if we need to verify the value is truly different
         // This is needed for cases where the property might have been changed externally
         var currentGetterValue = GetterFunc();
-        if (EqualityComparer<TValue>.Default.Equals(value, currentGetterValue))
+        if (Comparer.Equals(value, currentGetterValue))
             return;
 
         // Update the last set value to track this change
@@ -248,13 +252,12 @@ internal class ViewPropertyComputedState<TControl, TValue> : ExpressionBindingBa
 
     #region IObservable implementation
 
-    private readonly List<IObserver<TValue>> _observers = [];
+    private readonly HashSet<IObserver<TValue>> _observers = [];
 
     public IDisposable Subscribe(IObserver<TValue> observer)
     {
-        if (!_observers.Contains(observer))
+        if (_observers.Add(observer))
         {
-            _observers.Add(observer);
             // Immediately notify the new observer with the current value
             observer.OnNext(Value);
         }
@@ -267,12 +270,11 @@ internal class ViewPropertyComputedState<TControl, TValue> : ExpressionBindingBa
             observer.OnNext(value);
     }
 
-    private class Unsubscriber(ICollection<IObserver<TValue>> observers, IObserver<TValue> observer) : IDisposable
+    private class Unsubscriber(HashSet<IObserver<TValue>> observers, IObserver<TValue> observer) : IDisposable
     {
         public void Dispose()
         {
-            if (observers.Contains(observer))
-                observers.Remove(observer);
+            observers.Remove(observer);
         }
     }
 
