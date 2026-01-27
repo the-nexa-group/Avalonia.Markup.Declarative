@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using Avalonia.Controls;
+using Avalonia.Controls.Templates;
 using Avalonia.Markup.Declarative.Helpers;
 using Avalonia.Threading;
 
@@ -43,7 +44,6 @@ public abstract class ComponentBase : ViewBase, IMvuComponent
     protected Dictionary<string, Action<object?>> _propertyUpdateCallbacks = new();
 
     private bool _isUpdatingState;
-    private readonly HashSet<INotifyPropertyChanged> _subscribedNotifyPropertyChanged = new();
 
     protected ComponentBase() : this(ViewInitializationStrategy.Immediate)
     {
@@ -62,6 +62,22 @@ public abstract class ComponentBase : ViewBase, IMvuComponent
     }
 
     protected virtual void InjectServices() { }
+
+    protected virtual void SubscribeToNotifyPropertyChangedMembers()
+    {
+        DataTemplates.PropertyChanged += HandlePropertyHasChanged; 
+        Classes.PropertyChanged += HandlePropertyHasChanged;
+        Styles.PropertyChanged += HandleAvPropertyHasChanged;
+        VisualChildren.PropertyChanged += HandlePropertyHasChanged;
+    }
+    
+    protected virtual void UnsubscribeToNotifyPropertyChangedMembers()
+    {
+        DataTemplates.PropertyChanged -= HandlePropertyHasChanged;
+        Classes.PropertyChanged -= HandlePropertyHasChanged;
+        Styles.PropertyChanged -= HandleAvPropertyHasChanged;
+        VisualChildren.PropertyChanged -= HandlePropertyHasChanged;
+    }
 
     protected virtual void OnStateChanged() {}
 
@@ -90,6 +106,7 @@ public abstract class ComponentBase : ViewBase, IMvuComponent
             .Select(p => new ViewPropertyState(p, this))
             .ToArray();
     }
+    
     public void UpdateState(Action? updateStateAction = null, bool bubbleToParent = false)
     {
         updateStateAction?.Invoke();
@@ -143,6 +160,16 @@ public abstract class ComponentBase : ViewBase, IMvuComponent
         }
         
         OnStateChanged();
+    }
+    
+    void HandleAvPropertyHasChanged(object? sender, AvaloniaPropertyChangedEventArgs e)
+    {
+        StateHasChanged();
+    }
+
+    void HandlePropertyHasChanged(object? sender, PropertyChangedEventArgs e)
+    {
+        StateHasChanged();
     }
 
     [Obsolete("Should not used directly and will be removed in future")]
@@ -223,56 +250,6 @@ public abstract class ComponentBase : ViewBase, IMvuComponent
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
-    [RequiresUnreferencedCode("Method SubscribeToNotifyPropertyChangedMembers uses reflection to inspect the type hierarchy. This can't be analyzed statically.")]
-    private void SubscribeToNotifyPropertyChangedMembers()
-    {
-        var componentType = GetType();
-        var types = new List<Type>();
-
-        for (var type = componentType; type != null && type != typeof(object); type = type.BaseType)
-            types.Add(type);
-
-        types.Reverse();
-
-        foreach (var type in types)
-        {
-            // Properties
-            var props = type.GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
-            foreach (var prop in props)
-            {
-                try
-                {
-                    if (!prop.CanRead) continue;
-                    if (prop.GetIndexParameters().Length != 0) continue; // skip indexers
-
-                    var value = prop.GetValue(this);
-                    if (value is INotifyPropertyChanged inpc)
-                        SubscribeNotifyPropertyChanged(inpc);
-                }
-                catch
-                {
-                    // Ignore getter exceptions
-                }
-            }
-
-            // Fields
-            var fields = type.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
-            foreach (var field in fields)
-            {
-                try
-                {
-                    var value = field.GetValue(this);
-                    if (value is INotifyPropertyChanged inpc)
-                        SubscribeNotifyPropertyChanged(inpc);
-                }
-                catch
-                {
-                    // Ignore getter exceptions
-                }
-            }
-        }
-    }
-
     public void RegisterPropertyCallback(string propertyName, Action<object?> callback)
     {
         _propertyUpdateCallbacks[propertyName] = callback;
@@ -293,15 +270,5 @@ public abstract class ComponentBase : ViewBase, IMvuComponent
             parent.NotifyExternalPropertyChanged(propertyName, newValue);
     }
 
-    private void SubscribeNotifyPropertyChanged(INotifyPropertyChanged inpc)
-    {
-        if (_subscribedNotifyPropertyChanged.Add(inpc))
-            inpc.PropertyChanged += OnMemberPropertyChanged;
-    }
 
-    private void OnMemberPropertyChanged(object? sender, PropertyChangedEventArgs e)
-    {
-        // Trigger a state update when any subscribed member changes
-        StateHasChanged();
-    }
 }

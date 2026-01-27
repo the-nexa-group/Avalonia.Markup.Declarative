@@ -6,10 +6,9 @@ using FluentAssertions;
 
 namespace Avalonia.Markup.Declarative.Tests.BindingTests;
 
-public class ExpressionBindingTests : AvaloniaTestBase
+public partial class ExpressionBindingTests : AvaloniaTestBase
 {
-
-    public class ExpressionBindingTestView : ComponentBase
+    public partial class ExpressionBindingTestView : ComponentBase
     {
         protected override Control Build() =>
             new StackPanel().Children(
@@ -25,10 +24,12 @@ public class ExpressionBindingTests : AvaloniaTestBase
 
         public TextBlock MyTextBlock = null!;
 
+        [Observe]
         public SeparatedViewState State { get; set; } = new();
 
         private bool IsToggleChecked { get; set; }
     }
+    
     public class SeparatedViewState : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -57,7 +58,7 @@ public class ExpressionBindingTests : AvaloniaTestBase
         window.Show();
         // Process layout and rendering
         Dispatcher.UIThread.RunJobs();
-
+        
         var state = view.State;
 
         view.UpdateState(() => state.UpdatePropertyWithoutNotification("Updated!"));
@@ -87,5 +88,4 @@ public class ExpressionBindingTests : AvaloniaTestBase
 
         textBlock.Text.Should().Be("Notified!");
     }
-
 }

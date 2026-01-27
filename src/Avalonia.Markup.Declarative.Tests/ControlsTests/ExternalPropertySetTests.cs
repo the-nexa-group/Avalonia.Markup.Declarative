@@ -20,6 +20,7 @@ public class SliderWithLabel : ComponentBase
 
     private TextBlock _labelTextBlock = null!;
     private Slider _slider = null!;
+    
     public double Value { get; set; }
     public string Label { get; set; } = "";
 
@@ -37,8 +38,8 @@ public class ExternalPropertySetTestView : ComponentBase
         .Label(() => "Hello world") // Initial label value with lazy evaluation
         .Value(() => Value, v => Value = v);
 
-
     public SliderWithLabel SliderWithLabel = null!;
+    
     public double Value { get; set; } = 1;
 
     public string? GetRealLabelValue() => SliderWithLabel.GetRealLabelValue();

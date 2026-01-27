@@ -3,9 +3,7 @@
 namespace Avalonia.Markup.Declarative;
 
 /// <summary>
-/// Used by Mvu component base to inject services into components
+/// Marks a property or field to be automatically injected using dependency injection.
 /// </summary>
-public class InjectAttribute : Attribute
-{
-
-}
+[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
+public sealed class InjectAttribute : Attribute;
