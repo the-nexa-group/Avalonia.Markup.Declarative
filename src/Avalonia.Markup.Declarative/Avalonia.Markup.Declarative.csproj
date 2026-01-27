@@ -7,9 +7,9 @@
 		<LangVersion>latest</LangVersion>
 		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
 
-		<Authors>Avalonia Team</Authors>
-		<PackageProjectUrl>https://github.com/AvaloniaUI/Avalonia.Markup.Declarative</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/AvaloniaUI/Avalonia.Markup.Declarative</RepositoryUrl>
+		<Authors>Avalonia Team, The Nexa Group</Authors>
+		<PackageProjectUrl>https://github.com/the-nexa-group/Avalonia.Markup.Declarative</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/the-nexa-group/Avalonia.Markup.Declarative</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<Description>The set of base classes and extension methods over Avalonia's controls to define views/markup with C# code instead of XAML.</Description>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
