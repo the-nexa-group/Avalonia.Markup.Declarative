@@ -1,4 +1,4 @@
-﻿using Avalonia.Data;
+using Avalonia.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -77,6 +77,12 @@ public abstract class ComponentBase : ViewBase, IMvuComponent
         Classes.PropertyChanged -= HandlePropertyHasChanged;
         Styles.PropertyChanged -= HandleAvPropertyHasChanged;
         VisualChildren.PropertyChanged -= HandlePropertyHasChanged;
+    }
+
+    protected override void OnDetachedFromVisualTree(VisualTreeAttachmentEventArgs e)
+    {
+        base.OnDetachedFromVisualTree(e);
+        UnsubscribeToNotifyPropertyChangedMembers();
     }
 
     protected virtual void OnStateChanged() {}
