@@ -41,6 +41,8 @@ public abstract class ComponentBase : ViewBase, IMvuComponent
 {
     private ViewPropertyState[] _localPropertyStates = [];
     private List<ViewPropertyState> _externalPropertyStates = [];
+    private readonly HashSet<INotifyPropertyChanged> _trackedNotifyMembers = [];
+    
     protected Dictionary<string, Action<object?>> _propertyUpdateCallbacks = new();
 
     private bool _isUpdatingState;
@@ -65,20 +67,36 @@ public abstract class ComponentBase : ViewBase, IMvuComponent
 
     protected virtual void SubscribeToNotifyPropertyChangedMembers()
     {
-        DataTemplates.PropertyChanged += HandlePropertyHasChanged; 
-        Classes.PropertyChanged += HandlePropertyHasChanged;
-        Styles.PropertyChanged += HandleAvPropertyHasChanged;
-        VisualChildren.PropertyChanged += HandlePropertyHasChanged;
+        TrackPropertyChanged(DataTemplates);
+        TrackPropertyChanged(Classes);
+        TrackPropertyChanged(Styles);
+        TrackPropertyChanged(VisualChildren);
     }
     
     protected virtual void UnsubscribeToNotifyPropertyChangedMembers()
     {
-        DataTemplates.PropertyChanged -= HandlePropertyHasChanged;
-        Classes.PropertyChanged -= HandlePropertyHasChanged;
-        Styles.PropertyChanged -= HandleAvPropertyHasChanged;
-        VisualChildren.PropertyChanged -= HandlePropertyHasChanged;
+        UntrackPropertyChanged(DataTemplates);
+        UntrackPropertyChanged(Classes);
+        UntrackPropertyChanged(Styles);
+        UntrackPropertyChanged(VisualChildren);
+        
+        // Clean-up any potentially lingering members.
+        foreach (var trackedNotifyMember in _trackedNotifyMembers)
+            UntrackPropertyChanged(trackedNotifyMember); 
     }
 
+    protected void TrackPropertyChanged(INotifyPropertyChanged? notifier)
+    {
+        if (notifier is not null && _trackedNotifyMembers.Add(notifier))
+            notifier.PropertyChanged += HandlePropertyHasChanged;
+    }
+
+    protected void UntrackPropertyChanged(INotifyPropertyChanged? notifier)
+    {
+        if (notifier is not null && _trackedNotifyMembers.Remove(notifier))
+            notifier.PropertyChanged -= HandlePropertyHasChanged;
+    }
+    
     protected override void OnDetachedFromVisualTree(VisualTreeAttachmentEventArgs e)
     {
         base.OnDetachedFromVisualTree(e);
