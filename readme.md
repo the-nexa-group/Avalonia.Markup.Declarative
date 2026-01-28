@@ -70,17 +70,16 @@ public partial class CounterComponent : ComponentBase
 ```csharp
 public class MainView : ViewBase<MainViewModel>
 {
-    protected override Control? Build(MainViewModel vm) =>
-        new Grid()
-            .Cols("Auto, *")
-            .Children(
-                new TextBlock()
-                    .Text(() => vm.Title),
-                new Button()
-                    .Col(1)
-                    .Content("Click me")
-                    .OnClick(() => vm.OnClick())
-            );
+    protected override Control Build(MainViewModel vm) => new Grid()
+        .Cols("Auto, *")
+        .Children(
+            new TextBlock()
+                .Text(() => vm.Title),
+            new Button()
+                .Col(1)
+                .Content("Click me")
+                .OnClick(() => vm.OnClick())
+        );
 }
 ```
 
@@ -91,7 +90,7 @@ public class MainView : ViewBase<MainViewModel>
 Automatically subscribes to `INotifyPropertyChanged` changes on properties or fields and updates the UI:
 
 ```csharp
-public class MyComponent : ComponentBase
+public partial class MyComponent : ComponentBase
 {
     [Observe]
     public StatusModel Status { get; init; };
@@ -103,7 +102,7 @@ public class MyComponent : ComponentBase
 Marks a field as an Observable Property. Generates a public property and an Avalonia Property, which automatically triggers UI updates on changes.
 Fields with `INotifyPropertyChanged` types are automatically subscribed and unsubscribed to and act similar to the `[Observe]` attribute:
 ```csharp
-public class DataComponent : ComponentBase
+public partial class DataComponent : ComponentBase
 {
     [Observable]
     private INotifyPropertyChanged _dataSource;
