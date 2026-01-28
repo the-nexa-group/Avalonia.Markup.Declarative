@@ -1,6 +1,6 @@
 ﻿namespace MvuTemplate;
 
-public class MainView : ComponentBase
+public class MainView : Component
 {
     protected override Control Build()
         => New<SimpleComponent>() // creates Child SimpleComponent and injects it's dependencies into constructor

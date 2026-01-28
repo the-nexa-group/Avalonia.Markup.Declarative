@@ -24,7 +24,7 @@ public class BindPropertySameLevelSyncTest : AvaloniaTestBase
         Assert.Equal(expectedValue, view.Value);
     }
 
-    public class SliderWrapperEx : ComponentBase
+    public class SliderWrapperEx : Component
     {
         protected override Control Build() =>
         new Grid()
@@ -72,7 +72,7 @@ public class BindPropertySameLevelSyncTest : AvaloniaTestBase
         public Slider _slider = null!;
         public NumericUpDown _numericUpDown = null!;
     }
-    public class SliderTestView : ComponentBase
+    public class SliderTestView : Component
     {
         protected override Control Build() =>
             new SliderWrapperEx()

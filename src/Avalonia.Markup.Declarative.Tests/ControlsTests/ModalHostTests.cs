@@ -5,7 +5,7 @@ namespace Avalonia.Markup.Declarative.Tests.ControlsTests;
 public class ModalHostTests : AvaloniaTestBase
 {
     // Reproduces the MVU-style component from the issue
-    public class ModalHost : ComponentBase
+    public class ModalHost : Component
     {
         internal Panel? HostPanel;
 

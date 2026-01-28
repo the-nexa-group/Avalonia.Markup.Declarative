@@ -13,7 +13,7 @@ public class TreeViewBindingTests : AvaloniaTestBase
         public ObservableCollection<Node> Children { get; set; } = new(children ?? []);
     }
 
-    public class TreeViewSampleView : ComponentBase
+    public class TreeViewSampleView : Component
     {
         protected override Control Build() =>
             new StackPanel()

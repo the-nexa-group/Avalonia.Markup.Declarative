@@ -3,7 +3,7 @@ using Avalonia.Styling;
 
 namespace AvaloniaMarkupSample.MvuSample;
 
-public class SampleMvuView : ComponentBase
+public class SampleMvuView : Avalonia.Markup.Declarative.Component
 {
     protected override StyleGroup BuildStyles() =>
     [
@@ -50,7 +50,7 @@ public class SampleMvuView : ComponentBase
                             .BorderBrush(() => BorderColor)
                             .BorderThickness(3)
                             .Child(
-                                new Component()
+                                new MvuComponent()
                                     .InnerContent(() => MvuComponentParam)
                                     .OnButtonClicked(() =>
                                     {

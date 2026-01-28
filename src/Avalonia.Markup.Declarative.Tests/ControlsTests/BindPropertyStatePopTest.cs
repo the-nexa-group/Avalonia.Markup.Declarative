@@ -23,7 +23,7 @@ public class BindPropertyStatePopTest : AvaloniaTestBase
         Assert.Equal(expectedValue, view.Value);
     }
 
-    public class SliderWrapper : ComponentBase
+    public class SliderWrapper : Component
     {
         protected override Control Build() =>
             new StackPanel().Children(
@@ -43,7 +43,7 @@ public class BindPropertyStatePopTest : AvaloniaTestBase
         public Slider _slider = null!;
         public double Value { get; set; }
     }
-    public class SliderTestView : ComponentBase
+    public class SliderTestView : Component
     {
         protected override Control Build() =>
             new SliderWrapper()

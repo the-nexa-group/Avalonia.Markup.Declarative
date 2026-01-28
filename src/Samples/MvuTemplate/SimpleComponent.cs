@@ -3,7 +3,7 @@ using Avalonia.Styling;
 
 namespace MvuTemplate;
 
-public partial class SimpleComponent(SampleDataService dataService) : ComponentBase //constructor dependency injection sample
+public partial class SimpleComponent(SampleDataService dataService) : Component //constructor dependency injection sample
 {
     // You can also use Service injection into Property with DI container as follows:
     [Inject] public SampleDataService? DataService { get; set; }

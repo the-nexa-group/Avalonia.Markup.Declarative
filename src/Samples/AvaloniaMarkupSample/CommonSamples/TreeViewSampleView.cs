@@ -3,7 +3,7 @@ using Avalonia.Controls.Templates;
 
 namespace AvaloniaMarkupSample.CommonSamples;
 
-public class TreeViewSampleView : ComponentBase
+public class TreeViewSampleView : Component
 {
     protected override Control Build() =>
         new StackPanel()

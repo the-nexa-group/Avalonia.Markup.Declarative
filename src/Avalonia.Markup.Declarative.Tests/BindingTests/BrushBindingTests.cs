@@ -6,7 +6,7 @@ namespace Avalonia.Markup.Declarative.Tests.BindingTests;
 
 public class BrushBindingTests : AvaloniaTestBase
 {
-    public class BorderBrushView : ComponentBase
+    public class BorderBrushView : Component
     {
         protected override Control Build() =>
             new Border()

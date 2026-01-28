@@ -28,7 +28,7 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
         var classDecl = (ClassDeclarationSyntax)context.Node;
         var symbol = context.SemanticModel.GetDeclaredSymbol(classDecl);
 
-        if (symbol is not INamedTypeSymbol typeSymbol || !InheritsFrom(typeSymbol, "ComponentBase"))
+        if (symbol is not INamedTypeSymbol typeSymbol || !InheritsFrom(typeSymbol, "Component"))
             return null;
 
         var injectables = new List<(string Name, string Type, bool IsProperty, bool HasSetter)>();

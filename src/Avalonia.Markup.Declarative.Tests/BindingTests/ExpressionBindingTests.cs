@@ -8,7 +8,7 @@ namespace Avalonia.Markup.Declarative.Tests.BindingTests;
 
 public partial class ExpressionBindingTests : AvaloniaTestBase
 {
-    public partial class ExpressionBindingTestView : ComponentBase
+    public partial class ExpressionBindingTestView : Component
     {
         protected override Control Build() =>
             new StackPanel().Children(

@@ -8,14 +8,14 @@ namespace Avalonia.Markup.Declarative.Tests.ControlsTests
     {
         public class TestService { }
 
-        public partial class BaseComponent() : ComponentBase(ViewInitializationStrategy.Immediate)
+        public partial class InjectComponent() : Component(ViewInitializationStrategy.Immediate)
         {
             [Inject]
             public TestService? Service { get; private set; }
             protected override Control? Build() => null;
         }
 
-        public partial class DerivedComponent : BaseComponent
+        public partial class DerivedComponent : InjectComponent
         {
             protected override Control? Build() => null;
         }
@@ -28,7 +28,7 @@ namespace Avalonia.Markup.Declarative.Tests.ControlsTests
             var component = new DerivedComponent();
 
             // Act
-            var property = typeof(BaseComponent).GetProperty("Service",
+            var property = typeof(InjectComponent).GetProperty("Service",
                 BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
             var value = property?.GetValue(component);
 

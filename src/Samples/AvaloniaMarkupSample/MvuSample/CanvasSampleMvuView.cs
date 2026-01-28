@@ -2,7 +2,7 @@
 
 namespace AvaloniaMarkupSample.MvuSample;
 
-public class CanvasSampleMvuView : ComponentBase
+public class CanvasSampleMvuView : Avalonia.Markup.Declarative.Component
 {
     protected override Control Build() =>
         new Grid().Rows("30, 40, *")
