@@ -18,13 +18,13 @@
 ### MVU Pattern 
 
 ```csharp
-public class CounterComponent : ComponentBase
+public partial class CounterComponent : ComponentBase
 {
     [Inject] DataService DataService { get; set; } = null!;
     
     public int Counter { get; set; }
 
-    protected override object Build() => new StackPanel()
+    protected override Control Build() => new StackPanel()
         .Children(
             new TextBlock()
                 .Text("Hello World"),
@@ -46,13 +46,13 @@ public class CounterComponent : ComponentBase
 ### Extended MVU Pattern (recommended)
 
 ```csharp
-public class CounterComponent : ComponentBase
+public partial class CounterComponent : ComponentBase
 {
     [Inject] DataService DataService { get; set; } = null!;
     
     [Observable] int _counter;
 
-    protected override object Build() => new StackPanel()
+    protected override Control Build() => new StackPanel()
         .Children(
             new TextBlock()
                 .Text("Hello World"),
@@ -70,7 +70,7 @@ public class CounterComponent : ComponentBase
 ```csharp
 public class MainView : ViewBase<MainViewModel>
 {
-    protected override object Build(MainViewModel vm) =>
+    protected override Control? Build(MainViewModel vm) =>
         new Grid()
             .Cols("Auto, *")
             .Children(
