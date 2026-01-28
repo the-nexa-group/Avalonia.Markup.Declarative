@@ -91,7 +91,7 @@ public static class ControlPropertyExtensions
         var handler = setChangedHandler;
 
         //override handler for MVU components so changing of such properties will trigger StateHasChanged method
-        if (view is Component componentBase && setChangedHandler != null)
+        if (view is ComponentBase componentBase && setChangedHandler != null)
         {
             handler = v =>
             {
@@ -141,12 +141,12 @@ public static class ControlPropertyExtensions
 
         var handler = setChangedHandler;
 
-        if (view is Component componentBase && setChangedHandler != null)
+        if (view is ComponentBase componentBase && setChangedHandler != null)
         {
             // Extract property name for tracking (if possible)
             string propertyName = expression ?? "unknown";
 
-            if (control is Component childComponent)
+            if (control is ComponentBase childComponent)
             {
                 // Register callback on PARENT to handle child changes by expression key
                 componentBase.RegisterPropertyCallback(propertyName, value =>
@@ -268,7 +268,7 @@ public static class ControlPropertyExtensions
 
     private static Action<TValue>? PrepareHandler<TValue>(ViewBase view, Action<TValue>? handler, string? expression)
     {
-        if (view is Component cb && handler != null)
+        if (view is ComponentBase cb && handler != null)
         {
             return v =>
             {

@@ -159,7 +159,7 @@ public class ComponentBaseViewModelNullTest
         public void TriggerInvalidated() => Invalidated?.Invoke();
     }
 
-    private class TestComponentView : Component<TestViewModel>
+    private class TestComponentView : ComponentBase<TestViewModel>
     {
         public bool BuildWasCalledWithNonNullViewModel { get; private set; }
         public int BuildCallCount { get; private set; }
@@ -183,7 +183,7 @@ public class ComponentBaseViewModelNullTest
         }
     }
 
-    private class TestComponentViewWithEventSubscription : Component<TestViewModel>
+    private class TestComponentViewWithEventSubscription : ComponentBase<TestViewModel>
     {
         public bool InvalidatedEventWasHandled { get; private set; }
 
@@ -224,7 +224,7 @@ public class ComponentBaseViewModelNullTest
         public void RaiseInvalidated() => Invalidated?.Invoke();
     }
 
-    private class LayerItemViewStub : Component<LayerItemViewModelStub>
+    private class LayerItemViewStub : ComponentBase<LayerItemViewModelStub>
     {
         public bool WasBuiltSuccessfully { get; private set; }
         public bool InvalidatedEventWasHandled { get; private set; }

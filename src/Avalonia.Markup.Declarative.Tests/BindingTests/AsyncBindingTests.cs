@@ -173,7 +173,7 @@ public class AsyncBindingTests : AvaloniaTestBase
     }
 
     // Custom view for Instant value test
-    public class InstantView : Component
+    public class InstantView : ComponentBase
     {
         public TextBlock TargetTextBlock = null!;
         protected override Control Build() =>

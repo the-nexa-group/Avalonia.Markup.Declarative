@@ -7,7 +7,7 @@ using Color = Avalonia.Media.Color;
 
 namespace Avalonia.Markup.Declarative.Tests.ControlsTests;
 
-public class ColorPickerView : Component
+public class ColorPickerView : ComponentBase
 {
     protected override Control Build() =>
         new TabControl()

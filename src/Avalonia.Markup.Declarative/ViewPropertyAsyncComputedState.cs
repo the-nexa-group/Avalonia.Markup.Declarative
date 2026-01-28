@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Markup.Declarative;
 using Avalonia.Threading;
-using Component = Avalonia.Markup.Declarative.Component;
 
 internal class ViewPropertyAsyncComputedState<TValue> : ExpressionBindingBase, IObservable<TValue>, INotifyPropertyChanged
 {
@@ -206,7 +205,7 @@ internal class ViewPropertyAsyncComputedState<TControl, TValue> : ExpressionBind
         if (_isUpdating || Equals(value, _lastValue)) return;
         _lastValue = value;
         _setChangedHandler?.Invoke(value);
-        if (!string.IsNullOrEmpty(ExpressionString) && _parentView is Component pc)
+        if (!string.IsNullOrEmpty(ExpressionString) && _parentView is ComponentBase pc)
             pc.NotifyExternalPropertyChanged(ExpressionString, value);
     }
 

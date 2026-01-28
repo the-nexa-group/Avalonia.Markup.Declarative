@@ -5,7 +5,7 @@ namespace Avalonia.Markup.Declarative.Tests.BindingTests;
 
 public class NumericUpDownBindingTests : AvaloniaTestBase
 {
-    public class NumericView : Component
+    public class NumericView : ComponentBase
     {
         protected override Control Build() =>
             new NumericUpDown()

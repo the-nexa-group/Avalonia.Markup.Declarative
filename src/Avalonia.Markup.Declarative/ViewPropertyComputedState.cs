@@ -233,7 +233,7 @@ internal class ViewPropertyComputedState<TControl, TValue> : ExpressionBindingBa
 
         // Handle property propagation to parent components
         // Check if we have an expression string for property tracking and a parent view
-        if (!string.IsNullOrEmpty(ExpressionString) && _parentView is Component parentComponent)
+        if (!string.IsNullOrEmpty(ExpressionString) && _parentView is ComponentBase parentComponent)
         {
             // Notify parent without using reflection
             parentComponent.NotifyExternalPropertyChanged(ExpressionString, value);

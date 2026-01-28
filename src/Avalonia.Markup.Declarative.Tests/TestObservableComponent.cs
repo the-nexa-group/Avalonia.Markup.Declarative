@@ -3,7 +3,7 @@ using Avalonia.Controls;
 
 namespace Avalonia.Markup.Declarative.Tests;
 
-public partial class TestObservableComponent : Component
+public partial class TestObservableComponent : ComponentBase
 {
     // Regular Observe attribute - subscribes once, doesn't handle reassignment
     [Observe]

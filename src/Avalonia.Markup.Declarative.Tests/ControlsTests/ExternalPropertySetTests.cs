@@ -4,7 +4,7 @@ using Xunit.Abstractions;
 
 namespace Avalonia.Markup.Declarative.Tests.ControlsTests;
 
-public class SliderWithLabel : Component
+public class SliderWithLabel : ComponentBase
 {
     protected override Control Build() =>
         new StackPanel()
@@ -31,7 +31,7 @@ public class SliderWithLabel : Component
         _slider.Value = value;
     }
 }
-public class ExternalPropertySetTestView : Component
+public class ExternalPropertySetTestView : ComponentBase
 {
     protected override Control Build() => new SliderWithLabel()
         .Ref(out SliderWithLabel)

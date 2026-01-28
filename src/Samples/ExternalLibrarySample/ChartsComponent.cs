@@ -5,7 +5,7 @@ namespace ExternalLibrarySample;
 
 //prevent from trimming [injected] services by native aot compilation
 [method: DynamicDependency(DynamicallyAccessedMemberTypes.PublicProperties, typeof(ChartsComponent))]
-public class ChartsComponent() : Component
+public class ChartsComponent() : ComponentBase
 {
     //Styles
     protected override StyleGroup? BuildStyles() => [];

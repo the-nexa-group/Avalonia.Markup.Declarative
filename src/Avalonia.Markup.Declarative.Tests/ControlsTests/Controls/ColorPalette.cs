@@ -6,7 +6,7 @@ using Avalonia.Interactivity;
 using Avalonia.Media;
 
 namespace Avalonia.Markup.Declarative.Tests.ControlsTests.Controls;
-public class ColorPalette : Component
+public class ColorPalette : ComponentBase
 {
     #region AvaloniaProperties
     /// <summary>

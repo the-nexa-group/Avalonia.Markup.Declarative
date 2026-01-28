@@ -5,7 +5,7 @@ namespace Avalonia.Markup.Declarative.Tests.BindingTests;
 
 public class ListBoxBindingTests : AvaloniaTestBase
 {
-    public class ListBoxSampleView : Component
+    public class ListBoxSampleView : ComponentBase
     {
         protected override Control Build() =>
             new StackPanel()

@@ -2,7 +2,7 @@
 
 namespace AvaloniaMarkupSample.MvuSample;
 
-public class SliderEx : Avalonia.Markup.Declarative.Component
+public class SliderEx : ComponentBase
 {
     protected override Control Build() =>
         new Grid()

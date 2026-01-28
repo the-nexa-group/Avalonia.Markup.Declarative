@@ -1,6 +1,6 @@
 ﻿namespace AvaloniaMarkupSample.CommonSamples;
 
-public class ItemControlSampleView : Component
+public class ItemControlSampleView : ComponentBase
 {
     protected override Control Build() =>
         new StackPanel()

@@ -4,7 +4,7 @@ namespace AvaloniaMarkupSample.CommonSamples;
 
 //prevent from trimming [injected] services by native aot compilation
 [method: DynamicDependency(DynamicallyAccessedMemberTypes.PublicProperties, typeof(OpenGlView))]
-public class OpenGlView() : Component
+public class OpenGlView() : ComponentBase
 {
     protected override Control Build() =>
         new Grid()
