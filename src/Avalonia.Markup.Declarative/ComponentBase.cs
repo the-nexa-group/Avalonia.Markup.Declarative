@@ -29,14 +29,14 @@ public abstract class ComponentBase<TViewModel> : ComponentBase
     protected override Control? Build() => Build(ViewModel);
 }
 
-public abstract class ComponentBase(
-    ViewInitializationStrategy viewInitializationStrategy = ViewInitializationStrategy.Immediate)
-    : ViewBase(viewInitializationStrategy), IMvuComponent
+public abstract class ComponentBase : ViewBase, IMvuComponent
 {
     private readonly HashSet<INotifyPropertyChanged> _trackedNotifyMembers = [];
     private readonly Dictionary<string, Action<object?>> _propertyUpdateCallbacks = new();
     private bool _isUpdatingState;
-    
+
+    public ComponentBase(ViewInitializationStrategy viewInitializationStrategy = ViewInitializationStrategy.Immediate) : base(viewInitializationStrategy) { }
+
     /// <summary>
     /// Creates a new instance of the control using the component factory. Injects services into the control if needed.
     /// </summary>
