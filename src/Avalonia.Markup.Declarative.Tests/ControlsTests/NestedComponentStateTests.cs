@@ -35,7 +35,6 @@ public class ColorPickerView : ComponentBase
     {
         var value = SelectedColor;
         HexValue = $"#{value.A:X2}{value.R:X2}{value.G:X2}{value.B:X2}";
-        OnPropertyChanged(nameof(HexValue));
         StateHasChanged();
     }
 

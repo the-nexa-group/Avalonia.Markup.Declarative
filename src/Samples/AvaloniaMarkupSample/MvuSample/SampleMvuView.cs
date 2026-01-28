@@ -93,7 +93,6 @@ public class SampleMvuView : ComponentBase
             if (value != _myNotifiedProperty1)
             {
                 _myNotifiedProperty1 = value;
-                OnPropertyChanged();
             }
         }
     }

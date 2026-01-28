@@ -31,7 +31,6 @@ public class TreeViewSampleView : ComponentBase
         {
             _selectedNode = value;
             StateHasChanged();
-            OnPropertyChanged();
         }
     }
 

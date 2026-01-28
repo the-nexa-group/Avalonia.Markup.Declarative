@@ -35,7 +35,6 @@ public class ItemControlSampleView : ComponentBase
         {
             _selectedItem = value;
             StateHasChanged();
-            OnPropertyChanged();
         }
     }
 

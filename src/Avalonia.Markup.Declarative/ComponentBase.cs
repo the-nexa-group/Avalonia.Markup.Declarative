@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
-using System.Runtime.CompilerServices;
 using Avalonia.Controls;
 using Avalonia.Threading;
 
@@ -34,8 +33,6 @@ public abstract class ComponentBase(
     ViewInitializationStrategy viewInitializationStrategy = ViewInitializationStrategy.Immediate)
     : ViewBase(viewInitializationStrategy), IMvuComponent
 {
-    public new event PropertyChangedEventHandler? PropertyChanged;
-    
     private readonly HashSet<INotifyPropertyChanged> _trackedNotifyMembers = [];
     private readonly Dictionary<string, Action<object?>> _propertyUpdateCallbacks = new();
     private bool _isUpdatingState;
@@ -132,11 +129,6 @@ public abstract class ComponentBase(
     {
         if (notifier is not null && _trackedNotifyMembers.Remove(notifier))
             notifier.PropertyChanged -= HandlePropertyHasChanged;
-    }
-    
-    protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
     
     protected void StateHasChanged()

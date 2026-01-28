@@ -32,7 +32,6 @@ public class ListBoxBindingTests : AvaloniaTestBase
             {
                 _selectedItem = value;
                 StateHasChanged();
-                OnPropertyChanged();
             }
         }
 

@@ -12,10 +12,17 @@ public partial class TestObservableComponent : ComponentBase
     // New Observable attribute - handles reassignment automatically  
     [Observable] 
     TestViewModel? _dynamicViewModel;
+    
+    [Observable]
+    int _someNumber;
+    
+    [Observable]
+    string? _someText = "Hello";
 
     protected override Control? Build()
     {
-        return new TextBlock();
+        return new TextBlock()
+            .Text(() => SomeText, v => SomeText = v);
     }
 }
 

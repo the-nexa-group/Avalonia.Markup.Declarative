@@ -33,7 +33,7 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
 
         var injectables = new List<(string Name, string Type, bool IsProperty, bool HasSetter)>();
         var observables = new List<(string Name, string Type, bool IsProperty)>();
-        var deepObservables = new List<(string Name, string Type, bool IsNotifier)>();
+        var deepObservables = new List<(string Name, string Type, bool IsNotifier, bool IsPrimitive)>();
 
         var currentType = typeSymbol;
         while (currentType != null && currentType.SpecialType != SpecialType.System_Object)
@@ -75,8 +75,11 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
                 {
                     if (member is IFieldSymbol field)
                     {
-                        deepObservables.Add((field.Name, field.Type.ToDisplayString(), field.Type.AllInterfaces.Any(x => x.Name == "INotifyPropertyChanged")));
-                        observables.Add((field.Name, field.Type.ToDisplayString(), false));
+                        bool isNotifier = field.Type.AllInterfaces.Any(x => x.Name == "INotifyPropertyChanged");
+                        deepObservables.Add((field.Name, field.Type.ToDisplayString(), isNotifier, field.Type.IsValueType));
+                        
+                        if (isNotifier)
+                            observables.Add((field.Name, field.Type.ToDisplayString(), false));
                     }
                 }
             }
@@ -101,7 +104,8 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
         var current = symbol.BaseType;
         while (current != null)
         {
-            if (current.Name == baseName) return true;
+            if (current.Name == baseName) 
+                return true;
             current = current.BaseType;
         }
         return false;
@@ -163,12 +167,32 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
         
         if (deepObservables.Count > 0)
         {
-            // Generate properties for deep observable fields
+            sb.AppendLine($"{indent}// Generated Observable Avalonia Properties");
+            sb.AppendLine();
+                
+            // Generate Avalonia properties for deep observable fields
             foreach (var item in deepObservables)
             {
                 string propertyName = item.Name.TrimStart('_');
                 propertyName = char.ToUpper(propertyName[0]) + propertyName.Substring(1);
+                string avaloniaPropertyName = propertyName + "Property";
                 
+                sb.AppendLine($"{indent}public static readonly DirectProperty<{className}, {item.Type}> {avaloniaPropertyName} =");
+                sb.AppendLine($"{indent}    AvaloniaProperty.RegisterDirect<{className}, {item.Type}>(");
+                sb.AppendLine($"{indent}        nameof({propertyName}),");
+                sb.AppendLine($"{indent}        o => o.{propertyName},");
+                sb.AppendLine($"{indent}        (o, value) => o.{propertyName} = value);");
+                sb.AppendLine();
+            }
+            
+            sb.AppendLine($"{indent}// Generated Observable Properties");
+            sb.AppendLine();
+            
+            foreach (var item in deepObservables)
+            {
+                string propertyName = item.Name.TrimStart('_');
+                propertyName = char.ToUpper(propertyName[0]) + propertyName.Substring(1);
+                string avaloniaPropertyName = propertyName + "Property";
                 var propertyType = item.Type;
                 
                 sb.AppendLine($"{indent}public {propertyType} {propertyName}");
@@ -176,7 +200,10 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
                 sb.AppendLine($"{indent}    get => {item.Name};");
                 sb.AppendLine($"{indent}    set");
                 sb.AppendLine($"{indent}    {{");
-                sb.AppendLine($"{indent}        if (ReferenceEquals({item.Name}, value))");
+
+                sb.AppendLine(item.IsPrimitive
+                    ? $"{indent}        if ({item.Name} == value)"
+                    : $"{indent}        if (ReferenceEquals({item.Name}, value))");
                 sb.AppendLine($"{indent}            return;");
                 sb.AppendLine();
                 
@@ -184,15 +211,15 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
                 if (item.IsNotifier)
                     sb.AppendLine($"{indent}        UntrackPropertyChanged({item.Name});");
                 
-                sb.AppendLine($"{indent}        {item.Name} = value;");
-                sb.AppendLine();
+                sb.AppendLine($"{indent}        SetAndRaise({avaloniaPropertyName}, ref {item.Name}, value);");
                 
                 // Subscribe to new value if it implements INotifyPropertyChanged
                 if (item.IsNotifier)
-                    sb.AppendLine($"{indent}        TrackPropertyChanged(value);");
+                    sb.AppendLine($"{indent}        TrackPropertyChanged({item.Name});");
                 
+                // I think these are still necessary tho I'm confused why the View doesn't listen to its own Property Changed events?
+                // I'm assuming there's a reason so let's stick with this for now.
                 sb.AppendLine($"{indent}        StateHasChanged();");
-                sb.AppendLine($"{indent}        OnPropertyChanged();");
                 sb.AppendLine($"{indent}    }}");
                 sb.AppendLine($"{indent}}}");
                 sb.AppendLine();
@@ -202,6 +229,9 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
         // Generate InjectServices method if needed
         if (injectables.Count > 0)
         {
+            sb.AppendLine($"{indent}// Generated Injected Services");
+            sb.AppendLine();
+            
             // [DynamicDependency] attributes
             foreach (var item in injectables)
                 sb.AppendLine($"{indent}[DynamicDependency(DynamicallyAccessedMemberTypes.PublicConstructors, typeof({item.Type.TrimEnd('?')}))]");
@@ -224,6 +254,9 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
 
         if (observables.Count > 0) 
         {
+            sb.AppendLine($"{indent}// Generated Notifier Subscriptions");
+            sb.AppendLine();
+            
             sb.AppendLine($"{indent}protected override void SubscribeToNotifyPropertyChangedMembers()");
             sb.AppendLine($"{indent}{{");
             sb.AppendLine($"{indent}    base.SubscribeToNotifyPropertyChangedMembers();");
@@ -268,6 +301,6 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
         public INamedTypeSymbol Symbol { get; set; } = null!;
         public List<(string Name, string Type, bool IsProperty, bool HasSetter)> Injectables { get; set; } = new();
         public List<(string Name, string Type, bool IsProperty)> Observables { get; set; } = new();
-        public List<(string Name, string Type, bool IsNotifier)> DeepObservables { get; set; } = new();
+        public List<(string Name, string Type, bool IsNotifier, bool IsPrimitive)> DeepObservables { get; set; } = new();
     }
 }
