@@ -6,6 +6,7 @@
 		<Nullable>enable</Nullable>
 		<LangVersion>latest</LangVersion>
 		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+		<IsAotCompatible>true</IsAotCompatible>
 
 		<Authors>Avalonia Team, The Nexa Group</Authors>
 		<PackageProjectUrl>https://github.com/the-nexa-group/Avalonia.Markup.Declarative</PackageProjectUrl>
