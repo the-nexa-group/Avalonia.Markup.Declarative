@@ -35,8 +35,14 @@ public abstract class ComponentBase : ViewBase, IMvuComponent
     private readonly Dictionary<string, Action<object?>> _propertyUpdateCallbacks = new();
     private bool _isUpdatingState;
 
-    public ComponentBase(ViewInitializationStrategy viewInitializationStrategy = ViewInitializationStrategy.Immediate) : base(viewInitializationStrategy) { }
-
+    protected ComponentBase() : this(ViewInitializationStrategy.Immediate)
+    {
+    }
+   
+    protected ComponentBase(ViewInitializationStrategy viewInitializationStrategy) : base(viewInitializationStrategy)
+    {
+    }
+    
     /// <summary>
     /// Creates a new instance of the control using the component factory. Injects services into the control if needed.
     /// </summary>
