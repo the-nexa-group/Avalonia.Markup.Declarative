@@ -51,11 +51,11 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
                 {
                     if (member is IPropertySymbol prop)
                     {
-                        injectables.Add((prop.Name, prop.Type.ToDisplayString(), true, !prop.IsReadOnly));
+                        injectables.Add((prop.Name, prop.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat), true, !prop.IsReadOnly));
                     }
                     else if (member is IFieldSymbol field)
                     {
-                        injectables.Add((field.Name, field.Type.ToDisplayString(), false, !field.IsReadOnly));
+                        injectables.Add((field.Name, field.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat), false, !field.IsReadOnly));
                     }
                 }
 
@@ -63,11 +63,11 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
                 {
                     if (member is IPropertySymbol prop)
                     {
-                        observables.Add((prop.Name, prop.Type.ToDisplayString(), true));
+                        observables.Add((prop.Name, prop.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat), true));
                     }
                     else if (member is IFieldSymbol field)
                     {
-                        observables.Add((field.Name, field.Type.ToDisplayString(), false));
+                        observables.Add((field.Name, field.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat), false));
                     }
                 }
 
@@ -76,10 +76,10 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
                     if (member is IFieldSymbol field)
                     {
                         bool isNotifier = field.Type.AllInterfaces.Any(x => x.Name == "INotifyPropertyChanged");
-                        deepObservables.Add((field.Name, field.Type.ToDisplayString(), isNotifier, field.Type.IsValueType));
+                        deepObservables.Add((field.Name, field.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat), isNotifier, field.Type.IsValueType));
                         
                         if (isNotifier)
-                            observables.Add((field.Name, field.Type.ToDisplayString(), false));
+                            observables.Add((field.Name, field.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat), false));
                     }
                 }
             }
