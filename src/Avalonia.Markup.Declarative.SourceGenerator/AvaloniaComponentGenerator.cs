@@ -129,6 +129,7 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
         sb.AppendLine("using System.Collections.Generic;");
         sb.AppendLine("using System.ComponentModel;");
         sb.AppendLine("using System.Diagnostics.CodeAnalysis;");
+        sb.AppendLine("using System.Threading.Tasks;");
         sb.AppendLine("using Avalonia;");
         sb.AppendLine("using Avalonia.Controls;");
         sb.AppendLine("using Avalonia.Markup.Declarative;");
