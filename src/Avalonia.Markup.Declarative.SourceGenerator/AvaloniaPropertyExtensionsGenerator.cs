@@ -317,7 +317,7 @@ public class AvaloniaPropertyExtensionsGenerator : IIncrementalGenerator
         return extensionText;
     }
 
-    private static string GetCommonPropertySetterExtension(string controlTypeName, PropertyDeclarationSyntax property, SemanticModel semanticModel)
+    public static string GetCommonPropertySetterExtension(string controlTypeName, PropertyDeclarationSyntax property, SemanticModel semanticModel)
     {
         var extensionName = property.Identifier.ToString();
 
@@ -361,12 +361,15 @@ public class AvaloniaPropertyExtensionsGenerator : IIncrementalGenerator
 
         var extensionText =
             $"public static {controlTypeName} {extensionName}{genericParamsAll}(this {controlTypeName} control, Func<{valueTypeSource}> func, Action<{valueTypeSource}>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null){classConstraint}{NewLine}" +
-            $"   => control._set({controlTypeName}.{extensionName}Property, func, onChanged, expression);";
+            $"   => control._set({controlTypeName}.{extensionName}Property, func, onChanged, expression);{NewLine}{NewLine}" +
+            $"public static {controlTypeName} {extensionName}{genericParamsAll}(this {controlTypeName} control, Func<ValueTask<{valueTypeSource}>> getter, Func<{valueTypeSource}>? fallbackGetter = null, Action<{valueTypeSource}>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null){classConstraint}{NewLine}" +
+            $"   => control._set({controlTypeName}.{extensionName}Property, getter, fallbackGetter, onChanged, expression);{NewLine}{NewLine}";
+
 
         return extensionText;
     }
 
-    private static string GetCommonPropertyExpressionBindingSetterExtension(string controlTypeName, PropertyDeclarationSyntax property, SemanticModel semanticModel)
+    public static string GetCommonPropertyExpressionBindingSetterExtension(string controlTypeName, PropertyDeclarationSyntax property, SemanticModel semanticModel)
     {
         var extensionName = property.Identifier.ToString();
         var valueTypeSource = GetPropertyTypeName(property, semanticModel);

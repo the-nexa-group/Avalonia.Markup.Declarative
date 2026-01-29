@@ -5,6 +5,10 @@ namespace Avalonia.Markup.Declarative.Tests;
 
 public partial class TestObservableComponent : ComponentBase
 {
+    public static readonly StyledProperty<object> SomeObjectProperty = 
+        AvaloniaProperty.Register<TestObservableComponent, object>(
+            nameof(SomeObject), string.Empty);
+    
     // Regular Observe attribute - subscribes once, doesn't handle reassignment
     [Observe]
     public TestViewModel? StaticViewModel { get; set; }
@@ -19,9 +23,10 @@ public partial class TestObservableComponent : ComponentBase
     [Observable]
     string? _someText = "Hello";
 
+    public object? SomeObject { get; set; }
+
     protected override Control? Build()
     {
-        SubscribeToNotifyPropertyChangedMembers();
         return new TextBlock()
             .Text(() => SomeText, v => SomeText = v);
     }
