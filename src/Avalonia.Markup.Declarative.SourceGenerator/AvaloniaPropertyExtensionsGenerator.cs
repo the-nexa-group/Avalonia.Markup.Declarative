@@ -81,6 +81,7 @@ public class AvaloniaPropertyExtensionsGenerator : IIncrementalGenerator
         sb.AppendLine("using Avalonia.Data;");
         sb.AppendLine("using Avalonia.Data.Converters;");
         sb.AppendLine("using System.Runtime.CompilerServices;");
+        sb.AppendLine("using System.Threading.Tasks;");
 
         if (root is CompilationUnitSyntax compilationUnit)
         {
