@@ -132,6 +132,7 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
         sb.AppendLine("using Avalonia;");
         sb.AppendLine("using Avalonia.Controls;");
         sb.AppendLine("using Avalonia.Markup.Declarative;");
+        sb.AppendLine("using Avalonia.Threading;");
         sb.AppendLine();
 
         // Handle Namespace
@@ -178,8 +179,8 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
                 propertyName = char.ToUpper(propertyName[0]) + propertyName.Substring(1);
                 string avaloniaPropertyName = propertyName + "Property";
                 
-                sb.AppendLine($"{indent}public static readonly DirectProperty<{className}, {item.Type}> {avaloniaPropertyName} =");
-                sb.AppendLine($"{indent}    AvaloniaProperty.RegisterDirect<{className}, {item.Type}>(");
+                sb.AppendLine($"{indent}public static readonly Avalonia.DirectProperty<{className}, {item.Type}> {avaloniaPropertyName} =");
+                sb.AppendLine($"{indent}    Avalonia.AvaloniaProperty.RegisterDirect<{className}, {item.Type}>(");
                 sb.AppendLine($"{indent}        nameof({propertyName}),");
                 sb.AppendLine($"{indent}        o => o.{propertyName},");
                 sb.AppendLine($"{indent}        (o, value) => o.{propertyName} = value);");
@@ -222,6 +223,33 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
                 // I'm assuming there's a reason so let's stick with this for now.
                 sb.AppendLine($"{indent}        StateHasChanged();");
                 sb.AppendLine($"{indent}    }}");
+                sb.AppendLine($"{indent}}}");
+                sb.AppendLine();
+            }
+            
+            sb.AppendLine($"{indent}// Generated Observable Async Setters and Getters");
+            sb.AppendLine();
+
+            foreach (var item in deepObservables)
+            {
+                string propertyName = item.Name.TrimStart('_');
+                propertyName = char.ToUpper(propertyName[0]) + propertyName.Substring(1);
+                
+                sb.AppendLine($"{indent}public async ValueTask<{item.Type}> Get{propertyName}Async()");
+                sb.AppendLine($"{indent}{{");
+                sb.AppendLine($"{indent}    if (Dispatcher.UIThread.CheckAccess())");
+                sb.AppendLine($"{indent}        return {propertyName};");
+                sb.AppendLine($"{indent}    else");
+                sb.AppendLine($"{indent}        return await Dispatcher.UIThread.InvokeAsync(() => {propertyName});");
+                sb.AppendLine($"{indent}}}");
+                sb.AppendLine();
+                
+                sb.AppendLine($"{indent}public async ValueTask Set{propertyName}Async({item.Type} value)");
+                sb.AppendLine($"{indent}{{");
+                sb.AppendLine($"{indent}    if (Dispatcher.UIThread.CheckAccess())");
+                sb.AppendLine($"{indent}        {propertyName} = value;");
+                sb.AppendLine($"{indent}    else");
+                sb.AppendLine($"{indent}        await Dispatcher.UIThread.InvokeAsync(() => {propertyName} = value);");
                 sb.AppendLine($"{indent}}}");
                 sb.AppendLine();
             }

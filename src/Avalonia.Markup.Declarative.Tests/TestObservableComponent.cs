@@ -21,8 +21,20 @@ public partial class TestObservableComponent : ComponentBase
 
     protected override Control? Build()
     {
+        SubscribeToNotifyPropertyChangedMembers();
         return new TextBlock()
             .Text(() => SomeText, v => SomeText = v);
+    }
+
+    void DoSomething()
+    {
+        SomeText = "Bye";
+    }
+
+    async Task DoSomethingAsync()
+    {
+        await SetSomeTextAsync("Byebye");
+        int number = await GetSomeNumberAsync();
     }
 }
 
