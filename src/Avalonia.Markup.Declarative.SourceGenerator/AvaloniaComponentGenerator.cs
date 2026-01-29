@@ -180,8 +180,8 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
                 propertyName = char.ToUpper(propertyName[0]) + propertyName.Substring(1);
                 string avaloniaPropertyName = propertyName + "Property";
                 
-                sb.AppendLine($"{indent}public static readonly Avalonia.DirectProperty<{className}, {item.Type}> {avaloniaPropertyName} =");
-                sb.AppendLine($"{indent}    Avalonia.AvaloniaProperty.RegisterDirect<{className}, {item.Type}>(");
+                sb.AppendLine($"{indent}public static readonly DirectProperty<{className}, {item.Type}> {avaloniaPropertyName} =");
+                sb.AppendLine($"{indent}    AvaloniaProperty.RegisterDirect<{className}, {item.Type}>(");
                 sb.AppendLine($"{indent}        nameof({propertyName}),");
                 sb.AppendLine($"{indent}        o => o.{propertyName},");
                 sb.AppendLine($"{indent}        (o, value) => o.{propertyName} = value);");
