@@ -360,6 +360,10 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
                 sb.AppendLine($"            => component._set({typeSymbol.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)}.{avaloniaPropertyName}, getter, onChanged, expression);");
                 sb.AppendLine();
                 
+                sb.AppendLine($"        public TComponent {propertyName}({item.Type} value)");
+                sb.AppendLine($"            => component.{propertyName}(() => value);");
+                sb.AppendLine();
+                
                 sb.AppendLine($"        public TComponent {propertyName}(Func<ValueTask<{item.Type}>> getter, Func<{item.Type}>? fallbackGetter = null, Action<{item.Type}>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)");
                 sb.AppendLine($"            => component._set({typeSymbol.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)}.{avaloniaPropertyName}, getter, fallbackGetter, onChanged, expression);");
                 sb.AppendLine();
