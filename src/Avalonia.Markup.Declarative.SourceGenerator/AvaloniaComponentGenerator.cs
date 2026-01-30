@@ -356,12 +356,15 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
                 propertyName = char.ToUpper(propertyName[0]) + propertyName.Substring(1);
                 string avaloniaPropertyName = propertyName + "Property";
                 
-                sb.AppendLine($"        public TComponent {propertyName}(Func<{item.Type}> getter, Action<{item.Type}>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)");
-                sb.AppendLine($"            => component._set({typeSymbol.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)}.{avaloniaPropertyName}, getter, onChanged, expression);");
+                sb.AppendLine($"        public TComponent {propertyName}({item.Type} value)");
+                sb.AppendLine("        {");
+                sb.AppendLine($"            component.{propertyName} = value;");
+                sb.AppendLine("            return component;");
+                sb.AppendLine("        }");
                 sb.AppendLine();
                 
-                sb.AppendLine($"        public TComponent {propertyName}({item.Type} value)");
-                sb.AppendLine($"            => component.{propertyName}(() => value);");
+                sb.AppendLine($"        public TComponent {propertyName}(Func<{item.Type}> getter, Action<{item.Type}>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)");
+                sb.AppendLine($"            => component._set({typeSymbol.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)}.{avaloniaPropertyName}, getter, onChanged, expression);");
                 sb.AppendLine();
                 
                 sb.AppendLine($"        public TComponent {propertyName}(Func<ValueTask<{item.Type}>> getter, Func<{item.Type}>? fallbackGetter = null, Action<{item.Type}>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)");
