@@ -1,3 +1,4 @@
+using System;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
 using System.Collections.Generic;
@@ -39,13 +40,22 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
             {
                 if (ShouldSkipType(controlType))
                     continue;
-                    
-                var extensions = GenerateExtensionsForType(compilation, controlType, styledElementSymbol);
-                if (!string.IsNullOrEmpty(extensions))
+
+                var fullName = controlType.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat);
+                var fileName = $"{fullName.Replace(".", "_").Replace("global::", "")}_MarkupExtensions.g.cs";
+                
+                try
                 {
-                    var fullName = controlType.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat);
-                    var fileName = $"{fullName.Replace(".", "_").Replace("global::", "")}_MarkupExtensions.g.cs";
-                    spc.AddSource(fileName, SourceText.From(extensions, Encoding.UTF8));
+                    var extensions = GenerateExtensionsForType(compilation, controlType, styledElementSymbol);
+                    if (!string.IsNullOrEmpty(extensions))
+                    {
+                        spc.AddSource(fileName, SourceText.From(extensions, Encoding.UTF8));
+                    }
+                }
+                catch (Exception e)
+                {
+                    string error = $"// Failed to generate source for {fullName}. Reason: {e}";
+                    spc.AddSource(fileName, SourceText.From(error, Encoding.UTF8));
                 }
             }
         });
