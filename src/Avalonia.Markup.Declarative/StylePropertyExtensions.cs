@@ -28,7 +28,7 @@ public static class StylePropertyExtensions
         return style;
     }
 
-    public static Style<TElement> Setter<TElement>(this Style<TElement> style, AvaloniaProperty avaloniaProperty, object value)
+    public static Style<TElement> Setter<TElement>(this Style<TElement> style, AvaloniaProperty avaloniaProperty, object? value)
         where TElement : StyledElement
     {
         style._addSetter(avaloniaProperty, value);
@@ -41,7 +41,7 @@ public static class StylePropertyExtensions
         return style;
     }
 
-    public static Style<TElement> _addSetter<TElement>(this Style<TElement> style, AvaloniaProperty avaloniaProperty, object value) 
+    public static Style<TElement> _addSetter<TElement>(this Style<TElement> style, AvaloniaProperty avaloniaProperty, object? value) 
         where TElement : StyledElement
     {
         style.Setters.Add(new Setter(avaloniaProperty, value));

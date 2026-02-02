@@ -121,7 +121,7 @@ public class AvaloniaEventExtensionsGenerator : IIncrementalGenerator
     }
 
     // Rewritten for clarity: separates logic for EventHandler, EventHandler<T>, Action, and Action<T>.
-    private static string GetEventExtension(string controlTypeName, EventFieldDeclarationSyntax @event)
+    public static string GetEventExtension(string controlTypeName, EventFieldDeclarationSyntax @event)
     {
         // Get the event type as string (e.g., EventHandler, EventHandler<T>, Action, Action<T>)
         var eventTypeSyntax = @event.Declaration.Type;

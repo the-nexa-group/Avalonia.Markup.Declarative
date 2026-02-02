@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Controls.Templates;
 using Avalonia.Data;
@@ -470,54 +470,6 @@ public static class ControlPropertyExtensions
         return control;
     }
 
-    [Obsolete("Use Canvas_Top extension instead")]
-    public static TElement Top<TElement>(this TElement control, double value)
-        where TElement : Control
-    {
-        Canvas.SetTop(control, value);
-        return control;
-    }
-
-    [Obsolete("Use Canvas_Left extension instead")]
-    public static TElement Left<TElement>(this TElement control, double value)
-        where TElement : Control
-    {
-        Canvas.SetLeft(control, value);
-        return control;
-    }
-
-    [Obsolete("Use Canvas_Bottom extension instead")]
-    public static TElement Bottom<TElement>(this TElement control, double value)
-        where TElement : Control
-    {
-        Canvas.SetBottom(control, value);
-        return control;
-    }
-
-    [Obsolete("Use Canvas_Right extension instead")]
-    public static TElement Right<TElement>(this TElement control, double value)
-        where TElement : Control
-    {
-        Canvas.SetRight(control, value);
-        return control;
-    }
-
-    [Obsolete("Use ScrollViewer_HorizontalScrollBarVisibility extension instead")]
-    public static TElement HorizontalScrollBarVisibility<TElement>(this TElement control, ScrollBarVisibility value)
-        where TElement : ItemsControl
-    {
-        ScrollViewer.SetHorizontalScrollBarVisibility(control, value);
-        return control;
-    }
-
-    [Obsolete("Use ScrollViewer_VerticalScrollBarVisibility extension instead")]
-    public static TElement VerticalScrollBarVisibility<TElement>(this TElement control, ScrollBarVisibility value)
-        where TElement : ItemsControl
-    {
-        ScrollViewer.SetVerticalScrollBarVisibility(control, value);
-        return control;
-    }
-
     public static TPanel Children<TPanel>(this TPanel container, params Control[] children)
         where TPanel : Panel
     {
@@ -712,7 +664,7 @@ public static class ControlPropertyExtensions
     public static TElement AddFlyoutOnClick<TElement>(this TElement control, FlyoutBase flyout)
         where TElement : Button
     {
-        control.OnClick(_ => flyout.ShowAt(control));
+        control.Click += (_, _) => flyout.ShowAt(control);
         return control;
     }
 

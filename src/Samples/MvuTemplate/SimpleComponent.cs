@@ -66,7 +66,7 @@ public partial class SimpleComponent(SampleDataService dataService) : ComponentB
 
     private decimal? Counter { get; set; } = 0;
 
-    private void OnButtonClick(RoutedEventArgs e)
+    private void OnButtonClick(RoutedEventArgs? e)
     {
         _textBlock1.Text = dataService?.GetData() ?? "Data service is `null`";
         StateHasChanged();
