@@ -317,7 +317,7 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
             if (!propertyType.EndsWith("IBinding") && !propertyType.EndsWith("IBinding?"))
             {
                 sb.AppendLine($"        public TControl {controlType.Name}_{propertyName}({propertyType} value)");
-                sb.AppendLine($"            => control._set(() => {containingTypeName}.Set{propertyName}((dynamic)control, value));");
+                sb.AppendLine($"            => control._set(() => control.SetValue({containingTypeName}.{propertyName}Property, value));");
                 sb.AppendLine();
                 totalExtensions++;
             }
@@ -420,6 +420,9 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
             .Where(f => IsStyledPropertyField(f) && !IsReadOnlyField(f) && 
                            SymbolEqualityComparer.Default.Equals(f.ContainingType, controlType) && 
                            processedStyledProperties.Add(f.Name));
+
+        if (!styledProperties.Any())
+            return string.Empty;
 
         string returnType = isGeneric ? "TControl" : controlTypeName;
         if (isGeneric)
