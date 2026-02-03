@@ -44,6 +44,7 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
             var styledElementSymbol = compilation.GetTypeByMetadataName("Avalonia.StyledElement");
             
             var controlTypes = GetAllControlTypes(compilation, avaloniaObjectSymbol);
+            var generatedTypeNames = new HashSet<string>();
             
             foreach (var controlType in controlTypes)
             {
@@ -52,6 +53,15 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
 
                 var fullName = controlType.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat);
                 var fileName = $"{fullName.Replace(".", "_").Replace("global::", "")}_MarkupExtensions.g.cs";
+                
+                // Skip if we've already generated extensions for this type name
+                if (!generatedTypeNames.Add(fileName))
+                    continue;
+                
+                // Additional check: Skip if this type comes from an external assembly that's not the current assembly
+                // or if the extension class already exists in the compilation
+                if (ExtensionClassAlreadyExists(compilation, controlType))
+                    continue;
                 
                 try
                 {
@@ -618,6 +628,25 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
             return innerType.ToDisplayString(MarkupTypeHelpers.FullSymbols);
         }
         return "object";
+    }
+
+    private static bool ExtensionClassAlreadyExists(Compilation compilation, INamedTypeSymbol controlType)
+    {
+        var className = controlType.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)
+            .Replace(".", "_")
+            .Replace("global::", "") + "_MarkupExtensions";
+        
+        // Check if the extension class already exists in any accessible namespace
+        var extensionClassSymbol = compilation.GetTypeByMetadataName($"Avalonia.Markup.Declarative.{className}");
+        if (extensionClassSymbol != null)
+            return true;
+            
+        // Also check for partial classes that might exist in generated code
+        var globalNamespace = compilation.GlobalNamespace;
+        var avaloniaMarkupNamespace = globalNamespace.GetNamespaceMembers()
+            .FirstOrDefault(ns => ns.ToDisplayString() == "Avalonia.Markup.Declarative");
+            
+        return avaloniaMarkupNamespace?.GetTypeMembers(className).Any() ?? false;
     }
     
 }
