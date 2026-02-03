@@ -360,18 +360,37 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
     {
         var sb = new StringBuilder();
         var controlTypeName = GetFullTypeName(controlType);
+        var isGeneric = !controlType.IsSealed;
 
         var events = controlType.GetMembers()
             .OfType<IEventSymbol>()
-            .Where(e => SymbolEqualityComparer.Default.Equals(e.ContainingType, controlType) && 
-                           e.DeclaredAccessibility == Accessibility.Public &&
-                           !e.GetAttributes().Any(a => a.AttributeClass?.Name == "ObsoleteAttribute"));
+            .Where(e => 
+                SymbolEqualityComparer.Default.Equals(e.ContainingType, controlType) &&
+                e.DeclaredAccessibility == Accessibility.Public &&
+                !e.GetAttributes().Any(a => a.AttributeClass?.Name == "ObsoleteAttribute"))
+            .ToArray();
+        
+        if (events.Length == 0)
+            return string.Empty;
+        
+        string returnType = isGeneric ? "TControl" : controlTypeName;
+        if (isGeneric)
+        {
+            sb.AppendLine($"    extension<{returnType}>(TControl control)");
+            sb.AppendLine($"        where {returnType} : {controlTypeName}");
+        }
+        else
+        {
+            sb.AppendLine($"    extension({controlTypeName} control)");
+        }
+
+        sb.AppendLine("    {");
 
         foreach (var evt in events)
         {
             var eventName = evt.Name;
             // The full type of the delegate (e.g., EventHandler<Thickness>)
-            var delegateTypeString = evt.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat);
+            var delegateTypeString = evt.Type.ToDisplayString(MarkupTypeHelpers.FullSymbols);
             
             // Determine parameters based on the delegate's Invoke method
             string parameterList;
@@ -386,7 +405,7 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
                 {
                     // Standard EventHandler or EventHandler<T>
                     // parameters[0] is sender, parameters[1] is TEventArgs
-                    var argType = parameters[1].Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat);
+                    var argType = parameters[1].Type.ToDisplayString(MarkupTypeHelpers.FullSymbols);
                     parameterList = $"Action<{argType}> action";
                     lambdaParameters = "_, args";
                     lambdaBody = "action(args)";
@@ -394,7 +413,7 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
                 else if (parameters.Length == 1)
                 {
                     // Action<T>
-                    var argType = parameters[0].Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat);
+                    var argType = parameters[0].Type.ToDisplayString(MarkupTypeHelpers.FullSymbols);
                     parameterList = $"Action<{argType}> action";
                     lambdaParameters = "args";
                     lambdaBody = "action(args)";
@@ -417,14 +436,16 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
 
             if (evt.AddMethod?.DeclaredAccessibility == Accessibility.Public)
             {
-                sb.AppendLine($"    // {eventName}");
-                sb.AppendLine($"    public static {controlTypeName} On{eventName}(this {controlTypeName} control, {parameterList}) =>");
-                sb.AppendLine($"        control._setEvent(({delegateTypeString})(({lambdaParameters}) => {lambdaBody}), h => control.{eventName} += h);");
+                sb.AppendLine($"        // {eventName}");
+                sb.AppendLine($"        public {returnType} On{eventName}({parameterList}) =>");
+                sb.AppendLine($"            control._setEvent(({delegateTypeString})(({lambdaParameters}) => {lambdaBody}), h => control.{eventName} += h);");
                 sb.AppendLine();
             }
 
-            totalExtensions += 1;
+            totalExtensions++;
         }
+        
+        sb.AppendLine("    }");
 
         return sb.ToString();
     }
