@@ -13,6 +13,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Avalonia.Interactivity;
 
 namespace Avalonia.Markup.Declarative;
 
@@ -25,246 +26,232 @@ public static class ControlPropertyExtensions
         return control;
     }
 
-    /// <summary>
-    /// Used to bind one avalonia property to another
-    /// </summary>
-    /// <typeparam name="TAvObject"></typeparam>
     /// <param name="control"></param>
-    /// <param name="avaloniaProperty"></param>
-    /// <param name="propertyToBindTo"></param>
-    /// <param name="bindingMode"></param>
-    /// <param name="converter"></param>
-    /// <param name="overrideView"></param>
-    /// <returns></returns>
-    public static TAvObject _set<TAvObject>(this TAvObject control, AvaloniaProperty avaloniaProperty,
-        AvaloniaProperty propertyToBindTo, BindingMode? bindingMode, IValueConverter? converter, ViewBase? overrideView)
-        where TAvObject : AvaloniaObject
+    /// <typeparam name="TAvObject"></typeparam>
+    extension<TAvObject>(TAvObject control) where TAvObject : AvaloniaObject
     {
-        var view = overrideView ?? ViewBuildContext.CurrentView;
-        var binding = new Binding()
+        /// <summary>
+        /// Used to bind one avalonia property to another
+        /// </summary>
+        /// <param name="avaloniaProperty"></param>
+        /// <param name="propertyToBindTo"></param>
+        /// <param name="bindingMode"></param>
+        /// <param name="converter"></param>
+        /// <param name="overrideView"></param>
+        /// <returns></returns>
+        public TAvObject _set(AvaloniaProperty avaloniaProperty,
+            AvaloniaProperty propertyToBindTo, BindingMode? bindingMode, IValueConverter? converter, ViewBase? overrideView)
         {
-            Source = view,
-            Path = propertyToBindTo.Name,
-            Mode = bindingMode ?? BindingMode.Default,
-            Converter = converter
-        };
-
-        control[!avaloniaProperty] = binding;
-        return control;
-    }
-
-    /// <summary>
-    /// Used to pass Binding object constructed by end-user
-    /// </summary>
-    /// <typeparam name="TAvObject"></typeparam>
-    /// <param name="control"></param>
-    /// <param name="avaloniaProperty"></param>
-    /// <param name="binding"></param>
-    /// <returns></returns>
-    public static TAvObject _set<TAvObject>(this TAvObject control, AvaloniaProperty avaloniaProperty, IBinding binding)
-        where TAvObject : AvaloniaObject
-    {
-        control[!avaloniaProperty] = binding;
-        return control;
-    }
-
-    /// <summary>
-    /// Creates *Avalonia property* binding based on expression argument
-    /// </summary>
-    /// <typeparam name="TAvObject"></typeparam>
-    /// <typeparam name="TValue"></typeparam>
-    /// <param name="control"></param>
-    /// <param name="avaloniaProperty"></param>
-    /// <param name="getterFunc"></param>
-    /// <param name="setChangedHandler"></param>
-    /// <param name="expression"></param>
-    /// <returns></returns>
-    /// <exception cref="InvalidOperationException"></exception>
-    public static TAvObject _set<TAvObject, TValue>(this TAvObject control, AvaloniaProperty<TValue> avaloniaProperty, Func<TValue> getterFunc, Action<TValue>? setChangedHandler, string? expression)
-        where TAvObject : AvaloniaObject
-    {
-        var view = ViewBuildContext.CurrentView;
-
-        if (view == null)
-            throw new InvalidOperationException("Current view is not set! If you are using expression binding inside of FuncTemplate, wrap it's content into FuncView or FuncComponent, to make bindings work.");
-
-        var handler = setChangedHandler;
-
-        //override handler for MVU components so changing of such properties will trigger StateHasChanged method
-        if (view is ComponentBase componentBase && setChangedHandler != null)
-        {
-            handler = v =>
+            var view = overrideView ?? ViewBuildContext.CurrentView;
+            var binding = new Binding()
             {
-                // Update this component's state first
-                componentBase.UpdateState(() => setChangedHandler(v), bubbleToParent: true);
-
-                // Also notify listeners (e.g., parent components) that track this property by expression
-                if (!string.IsNullOrEmpty(expression))
-                {
-                    try
-                    {
-                        componentBase.NotifyExternalPropertyChanged(expression!, v);
-                    }
-                    catch
-                    {
-                        // Swallow diagnostics-only issues
-                    }
-                }
-            };
-        }
-
-        var state = new ViewPropertyComputedState<TAvObject, TValue>(expression, getterFunc, handler, control, avaloniaProperty);
-
-        view.AddComputedState(state, control);
-        return control;
-    }
-
-    /// <summary>
-    /// Creates *Common property* binding based on expression argument
-    /// </summary>
-    /// <typeparam name="TAvObject"></typeparam>
-    /// <typeparam name="TValue"></typeparam>
-    /// <param name="control"></param>
-    /// <param name="setter">Property setter action</param>
-    /// <param name="getterFunc">Property getterFunc function</param>
-    /// <param name="setChangedHandler"></param>
-    /// <param name="expression"></param>
-    /// <returns></returns>
-    /// <exception cref="InvalidOperationException"></exception>
-    public static TAvObject _set<TAvObject, TValue>(this TAvObject control, Action<TValue> setter, Func<TValue> getterFunc, Action<TValue>? setChangedHandler, string? expression)
-        where TAvObject : AvaloniaObject
-    {
-        var view = ViewBuildContext.CurrentView;
-
-        if (view == null)
-            throw new InvalidOperationException("Current view is not set. Control must be put into view (inherited from ViewBase of ComponentBase) that can store binding information.");
-
-        var handler = setChangedHandler;
-
-        if (view is ComponentBase componentBase && setChangedHandler != null)
-        {
-            // Extract property name for tracking (if possible)
-            string propertyName = expression ?? "unknown";
-
-            if (control is ComponentBase childComponent)
-            {
-                // Register callback on PARENT to handle child changes by expression key
-                componentBase.RegisterPropertyCallback(propertyName, value =>
-                {
-                    try
-                    {
-                        if (value is TValue typedValue)
-                            setChangedHandler(typedValue);
-                        else if (value is null)
-                            setChangedHandler(default!);
-                        else
-                            setChangedHandler((TValue)Convert.ChangeType(value, typeof(TValue))!);
-                    }
-                    catch
-                    {
-                        // ignore conversion issues
-                    }
-                });
-
-                // When child local setter fires via binding, bubble to parent listeners
-                handler = v =>
-                {
-                    setChangedHandler(v);
-                    componentBase.NotifyExternalPropertyChanged(propertyName, v);
-                };
-            }
-            else
-            {
-                handler = v => componentBase.UpdateState(() => setChangedHandler(v), bubbleToParent: true);
-            }
-        }
-
-        var state = new ViewPropertyComputedState<TAvObject, TValue>(expression, setter, getterFunc, handler, control);
-        view.AddComputedState(state, control);
-        return control;
-    }
-    
-    
-    /// <summary>
-    /// Creates binding to property on DataContext of the control parsed from Value's expression arg , used by generated extensions
-    /// </summary>
-    /// <typeparam name="TAvObject"></typeparam>
-    /// <param name="control"></param>
-    /// <param name="destProperty"></param>
-    /// <param name="sourcePropertyPathString"></param>
-    /// <param name="setAction"></param>
-    /// <param name="bindingMode"></param>
-    /// <param name="converter"></param>
-    /// <param name="bindingSource"></param>
-    /// <returns></returns>
-    public static TAvObject _setEx<TAvObject>(this TAvObject control, AvaloniaProperty destProperty,
-        string? sourcePropertyPathString, Action setAction,
-        BindingMode? bindingMode, IValueConverter? converter, object? bindingSource)
-        where TAvObject : AvaloniaObject
-    {
-        if (sourcePropertyPathString == null
-            || bindingMode.HasValue
-            || bindingSource != default
-            || sourcePropertyPathString.StartsWith("@"))
-        {
-            var binding = new Binding
-            {
-                Path = PropertyPathHelper.GetNameFromPropertyPath(sourcePropertyPathString),
+                Source = view,
+                Path = propertyToBindTo.Name,
                 Mode = bindingMode ?? BindingMode.Default,
                 Converter = converter
             };
 
-            // This is needed as setting a null Source breaks the Binding
-            if (bindingSource != null)
+            control[!avaloniaProperty] = binding;
+            return control;
+        }
+
+        /// <summary>
+        /// Used to pass Binding object constructed by end-user
+        /// </summary>
+        /// <param name="avaloniaProperty"></param>
+        /// <param name="binding"></param>
+        /// <returns></returns>
+        public TAvObject _set(AvaloniaProperty avaloniaProperty, IBinding binding)
+        {
+            control[!avaloniaProperty] = binding;
+            return control;
+        }
+
+        /// <summary>
+        /// Creates *Avalonia property* binding based on expression argument
+        /// </summary>
+        /// <typeparam name="TValue"></typeparam>
+        /// <param name="avaloniaProperty"></param>
+        /// <param name="getterFunc"></param>
+        /// <param name="setChangedHandler"></param>
+        /// <param name="expression"></param>
+        /// <returns></returns>
+        /// <exception cref="InvalidOperationException"></exception>
+        public TAvObject _set<TValue>(AvaloniaProperty<TValue> avaloniaProperty, Func<TValue> getterFunc, Action<TValue>? setChangedHandler, string? expression)
+        {
+            var view = ViewBuildContext.CurrentView;
+
+            if (view == null)
+                throw new InvalidOperationException("Current view is not set! If you are using expression binding inside of FuncTemplate, wrap it's content into FuncView or FuncComponent, to make bindings work.");
+
+            var handler = setChangedHandler;
+
+            //override handler for MVU components so changing of such properties will trigger StateHasChanged method
+            if (view is ComponentBase componentBase && setChangedHandler != null)
             {
-                binding.Source = bindingSource;
-            }
-            else
-            {
-                //for components the default binding context is the component itself instead of the control's data context
-                // except cases, where the binding source is defined directly
-                var view = ViewBuildContext.CurrentView;
-                if (view is IMvuComponent component)
+                handler = v =>
                 {
-                    binding.Source ??= component;
+                    // Update this component's state first
+                    componentBase.UpdateState(() => setChangedHandler(v), bubbleToParent: true);
+
+                    // Also notify listeners (e.g., parent components) that track this property by expression
+                    if (!string.IsNullOrEmpty(expression))
+                    {
+                        try
+                        {
+                            componentBase.NotifyExternalPropertyChanged(expression!, v);
+                        }
+                        catch
+                        {
+                            // Swallow diagnostics-only issues
+                        }
+                    }
+                };
+            }
+
+            var state = new ViewPropertyComputedState<TAvObject, TValue>(expression, getterFunc, handler, control, avaloniaProperty);
+
+            view.AddComputedState(state, control);
+            return control;
+        }
+
+        /// <summary>
+        /// Creates *Common property* binding based on expression argument
+        /// </summary>
+        /// <typeparam name="TValue"></typeparam>
+        /// <param name="setter">Property setter action</param>
+        /// <param name="getterFunc">Property getterFunc function</param>
+        /// <param name="setChangedHandler"></param>
+        /// <param name="expression"></param>
+        /// <returns></returns>
+        /// <exception cref="InvalidOperationException"></exception>
+        public TAvObject _set<TValue>(Action<TValue> setter, Func<TValue> getterFunc, Action<TValue>? setChangedHandler, string? expression)
+        {
+            var view = ViewBuildContext.CurrentView;
+
+            if (view == null)
+                throw new InvalidOperationException("Current view is not set. Control must be put into view (inherited from ViewBase of ComponentBase) that can store binding information.");
+
+            var handler = setChangedHandler;
+
+            if (view is ComponentBase componentBase && setChangedHandler != null)
+            {
+                // Extract property name for tracking (if possible)
+                string propertyName = expression ?? "unknown";
+
+                if (control is ComponentBase childComponent)
+                {
+                    // Register callback on PARENT to handle child changes by expression key
+                    componentBase.RegisterPropertyCallback(propertyName, value =>
+                    {
+                        try
+                        {
+                            if (value is TValue typedValue)
+                                setChangedHandler(typedValue);
+                            else if (value is null)
+                                setChangedHandler(default!);
+                            else
+                                setChangedHandler((TValue)Convert.ChangeType(value, typeof(TValue))!);
+                        }
+                        catch
+                        {
+                            // ignore conversion issues
+                        }
+                    });
+
+                    // When child local setter fires via binding, bubble to parent listeners
+                    handler = v =>
+                    {
+                        setChangedHandler(v);
+                        componentBase.NotifyExternalPropertyChanged(propertyName, v);
+                    };
+                }
+                else
+                {
+                    handler = v => componentBase.UpdateState(() => setChangedHandler(v), bubbleToParent: true);
                 }
             }
 
-
-            setAction();
-            control.Bind(destProperty, binding);
+            var state = new ViewPropertyComputedState<TAvObject, TValue>(expression, setter, getterFunc, handler, control);
+            view.AddComputedState(state, control);
+            return control;
         }
-        else
+
+        /// <summary>
+        /// Creates binding to property on DataContext of the control parsed from Value's expression arg , used by generated extensions
+        /// </summary>
+        /// <param name="destProperty"></param>
+        /// <param name="sourcePropertyPathString"></param>
+        /// <param name="setAction"></param>
+        /// <param name="bindingMode"></param>
+        /// <param name="converter"></param>
+        /// <param name="bindingSource"></param>
+        /// <returns></returns>
+        public TAvObject _setEx(AvaloniaProperty destProperty,
+            string? sourcePropertyPathString, Action setAction,
+            BindingMode? bindingMode, IValueConverter? converter, object? bindingSource)
         {
-            setAction();
+            if (sourcePropertyPathString == null
+                || bindingMode.HasValue
+                || bindingSource != default
+                || sourcePropertyPathString.StartsWith("@"))
+            {
+                var binding = new Binding
+                {
+                    Path = PropertyPathHelper.GetNameFromPropertyPath(sourcePropertyPathString),
+                    Mode = bindingMode ?? BindingMode.Default,
+                    Converter = converter
+                };
+
+                // This is needed as setting a null Source breaks the Binding
+                if (bindingSource != null)
+                {
+                    binding.Source = bindingSource;
+                }
+                else
+                {
+                    //for components the default binding context is the component itself instead of the control's data context
+                    // except cases, where the binding source is defined directly
+                    var view = ViewBuildContext.CurrentView;
+                    if (view is IMvuComponent component)
+                    {
+                        binding.Source ??= component;
+                    }
+                }
+
+
+                setAction();
+                control.Bind(destProperty, binding);
+            }
+            else
+            {
+                setAction();
+            }
+
+            return control;
         }
 
-        return control;
+        public TAvObject _set<TValue>(AvaloniaProperty<TValue> avaloniaProperty, 
+            Func<ValueTask<TValue>> getterFunc, 
+            Func<TValue>? fallbackGetter = null,
+            Action<TValue>? setChangedHandler = null, 
+            string? expression = null)
+        {
+            var view = ViewBuildContext.CurrentView;
+
+            if (view == null)
+                throw new InvalidOperationException("Current view is not set! If you are using expression binding inside of FuncTemplate, wrap it's content into FuncView or FuncComponent, to make bindings work.");
+
+            var handler = PrepareHandler(view, setChangedHandler, expression);
+
+            var state = new ViewPropertyAsyncComputedState<TAvObject, TValue>(
+                expression, getterFunc, fallbackGetter, handler, control, avaloniaProperty);
+
+            view.AddComputedState(state, control);
+            return control;
+        }
     }
-    
-    public static TAvObject _set<TAvObject, TValue>(
-        this TAvObject control, 
-        AvaloniaProperty<TValue> avaloniaProperty, 
-        Func<ValueTask<TValue>> getterFunc, 
-        Func<TValue>? fallbackGetter = null,
-        Action<TValue>? setChangedHandler = null, 
-        string? expression = null)
-        where TAvObject : AvaloniaObject
-    {
-        var view = ViewBuildContext.CurrentView;
 
-        if (view == null)
-            throw new InvalidOperationException("Current view is not set! If you are using expression binding inside of FuncTemplate, wrap it's content into FuncView or FuncComponent, to make bindings work.");
-
-        var handler = PrepareHandler(view, setChangedHandler, expression);
-
-        var state = new ViewPropertyAsyncComputedState<TAvObject, TValue>(
-            expression, getterFunc, fallbackGetter, handler, control, avaloniaProperty);
-
-        view.AddComputedState(state, control);
-        return control;
-    }
-    
 
     private static Action<TValue>? PrepareHandler<TValue>(ViewBase view, Action<TValue>? handler, string? expression)
     {
@@ -278,63 +265,57 @@ public static class ControlPropertyExtensions
         }
         return handler;
     }
-    
-    /// <summary>
-    /// Binds an Avalonia Property to a getter and setter function.
-    /// </summary>
-    public static TAvObject Bind<TAvObject, TValue>(
-        this TAvObject control,
-        AvaloniaProperty<TValue> property,
-        Func<TValue> getter,
-        Action<TValue>? setter = null)
-        where TAvObject : AvaloniaObject
-    {
-        return control._set(property, getter, setter, null);
-    }
 
-    /// <summary>
-    /// Binds an Avalonia Property to another Avalonia Property from another object.
-    /// </summary>
     /// <param name="control"></param>
-    /// <param name="property">Destination property to bind to.</param>
-    /// <param name="otherProperty">Source property to bind from.</param>
-    /// <param name="otherObject">Source object to bind from.</param>
-    /// <param name="mode">Binding mode, i.e. source to destination or bidirectional</param>
     /// <typeparam name="TAvObject"></typeparam>
-    /// <typeparam name="TValue"></typeparam>
-    /// <returns></returns>
-    public static TAvObject Bind<TAvObject, TValue>(
-        this TAvObject control,
-        AvaloniaProperty<TValue> property,
-        AvaloniaProperty<TValue> otherProperty,
-        object otherObject,
-        BindingMode mode = BindingMode.Default)
-        where TAvObject : AvaloniaObject
+    extension<TAvObject>(TAvObject control) where TAvObject : AvaloniaObject
     {
-        control.Bind(property, new Binding
+        /// <summary>
+        /// Binds an Avalonia Property to a getter and setter function.
+        /// </summary>
+        public TAvObject Bind<TValue>(AvaloniaProperty<TValue> property,
+            Func<TValue> getter,
+            Action<TValue>? setter = null)
         {
-            Path = otherProperty.Name,
-            Source = otherObject,
-            Mode = mode
-        });
+            return control._set(property, getter, setter, null);
+        }
 
-        return control;
+        /// <summary>
+        /// Binds an Avalonia Property to another Avalonia Property from another object.
+        /// </summary>
+        /// <param name="property">Destination property to bind to.</param>
+        /// <param name="otherProperty">Source property to bind from.</param>
+        /// <param name="otherObject">Source object to bind from.</param>
+        /// <param name="mode">Binding mode, i.e. source to destination or bidirectional</param>
+        /// <typeparam name="TValue"></typeparam>
+        /// <returns></returns>
+        public TAvObject Bind<TValue>(AvaloniaProperty<TValue> property,
+            AvaloniaProperty<TValue> otherProperty,
+            object otherObject,
+            BindingMode mode = BindingMode.Default)
+        {
+            control.Bind(property, new Binding
+            {
+                Path = otherProperty.Name,
+                Source = otherObject,
+                Mode = mode
+            });
+
+            return control;
+        }
+
+        /// <summary>
+        /// Binds an Avalonia Property to a Value Task getter, allowing for async bindings.
+        /// <param name="fallbackGetter">What to set the Property to whiles the async operation is still going.</param>
+        /// </summary>
+        public TAvObject Bind<TValue>(AvaloniaProperty<TValue> property,
+            Func<ValueTask<TValue>> getter,
+            Func<TValue>? fallbackGetter = null)
+        {
+            return control._set(property, getter, fallbackGetter);
+        }
     }
-    
-    /// <summary>
-    /// Binds an Avalonia Property to a Value Task getter, allowing for async bindings.
-    /// <param name="fallbackGetter">What to set the Property to whiles the async operation is still going.</param>
-    /// </summary>
-    public static TAvObject Bind<TAvObject, TValue>(
-        this TAvObject control,
-        AvaloniaProperty<TValue> property,
-        Func<ValueTask<TValue>> getter,
-        Func<TValue>? fallbackGetter = null)
-        where TAvObject : AvaloniaObject
-    {
-        return control._set(property, getter, fallbackGetter);
-    }
-    
+
     public static TElement DataContext<TElement, TDataContext>(
         this TElement control,
         TDataContext value,
@@ -351,123 +332,113 @@ public static class ControlPropertyExtensions
 
     public static Brush ToBrush(this Color color) => new SolidColorBrush(color);
 
-    public static TElement Dock<TElement>(this TElement control, Dock dock)
-        where TElement : Control
-    {
-        DockPanel.SetDock(control, dock);
-        return control;
-    }
-
-    /// <summary>
-    /// It's a shortcut for Grid_Column (in xaml: Grid.Column) extension 
-    /// </summary>
+    /// <param name="control">Control for positioning</param>
     /// <typeparam name="TElement"></typeparam>
+    extension<TElement>(TElement control) where TElement : Control
+    {
+        public TElement Dock(Dock dock)
+        {
+            DockPanel.SetDock(control, dock);
+            return control;
+        }
+
+        /// <summary>
+        /// It's a shortcut for Grid_Column (in xaml: Grid.Column) extension 
+        /// </summary>
+        /// <param name="value">Grid.Column value</param>
+        /// <returns></returns>
+        public TElement Col(int value)
+        {
+            Grid.SetColumn(control, value);
+            return control;
+        }
+
+        /// <summary>
+        /// It's a shortcut for Grid_Row (in xaml: Grid.Row) extension 
+        /// </summary>
+        /// <param name="value">Grid.Row value</param>
+        /// <returns></returns>
+        public TElement Row(int value)
+        {
+            Grid.SetRow(control, value);
+            return control;
+        }
+    }
+
+    /// <param name="control">Grid control</param>
+    /// <typeparam name="TElement">Grid</typeparam>
+    extension<TElement>(TElement control) where TElement : Grid
+    {
+        /// <summary>
+        /// It's a shortcut for Grid_ColumnDefinitions (in xaml: Grid.ColumnDefinitions) extension 
+        /// </summary>
+        /// <param name="value">Grid.ColumnDefinitions value</param>
+        /// <returns></returns>
+        public TElement Cols(ColumnDefinitions value)
+        {
+            control.ColumnDefinitions = value;
+            return control;
+        }
+
+        /// <summary>
+        /// It's a shortcut for Grid_RowDefinitions (in xaml: Grid.RowDefinitions) extension 
+        /// </summary>
+        /// <param name="value">Grid.RowDefinitions value</param>
+        /// <returns></returns>
+        public TElement Rows(RowDefinitions value)
+        {
+            control.RowDefinitions = value;
+            return control;
+        }
+
+        /// <summary>
+        /// It's a shortcut for Grid_ColumnDefinitions (in xaml: Grid.ColumnDefinitions) extension 
+        /// </summary>
+        /// <param name="value">String representing ColumnDefinitions i.e. "0,*,30,Auto" </param>
+        /// <returns></returns>
+        public TElement Cols(string value)
+        {
+            control.ColumnDefinitions = ColumnDefinitions.Parse(value);
+            return control;
+        }
+
+        /// <summary>
+        /// It's a shortcut for Grid_RowDefinitions (in xaml: Grid.RowDefinitions) extension 
+        /// </summary>
+        /// <param name="value">String representing RowDefinitions i.e. "0,*,30,Auto" </param>
+        /// <returns></returns>
+        public TElement Rows(string value)
+        {
+            control.RowDefinitions = RowDefinitions.Parse(value);
+            return control;
+        }
+    }
+
     /// <param name="control">Control for positioning</param>
-    /// <param name="value">Grid.Column value</param>
-    /// <returns></returns>
-	public static TElement Col<TElement>(this TElement control, int value)
-        where TElement : Control
-    {
-        Grid.SetColumn(control, value);
-        return control;
-    }
-
-    /// <summary>
-    /// It's a shortcut for Grid_Row (in xaml: Grid.Row) extension 
-    /// </summary>
-    /// <typeparam name="TElement">Control type</typeparam>
-    /// <param name="control">Control for positioning</param>
-    /// <param name="value">Grid.Row value</param>
-    /// <returns></returns>
-    public static TElement Row<TElement>(this TElement control, int value)
-        where TElement : Control
-    {
-        Grid.SetRow(control, value);
-        return control;
-    }
-
-    /// <summary>
-    /// It's a shortcut for Grid_ColumnDefinitions (in xaml: Grid.ColumnDefinitions) extension 
-    /// </summary>
-    /// <typeparam name="TElement">Grid</typeparam>
-    /// <param name="control">Grid control</param>
-    /// <param name="value">Grid.ColumnDefinitions value</param>
-    /// <returns></returns>
-	public static TElement Cols<TElement>(this TElement control, ColumnDefinitions value)
-        where TElement : Grid
-    {
-        control.ColumnDefinitions = value;
-        return control;
-    }
-
-    /// <summary>
-    /// It's a shortcut for Grid_RowDefinitions (in xaml: Grid.RowDefinitions) extension 
-    /// </summary>
-    /// <typeparam name="TElement">Grid</typeparam>
-    /// <param name="control">Grid control</param>
-    /// <param name="value">Grid.RowDefinitions value</param>
-    /// <returns></returns>
-	public static TElement Rows<TElement>(this TElement control, RowDefinitions value)
-        where TElement : Grid
-    {
-        control.RowDefinitions = value;
-        return control;
-    }
-
-    /// <summary>
-    /// It's a shortcut for Grid_ColumnDefinitions (in xaml: Grid.ColumnDefinitions) extension 
-    /// </summary>
-    /// <typeparam name="TElement">Grid</typeparam>
-    /// <param name="control">Grid control</param>
-    /// <param name="value">String representing ColumnDefinitions i.e. "0,*,30,Auto" </param>
-    /// <returns></returns>
-	public static TElement Cols<TElement>(this TElement control, string value)
-        where TElement : Grid
-    {
-        control.ColumnDefinitions = ColumnDefinitions.Parse(value);
-        return control;
-    }
-
-    /// <summary>
-    /// It's a shortcut for Grid_RowDefinitions (in xaml: Grid.RowDefinitions) extension 
-    /// </summary>
-    /// <typeparam name="TElement">Grid</typeparam>
-    /// <param name="control">Grid control</param>
-    /// <param name="value">String representing RowDefinitions i.e. "0,*,30,Auto" </param>
-    /// <returns></returns>
-	public static TElement Rows<TElement>(this TElement control, string value)
-        where TElement : Grid
-    {
-        control.RowDefinitions = RowDefinitions.Parse(value);
-        return control;
-    }
-
-    /// <summary>
-    /// It's a shortcut for Grid_ColumnSpan (in xaml: Grid.ColumnSpan) extension 
-    /// </summary>
     /// <typeparam name="TElement">Control Type</typeparam>
-    /// <param name="control">Control for positioning</param>
-    /// <param name="value">Grid.ColumnSpan value</param>
-    /// <returns></returns>
-	public static TElement ColSpan<TElement>(this TElement control, int value)
-        where TElement : Control
+    extension<TElement>(TElement control) where TElement : Control
     {
-        Grid.SetColumnSpan(control, value);
-        return control;
-    }
+        /// <summary>
+        /// It's a shortcut for Grid_ColumnSpan (in xaml: Grid.ColumnSpan) extension 
+        /// </summary>
+        /// <param name="value">Grid.ColumnSpan value</param>
+        /// <returns></returns>
+        public TElement ColSpan(int value)
+        {
+            Grid.SetColumnSpan(control, value);
+            return control;
+        }
 
-    /// <summary>
-    /// It's a shortcut for Grid_RowSpan (in xaml: Grid.RowSpan) extension 
-    /// </summary>
-    /// <typeparam name="TElement">Control type</typeparam>
-    /// <param name="control">Control for positioning</param>
-    /// <param name="value">Grid.RowSpan value</param>
-    /// <returns></returns>
-	public static TElement RowSpan<TElement>(this TElement control, int value)
-        where TElement : Control
-    {
-        Grid.SetRowSpan(control, value);
-        return control;
+        /// <summary>
+        /// It's a shortcut for Grid_RowSpan (in xaml: Grid.RowSpan) extension 
+        /// </summary>
+        /// <param name="value">Grid.RowSpan value</param>
+        /// <returns></returns>
+        public TElement RowSpan(int value)
+        {
+            Grid.SetRowSpan(control, value);
+            return control;
+        }
     }
 
     public static TPanel Children<TPanel>(this TPanel container, params Control[] children)
@@ -540,118 +511,115 @@ public static class ControlPropertyExtensions
         return control;
     }
 
-    public static TElement Name<TElement>(this TElement control, string name, INameScope ns)
-        where TElement : Control
+    extension<TElement>(TElement control) where TElement : Control
     {
-        ns?.Register(name, control);
-        control.Name = name;
-        return control;
-    }
+        public TElement Name(string name, INameScope ns)
+        {
+            ns?.Register(name, control);
+            control.Name = name;
+            return control;
+        }
 
-    public static TElement Styles<TElement>(this TElement control, params Style[] styles)
-        where TElement : Control
-    {
-        foreach (var style in styles)
-            control.Styles.Add(style);
+        public TElement Styles(params Style[] styles)
+        {
+            foreach (var style in styles)
+                control.Styles.Add(style);
 
-        return control;
-    }
+            return control;
+        }
 
-    public static TElement Styles<TElement>(this TElement control, IEnumerable<Style> styles)
-        where TElement : Control
-    {
-        foreach (var style in styles)
-            control.Styles.Add(style);
+        public TElement Styles(IEnumerable<Style> styles)
+        {
+            foreach (var style in styles)
+                control.Styles.Add(style);
 
-        return control;
-    }
+            return control;
+        }
 
-    public static TElement Classes<TElement>(this TElement control, string className, [CallerLineNumber] int line = 0,
-        [CallerMemberName] string? caller = null)
-        where TElement : Control
-    {
-        control.Classes.Add(className);
-        return control;
-    }
+        public TElement Classes(string className, [CallerLineNumber] int line = 0,
+            [CallerMemberName] string? caller = null)
+        {
+            control.Classes.Add(className);
+            return control;
+        }
 
-    public static TElement BindClass<TElement>(this TElement control, Func<bool> func, string className,
-        [CallerArgumentExpression(nameof(func))] string? ps = null)
-        where TElement : Control
-    {
+        public TElement BindClass(Func<bool> func, string className,
+            [CallerArgumentExpression(nameof(func))] string? ps = null)
+        {
 
-        var view = ViewBuildContext.CurrentView;
+            var view = ViewBuildContext.CurrentView;
 
-        if (view == null)
-            throw new InvalidOperationException("Current view is not set");
+            if (view == null)
+                throw new InvalidOperationException("Current view is not set");
 
-        var state = new ViewPropertyComputedState<bool>(ps, func);
+            var state = new ViewPropertyComputedState<bool>(ps, func);
 
-        view.AddComputedState(state, control);
+            view.AddComputedState(state, control);
 
-        var binding = state.ToBinding();
+            var binding = state.ToBinding();
 
-        control.BindClass(className, binding, null!);
+            control.BindClass(className, binding, null!);
 
-        return control;
-    }
+            return control;
+        }
 
-    public static TElement BindClass<TElement>(this TElement control, bool value, string className,
-        object? bindingSource = null, [CallerLineNumber] int line = 0, [CallerMemberName] string? caller = null,
-        [CallerArgumentExpression(nameof(value))] string? ps = null)
-        where TElement : Control
-    {
-        var path = PropertyPathHelper.GetNameFromPropertyPath(ps);
-        var binding = new Binding(path, BindingMode.OneWay);
+        public TElement BindClass(bool value, string className,
+            object? bindingSource = null, [CallerLineNumber] int line = 0, [CallerMemberName] string? caller = null,
+            [CallerArgumentExpression(nameof(value))] string? ps = null)
+        {
+            var path = PropertyPathHelper.GetNameFromPropertyPath(ps);
+            var binding = new Binding(path, BindingMode.OneWay);
 
-        if (bindingSource != null)
-            binding.Source = bindingSource;
+            if (bindingSource != null)
+                binding.Source = bindingSource;
 
-        control.BindClass(className, binding, null!);
-        return control;
+            control.BindClass(className, binding, null!);
+            return control;
+        }
     }
 
     public static StackTrace GetDeeperStackTrace(int depth) =>
         depth > 0 ? GetDeeperStackTrace(depth - 1) : new StackTrace(0, true);
 
 
-    public static TElement DataTemplates<TElement>(this TElement control, params IDataTemplate[] dataTemplate)
-        where TElement : Control
+    extension<TElement>(TElement control) where TElement : Control
     {
-        foreach (var template in dataTemplate)
-            control.DataTemplates.Add(template);
-        return control;
-    }
-
-    public static TElement SetProp<TElement, TValue>(this TElement control, Avalonia.AvaloniaProperty property,
-        TValue value)
-        where TElement : Control
-    {
-        if (value is IBinding binding)
+        public TElement DataTemplates(params IDataTemplate[] dataTemplate)
         {
-            control[!property] = binding;
-        }
-        else
-        {
-            control[property] = value;
+            foreach (var template in dataTemplate)
+                control.DataTemplates.Add(template);
+            return control;
         }
 
-        return control;
-    }
-
-    public static TElement ToolTip<TElement, TValue>(this TElement control, TValue value)
-        where TElement : Control
-    {
-        var prop = Avalonia.Controls.ToolTip.TipProperty;
-        if (value is IBinding binding)
+        public TElement SetProp<TValue>(Avalonia.AvaloniaProperty property,
+            TValue value)
         {
-            control[!prop] = binding;
-        }
-        else
-        {
-            control[prop] = value;
+            if (value is IBinding binding)
+            {
+                control[!property] = binding;
+            }
+            else
+            {
+                control[property] = value;
+            }
+
+            return control;
         }
 
-        return control;
+        public TElement ToolTip<TValue>(TValue value)
+        {
+            var prop = Avalonia.Controls.ToolTip.TipProperty;
+            if (value is IBinding binding)
+            {
+                control[!prop] = binding;
+            }
+            else
+            {
+                control[prop] = value;
+            }
+
+            return control;
+        }
     }
 
     /// <summary>
@@ -714,5 +682,20 @@ public static class ControlPropertyExtensions
     {
         field = control;
         return control;
+    }
+    
+    extension<T>(T interactive) where T : Interactive
+    {
+        /// <summary>
+        /// Binds a delegate to an Avalonia Routed Event.
+        /// Useful for when Declarative Bindings don't already exist for a particular control.
+        /// </summary>
+        public T Handle<TEvent>(RoutedEvent<TEvent> routedEvent,
+            Action<TEvent> action,
+            RoutingStrategies? routes = null) where TEvent : RoutedEventArgs
+        {
+            interactive.AddHandler(routedEvent, (EventHandler<TEvent>) ((_, args) => action(args)), routes ??  routedEvent.RoutingStrategies);
+            return interactive;
+        }
     }
 }
