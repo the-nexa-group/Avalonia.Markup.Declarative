@@ -7,11 +7,10 @@
 - **C#-Only UI** - Write Avalonia applications without any XAML
 - **Hot Reload Support** - .NET 6.0+ hot reload for C# markup
 - **MVU & MVVM Patterns** - Flexible component architecture supporting both patterns
-- **Reactive Attributes** - New `[Observe]` and `[Observable]` attributes for automatic property change handling
-- **Source Generation** - Compile-time extensions for custom controls
+- **Reactive Attributes** - `[Observe]` and `[Observable]` attributes for automatic property change handling
+- **Source Generation** - Compile-time extensions for built-in, custom and third-party controls
 - **Dependency Injection** - Compile-time dependency injection
 - **No Reflection** - Keep performance high by avoiding reflection
-- **External Library Support** - Generate extensions for third-party controls
 
 ## Quick Start
 
@@ -109,20 +108,10 @@ public partial class DataComponent : ComponentBase
     
     // Generates
     public static readonly AvaloniaDirectProperty<DataComponent, INotifyPropertyChanged> DataSourceProperty;
-    
     public INotifyPropertyChanged DataSource { get; set; }
+    public ValueTask<INotifyPropertyChanged> GetDataSourceAsync();
+    public ValueTask SetDataSourceAsync(INotifyPropertyChanged newDataSource);
 }
-```
-
-## Advanced Features
-
-### Custom Controls with Source Generation
-
-```xml
-<ItemGroup>
-    <ProjectReference Include="..\..\Avalonia.Markup.Declarative.SourceGenerator\Avalonia.Markup.Declarative.SourceGenerator.csproj" 
-                      OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-</ItemGroup>
 ```
 
 ### Styling
@@ -150,18 +139,14 @@ AppBuilder.Configure<Application>()
 
 - `src/Avalonia.Markup.Declarative/` - Core framework
 - `src/Avalonia.Markup.Declarative.SourceGenerator/` - Source generators
-- `src/AvaloniaExtensionGenerator/` - External library tool
 - `Samples/` - Example applications and patterns
 
 ## About This Fork
 
 This is a community-driven fork of AvaloniaUI/Avalonia.Markup.Declarative. The original repository serves as a proof-of-concept for writing Avalonia UI in pure C#. 
-This fork builds upon that foundation with the goal of extending its capabilities and exploring the potential of C# markup as a more developed alternative to XAML.
+This fork builds upon that foundation with the goal of extending its capabilities and exploring the potential of C# markup as a complete alternative to XAML.
 
 ## License
 
 MIT
 
----
-
-**Note:** This is a community-driven project and not officially supported by the Avalonia team. For official Avalonia support, use their supported XAML approach.
