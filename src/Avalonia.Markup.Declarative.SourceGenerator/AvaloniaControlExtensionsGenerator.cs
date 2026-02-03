@@ -23,12 +23,12 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
         "System.Threading.Tasks"
     ];
     
-    private static readonly DiagnosticDescriptor GeneratorError = new DiagnosticDescriptor(
+    private static readonly DiagnosticDescriptor GeneratorError = new(
         id: "AVGEN001",
         title: "Source Generation Failed",
-        messageFormat: "Failed to generate extensions for {0}. Reason: {1}",
+        messageFormat: "Failed to generate extensions for {0}. Reason: {1}.",
         category: "AvaloniaGenerator",
-        defaultSeverity: DiagnosticSeverity.Error,
+        defaultSeverity: DiagnosticSeverity.Warning,
         isEnabledByDefault: true);
 
     public void Initialize(IncrementalGeneratorInitializationContext context)
@@ -65,6 +65,8 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
                 {
                     // Get the location of the class to point the error at the right line
                     Location location = controlType.Locations.FirstOrDefault() ?? Location.None;
+                    
+                    spc.AddSource($"Generator_Error_Log_{fullName}.g.cs", SourceText.From($"Failed to source gen control '{fullName}' because {e}"));
 
                     spc.ReportDiagnostic(Diagnostic.Create(
                         GeneratorError,
@@ -84,8 +86,7 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
         // Look through all accessible types in the compilation
         foreach (var assembly in compilation.References)
         {
-            var assemblySymbol = compilation.GetAssemblyOrModuleSymbol(assembly) as IAssemblySymbol;
-            if (assemblySymbol != null)
+            if (compilation.GetAssemblyOrModuleSymbol(assembly) is IAssemblySymbol assemblySymbol)
             {
                 var types = GetTypesFromNamespace(assemblySymbol.GlobalNamespace);
                 foreach (var type in types.Where(type => IsControlType(type, baseType)))
@@ -593,15 +594,7 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
             if (innerType == null)
                 return "object";
 
-            var format = new SymbolDisplayFormat(
-                globalNamespaceStyle: SymbolDisplayGlobalNamespaceStyle.Included,
-                typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
-                genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters,
-                miscellaneousOptions: SymbolDisplayMiscellaneousOptions.UseSpecialTypes | 
-                                      SymbolDisplayMiscellaneousOptions.IncludeNullableReferenceTypeModifier
-            );
-
-            return innerType.ToDisplayString(format);
+            return innerType.ToDisplayString(MarkupTypeHelpers.FullSymbols);
         }
         return "object";
     }

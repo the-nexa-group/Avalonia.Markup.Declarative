@@ -87,11 +87,7 @@ internal static class MarkupTypeHelpers
         if (typeInfo.Type == null)
             return property.Type.ToString();
 
-        return typeInfo.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat
-            .WithMiscellaneousOptions(
-                SymbolDisplayMiscellaneousOptions.UseSpecialTypes | 
-                SymbolDisplayMiscellaneousOptions.ExpandNullable
-            ));
+        return typeInfo.Type.ToDisplayString(FullSymbols);
     }
 
     internal static string GetNullableLambdaParameterTypeName(PropertyDeclarationSyntax property, SemanticModel semanticModel)
@@ -106,4 +102,12 @@ internal static class MarkupTypeHelpers
 
         return nullableTypeSymbol.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat);
     }
+    
+    internal static readonly SymbolDisplayFormat FullSymbols = new(
+        globalNamespaceStyle: SymbolDisplayGlobalNamespaceStyle.Included,
+        typeQualificationStyle: SymbolDisplayTypeQualificationStyle.NameAndContainingTypesAndNamespaces,
+        genericsOptions: SymbolDisplayGenericsOptions.IncludeTypeParameters,
+        miscellaneousOptions: SymbolDisplayMiscellaneousOptions.UseSpecialTypes | 
+        SymbolDisplayMiscellaneousOptions.IncludeNullableReferenceTypeModifier
+    );
 }
