@@ -16,11 +16,20 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
         "Avalonia.Data",
         "Avalonia.Data.Converters", 
         "System",
+        "System.Diagnostics.CodeAnalysis",
         "System.Numerics",
         "System.Linq.Expressions",
         "System.Runtime.CompilerServices",
         "System.Threading.Tasks"
     ];
+    
+    private static readonly DiagnosticDescriptor GeneratorError = new DiagnosticDescriptor(
+        id: "AVGEN001",
+        title: "Source Generation Failed",
+        messageFormat: "Failed to generate extensions for {0}. Reason: {1}",
+        category: "AvaloniaGenerator",
+        defaultSeverity: DiagnosticSeverity.Error,
+        isEnabledByDefault: true);
 
     public void Initialize(IncrementalGeneratorInitializationContext context)
     {
@@ -54,8 +63,14 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
                 }
                 catch (Exception e)
                 {
-                    string error = $"// Failed to generate source for {fullName}. Reason: {e}";
-                    spc.AddSource(fileName, SourceText.From(error, Encoding.UTF8));
+                    // Get the location of the class to point the error at the right line
+                    Location location = controlType.Locations.FirstOrDefault() ?? Location.None;
+
+                    spc.ReportDiagnostic(Diagnostic.Create(
+                        GeneratorError,
+                        location, 
+                        controlType.Name, 
+                        e.ToString()));
                 }
             }
         });
@@ -237,20 +252,24 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
             }
 
             // BindFromExpressionSetterGenerator
+            sb.AppendLine($"        [DynamicDependency(nameof({controlTypeName}.{propertyName}), typeof({controlTypeName}))]");
             sb.AppendLine($"        public {returnType} {propertyName}(Func<{propertyType}> func, Action<{propertyType}>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)");
             sb.AppendLine($"            => control._set({controlTypeName}.{field.Name}!, func, onChanged, expression);");
             sb.AppendLine();
 
             // BindFromExpressionAsyncSetterGenerator
+            sb.AppendLine($"        [DynamicDependency(nameof({controlTypeName}.{propertyName}), typeof({controlTypeName}))]");
             sb.AppendLine($"        public {returnType} {propertyName}(Func<ValueTask<{propertyType}>> getter, Func<{propertyType}>? fallbackGetter = null, Action<{propertyType}>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)");
             sb.AppendLine($"            => control._set({controlTypeName}.{field.Name}!, getter, fallbackGetter, onChanged, expression);");
             sb.AppendLine();
 
             // BindSetterGenerator
+            sb.AppendLine($"        [DynamicDependency(nameof({controlTypeName}.{propertyName}), typeof({controlTypeName}))]");
             sb.AppendLine($"        public {returnType} {propertyName}(IBinding binding)");
             sb.AppendLine($"            => control._set({controlTypeName}.{field.Name}, binding);");
             sb.AppendLine();
 
+            sb.AppendLine($"        [DynamicDependency(nameof({controlTypeName}.{propertyName}), typeof({controlTypeName}))]");
             sb.AppendLine($"        public {returnType} {propertyName}(AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)");
             sb.AppendLine($"            => control._set({controlTypeName}.{field.Name}, avaloniaProperty, bindingMode, converter, overrideView);");
             sb.AppendLine();
@@ -291,9 +310,10 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
 
         var attachedProperties = controlType.GetMembers()
             .OfType<IFieldSymbol>()
-            .Where(f => IsAttachedPropertyField(f) && !IsReadOnlyAttachedField(f));
+            .Where(f => IsAttachedPropertyField(f) && !IsReadOnlyAttachedField(f))
+            .ToArray();
 
-        if (!attachedProperties.Any()) 
+        if (attachedProperties.Length == 0) 
             return string.Empty;
 
         sb.AppendLine();
@@ -414,14 +434,15 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
         var controlTypeName = GetFullTypeName(controlType);
         var isGeneric = !controlType.IsSealed;
 
-        var processedStyledProperties = new HashSet<string>();
         var styledProperties = controlType.GetMembers()
             .OfType<IFieldSymbol>()
-            .Where(f => IsStyledPropertyField(f) && !IsReadOnlyField(f) && 
-                           SymbolEqualityComparer.Default.Equals(f.ContainingType, controlType) && 
-                           processedStyledProperties.Add(f.Name));
+            .Where(f => 
+                IsStyledPropertyField(f) && 
+                !IsReadOnlyField(f) && 
+                SymbolEqualityComparer.Default.Equals(f.ContainingType, controlType))
+            .ToArray();
 
-        if (!styledProperties.Any())
+        if (styledProperties.Length == 0)
             return string.Empty;
 
         string returnType = isGeneric ? "TControl" : controlTypeName;
