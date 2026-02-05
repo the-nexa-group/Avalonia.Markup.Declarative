@@ -5,16 +5,17 @@ namespace Avalonia.Markup.Declarative.Helpers;
 internal static class PropertyPathHelper
 {
     private static readonly char[] StopChars = [' ', '?', ',', '\"', '@', '\t', '\n'];
+    
     public static string GetNameFromPropertyPath(string? path)
     {
         if (string.IsNullOrEmpty(path)) 
             return string.Empty;
 
         ReadOnlySpan<char> pathSpan = path.AsSpan();
-        var startIndex = Math.Max(0, pathSpan.LastIndexOf(')'));
-        var propFound = false;
+        int startIndex = Math.Max(0, pathSpan.LastIndexOf(')'));
+        bool propFound = false;
         
-        for (var i = startIndex; i < pathSpan.Length; i++)
+        for (int i = startIndex; i < pathSpan.Length; i++)
         {
             var curChar = pathSpan[i];
             if (propFound && StopChars.Contains(curChar))

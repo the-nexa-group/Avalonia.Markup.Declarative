@@ -359,9 +359,9 @@ public class AvaloniaPropertyExtensionsGenerator : IIncrementalGenerator
 
         var extensionText =
             $"public static {controlTypeName} {extensionName}{genericParamsAll}(this {controlTypeName} control, Func<{valueTypeSource}> func, Action<{valueTypeSource}>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null){classConstraint}{NewLine}" +
-            $"    => control._set({controlTypeName}.{extensionName}Property, func, onChanged, expression);\n" +
+            $"    => control.Bind({controlTypeName}.{extensionName}Property, func, onChanged, expression);\n" +
             $"public static {controlTypeName} {extensionName}{genericParamsAll}(this {controlTypeName} control, Func<ValueTask<{valueTypeSource}>> getter, Func<{valueTypeSource}>? fallbackGetter = null, Action<{valueTypeSource}>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null){classConstraint}{NewLine}" +
-            $"    => control._set({controlTypeName}.{extensionName}Property, getter, fallbackGetter, onChanged, expression);\n";
+            $"    => control.Bind({controlTypeName}.{extensionName}Property, getter, fallbackGetter, onChanged, expression);\n";
 
 
         return extensionText;
@@ -374,7 +374,7 @@ public class AvaloniaPropertyExtensionsGenerator : IIncrementalGenerator
 
         var extensionText =
             $"public static {controlTypeName} {extensionName}(this {controlTypeName} control, Func<{valueTypeSource}> func, Action<{valueTypeSource}>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null){NewLine}" +
-            $"   => control._set((v) => control.{extensionName} = v, func, onChanged, expression);\n";
+            $"   => control.Bind((v) => control.{extensionName} = v, func, onChanged, expression);\n";
 
         return extensionText;
     }

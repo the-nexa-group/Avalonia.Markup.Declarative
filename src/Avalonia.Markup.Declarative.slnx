@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/Global/">
+    <File Path="../Directory.Build.props" />
+  </Folder>
+  <Folder Name="/Samples/">
+    <Project Path="Samples/AvaloniaMarkupSample/AvaloniaMarkupSample.csproj" />
+    <Project Path="Samples/ExternalLibrarySample/ExternalLibrarySample.csproj" />
+    <Project Path="Samples/MvuTemplate/MvuTemplate.csproj" />
+    <Project Path="Samples/ReactiveSample/ReactiveSample.csproj" />
+  </Folder>
+  <Project Path="Avalonia.Markup.Declarative.SourceGenerator/Avalonia.Markup.Declarative.SourceGenerator.csproj" />
+  <Project Path="Avalonia.Markup.Declarative.Tests/Avalonia.Markup.Declarative.Tests.csproj" />
+  <Project Path="Avalonia.Markup.Declarative/Avalonia.Markup.Declarative.csproj" />
+</Solution>

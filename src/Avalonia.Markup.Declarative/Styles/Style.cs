@@ -1,9 +1,9 @@
 ﻿using Avalonia.Markup.Declarative.Helpers;
 using Avalonia.Styling;
 using System;
-using System.Runtime.CompilerServices;
 
 namespace Avalonia.Markup.Declarative;
+
 /// <summary>
 /// Typed style to support method chains with generic arguments
 /// </summary>
@@ -11,7 +11,7 @@ namespace Avalonia.Markup.Declarative;
 public class Style<TControl> : Style, IRelativeStyle
     where TControl : StyledElement
 {
-    private Func<Selector, Selector> SelectorFunc { get; }
+    private Func<Selector?, Selector> SelectorFunc { get; }
 
     /// <summary>
     /// Creates Style with added .OfType<typeparam name="TControl"></typeparam> selector
@@ -27,9 +27,7 @@ public class Style<TControl> : Style, IRelativeStyle
     /// Creates Style with added .OfType<typeparam name="TControl"></typeparam> selector and use name="selectorFunc" to generate selector
     /// </summary>
     /// <param name="selectorFunc">Selector to control</param>
-    /// <param name="expression">expression how selector was called</param>
-    /// <param name="callerFile">file where style was constructed</param>
-    public Style(Func<Selector, Selector> selectorFunc, [CallerArgumentExpression(nameof(selectorFunc))] string? expression = null, [CallerFilePath] string? callerFile = null)
+    public Style(Func<Selector?, Selector> selectorFunc)
     {
         SelectorFunc = selectorFunc;
 
@@ -37,21 +35,18 @@ public class Style<TControl> : Style, IRelativeStyle
         if (selectorFunc(null!).GetTypeNameFromSelector() == null) 
             SelectorFunc = s => selectorFunc(s.OfType<TControl>());
             
-        //Prevent Selector generation from immediate call, since we need to apply base selectors from ascendant groups
+        // Prevent Selector generation from immediate call, since we need to apply base selectors from ascendant groups
         if (ViewBuildContext.CurrentState != ViewBuildContextState.StyleBuilding)
             Selector = SelectorFunc(null!);
     }
 
-    public void UpdateSelector(Func<Selector, Selector>? baseSelectorFunc)
+    public void UpdateSelector(Func<Selector?, Selector>? baseSelectorFunc)
     {
-        if (baseSelectorFunc != null)
-            Selector = SelectorFunc(baseSelectorFunc(null!));
-        else
-            Selector = SelectorFunc(null!);
+        Selector = SelectorFunc.Invoke(baseSelectorFunc?.Invoke(null));
     }
 }
 
 internal interface IRelativeStyle : IStyle
 {
-    void UpdateSelector(Func<Selector, Selector>? baseSelectorFunc);
+    void UpdateSelector(Func<Selector?, Selector>? baseSelectorFunc);
 }

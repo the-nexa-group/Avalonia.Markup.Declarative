@@ -6,12 +6,12 @@ namespace Avalonia.Markup.Declarative;
 
 internal static class StyleBuilder
 {
-    internal static IEnumerable<IStyle> StylesToRange(StyleGroup? styleGroup, Func<Selector, Selector>? selector = null)
+    internal static IEnumerable<IStyle> StylesToRange(StyleGroup? styleGroup, Func<Selector?, Selector>? selector = null)
     {
         if (styleGroup == null)
             yield break;
 
-        var stack = new Stack<(StyleGroup, Func<Selector, Selector>?)>();
+        var stack = new Stack<(StyleGroup, Func<Selector?, Selector>?)>();
         stack.Push((styleGroup, selector));
 
         while (stack.Count > 0)

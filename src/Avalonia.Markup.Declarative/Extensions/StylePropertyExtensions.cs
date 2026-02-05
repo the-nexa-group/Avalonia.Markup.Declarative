@@ -1,7 +1,6 @@
 ﻿using Avalonia.Styling;
 using System;
 using Avalonia.Controls;
-using System.Xml.Linq;
 
 namespace Avalonia.Markup.Declarative;
 
@@ -36,7 +35,7 @@ public static class StylePropertyExtensions
             style._addSetter(avaloniaProperty, value);
 
         /// <summary>
-        /// Creates selector and applies .OfType<TElement>() to it
+        /// Creates selector and applies .OfTypeTElement() to it
         /// </summary>
         /// <param name="selector">Selector modifier function</param>
         /// <returns>style with applied selector</returns>

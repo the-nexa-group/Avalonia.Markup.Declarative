@@ -27,7 +27,7 @@ public static class InputExtensions
         }
 
         public T OnKeyDown(Key key, KeyEvent action, RoutingStrategies? routes = null) => 
-            OnKeyDown(control, key, KeyModifiers.None, action, routes);
+            control.OnKeyDown(key, KeyModifiers.None, action, routes);
 
         public T OnKeyUp(Key key, KeyModifiers keyModifiers, KeyEvent action, RoutingStrategies? routes = null)
         {
@@ -41,6 +41,6 @@ public static class InputExtensions
         }
 
         public T OnKeyUp(Key key, KeyEvent action, RoutingStrategies? routes = null) => 
-            OnKeyUp(control, key, KeyModifiers.None, action, routes);
+            control.OnKeyUp(key, KeyModifiers.None, action, routes);
     }
 }

@@ -257,7 +257,7 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
             if (!propertyType.EndsWith("IBinding") && !propertyType.EndsWith("IBinding?"))
             {
                 sb.AppendLine($"        public {returnType} {propertyName}({propertyType} value)");
-                sb.AppendLine($"            => control._set(() => control.{propertyName} = value);");
+                sb.AppendLine($"            => control.Execute(() => control.{propertyName} = value);");
                 sb.AppendLine();
                 totalExtensions++;
             }
@@ -265,24 +265,24 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
             // BindFromExpressionSetterGenerator
             sb.AppendLine($"        [DynamicDependency(nameof({controlTypeName}.{propertyName}), typeof({controlTypeName}))]");
             sb.AppendLine($"        public {returnType} {propertyName}(Func<{propertyType}> func, Action<{propertyType}>? onChanged = null, [CallerArgumentExpression(nameof(func))] string? expression = null)");
-            sb.AppendLine($"            => control._set({controlTypeName}.{field.Name}!, func, onChanged, expression);");
+            sb.AppendLine($"            => control.Bind({controlTypeName}.{field.Name}!, func, onChanged, expression);");
             sb.AppendLine();
 
             // BindFromExpressionAsyncSetterGenerator
             sb.AppendLine($"        [DynamicDependency(nameof({controlTypeName}.{propertyName}), typeof({controlTypeName}))]");
             sb.AppendLine($"        public {returnType} {propertyName}(Func<ValueTask<{propertyType}>> getter, Func<{propertyType}>? fallbackGetter = null, Action<{propertyType}>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)");
-            sb.AppendLine($"            => control._set({controlTypeName}.{field.Name}!, getter, fallbackGetter, onChanged, expression);");
+            sb.AppendLine($"            => control.Bind({controlTypeName}.{field.Name}!, getter, fallbackGetter, onChanged, expression);");
             sb.AppendLine();
 
             // BindSetterGenerator
             sb.AppendLine($"        [DynamicDependency(nameof({controlTypeName}.{propertyName}), typeof({controlTypeName}))]");
             sb.AppendLine($"        public {returnType} {propertyName}(IBinding binding)");
-            sb.AppendLine($"            => control._set({controlTypeName}.{field.Name}, binding);");
+            sb.AppendLine($"            => control.BindR({controlTypeName}.{field.Name}, binding);");
             sb.AppendLine();
 
             sb.AppendLine($"        [DynamicDependency(nameof({controlTypeName}.{propertyName}), typeof({controlTypeName}))]");
             sb.AppendLine($"        public {returnType} {propertyName}(AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)");
-            sb.AppendLine($"            => control._set({controlTypeName}.{field.Name}, avaloniaProperty, bindingMode, converter, overrideView);");
+            sb.AppendLine($"            => control.Bind({controlTypeName}.{field.Name}, avaloniaProperty, bindingMode, converter, overrideView);");
             sb.AppendLine();
             
             totalExtensions += 4;
@@ -291,20 +291,20 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
             if (propertyType.EndsWith("Thickness"))
             {
                 sb.AppendLine($"        public {returnType} {propertyName}(double value)");
-                sb.AppendLine($"            => control._set(() => control.{propertyName} = new Avalonia.Thickness(value));");
+                sb.AppendLine($"            => control.Execute(() => control.{propertyName} = new Avalonia.Thickness(value));");
                 sb.AppendLine();
                 sb.AppendLine($"        public {returnType} {propertyName}(double left = 0, double top = 0, double right = 0, double bottom = 0)");
-                sb.AppendLine($"            => control._set(() => control.{propertyName} = new Avalonia.Thickness(left, top, right, bottom));");
+                sb.AppendLine($"            => control.Execute(() => control.{propertyName} = new Avalonia.Thickness(left, top, right, bottom));");
                 sb.AppendLine();
                 totalExtensions += 2;
             }
             else if (propertyType.EndsWith("CornerRadius"))
             {
                 sb.AppendLine($"        public {returnType} {propertyName}(double value)");
-                sb.AppendLine($"            => control._set(() => control.{propertyName} = new Avalonia.CornerRadius(value));");
+                sb.AppendLine($"            => control.Execute(() => control.{propertyName} = new Avalonia.CornerRadius(value));");
                 sb.AppendLine();
                 sb.AppendLine($"        public {returnType} {propertyName}(double left = 0, double top = 0, double right = 0, double bottom = 0)");
-                sb.AppendLine($"            => control._set(() => control.{propertyName} = new Avalonia.CornerRadius(left, top, right, bottom));");
+                sb.AppendLine($"            => control.Execute(() => control.{propertyName} = new Avalonia.CornerRadius(left, top, right, bottom));");
                 sb.AppendLine();
                 totalExtensions += 2;
             }
@@ -348,14 +348,14 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
             if (!propertyType.EndsWith("IBinding") && !propertyType.EndsWith("IBinding?"))
             {
                 sb.AppendLine($"        public TControl {controlType.Name}_{propertyName}({propertyType} value)");
-                sb.AppendLine($"            => control._set(() => control.SetValue({containingTypeName}.{propertyName}Property, value));");
+                sb.AppendLine($"            => control.Execute(() => control.SetValue({containingTypeName}.{propertyName}Property, value));");
                 sb.AppendLine();
                 totalExtensions++;
             }
 
             // Binding setter
             sb.AppendLine($"        public TControl {controlType.Name}_{propertyName}(IBinding binding)");
-            sb.AppendLine($"            => control._set({containingTypeName}.{field.Name}, binding);");
+            sb.AppendLine($"            => control.BindR({containingTypeName}.{field.Name}, binding);");
             sb.AppendLine();
 
             totalExtensions++;

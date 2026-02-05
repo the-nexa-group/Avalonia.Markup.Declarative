@@ -367,12 +367,12 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
                 
                 sb.AppendLine($"        [DynamicDependency(nameof({typeName}.{propertyName}), typeof({typeName}))]");
                 sb.AppendLine($"        public TComponent {propertyName}(Func<{item.Type}> getter, Action<{item.Type}>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)");
-                sb.AppendLine($"            => component._set({typeName}.{avaloniaPropertyName}, getter, onChanged, expression);");
+                sb.AppendLine($"            => component.Bind({typeName}.{avaloniaPropertyName}, getter, onChanged, expression);");
                 sb.AppendLine();
                 
                 sb.AppendLine($"        [DynamicDependency(nameof({typeName}.{propertyName}), typeof({typeName}))]");
                 sb.AppendLine($"        public TComponent {propertyName}(Func<ValueTask<{item.Type}>> getter, Func<{item.Type}>? fallbackGetter = null, Action<{item.Type}>? onChanged = null, [CallerArgumentExpression(nameof(getter))] string? expression = null)");
-                sb.AppendLine($"            => component._set({typeName}.{avaloniaPropertyName}, getter, fallbackGetter, onChanged, expression);");
+                sb.AppendLine($"            => component.Bind({typeName}.{avaloniaPropertyName}, getter, fallbackGetter, onChanged, expression);");
                 sb.AppendLine();
             }
 

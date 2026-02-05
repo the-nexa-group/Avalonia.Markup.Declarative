@@ -11,9 +11,7 @@ internal static class SelectorParserHelper
     public static string? GetTypeNameFromSelectorString(string selectorString)
     {
         if (string.IsNullOrWhiteSpace(selectorString))
-        {
             return null;
-        }
 
         // Regular expression for finding type names.
         // It searches for:

@@ -1,4 +1,5 @@
 ﻿using Avalonia.Controls.Primitives;
+using Avalonia.Markup.Xaml.MarkupExtensions;
 using Avalonia.Styling;
 using AvaloniaMarkupSample.CommonSamples;
 using AvaloniaMarkupSample.MvuSample;
@@ -31,7 +32,7 @@ public class MainView : ViewBase
                                     .FontSize(30)
                                     .HorizontalAlignment(HorizontalAlignment.Center)
                                     .Text("Hello Hot Reload!")
-                                    .Foreground("SystemAccentColor".GetDynamicResource()),
+                                    .Foreground(new DynamicResourceExtension("SystemAccentColor")),
 
                                 new Button()
                                     .Name("HotReloadButton", Scope)
@@ -42,12 +43,11 @@ public class MainView : ViewBase
                                         textBlock.Text("Button clicked!");
 
                                         var button = this.FindControl<Button>("HotReloadButton");
-                                        if (button != null)
-                                            button.Content = "Found by Name";
+                                        button?.Content = "Found by Name";
                                     }),
                                 new HyperlinkButton()
                                     .HorizontalAlignment(HorizontalAlignment.Center)
-                                    .NavigateUri(new Uri("https://github.com/AvaloniaUI/Avalonia.Markup.Declarative"))
+                                    .NavigateUri(new Uri("https://github.com/the-nexa-group/Avalonia.Markup.Declarative"))
                                     .Content("Open on github")
                             )
                     ),

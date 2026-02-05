@@ -1,7 +1,7 @@
 ﻿namespace Avalonia.Markup.Declarative;
 
 /// <summary>
-/// IReloadable interfece is used by HotReloadManager to reload controls after net6 updating assemblies on runtime
+/// IReloadable interface is used by HotReloadManager to reload controls after net6 updating assemblies on runtime
 /// </summary>
 public interface IReloadable
 {
