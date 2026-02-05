@@ -17,5 +17,5 @@ public static class ConverterExtensions
     }
     
     public static Brush ToBrush(this Color color) => new SolidColorBrush(color);
-    public static Cursor ToCursor(this StandardCursorType cursor) => new Cursor(cursor);
+    public static Cursor ToCursor(this StandardCursorType cursor) => new(cursor);
 }
