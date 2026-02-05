@@ -10,6 +10,15 @@ namespace Avalonia.Markup.Declarative;
 
 public static class ControlChildrenExtensions
 {
+    extension<TContentControl>(TContentControl contentControl) where TContentControl : ContentControl
+    {
+        public TContentControl Text(string text)
+        {
+            contentControl.Content = new TextBlock { Text = text };
+            return contentControl;
+        }
+    }
+    
     extension<TPanel>(TPanel container) where TPanel : Panel
     {
         public TPanel Children(params Control[] children)
