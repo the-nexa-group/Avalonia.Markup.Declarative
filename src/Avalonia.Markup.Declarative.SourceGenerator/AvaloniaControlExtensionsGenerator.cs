@@ -357,8 +357,13 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
             sb.AppendLine($"        public TControl {controlType.Name}_{propertyName}(IBinding binding)");
             sb.AppendLine($"            => control.BindR({containingTypeName}.{field.Name}, binding);");
             sb.AppendLine();
+            
+            sb.AppendLine($"        public TControl {controlType.Name}_{propertyName}(AvaloniaProperty avaloniaProperty, Avalonia.AvaloniaObject? source = null, BindingMode bindingMode = BindingMode.Default, IValueConverter? converter = null)");
+            sb.AppendLine($"            => control.Bind({containingTypeName}.{field.Name}, avaloniaProperty, source, bindingMode, converter);");
+            sb.AppendLine();
 
-            totalExtensions++;
+            totalExtensions += 2;
+            
             sb.AppendLine("    }");
             sb.AppendLine();
         }
