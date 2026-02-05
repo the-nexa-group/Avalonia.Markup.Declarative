@@ -532,7 +532,7 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
             sb.AppendLine();
 
             totalExtensions += 2;
-
+            
             if (propertyType.EndsWith("Thickness"))
             {
                 sb.AppendLine($"        public Style<{returnType}> {propertyName}(double uniform)");
@@ -541,8 +541,14 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
                 sb.AppendLine($"        public Style<{returnType}> {propertyName}(double left = 0, double top = 0, double right = 0, double bottom = 0)");
                 sb.AppendLine($"            => style.Setter({controlTypeName}.{propertyName}Property!, new Avalonia.Thickness(left, top, right, bottom));");
                 sb.AppendLine();
+                sb.AppendLine($"        public Style<{returnType}> {propertyName}(IBinding? left = null, IBinding? top = null, IBinding? right = null, IBinding? bottom = null)");
+                sb.AppendLine($"            => style.Setter({controlTypeName}.{propertyName}Property!, MultiBindingHelper.DoubleBindingsToThicknessBinding(left, top, right, bottom));");
+                sb.AppendLine();
+                sb.AppendLine($"        public Style<{returnType}> {propertyName}Uniform(IBinding uniform)");
+                sb.AppendLine($"            => style.Setter({controlTypeName}.{propertyName}Property!, MultiBindingHelper.DoubleBindingToUniformThickness(uniform));");
+                sb.AppendLine();
 
-                totalExtensions += 2;
+                totalExtensions += 4;
             }
             else if (propertyType.EndsWith("CornerRadius"))
             {
