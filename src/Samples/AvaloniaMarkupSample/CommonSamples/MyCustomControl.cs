@@ -98,7 +98,7 @@ public class MyCustomControl : ViewBase
                         new TextBlock().Text("Enter text:")
                             .VerticalAlignment(VerticalAlignment.Center),
                         new TextBox()
-                            .Text(NewValueProperty, BindingMode.TwoWay)
+                            .Text(NewValueProperty, this, BindingMode.TwoWay)
                             .MinWidth(150)
                     ),
 
@@ -111,7 +111,7 @@ public class MyCustomControl : ViewBase
                         new TextBlock().Text("Saved text:")
                             .VerticalAlignment(VerticalAlignment.Center),
                         new TextBox()
-                            .Text(SavedValueProperty, BindingMode.Default)
+                            .Text(SavedValueProperty)
                             .MinWidth(150)
                     ),
                 new StackPanel().Row(3)

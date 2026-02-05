@@ -13,7 +13,8 @@ public static class AvaloniaObjectPropertyExtensions
     extension<TAvObject>(TAvObject control) where TAvObject : AvaloniaObject
     {
         /// <summary>
-        /// Used to pass Binding object constructed by end-user
+        /// Used to pass Binding object constructed by end-user.
+        /// Can't be called Bind due to conflicting method AvaloniaObject.Bind
         /// </summary>
         /// <param name="avaloniaProperty"></param>
         /// <param name="binding"></param>
@@ -28,32 +29,33 @@ public static class AvaloniaObjectPropertyExtensions
         } 
         
         /// <summary>
-        /// Used to bind one avalonia property to another
+        /// Used to bind one avalonia property to another.
+        /// TODO: Find a way to make this AOT friendly.
         /// </summary>
         /// <param name="avaloniaProperty"></param>
         /// <param name="propertyToBindTo"></param>
         /// <param name="bindingMode"></param>
         /// <param name="converter"></param>
-        /// <param name="overrideView"></param>
+        /// <param name="source"></param>
         /// <returns></returns>
         [RequiresUnreferencedCode("Except for Direct Properties, the value used by the Avalonia Property may be trimmed")]
         public TAvObject Bind(
             AvaloniaProperty avaloniaProperty,
             AvaloniaProperty propertyToBindTo,
-            BindingMode? bindingMode,
-            IValueConverter? converter,
-            ViewBase? overrideView)
+            AvaloniaObject? source = null,
+            BindingMode bindingMode = BindingMode.Default,
+            IValueConverter? converter = null)
         {
-            ViewBase? view = overrideView ?? ViewBuildContext.CurrentView;
+            source ??= ViewBuildContext.CurrentView;
             Binding binding = new() 
             {
-                Source = view,
+                Source = source,
                 Path = propertyToBindTo.Name,
-                Mode = bindingMode ?? BindingMode.Default,
+                Mode = bindingMode,
                 Converter = converter
             };
 
-            control[!avaloniaProperty] = binding;
+            control.BindR(avaloniaProperty, binding);
             return control;
         }
         
@@ -71,8 +73,8 @@ public static class AvaloniaObjectPropertyExtensions
         public TAvObject Bind<TValue>(
             AvaloniaProperty<TValue> avaloniaProperty,
             Func<TValue> getterFunc, 
-            Action<TValue>? setChangedHandler,
-            string? expression)
+            Action<TValue>? setChangedHandler = null,
+            string? expression = null)
         {
             ViewBase? view = ViewBuildContext.CurrentView;
 
@@ -94,7 +96,7 @@ public static class AvaloniaObjectPropertyExtensions
                     {
                         try
                         {
-                            componentBase.NotifyExternalPropertyChanged(expression!, v);
+                            componentBase.NotifyExternalPropertyChanged(expression, v);
                         }
                         catch
                         {
@@ -122,8 +124,8 @@ public static class AvaloniaObjectPropertyExtensions
         public TAvObject Bind<TValue>(
             Action<TValue> setter, 
             Func<TValue> getterFunc,
-            Action<TValue>? setChangedHandler,
-            string? expression)
+            Action<TValue>? setChangedHandler = null,
+            string? expression = null)
         {
             ViewBase? view = ViewBuildContext.CurrentView;
 
@@ -175,7 +177,8 @@ public static class AvaloniaObjectPropertyExtensions
             return control;
         }
         
-        public TAvObject Bind<TValue>(AvaloniaProperty<TValue> avaloniaProperty, 
+        public TAvObject Bind<TValue>(
+            AvaloniaProperty<TValue> avaloniaProperty, 
             Func<ValueTask<TValue>> getterFunc, 
             Func<TValue>? fallbackGetter = null,
             Action<TValue>? setChangedHandler = null, 
@@ -196,7 +199,10 @@ public static class AvaloniaObjectPropertyExtensions
         }
     }
 
-    private static Action<TValue>? PrepareHandler<TValue>(ViewBase view, Action<TValue>? handler, string? expression)
+    private static Action<TValue>? PrepareHandler<TValue>(
+        ViewBase view, 
+        Action<TValue>? handler, 
+        string? expression)
     {
         if (view is ComponentBase cb && handler != null)
         {

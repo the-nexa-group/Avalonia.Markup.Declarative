@@ -281,8 +281,8 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
             sb.AppendLine();
 
             sb.AppendLine($"        [DynamicDependency(nameof({controlTypeName}.{propertyName}), typeof({controlTypeName}))]");
-            sb.AppendLine($"        public {returnType} {propertyName}(AvaloniaProperty avaloniaProperty, BindingMode? bindingMode = null, IValueConverter? converter = null, ViewBase? overrideView = null)");
-            sb.AppendLine($"            => control.Bind({controlTypeName}.{field.Name}, avaloniaProperty, bindingMode, converter, overrideView);");
+            sb.AppendLine($"        public {returnType} {propertyName}(AvaloniaProperty avaloniaProperty, Avalonia.AvaloniaObject? source = null, BindingMode bindingMode = BindingMode.Default, IValueConverter? converter = null)");
+            sb.AppendLine($"            => control.Bind({controlTypeName}.{field.Name}, avaloniaProperty, source, bindingMode, converter);");
             sb.AppendLine();
             
             totalExtensions += 4;
