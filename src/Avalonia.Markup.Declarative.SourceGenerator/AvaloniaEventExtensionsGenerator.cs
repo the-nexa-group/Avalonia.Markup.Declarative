@@ -95,6 +95,8 @@ public class AvaloniaEventExtensionsGenerator : IIncrementalGenerator
             .Replace('+', '_'); // just in case
 
         sb.AppendLine("namespace Avalonia.Markup.Declarative;");
+        sb.AppendLine();
+        sb.AppendLine("[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]");
         sb.AppendLine($"public static partial class {safeId}EventExtensions");
         sb.AppendLine("{");
 

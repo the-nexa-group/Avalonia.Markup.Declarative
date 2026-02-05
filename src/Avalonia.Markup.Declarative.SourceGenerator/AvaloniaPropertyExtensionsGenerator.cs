@@ -111,6 +111,8 @@ public class AvaloniaPropertyExtensionsGenerator : IIncrementalGenerator
         string allTypeParamsForMethods = BuildAllTypeParameters(type);
 
         sb.AppendLine("namespace Avalonia.Markup.Declarative;");
+        sb.AppendLine();
+        sb.AppendLine("[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]");
         sb.AppendLine($"public static partial class {extensionClassName}Extensions");
         sb.AppendLine("{");
 

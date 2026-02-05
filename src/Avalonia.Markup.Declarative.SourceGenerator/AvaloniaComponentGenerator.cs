@@ -164,6 +164,7 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
         }
 
         // Open The Component Class
+        sb.AppendLine("[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]");
         sb.AppendLine($"{Indent(indentLevel)}partial class {className}");
         sb.AppendLine($"{Indent(indentLevel)}{{");
 

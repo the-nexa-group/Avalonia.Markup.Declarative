@@ -109,6 +109,16 @@ public class AvaloniaControlExtensionsGenerator : IIncrementalGenerator
                 }
             }
         }
+        
+        IEnumerable<INamedTypeSymbol> thisAssemblyTypes = GetTypesFromNamespace(compilation.GlobalNamespace);
+        foreach (var type in thisAssemblyTypes.Where(type => IsControlType(type, baseType)))
+        {
+            var fullName = type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat);
+            if (processedTypeNames.Add(fullName))
+            {
+                controlTypes.Add(type);
+            }
+        }
 
         return controlTypes;
     }
