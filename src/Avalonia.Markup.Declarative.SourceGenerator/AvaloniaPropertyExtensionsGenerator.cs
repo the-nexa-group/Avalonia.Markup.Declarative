@@ -118,6 +118,7 @@ public class AvaloniaPropertyExtensionsGenerator : IIncrementalGenerator
 
         sb.AppendLine("namespace Avalonia.Markup.Declarative;");
         sb.AppendLine();
+        sb.AppendLine("""[global::System.CodeDom.Compiler.GeneratedCode("AvaloniaPropertyExtensionsGenerator", "1.0.0.0")]""");
         sb.AppendLine("[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]");
         sb.AppendLine($"public static partial class {extensionClassName}Extensions");
         sb.AppendLine("{");

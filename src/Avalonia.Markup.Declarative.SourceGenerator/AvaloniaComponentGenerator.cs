@@ -169,6 +169,7 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
         }
 
         // Open The Component Class
+        sb.AppendLine("""[global::System.CodeDom.Compiler.GeneratedCode("AvaloniaComponentGenerator", "1.0.0.0")]""");
         sb.AppendLine("[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]");
         sb.AppendLine($"{Indent(indentLevel)}partial class {className}");
         sb.AppendLine($"{Indent(indentLevel)}{{");
@@ -353,6 +354,8 @@ public class AvaloniaComponentGenerator : IIncrementalGenerator
             
             sb.AppendLine("namespace Avalonia.Markup.Declarative;");
             sb.AppendLine();
+            sb.AppendLine("""[global::System.CodeDom.Compiler.GeneratedCode("AvaloniaComponentGenerator", "1.0.0.0")]""");
+            sb.AppendLine("[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]");
             sb.AppendLine($"public static partial class {uniqueName}Extensions");
             sb.AppendLine("{");
 
