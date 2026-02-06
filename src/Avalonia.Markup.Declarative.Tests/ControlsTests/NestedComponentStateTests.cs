@@ -40,7 +40,7 @@ public class ColorPickerView : ComponentBase
 
     private ObservableCollection<Color> Colors { get; set; } = [];
     public Color SelectedColor { get; set; }
-    public string HexValue { get; set; }
+    public string HexValue { get; set; } = string.Empty;
 
     public ColorPickerColorType ColorType { get; set; }
     public int ColorTypeIndex
@@ -64,7 +64,7 @@ public class ColorPickerView : ComponentBase
 public class NestedComponentStateTest(ITestOutputHelper testOutputHelper) : AvaloniaTestBase
 {
     [Fact]
-    public async Task ColorPickerView_BindingStateChanges_PreventInfiniteRecursion()
+    public Task ColorPickerView_BindingStateChanges_PreventInfiniteRecursion()
     {
         var view = new ColorPickerView();
         var window = new Window { Content = view };
@@ -83,5 +83,6 @@ public class NestedComponentStateTest(ITestOutputHelper testOutputHelper) : Aval
         var viewHexValue = view.HexValue;
         testOutputHelper.WriteLine($"Hex value: {viewHexValue}");
         Assert.Equal("#FFFF0000", viewHexValue);
+        return Task.CompletedTask;
     }
 }

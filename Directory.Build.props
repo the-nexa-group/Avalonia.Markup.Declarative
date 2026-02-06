@@ -2,4 +2,8 @@
 	<PropertyGroup>
 		<Version>11.3.7-beta05</Version>
 	</PropertyGroup>
+	
+	<PropertyGroup>
+		<NoWarn>$(NoWarn);CS0067;CS9113;CS8620</NoWarn>
+	</PropertyGroup>
 </Project>

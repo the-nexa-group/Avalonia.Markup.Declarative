@@ -106,7 +106,7 @@ public class ColorPalette : ComponentBase
         .CornerRadius(10)
         .ClipToBounds(true);
 
-    private Control _colorSquare;
+    private Control _colorSquare = null!;
 
     private ItemsControl _itemsControl = null!;
 
