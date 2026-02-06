@@ -28,6 +28,14 @@ public static class AvaloniaObjectPropertyExtensions
             return control;
         } 
         
+        public TAvObject BindR<TValue>(
+            DirectPropertyBase<TValue> avaloniaProperty,
+            IBinding binding)
+        {
+            control[!avaloniaProperty] = binding;
+            return control;
+        } 
+        
         /// <summary>
         /// Used to bind one avalonia property to another.
         /// TODO: Find a way to make this AOT friendly.
@@ -109,6 +117,15 @@ public static class AvaloniaObjectPropertyExtensions
             ViewPropertyComputedState<TAvObject, TValue> state = new(expression, getterFunc, handler, control, avaloniaProperty);
             view.AddComputedState(state, control);
             return control;
+        }
+
+        public TAvObject Bind<TValue>(
+            DirectPropertyBase<TValue> avaloniaProperty,
+            Func<TValue> getterFunc,
+            Action<TValue>? setChangedHandler = null,
+            string? expression = null)
+        {
+            return control.Bind((AvaloniaProperty<TValue>)avaloniaProperty, getterFunc, setChangedHandler, expression);
         }
 
         /// <summary>
